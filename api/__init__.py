@@ -16,20 +16,34 @@ from controller import Controller, TaskType
 # Pydantic models for request/response validation
 class TaskRequest(BaseModel):
     """Request model for processing tasks."""
-    task_type: str = Field(..., description="Type of task (classification, debugging, generation, documentation)")
-    input_data: str = Field(..., description="Input data to process (code or description)")
-    parameters: Optional[Dict[str, Any]] = Field(default=None, description="Additional parameters for the task")
+
+    task_type: str = Field(
+        ...,
+        description="Type of task (classification, debugging, generation, documentation)",
+    )
+    input_data: str = Field(
+        ..., description="Input data to process (code or description)"
+    )
+    parameters: Optional[Dict[str, Any]] = Field(
+        default=None, description="Additional parameters for the task"
+    )
 
 
 class AutoRouteRequest(BaseModel):
     """Request model for auto-routing based on description."""
+
     input_data: str = Field(..., description="Input data to process")
-    description: str = Field(..., description="Description of the task for automatic routing")
-    parameters: Optional[Dict[str, Any]] = Field(default=None, description="Additional parameters for the task")
+    description: str = Field(
+        ..., description="Description of the task for automatic routing"
+    )
+    parameters: Optional[Dict[str, Any]] = Field(
+        default=None, description="Additional parameters for the task"
+    )
 
 
 class TaskResponse(BaseModel):
     """Response model for task results."""
+
     success: bool
     result: Dict[str, Any]
     error: Optional[str] = None
@@ -37,6 +51,7 @@ class TaskResponse(BaseModel):
 
 class HealthResponse(BaseModel):
     """Response model for health check."""
+
     status: str
     agents: Dict[str, Any]
 
@@ -45,7 +60,7 @@ class HealthResponse(BaseModel):
 app = FastAPI(
     title="IntelliCode-SL API",
     description="API for the IntelliCode-SL agentic AI system with specialized language models",
-    version="1.0.0"
+    version="1.0.0",
 )
 
 # Initialize controller
@@ -64,8 +79,8 @@ async def root():
             "POST /auto-route": "Automatically route based on task description",
             "GET /health": "Check system health",
             "GET /agents": "Get information about all agents",
-            "GET /agents/{task_type}": "Get information about a specific agent"
-        }
+            "GET /agents/{task_type}": "Get information about a specific agent",
+        },
     }
 
 
@@ -73,32 +88,21 @@ async def root():
 async def process_task(request: TaskRequest):
     """
     Process a task using the specified agent.
-    
+
     Args:
         request: Task request containing task_type, input_data, and parameters
-        
+
     Returns:
         Task response with results or error
     """
     try:
         parameters = request.parameters or {}
-        result = controller.route(
-            request.task_type,
-            request.input_data,
-            **parameters
-        )
-        
+        result = controller.route(request.task_type, request.input_data, **parameters)
+
         if result.get("error"):
-            return TaskResponse(
-                success=False,
-                result=result,
-                error=result.get("error")
-            )
-        
-        return TaskResponse(
-            success=True,
-            result=result
-        )
+            return TaskResponse(success=False, result=result, error=result.get("error"))
+
+        return TaskResponse(success=True, result=result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -107,32 +111,23 @@ async def process_task(request: TaskRequest):
 async def auto_route_task(request: AutoRouteRequest):
     """
     Automatically route a task based on description keywords.
-    
+
     Args:
         request: Auto-route request with input_data, description, and parameters
-        
+
     Returns:
         Task response with results or error
     """
     try:
         parameters = request.parameters or {}
         result = controller.auto_route(
-            request.input_data,
-            request.description,
-            **parameters
+            request.input_data, request.description, **parameters
         )
-        
+
         if result.get("error"):
-            return TaskResponse(
-                success=False,
-                result=result,
-                error=result.get("error")
-            )
-        
-        return TaskResponse(
-            success=True,
-            result=result
-        )
+            return TaskResponse(success=False, result=result, error=result.get("error"))
+
+        return TaskResponse(success=True, result=result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -141,14 +136,13 @@ async def auto_route_task(request: AutoRouteRequest):
 async def health_check():
     """
     Check the health status of the system.
-    
+
     Returns:
         Health status of controller and all agents
     """
     health_status = controller.health_check()
     return HealthResponse(
-        status=health_status["controller"],
-        agents=health_status["agents"]
+        status=health_status["controller"], agents=health_status["agents"]
     )
 
 
@@ -156,7 +150,7 @@ async def health_check():
 async def get_agents_info():
     """
     Get information about all available agents.
-    
+
     Returns:
         Dictionary containing information about all agents
     """
@@ -167,10 +161,10 @@ async def get_agents_info():
 async def get_agent_info(task_type: str):
     """
     Get information about a specific agent.
-    
+
     Args:
         task_type: Type of agent (classification, debugging, generation, documentation)
-        
+
     Returns:
         Dictionary containing agent information
     """
@@ -184,7 +178,7 @@ async def get_agent_info(task_type: str):
 async def get_task_types():
     """
     Get list of available task types.
-    
+
     Returns:
         List of available task types with descriptions
     """
@@ -192,24 +186,25 @@ async def get_task_types():
         "task_types": [
             {
                 "type": "classification",
-                "description": "Classify code by language, type, complexity, etc."
+                "description": "Classify code by language, type, complexity, etc.",
             },
             {
                 "type": "debugging",
-                "description": "Debug code, analyze errors, detect vulnerabilities"
+                "description": "Debug code, analyze errors, detect vulnerabilities",
             },
             {
                 "type": "generation",
-                "description": "Generate code from descriptions, complete code, refactor"
+                "description": "Generate code from descriptions, complete code, refactor",
             },
             {
                 "type": "documentation",
-                "description": "Generate docstrings, README files, API documentation"
-            }
+                "description": "Generate docstrings, README files, API documentation",
+            },
         ]
     }
 
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -12,18 +12,22 @@ from slms import BaseSLM, ModelType
 class GenerationSLM(BaseSLM):
     """
     Specialized Language Model for code generation tasks.
-    
+
     This model can:
     - Generate code from natural language descriptions
     - Complete partial code snippets
     - Refactor existing code
     - Generate test cases
     """
-    
-    def __init__(self, model_name: str = "generation-slm-v1", config: Optional[Dict[str, Any]] = None):
+
+    def __init__(
+        self,
+        model_name: str = "generation-slm-v1",
+        config: Optional[Dict[str, Any]] = None,
+    ):
         """
         Initialize the Generation SLM.
-        
+
         Args:
             model_name: Name of the generation model
             config: Optional configuration for the model
@@ -31,38 +35,38 @@ class GenerationSLM(BaseSLM):
         super().__init__(model_name, ModelType.GENERATION, config)
         self.max_tokens = config.get("max_tokens", 512) if config else 512
         self.temperature = config.get("temperature", 0.7) if config else 0.7
-    
+
     def load_model(self) -> None:
         """
         Load the generation model.
-        
+
         In a real implementation, this would load the actual model weights
         and tokenizer. For now, this is a placeholder.
         """
         # TODO: Implement actual model loading
         print(f"Loading generation model: {self.model_name}")
         self.is_loaded = True
-    
+
     def predict(self, input_data: str, **kwargs) -> Dict[str, Any]:
         """
         Generate code based on the input description.
-        
+
         Args:
             input_data: Natural language description or partial code
             **kwargs: Additional parameters (e.g., language, max_tokens, temperature)
-            
+
         Returns:
             Dictionary containing generated code and metadata
         """
         if not self.is_loaded:
             self.load_model()
-        
+
         # TODO: Replace with actual model inference
         # Placeholder implementation
         language = kwargs.get("language", "python")
         max_tokens = kwargs.get("max_tokens", self.max_tokens)
         temperature = kwargs.get("temperature", self.temperature)
-        
+
         result = {
             "input": input_data,
             "generated_code": f"""# Generated {language} code
@@ -78,45 +82,49 @@ def example_function():
             "max_tokens": max_tokens,
             "temperature": temperature,
             "model_name": self.model_name,
-            "model_type": self.model_type.value
+            "model_type": self.model_type.value,
         }
-        
+
         return result
-    
-    def generate_function(self, description: str, language: str = "python") -> Dict[str, Any]:
+
+    def generate_function(
+        self, description: str, language: str = "python"
+    ) -> Dict[str, Any]:
         """
         Generate a function from a natural language description.
-        
+
         Args:
             description: Natural language description of the function
             language: Target programming language
-            
+
         Returns:
             Dictionary with generated function code
         """
         return self.predict(description, language=language, task="function_generation")
-    
-    def complete_code(self, partial_code: str, language: str = "python") -> Dict[str, Any]:
+
+    def complete_code(
+        self, partial_code: str, language: str = "python"
+    ) -> Dict[str, Any]:
         """
         Complete a partial code snippet.
-        
+
         Args:
             partial_code: Incomplete code snippet
             language: Programming language of the code
-            
+
         Returns:
             Dictionary with completed code
         """
         return self.predict(partial_code, language=language, task="code_completion")
-    
+
     def refactor_code(self, code: str, instructions: str = "") -> Dict[str, Any]:
         """
         Refactor existing code based on instructions.
-        
+
         Args:
             code: Code to refactor
             instructions: Optional refactoring instructions
-            
+
         Returns:
             Dictionary with refactored code
         """

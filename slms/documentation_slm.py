@@ -12,7 +12,7 @@ from slms import BaseSLM, ModelType
 class DocumentationSLM(BaseSLM):
     """
     Specialized Language Model for code documentation tasks.
-    
+
     This model can:
     - Generate docstrings for functions and classes
     - Create README files
@@ -20,48 +20,52 @@ class DocumentationSLM(BaseSLM):
     - Improve existing documentation
     - Generate code comments
     """
-    
-    def __init__(self, model_name: str = "documentation-slm-v1", config: Optional[Dict[str, Any]] = None):
+
+    def __init__(
+        self,
+        model_name: str = "documentation-slm-v1",
+        config: Optional[Dict[str, Any]] = None,
+    ):
         """
         Initialize the Documentation SLM.
-        
+
         Args:
             model_name: Name of the documentation model
             config: Optional configuration for the model
         """
         super().__init__(model_name, ModelType.DOCUMENTATION, config)
         self.doc_style = config.get("doc_style", "google") if config else "google"
-    
+
     def load_model(self) -> None:
         """
         Load the documentation model.
-        
+
         In a real implementation, this would load the actual model weights
         and tokenizer. For now, this is a placeholder.
         """
         # TODO: Implement actual model loading
         print(f"Loading documentation model: {self.model_name}")
         self.is_loaded = True
-    
+
     def predict(self, input_data: str, **kwargs) -> Dict[str, Any]:
         """
         Generate documentation for the input code.
-        
+
         Args:
             input_data: Code snippet to document
             **kwargs: Additional parameters (e.g., doc_style, language)
-            
+
         Returns:
             Dictionary containing generated documentation
         """
         if not self.is_loaded:
             self.load_model()
-        
+
         # TODO: Replace with actual model inference
         # Placeholder implementation
         doc_style = kwargs.get("doc_style", self.doc_style)
         language = kwargs.get("language", "python")
-        
+
         result = {
             "input": input_data[:100] + "..." if len(input_data) > 100 else input_data,
             "documentation": '''"""
@@ -84,32 +88,34 @@ class DocumentationSLM(BaseSLM):
             "doc_style": doc_style,
             "language": language,
             "model_name": self.model_name,
-            "model_type": self.model_type.value
+            "model_type": self.model_type.value,
         }
-        
+
         return result
-    
+
     def generate_docstring(self, code: str, style: str = "google") -> Dict[str, Any]:
         """
         Generate a docstring for a function or class.
-        
+
         Args:
             code: Code snippet to document
             style: Documentation style (google, numpy, sphinx)
-            
+
         Returns:
             Dictionary with generated docstring
         """
         return self.predict(code, doc_style=style, task="docstring_generation")
-    
-    def generate_readme(self, project_description: str, code_samples: List[str] = None) -> Dict[str, Any]:
+
+    def generate_readme(
+        self, project_description: str, code_samples: List[str] = None
+    ) -> Dict[str, Any]:
         """
         Generate a README file for a project.
-        
+
         Args:
             project_description: Description of the project
             code_samples: Optional list of code samples to include
-            
+
         Returns:
             Dictionary with generated README content
         """
@@ -117,15 +123,15 @@ class DocumentationSLM(BaseSLM):
         if code_samples:
             input_text += f"\n\nCode samples: {code_samples}"
         return self.predict(input_text, task="readme_generation")
-    
+
     def improve_documentation(self, code: str, existing_docs: str) -> Dict[str, Any]:
         """
         Improve existing documentation.
-        
+
         Args:
             code: The code being documented
             existing_docs: Current documentation to improve
-            
+
         Returns:
             Dictionary with improved documentation
         """
