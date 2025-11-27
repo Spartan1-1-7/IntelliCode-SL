@@ -63,6 +63,62 @@ def render_chat_container_start():
     return '<div class="chat-container">'
 
 
+def render_page_title():
+    """Render the main page title."""
+    st.markdown("""
+    <style>
+    /* Reduce default Streamlit padding */
+    .block-container {
+        padding-top: 2rem !important;
+        padding-bottom: 0rem !important;
+    }
+    .main-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    </style>
+    <div class="main-title">IntelliCode-SL</div>
+    """, unsafe_allow_html=True)
+
+
+def render_code_editor_wrapper_start():
+    """Render the start of code editor wrapper with stats overlay styling."""
+    st.markdown("""
+    <style>
+    .code-editor-wrapper {
+        position: relative;
+    }
+    .code-stats {
+        position: absolute;
+        bottom: 30px;
+        right: 25px;
+        background-color: rgba(30, 30, 30, 0.9);
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        z-index: 1000;
+        pointer-events: none;
+    }
+    </style>
+    <div class="code-editor-wrapper">
+    """, unsafe_allow_html=True)
+
+
+def render_code_stats(lines: int, chars: int):
+    """Render code statistics overlay."""
+    st.markdown(f"""
+    <div class="code-stats">
+        Lines: {lines} | Characters: {chars}
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
 def render_send_button():
     """Render the send button with SVG icon."""
     st.markdown('''
@@ -115,7 +171,7 @@ def render_chat_history(chat_history: list):
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     }
     .chat-scroll-wrapper {
-        height: 680px;
+        height: 610px;
         overflow-y: auto;
         overflow-x: hidden;
         background-color: #1a1a1a;
@@ -219,4 +275,4 @@ def render_chat_history(chat_history: list):
     """
     
     # Use components.html to render
-    components.html(html_content, height=700, scrolling=False)
+    components.html(html_content, height=630, scrolling=False)

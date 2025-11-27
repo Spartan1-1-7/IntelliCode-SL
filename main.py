@@ -11,7 +11,10 @@ from streamlit_ace import st_ace
 from styles.components import (
     load_css,
     render_chat_history,
-    render_send_button
+    render_send_button,
+    render_page_title,
+    render_code_editor_wrapper_start,
+    render_code_stats
 )
 
 # Page configuration
@@ -25,25 +28,8 @@ st.set_page_config(
 # Load CSS styles
 st.markdown(load_css('styles/chat_styles.css'), unsafe_allow_html=True)
 
-# Add page title/heading with reduced spacing
-st.markdown("""
-<style>
-/* Reduce default Streamlit padding */
-.block-container {
-    padding-top: 2rem !important;
-    padding-bottom: 0rem !important;
-}
-.main-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 15px;
-    margin-top: 0px;
-    text-align: center;
-}
-</style>
-<div class="main-title">IntelliCode-SL</div>
-""", unsafe_allow_html=True)
+# Add page title/heading
+render_page_title()
 
 # Initialize session state
 if 'chat_history' not in st.session_state:
@@ -54,6 +40,9 @@ if 'code_content' not in st.session_state:
 
 if 'selected_language' not in st.session_state:
     st.session_state.selected_language = 'python'
+
+if 'input_counter' not in st.session_state:
+    st.session_state.input_counter = 0
 
 # Create two-column layout
 col_left, col_right = st.columns([1.5, 1])
@@ -70,27 +59,8 @@ with col_left:
     )
     st.session_state.selected_language = language
     
-    # Wrapper for code editor with stats overlay
-    st.markdown("""
-    <style>
-    .code-editor-wrapper {
-        position: relative;
-    }
-    .code-stats {
-        position: absolute;
-        bottom: 30px;
-        right: 25px;
-        background-color: rgba(30, 30, 30, 0.9);
-        color: #ffffff;
-        padding: 5px 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        z-index: 1000;
-        pointer-events: none;
-    }
-    </style>
-    <div class="code-editor-wrapper">
-    """, unsafe_allow_html=True)
+    # Start code editor wrapper with styling
+    render_code_editor_wrapper_start()
     
     # Code editor using streamlit-ace
     code_content = st_ace(
@@ -107,22 +77,17 @@ with col_left:
         readonly=False,
         min_lines=30,
         key="code_editor",
-        height=700
+        height=630
     )
     
     # Update session state with code content
     if code_content != st.session_state.code_content:
         st.session_state.code_content = code_content
     
-    # Code stats overlay at bottom right
+    # Render code stats overlay at bottom right
     lines = len(st.session_state.code_content.split(chr(10)))
     chars = len(st.session_state.code_content)
-    st.markdown(f"""
-    <div class="code-stats">
-        Lines: {lines} | Characters: {chars}
-    </div>
-    </div>
-    """, unsafe_allow_html=True)
+    render_code_stats(lines, chars)
 
 # Right column - Chat Interface
 with col_right:
@@ -140,7 +105,7 @@ with col_right:
         user_input = st.text_input(
             "Message",
             placeholder="Type your message here... (Press Enter to send)",
-            key="chat_input",
+            key=f"chat_input_{st.session_state.input_counter}",
             label_visibility="collapsed"
         )
     
@@ -155,9 +120,6 @@ with col_right:
     
     # Process chat input
     if send_button and user_input:
-        # Store the sent message
-        st.session_state['_last_sent_message'] = user_input
-        
         # Add user message to history
         st.session_state.chat_history.append({
             'role': 'user',
@@ -177,4 +139,7 @@ with col_right:
             'content': response_content
         })
         
+        # Increment counter to reset input field
+        st.session_state.input_counter += 1
+        st.session_state['_last_sent_message'] = user_input
         st.rerun()
