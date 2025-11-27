@@ -1,0 +1,148 @@
+/* Main editor styling */
+.main {
+    background-color: #1e1e1e;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px 0;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+/* Chat messages - ChatGPT style */
+.chat-message {
+    display: flex;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    background-color: #2f2f2f;
+    color: #ececec;
+    margin-left: 20px;
+    border: 1px solid #3f3f3f;
+}
+
+.assistant-message {
+    background-color: #1a1a1a;
+    color: #d1d1d1;
+    margin-right: 20px;
+    border: 1px solid #2a2a2a;
+}
+
+.message-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.user-label {
+    color: #4a9eff;
+}
+
+.assistant-label {
+    color: #10a37f;
+}
+
+.message-content {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #10a37f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.stButton>button:hover {
+    background-color: #0d8c6d;
+}
+
+/* Text area */
+.stTextArea textarea {
+    background-color: #2f2f2f !important;
+    color: #ececec !important;
+    border: 1px solid #3f3f3f !important;
+    border-radius: 8px !important;
+}
+
+.stTextArea textarea:focus {
+    border-color: #10a37f !important;
+    box-shadow: 0 0 0 1px #10a37f !important;
+}
+
+/* Chat input container with send button inside */
+.chat-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.chat-input-wrapper input {
+    padding-right: 50px !important;
+}
+
+.send-button-inside {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.send-button-inside:hover {
+    opacity: 1;
+}
+
+.send-button-inside img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Hide default streamlit button styling for send */
+.send-button-container button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+}
+
+.send-button-container button:hover {
+    background: transparent !important;
+}
+
+.send-button-container button img {
+    width: 24px;
+    height: 24px;
+}
