@@ -115,7 +115,7 @@ def render_chat_history(chat_history: list):
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     }
     .chat-scroll-wrapper {
-        height: 550px;
+        height: 680px;
         overflow-y: auto;
         overflow-x: hidden;
         background-color: #1a1a1a;
@@ -219,4 +219,4 @@ def render_chat_history(chat_history: list):
     """
     
     # Use components.html to render
-    components.html(html_content, height=570, scrolling=False)
+    components.html(html_content, height=700, scrolling=False)
