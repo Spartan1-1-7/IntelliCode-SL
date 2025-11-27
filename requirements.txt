@@ -1,0 +1,20 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+
+# Testing dependencies
+httpx<0.28.0  # For TestClient compatibility
+
+# Optional ML/AI dependencies (uncomment as needed)
+# transformers==4.35.0
+# torch==2.1.0
+# sentencepiece==0.1.99
+
+# Development dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+mypy==1.7.0
+flake8==6.1.0
