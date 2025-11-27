@@ -25,6 +25,26 @@ st.set_page_config(
 # Load CSS styles
 st.markdown(load_css('styles/chat_styles.css'), unsafe_allow_html=True)
 
+# Add page title/heading with reduced spacing
+st.markdown("""
+<style>
+/* Reduce default Streamlit padding */
+.block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 0rem !important;
+}
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-align: center;
+}
+</style>
+<div class="main-title">IntelliCode-SL</div>
+""", unsafe_allow_html=True)
+
 # Initialize session state
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
@@ -50,11 +70,33 @@ with col_left:
     )
     st.session_state.selected_language = language
     
+    # Wrapper for code editor with stats overlay
+    st.markdown("""
+    <style>
+    .code-editor-wrapper {
+        position: relative;
+    }
+    .code-stats {
+        position: absolute;
+        bottom: 30px;
+        right: 25px;
+        background-color: rgba(30, 30, 30, 0.9);
+        color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        z-index: 1000;
+        pointer-events: none;
+    }
+    </style>
+    <div class="code-editor-wrapper">
+    """, unsafe_allow_html=True)
+    
     # Code editor using streamlit-ace
     code_content = st_ace(
         value=st.session_state.code_content,
         language=st.session_state.selected_language,
-        theme="monokai",
+        theme="twilight",
         keybinding="vscode",
         font_size=14,
         tab_size=4,
@@ -72,8 +114,15 @@ with col_left:
     if code_content != st.session_state.code_content:
         st.session_state.code_content = code_content
     
-    # Code stats
-    st.markdown(f"**Lines:** {len(st.session_state.code_content.split(chr(10)))} | **Characters:** {len(st.session_state.code_content)}")
+    # Code stats overlay at bottom right
+    lines = len(st.session_state.code_content.split(chr(10)))
+    chars = len(st.session_state.code_content)
+    st.markdown(f"""
+    <div class="code-stats">
+        Lines: {lines} | Characters: {chars}
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Right column - Chat Interface
 with col_right:
