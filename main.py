@@ -10,10 +10,8 @@ import streamlit as st
 from streamlit_ace import st_ace
 from styles.components import (
     load_css,
-    render_chat_container_start,
-    render_chat_container_end,
     render_chat_history,
-    get_image_base64
+    render_send_button
 )
 
 # Page configuration
@@ -81,10 +79,8 @@ with col_left:
 with col_right:
     st.markdown("### 💬 Chat Assistant")
     
-    # Chat history display with ChatGPT-style layout
-    st.markdown(render_chat_container_start(), unsafe_allow_html=True)
+    # Render chat history from components module
     render_chat_history(st.session_state.chat_history)
-    st.markdown(render_chat_container_end(), unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -100,38 +96,7 @@ with col_right:
         )
     
     with col_send:
-        st.markdown('''
-        <style>
-            button[kind="secondary"] {
-                background: none !important;
-                background-color: transparent !important;
-                border: none !important;
-                padding: 0 !important;
-                box-shadow: none !important;
-                width: 32px !important;
-                height: 32px !important;
-            }
-            button[kind="secondary"]:hover {
-                background: none !important;
-                background-color: transparent !important;
-            }
-            .send-icon {
-                opacity: 0.5;
-                cursor: pointer;
-                transition: opacity 0.2s ease;
-            }
-            .send-icon:hover {
-                opacity: 1 !important;
-            }
-        </style>
-        <div style="display: flex; align-items: center; height: 40px;">
-            <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"
-                 onclick="document.querySelector('button[kind=\\'secondary\\']').click()">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-            </svg>
-        </div>
-        ''', unsafe_allow_html=True)
-        send_button = st.button("", key="send_btn", type="secondary")
+        send_button = render_send_button()
     
     # Automatically trigger send when Enter is pressed (user_input changes)
     if user_input and user_input != st.session_state.get('_last_sent_message', ''):
@@ -152,10 +117,10 @@ with col_right:
         
         # Placeholder response - AI functionality coming soon
         response_content = "Thank you for your question! AI agent functionality is coming soon.\n\n"
-        response_content += f"**Your Question:** {user_input}\n"
-        response_content += f"\n**Code Length:** {len(st.session_state.code_content)} characters\n"
-        response_content += f"**Language:** {st.session_state.selected_language}\n"
-        response_content += "\n*This is a placeholder response. The actual AI agents will be integrated soon.*"
+        response_content += f"Your Question: {user_input}\n"
+        response_content += f"\nCode Length: {len(st.session_state.code_content)} characters\n"
+        response_content += f"Language: {st.session_state.selected_language}\n"
+        response_content += "\nThis is a placeholder response. The actual AI agents will be integrated soon."
         
         # Add assistant response to history
         st.session_state.chat_history.append({

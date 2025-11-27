@@ -1,6 +1,19 @@
 /* Main editor styling */
 .main {
     background-color: #1e1e1e;
+    overflow-y: hidden !important;
+}
+
+.stColumn {
+    overflow: hidden;
+}
+
+section.main > div {
+    overflow-y: hidden !important;
+}
+
+[data-testid="stVerticalBlock"] {
+    overflow-y: hidden !important;
 }
 
 /* Chat container */
@@ -8,9 +21,34 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 10px 0;
+    padding: 10px;
+    height: 550px;
+    min-height: 550px;
     max-height: 550px;
-    overflow-y: auto;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Scrollbar styling for chat container */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
 }
 
 /* Chat messages - ChatGPT style */
@@ -60,6 +98,7 @@
 .message-content {
     white-space: pre-wrap;
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Buttons */
