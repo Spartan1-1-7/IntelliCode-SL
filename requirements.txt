@@ -1,0 +1,8 @@
+streamlit==1.51.0
+streamlit-ace==0.1.1
+langchain==1.1.0
+langgraph==1.0.4
+openai==2.8.1
+python-dotenv==1.2.1
+
+# tun "pip install -r requirements.txt" in the conda venv to install the file
