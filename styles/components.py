@@ -270,6 +270,13 @@ def render_chat_history(chat_history: list):
     
     html_content += """
     </div>
+    <script>
+        // Auto-scroll to bottom when page loads
+        window.onload = function() {
+            var chatContainer = document.querySelector('.chat-scroll-wrapper');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        };
+    </script>
     </body>
     </html>
     """

@@ -37,7 +37,7 @@ if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 
 if 'code_content' not in st.session_state:
-    st.session_state.code_content = "# Write your code here\ndef hello_world():\n    print('Hello, World!')\n"
+    st.session_state.code_content = "# Write your code here"
 
 if 'selected_language' not in st.session_state:
     st.session_state.selected_language = 'python'
@@ -117,29 +117,38 @@ with col_right:
         send_button = render_send_button()
     
     # Automatically trigger send when Enter is pressed (user_input changes)
-    if user_input and user_input != st.session_state.get('_last_sent_message', ''):
+    if user_input and user_input.strip():
         send_button = True
     
-    st.session_state['_last_input'] = user_input
-    
     # Process chat input
-    if send_button and user_input:
-        # Add user message to history
+    if send_button and user_input and user_input.strip():
+        # Add user message to history immediately
         st.session_state.chat_history.append({
             'role': 'user',
             'content': user_input
         })
         
-        # # Placeholder response - AI functionality coming soon
-        # response_content = "Thank you for your question! AI agent functionality is coming soon.\n\n"
-        # response_content += f"Your Question: {user_input}\n"
-        # response_content += f"\nCode Length: {len(st.session_state.code_content)} characters\n"
-        # response_content += f"Language: {st.session_state.selected_language}\n"
-        # response_content += "\nThis is a placeholder response. The actual AI agents will be integrated soon."
+        # Add "thinking..." message
+        st.session_state.chat_history.append({
+            'role': 'assistant',
+            'content': '🤔 Thinking...'
+        })
+        
+        # Increment counter to reset input field and show messages
+        st.session_state.input_counter += 1
+        st.rerun()
+    
+    # Check if we need to process workflow (last message is "thinking...")
+    if (len(st.session_state.chat_history) >= 2 and 
+        st.session_state.chat_history[-1]['role'] == 'assistant' and 
+        st.session_state.chat_history[-1]['content'] == '🤔 Thinking...'):
+        
+        # Get the user's message (second to last)
+        user_message = st.session_state.chat_history[-2]['content']
         
         # Create initial_state for workflow
         initial_state = {
-            'prompt': user_input,
+            'prompt': user_message,
             'input_code': st.session_state.code_content if st.session_state.code_content.strip() else None
         }
 
@@ -171,13 +180,10 @@ with col_right:
             # Increment counter to force editor refresh
             st.session_state.editor_counter += 1
 
-        # Add assistant response to history
-        st.session_state.chat_history.append({
+        # Replace "thinking..." with actual response
+        st.session_state.chat_history[-1] = {
             'role': 'assistant',
             'content': response_content
-        })
+        }
         
-        # Increment counter to reset input field
-        st.session_state.input_counter += 1
-        st.session_state['_last_sent_message'] = user_input
         st.rerun()
