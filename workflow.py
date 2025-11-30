@@ -28,9 +28,14 @@ model=OpenAI(
 
 ## DEFINING SCHEMAS FOR VARIOUS LLM/SLM POMPTS
 
+# defining the schema for the task classifier node
 class task_classifier_schema(BaseModel):
     task_type: Literal['explain','debug','write','docs','other']= Field(description='classify the prompt in various categories')
 
+# defining the schema for the uknown node 
+class unknown_node_schema(BaseModel):
+    summary: str= Field(description='Point-wise brief response explaining the action taken for prompts that do not fit any predefined category.')
+    modified_code : Optional[str] = Field(default=None, description='The final modified code produced by the node, containing only the corrected or generated code.')
 
 
 
@@ -380,7 +385,10 @@ Output a refined answer only—no extra commentary.
 # defining the function for the unknown node which handles prompt which are not in default catagories
 def unknown ( state: intellicode_state):
     prompt = f"""You are a coding assistant.
-Your task is to generate a brief, point-wise response for prompts that do not fit any predefined category.
+This node handles prompts that do not fit any predefined category. 
+Your task is to produce output that matches the schema with the fields:
+- summary: a brief, point-wise explanation of how the request was handled
+- modified_code: optional, only include corrected or generated code if the user's prompt explicitly requires code
 
 User prompt:
 \"\"\"{state['prompt']}\"\"\"
@@ -388,26 +396,43 @@ User prompt:
 Input code (optional; may be null):
 \"\"\"{state['input_code']}\"\"\"
 
-Write a short, clear, point-wise response addressing the user's request as best as possible.
-If the input code is null or irrelevant, ignore it.
-Keep the points concise and helpful.
-Do NOT include unnecessary details or extra commentary.
+Generate output following these rules:
+
+1. **summary**  
+   - Provide a short, clear, point-wise response addressing the user's request.  
+   - If input code is irrelevant or null, ignore it.  
+   - Keep the points concise and helpful.  
+   - No unnecessary details or commentary.
+
+2. **modified_code**  
+   - If the user's prompt requires producing or modifying code, return only the raw code here.  
+   - If not required, return null.
+
+Return your final output strictly in this JSON structure:
+
+{{
+  "summary": "...",
+  "modified_code": "..." or null
+}}
 """
 
-    completion = model.chat.completions.create(
-    
+    completion = model.beta.chat.completions.parse(
+
     model="x-ai/grok-4.1-fast",
     messages=[
         {
         "role": "user",
         "content": prompt
         }
-    ]
+    ],
+    response_format=unknown_node_schema,
     )
-    # extracting the content
 
-    unknow_res=completion.choices[0].message.content
-    return {'change_summary':unknow_res}
+    response=completion.choices[0].message.parsed
+    change_summary=response.summary
+    modified_code=response.modified_code
+    
+    return {'change_summary':change_summary,'modified_code': modified_code}
 
 # defining a function which handles the routing of the workflow from classifier node to the needed node for further processing 
 

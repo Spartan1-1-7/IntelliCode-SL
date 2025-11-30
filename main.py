@@ -6,6 +6,7 @@ Features:
 - Chat interface
 """
 
+from workflow import workflow
 import streamlit as st
 from streamlit_ace import st_ace
 from styles.components import (
@@ -36,13 +37,16 @@ if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
 
 if 'code_content' not in st.session_state:
-    st.session_state.code_content = "# Write your code here\ndef hello_world():\n    print('Hello, World!')\n"
+    st.session_state.code_content = "# Write your code here"
 
 if 'selected_language' not in st.session_state:
     st.session_state.selected_language = 'python'
 
 if 'input_counter' not in st.session_state:
     st.session_state.input_counter = 0
+
+if 'editor_counter' not in st.session_state:
+    st.session_state.editor_counter = 0
 
 # Create two-column layout
 col_left, col_right = st.columns([1.5, 1])
@@ -76,7 +80,7 @@ with col_left:
         auto_update=True,
         readonly=False,
         min_lines=30,
-        key="code_editor",
+        key=f"code_editor_{st.session_state.editor_counter}",
         height=630
     )
     
@@ -113,33 +117,73 @@ with col_right:
         send_button = render_send_button()
     
     # Automatically trigger send when Enter is pressed (user_input changes)
-    if user_input and user_input != st.session_state.get('_last_sent_message', ''):
+    if user_input and user_input.strip():
         send_button = True
     
-    st.session_state['_last_input'] = user_input
-    
     # Process chat input
-    if send_button and user_input:
-        # Add user message to history
+    if send_button and user_input and user_input.strip():
+        # Add user message to history immediately
         st.session_state.chat_history.append({
             'role': 'user',
             'content': user_input
         })
         
-        # Placeholder response - AI functionality coming soon
-        response_content = "Thank you for your question! AI agent functionality is coming soon.\n\n"
-        response_content += f"Your Question: {user_input}\n"
-        response_content += f"\nCode Length: {len(st.session_state.code_content)} characters\n"
-        response_content += f"Language: {st.session_state.selected_language}\n"
-        response_content += "\nThis is a placeholder response. The actual AI agents will be integrated soon."
-        
-        # Add assistant response to history
+        # Add "thinking..." message
         st.session_state.chat_history.append({
             'role': 'assistant',
-            'content': response_content
+            'content': '🤔 Thinking...'
         })
         
-        # Increment counter to reset input field
+        # Increment counter to reset input field and show messages
         st.session_state.input_counter += 1
-        st.session_state['_last_sent_message'] = user_input
+        st.rerun()
+    
+    # Check if we need to process workflow (last message is "thinking...")
+    if (len(st.session_state.chat_history) >= 2 and 
+        st.session_state.chat_history[-1]['role'] == 'assistant' and 
+        st.session_state.chat_history[-1]['content'] == '🤔 Thinking...'):
+        
+        # Get the user's message (second to last)
+        user_message = st.session_state.chat_history[-2]['content']
+        
+        # Create initial_state for workflow
+        initial_state = {
+            'prompt': user_message,
+            'input_code': st.session_state.code_content if st.session_state.code_content.strip() else None
+        }
+
+        # Invoke workflow
+        final_state = workflow.invoke(initial_state)
+
+        # Extract final_answer for chat
+        response_content = final_state.get('final_answer', 'No response generated.')
+
+        # Extract modified_code for IDE
+        modified_code = final_state.get('modified_code', None)
+
+        # If workflow returned modified code, update the editor
+        if modified_code is not None and modified_code.strip():
+            # Strip markdown code blocks if LLM wrapped code in ```
+            cleaned_code = modified_code.strip()
+            if cleaned_code.startswith('```'):
+                lines = cleaned_code.split('\n')
+                # Remove first line if it's ```python or similar
+                if lines[0].startswith('```'):
+                    lines = lines[1:]
+                # Remove last line if it's ```
+                if lines and lines[-1].strip() == '```':
+                    lines = lines[:-1]
+                cleaned_code = '\n'.join(lines)
+        
+            # Update the code in editor
+            st.session_state.code_content = cleaned_code
+            # Increment counter to force editor refresh
+            st.session_state.editor_counter += 1
+
+        # Replace "thinking..." with actual response
+        st.session_state.chat_history[-1] = {
+            'role': 'assistant',
+            'content': response_content
+        }
+        
         st.rerun()
