@@ -43,11 +43,6 @@ if modified_code is not None and modified_code.strip():
             lines = lines[:-1]
         cleaned_code = '\n'.join(lines)
 
-    # Update the code in editor
-    # st.session_state.code_content = cleaned_code
-    # Increment counter to force editor refresh
-    # st.session_state.editor_counter += 1
-
 out = f"response: {response_content}\n\n\nmodified code: {modified_code}\n\n\ncleaned code:{cleaned_code}"
 # out = f"response: {response_content}\n\n\nmodified code: {modified_code}\n\n\n"
 print(out)
