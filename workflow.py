@@ -30,7 +30,7 @@ model=OpenAI(
 
 # defining the schema for the task classifier node
 class task_classifier_schema(BaseModel):
-    task_type: Literal['explain','debug','write','docs','other']= Field(description='classify the prompt in various categories')
+    task_type: Literal['explain','modify','debug','write','docs','other']= Field(description='classify the prompt in various categories')
 
 # defining the schema for the uknown node 
 class unknown_node_schema(BaseModel):
@@ -42,7 +42,7 @@ class unknown_node_schema(BaseModel):
 ## DEFINING THE STATE FOR THE WORKFLOW
 
 # defining the literal for task_type
-task_type= Literal['explain','debug','write','docs','other']
+task_type= Literal['explain','modify','debug','write','docs','other']
 
 # defining the state
 class intellicode_state( TypedDict):
@@ -141,6 +141,90 @@ Now explain the code in a numbered point-wise format.
 
     explain=completion.choices[0].message.content
     return {'change_summary':explain}
+
+def modify_code (state:intellicode_state):
+    prompt = f"""You are an expert software engineer. Your sole task is to modify the given code based on the user's request.
+
+    ---
+    USER REQUEST:
+    {state['prompt']}
+
+    ---
+    ORIGINAL CODE:
+    {state['input_code']}
+
+    ---
+    INSTRUCTIONS:
+    1. Read the user's request carefully and understand exactly what change is needed.
+    2. Apply only the modifications requested — nothing more, nothing less.
+    3. Preserve all existing logic, structure, and style that is unrelated to the request.
+    4. Do not fix unrelated bugs, refactor, rename variables, or add unrequested features.
+
+    OUTPUT RULES (critical):
+    - Output raw code only.
+    - No markdown, no triple backticks, no code fences.
+    - No explanations, comments, or preamble.
+    - No "Here is the modified code:" or similar phrases.
+    - Return the complete modified file, not just the changed section.
+    """
+
+    completion = model.chat.completions.create(
+    
+    model="x-ai/grok-4.1-fast",
+    messages=[
+        {
+        "role": "user",
+        "content": prompt
+        }
+    ]
+    )
+    # extracting the content
+
+    code=completion.choices[0].message.content
+    return {'modified_code':code}
+
+
+
+def modify_summary (state:intellicode_state):
+    prompt = f"""You are a coding assistant.
+    Your task is to generate a brief, point-wise summary of the modifications made to the code.
+
+    User request:
+    \"\"\"{state['prompt']}\"\"\"
+
+    Original code:
+    \"\"\"{state['input_code']}\"\"\"
+
+    Modified code:
+    \"\"\"{state['modified_code']}\"\"\"
+
+    Write a short, clear, point-wise summary describing exactly what was changed based on the user's request.
+    Focus only on intentional modifications:
+    - features added or removed
+    - logic changes
+    - structural changes
+    - behavior changes
+
+    Do NOT rewrite the code.
+    Do NOT include extra explanations.
+    Output only concise bullet points.
+    """
+
+    completion = model.chat.completions.create(
+    
+    model="x-ai/grok-4.1-fast",
+    messages=[
+        {
+        "role": "user",
+        "content": prompt
+        }
+    ]
+    )
+    # extracting the content
+
+    summary=completion.choices[0].message.content
+    return {'change_summary':summary}
+
 
 # defining the function which handles the debuggin of the code
 def debug_code (state:intellicode_state):
@@ -436,12 +520,14 @@ Return your final output strictly in this JSON structure:
 
 # defining a function which handles the routing of the workflow from classifier node to the needed node for further processing 
 
-def task_router (state: intellicode_state)-> Literal['explain_slm','debug_code','write_code','docs_worker','unknown']:
+def task_router (state: intellicode_state)-> Literal['explain_slm','modify_code','debug_code','write_code','docs_worker','unknown']:
 
     if state['task_type']=='explain':
         return 'explain_slm'
     elif state['task_type']=='debug':
         return 'debug_code'
+    elif state['task_type']=='modify':
+        return 'modify_code'
     elif state['task_type']=='write':
         return 'write_code'
     elif state['task_type']=='docs':
@@ -463,6 +549,8 @@ graph.add_node('unknown',unknown)
 graph.add_node('explain_slm',explain_slm)
 graph.add_node('debug_code',debug_code)
 graph.add_node('debug_summary',debug_summary)
+graph.add_node('modify_code',modify_code)
+graph.add_node('modify_summary',modify_summary)
 graph.add_node('write_code',write_code)
 graph.add_node('write_summary',write_summary)
 graph.add_node('docs_worker',docs_worker)
@@ -480,6 +568,9 @@ graph.add_edge('explain_slm','collator')
 
 graph.add_edge('debug_code','debug_summary')
 graph.add_edge('debug_summary','collator')
+
+graph.add_edge('modify_code','modify_summary')
+graph.add_edge('modify_summary','collator')
 
 graph.add_edge('write_code','write_summary')
 graph.add_edge('write_summary','collator')
