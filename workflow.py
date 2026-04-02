@@ -581,4 +581,5 @@ graph.add_edge('docs_summary','collator')
 graph.add_edge('collator',END)
 
 #compiling the workflow
+
 workflow=graph.compile()
