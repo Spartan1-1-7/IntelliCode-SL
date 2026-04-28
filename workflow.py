@@ -1,8 +1,8 @@
 ## IMPORTING THE NEEDED LIBRARIES
 
+from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
-from langchain_core.messages import BaseMessage
-from typing import TypedDict, Literal,Optional
+from typing import TypedDict, Literal, Optional
 from openai import OpenAI
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -48,11 +48,14 @@ task_type= Literal['explain','modify','debug','write','docs','other']
 class intellicode_state( TypedDict):
 
     # user inputs
+    session_id: Optional[str]
     prompt:str
     input_code: Optional[str] 
 
     # context
-    messeges: list[BaseMessage]
+    messeges: list[dict[str, str]]
+    message_summary: Optional[str]
+    latest_code_iteration: Optional[str]
 
     # Routing and task info
     task_type: task_type
@@ -66,6 +69,57 @@ class intellicode_state( TypedDict):
     # metasdata (left empty for future additions)
 
 
+
+
+
+# CHECKPOINTED SESSION MEMORY HELPERS
+
+memory = MemorySaver()
+SUMMARY_MAX_MESSAGES = 12
+
+
+def _append_message(messages: list[dict[str, str]], role: str, content: str) -> list[dict[str, str]]:
+    return [*messages, {'role': role, 'content': content}]
+
+
+def summarize_messages(messages: list[dict[str, str]]) -> str:
+    if not messages:
+        return ''
+
+    recent_messages = messages[-SUMMARY_MAX_MESSAGES:]
+    history = '\n'.join(
+        f"{message.get('role', 'unknown')}: {message.get('content', '').strip()}" for message in recent_messages
+    )
+    prompt = f"""You are a concise memory summarizer.
+Summarize the conversation below in 4-6 short bullet points.
+Keep it compact and focused on persistent context.
+
+Conversation:
+{history}
+
+Summary:"""
+
+    completion = model.chat.completions.create(
+        model="x-ai/grok-4.1-fast",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+    )
+
+    return completion.choices[0].message.content.strip()
+
+
+def run_workflow(initial_state: intellicode_state, session_id: Optional[str] = None):
+    active_session_id = session_id or initial_state.get('session_id') or 'default'
+    prepared_state = {
+        **initial_state,
+        'session_id': active_session_id,
+        'messeges': list(initial_state.get('messeges', [])),
+    }
+    return workflow.invoke(prepared_state, config={'configurable': {'thread_id': active_session_id}})
 
 
 ## DEFINING THE FUNTIONS FOR ALL THE NODES OF THE WORKFLOW
@@ -108,7 +162,9 @@ Return only one word: explain, debug, write, docs, or other.
 
     task_type=completion.choices[0].message.parsed.task_type
     
-    return {'task_type':task_type}
+    updated_messages = _append_message(state.get('messeges', []), 'user', state['prompt'])
+
+    return {'task_type':task_type, 'messeges':updated_messages}
 
 # defining the function which handles the explaination node of the workflow
 def explain_slm (state:intellicode_state):
@@ -181,7 +237,7 @@ def modify_code (state:intellicode_state):
     # extracting the content
 
     code=completion.choices[0].message.content
-    return {'modified_code':code}
+    return {'modified_code':code, 'latest_code_iteration':code}
 
 
 
@@ -259,7 +315,7 @@ Return raw code only.
     # extracting the content
 
     code=completion.choices[0].message.content
-    return {'modified_code':code}
+    return {'modified_code':code, 'latest_code_iteration':code}
 
 # defining the fuction for the node which handles the response of debugging the code
 def debug_summary (state:intellicode_state):
@@ -391,7 +447,7 @@ Do NOT include explanations, comments, markdown formatting, or any extra text.
     # extracting the content
 
     doc=completion.choices[0].message.content
-    return {'modified_code':doc}
+    return {'modified_code':doc, 'latest_code_iteration':doc}
 
 # defining the function for the node which handles wrting response for the document created 
 def docs_summary (state: intellicode_state):
@@ -431,16 +487,21 @@ Output only concise bullet points.
 
 # defining the function for the collator node which intake summary points from the nodes and create a refined response from the user
 def collator (state: intellicode_state):
+    message_summary = summarize_messages(state.get('messeges', []))
     prompt = f"""You are a coding assistant.
 Your task is to generate a refined, medium-length response for the user based on:
 1. the original user prompt
 2. the point-wise summary of the work done
+3. the condensed memory summary of the conversation
 
 User prompt:
 \"\"\"{state['prompt']}\"\"\"
 
-Summary of changes / generated content:
-\"\"\"{state['change_summary']}\"\"\"
+ Conversation summary:
+ \"\"\"{message_summary or 'None'}\"\"\"
+
+ Summary of changes / generated content:
+ \"\"\"{state['change_summary']}\"\"\"
 
 Write a clear, polished response that:
 - starts with a short, refined paragraph explaining the result
@@ -464,10 +525,13 @@ Output a refined answer only—no extra commentary.
     # extracting the content
 
     final_answer=completion.choices[0].message.content
-    return {'final_answer':final_answer}
+    updated_messages = _append_message(state.get('messeges', []), 'assistant', final_answer)
+
+    return {'final_answer':final_answer, 'messeges':updated_messages, 'message_summary':message_summary}
 
 # defining the function for the unknown node which handles prompt which are not in default catagories
 def unknown ( state: intellicode_state):
+    message_summary = summarize_messages(state.get('messeges', []))
     prompt = f"""You are a coding assistant.
 This node handles prompts that do not fit any predefined category. 
 Your task is to produce output that matches the schema with the fields:
@@ -476,6 +540,9 @@ Your task is to produce output that matches the schema with the fields:
 
 User prompt:
 \"\"\"{state['prompt']}\"\"\"
+
+ Conversation summary:
+ \"\"\"{message_summary or 'None'}\"\"\"
 
 Input code (optional; may be null):
 \"\"\"{state['input_code']}\"\"\"
@@ -516,7 +583,7 @@ Return your final output strictly in this JSON structure:
     change_summary=response.summary
     modified_code=response.modified_code
     
-    return {'change_summary':change_summary,'modified_code': modified_code}
+    return {'change_summary':change_summary,'modified_code': modified_code,'latest_code_iteration': modified_code}
 
 # defining a function which handles the routing of the workflow from classifier node to the needed node for further processing 
 
@@ -582,4 +649,4 @@ graph.add_edge('collator',END)
 
 #compiling the workflow
 
-workflow=graph.compile()
+workflow=graph.compile(checkpointer=memory)
