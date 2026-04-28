@@ -6,6 +6,8 @@ Features:
 - Chat interface
 """
 
+import uuid
+
 from workflow import workflow
 import streamlit as st
 from streamlit_ace import st_ace
@@ -47,6 +49,9 @@ if 'input_counter' not in st.session_state:
 
 if 'editor_counter' not in st.session_state:
     st.session_state.editor_counter = 0
+
+if 'session_id' not in st.session_state:
+    st.session_state.session_id = uuid.uuid4().hex
 
 # Create two-column layout
 col_left, col_right = st.columns([1.5, 1])
@@ -148,12 +153,16 @@ with col_right:
         
         # Create initial_state for workflow
         initial_state = {
+            'session_id': st.session_state.session_id,
             'prompt': user_message,
             'input_code': st.session_state.code_content if st.session_state.code_content.strip() else None
         }
 
         # Invoke workflow
-        final_state = workflow.invoke(initial_state)
+        final_state = workflow.invoke(
+            initial_state,
+            config={'configurable': {'thread_id': st.session_state.session_id}}
+        )
 
         # Extract final_answer for chat
         response_content = final_state.get('final_answer', 'No response generated.')

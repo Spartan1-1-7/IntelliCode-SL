@@ -1,9 +1,10 @@
 ## IMPORTING THE NEEDED LIBRARIES
 
+import json
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Literal, Optional
-from openai import OpenAI
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import os
@@ -13,14 +14,14 @@ import os
 
 ## LOADING THE REQUIRED API KEYS AND VALIDATION LOGIC
 
-# API key 
+# API key
 load_dotenv()
-open_router_api=os.getenv('open_router_api')
+groq_api_key = os.getenv('groq_api_key') or os.getenv('GROQ_API_KEY')
 
-# validation 
-model=OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=open_router_api,
+# validation
+llm = ChatGroq(
+    model='llama-3.1-8b-instant',
+    groq_api_key=groq_api_key,
 )
 
 
@@ -99,17 +100,29 @@ Conversation:
 
 Summary:"""
 
-    completion = model.chat.completions.create(
-        model="x-ai/grok-4.1-fast",
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-    )
+    response = llm.invoke([
+        {
+            'role': 'user',
+            'content': prompt,
+        }
+    ])
 
-    return completion.choices[0].message.content.strip()
+    return response.content.strip()
+
+
+def _parse_json_response(content: str) -> dict:
+    text = content.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else ""
+        if text.endswith("```"):
+            text = text[:-3].strip()
+
+    start_index = text.find("{")
+    end_index = text.rfind("}")
+    if start_index != -1 and end_index != -1 and end_index > start_index:
+        text = text[start_index:end_index + 1]
+
+    return json.loads(text)
 
 
 def run_workflow(initial_state: intellicode_state, session_id: Optional[str] = None):
@@ -145,22 +158,21 @@ User prompt:
 Input code:
 \"\"\"{state['input_code']}\"\"\"
 
-Return only one word: explain, debug, write, docs, or other.
+Return a single JSON object with the field task_type set to exactly one of: explain, debug, write, docs, other.
+Do not include any extra text, markdown, or keys.
 """
 
-    completion = model.beta.chat.completions.parse(
-
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ],
-    response_format=task_classifier_schema,
-    )
+    ])
 
-    task_type=completion.choices[0].message.parsed.task_type
+    parsed_response = _parse_json_response(response.content)
+    task_type = parsed_response.get('task_type', 'other')
+    if task_type not in ('explain', 'modify', 'debug', 'write', 'docs', 'other'):
+        task_type = 'other'
     
     updated_messages = _append_message(state.get('messeges', []), 'user', state['prompt'])
 
@@ -183,19 +195,15 @@ Now explain the code in a numbered point-wise format.
 """
 
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    explain=completion.choices[0].message.content
+    explain = response.content
     return {'change_summary':explain}
 
 def modify_code (state:intellicode_state):
@@ -224,19 +232,15 @@ def modify_code (state:intellicode_state):
     - Return the complete modified file, not just the changed section.
     """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    code=completion.choices[0].message.content
+    code = response.content
     return {'modified_code':code, 'latest_code_iteration':code}
 
 
@@ -266,19 +270,15 @@ def modify_summary (state:intellicode_state):
     Output only concise bullet points.
     """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 
@@ -302,19 +302,15 @@ Do NOT include explanations, comments, or markdown formatting.
 Return raw code only.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    code=completion.choices[0].message.content
+    code = response.content
     return {'modified_code':code, 'latest_code_iteration':code}
 
 # defining the fuction for the node which handles the response of debugging the code
@@ -343,19 +339,15 @@ Do NOT include extra explanations.
 Output only concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the node which handles writing the code from scratch 
@@ -371,19 +363,15 @@ Do NOT include explanations, comments, markdown, or any extra text.
 Output raw executable code only.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    code=completion.choices[0].message.content
+    code = response.content
     return {'modified_code':code}
 
 # defining the function which handles the node for writing summary about the code written from scratch
@@ -403,19 +391,15 @@ Do NOT include unnecessary details.
 Only describe the key functionality in concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the node which handles the writing of the documents for the code
@@ -434,19 +418,15 @@ Output only the document content.
 Do NOT include explanations, comments, markdown formatting, or any extra text.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    doc=completion.choices[0].message.content
+    doc = response.content
     return {'modified_code':doc, 'latest_code_iteration':doc}
 
 # defining the function for the node which handles wrting response for the document created 
@@ -470,19 +450,15 @@ Do NOT include unnecessary details.
 Output only concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the collator node which intake summary points from the nodes and create a refined response from the user
@@ -512,19 +488,15 @@ Do NOT include code unless the user explicitly asked for it.
 Output a refined answer only—no extra commentary.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    final_answer=completion.choices[0].message.content
+    final_answer = response.content
     updated_messages = _append_message(state.get('messeges', []), 'assistant', final_answer)
 
     return {'final_answer':final_answer, 'messeges':updated_messages, 'message_summary':message_summary}
@@ -567,21 +539,16 @@ Return your final output strictly in this JSON structure:
 }}
 """
 
-    completion = model.beta.chat.completions.parse(
-
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ],
-    response_format=unknown_node_schema,
-    )
+    ])
 
-    response=completion.choices[0].message.parsed
-    change_summary=response.summary
-    modified_code=response.modified_code
+    parsed_response = _parse_json_response(response.content)
+    change_summary = parsed_response.get('summary', '')
+    modified_code = parsed_response.get('modified_code') or None
     
     return {'change_summary':change_summary,'modified_code': modified_code,'latest_code_iteration': modified_code}
 
