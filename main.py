@@ -6,6 +6,9 @@ Features:
 - Chat interface
 """
 
+import uuid
+
+from langgraph.types import Command
 from workflow import workflow
 import streamlit as st
 from streamlit_ace import st_ace
@@ -47,6 +50,12 @@ if 'input_counter' not in st.session_state:
 
 if 'editor_counter' not in st.session_state:
     st.session_state.editor_counter = 0
+
+if 'session_id' not in st.session_state:
+    st.session_state.session_id = uuid.uuid4().hex
+
+if 'pending_hitl' not in st.session_state:
+    st.session_state.pending_hitl = False
 
 # Create two-column layout
 col_left, col_right = st.columns([1.5, 1])
@@ -122,18 +131,22 @@ with col_right:
     
     # Process chat input
     if send_button and user_input and user_input.strip():
+        user_message = user_input.strip()
+
         # Add user message to history immediately
         st.session_state.chat_history.append({
             'role': 'user',
-            'content': user_input
+            'content': user_message
         })
         
-        # Add "thinking..." message
+        # Add the next assistant placeholder message
         st.session_state.chat_history.append({
             'role': 'assistant',
-            'content': '🤔 Thinking...'
+            'content': '🤔 Resuming...' if st.session_state.pending_hitl else '🤔 Thinking...'
         })
         
+        st.session_state.pending_hitl = False
+
         # Increment counter to reset input field and show messages
         st.session_state.input_counter += 1
         st.rerun()
@@ -141,22 +154,37 @@ with col_right:
     # Check if we need to process workflow (last message is "thinking...")
     if (len(st.session_state.chat_history) >= 2 and 
         st.session_state.chat_history[-1]['role'] == 'assistant' and 
-        st.session_state.chat_history[-1]['content'] == '🤔 Thinking...'):
+        st.session_state.chat_history[-1]['content'] in ('🤔 Thinking...', '🤔 Resuming...')):
         
         # Get the user's message (second to last)
         user_message = st.session_state.chat_history[-2]['content']
+        is_resume_turn = st.session_state.chat_history[-1]['content'] == '🤔 Resuming...'
         
-        # Create initial_state for workflow
-        initial_state = {
-            'prompt': user_message,
-            'input_code': st.session_state.code_content if st.session_state.code_content.strip() else None
-        }
+        if is_resume_turn:
+            workflow_input = Command(resume=user_message)
+        else:
+            # Create initial_state for workflow
+            workflow_input = {
+                'session_id': st.session_state.session_id,
+                'prompt': user_message,
+                'input_code': st.session_state.code_content if st.session_state.code_content.strip() else None
+            }
 
         # Invoke workflow
-        final_state = workflow.invoke(initial_state)
+        final_state = workflow.invoke(
+            workflow_input,
+            config={'configurable': {'thread_id': st.session_state.session_id}}
+        )
 
         # Extract final_answer for chat
         response_content = final_state.get('final_answer', 'No response generated.')
+
+        if isinstance(final_state, dict) and final_state.get('__interrupt__'):
+            interrupt_payload = final_state['__interrupt__'][0] if final_state['__interrupt__'] else None
+            response_content = getattr(interrupt_payload, 'value', 'Approval is required to continue.') if interrupt_payload is not None else 'Approval is required to continue.'
+            st.session_state.pending_hitl = True
+        else:
+            st.session_state.pending_hitl = False
 
         # Extract modified_code for IDE
         modified_code = final_state.get('modified_code', None)
