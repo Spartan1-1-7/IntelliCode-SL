@@ -1,9 +1,11 @@
 ## IMPORTING THE NEEDED LIBRARIES
 
+import json
+from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
-from langchain_core.messages import BaseMessage
-from typing import TypedDict, Literal,Optional
-from openai import OpenAI
+from langgraph.types import interrupt
+from typing import TypedDict, Literal, Optional
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import os
@@ -13,14 +15,14 @@ import os
 
 ## LOADING THE REQUIRED API KEYS AND VALIDATION LOGIC
 
-# API key 
+# API key
 load_dotenv()
-open_router_api=os.getenv('open_router_api')
+groq_api_key = os.getenv('groq_api_key') or os.getenv('GROQ_API_KEY')
 
-# validation 
-model=OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=open_router_api,
+# validation
+llm = ChatGroq(
+    model='llama-3.1-8b-instant',
+    groq_api_key=groq_api_key,
 )
 
 
@@ -30,7 +32,7 @@ model=OpenAI(
 
 # defining the schema for the task classifier node
 class task_classifier_schema(BaseModel):
-    task_type: Literal['explain','debug','write','docs','other']= Field(description='classify the prompt in various categories')
+    task_type: Literal['explain','modify','debug','write','docs','other']= Field(description='classify the prompt in various categories')
 
 # defining the schema for the uknown node 
 class unknown_node_schema(BaseModel):
@@ -42,17 +44,20 @@ class unknown_node_schema(BaseModel):
 ## DEFINING THE STATE FOR THE WORKFLOW
 
 # defining the literal for task_type
-task_type= Literal['explain','debug','write','docs','other']
+task_type= Literal['explain','modify','debug','write','docs','other']
 
 # defining the state
 class intellicode_state( TypedDict):
 
     # user inputs
+    session_id: Optional[str]
     prompt:str
     input_code: Optional[str] 
 
     # context
-    messeges: list[BaseMessage]
+    messeges: list[dict[str, str]]
+    message_summary: Optional[str]
+    latest_code_iteration: Optional[str]
 
     # Routing and task info
     task_type: task_type
@@ -62,10 +67,84 @@ class intellicode_state( TypedDict):
     # final response
     final_answer: Optional[str]
     modified_code: Optional[str]
+    unknown_route: Optional[str]
 
     # metasdata (left empty for future additions)
 
 
+
+
+
+# CHECKPOINTED SESSION MEMORY HELPERS
+
+memory = MemorySaver()
+SUMMARY_MAX_MESSAGES = 12
+
+
+def _append_message(messages: list[dict[str, str]], role: str, content: str) -> list[dict[str, str]]:
+    return [*messages, {'role': role, 'content': content}]
+
+
+def summarize_messages(messages: list[dict[str, str]]) -> str:
+    if not messages:
+        return ''
+
+    recent_messages = messages[-SUMMARY_MAX_MESSAGES:]
+    history = '\n'.join(
+        f"{message.get('role', 'unknown')}: {message.get('content', '').strip()}" for message in recent_messages
+    )
+    prompt = f"""You are a concise memory summarizer.
+Summarize the conversation below in 4-6 short bullet points.
+Keep it compact and focused on persistent context.
+
+Conversation:
+{history}
+
+Summary:"""
+
+    response = llm.invoke([
+        {
+            'role': 'user',
+            'content': prompt,
+        }
+    ])
+
+    return response.content.strip()
+
+
+def _parse_json_response(content: str) -> dict:
+    text = content.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else ""
+        if text.endswith("```"):
+            text = text[:-3].strip()
+
+    start_index = text.find("{")
+    end_index = text.rfind("}")
+    if start_index != -1 and end_index != -1 and end_index > start_index:
+        text = text[start_index:end_index + 1]
+
+    return json.loads(text)
+
+
+def run_workflow(initial_state: intellicode_state, session_id: Optional[str] = None):
+    active_session_id = session_id or initial_state.get('session_id') or 'default'
+    prepared_state = {
+        **initial_state,
+        'session_id': active_session_id,
+        'messeges': list(initial_state.get('messeges', [])),
+    }
+    result = workflow.invoke(prepared_state, config={'configurable': {'thread_id': active_session_id}})
+
+    if isinstance(result, dict) and result.get('__interrupt__'):
+        interrupt_payload = result['__interrupt__'][0] if result['__interrupt__'] else None
+        interrupt_message = getattr(interrupt_payload, 'value', '') if interrupt_payload is not None else ''
+        return {
+            **result,
+            'final_answer': interrupt_message,
+        }
+
+    return result
 
 
 ## DEFINING THE FUNTIONS FOR ALL THE NODES OF THE WORKFLOW
@@ -91,24 +170,25 @@ User prompt:
 Input code:
 \"\"\"{state['input_code']}\"\"\"
 
-Return only one word: explain, debug, write, docs, or other.
+Return a single JSON object with the field task_type set to exactly one of: explain, debug, write, docs, other.
+Do not include any extra text, markdown, or keys.
 """
 
-    completion = model.beta.chat.completions.parse(
-
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ],
-    response_format=task_classifier_schema,
-    )
+    ])
 
-    task_type=completion.choices[0].message.parsed.task_type
+    parsed_response = _parse_json_response(response.content)
+    task_type = parsed_response.get('task_type', 'other')
+    if task_type not in ('explain', 'modify', 'debug', 'write', 'docs', 'other'):
+        task_type = 'other'
     
-    return {'task_type':task_type}
+    updated_messages = _append_message(state.get('messeges', []), 'user', state['prompt'])
+
+    return {'task_type':task_type, 'messeges':updated_messages}
 
 # defining the function which handles the explaination node of the workflow
 def explain_slm (state:intellicode_state):
@@ -127,20 +207,92 @@ Now explain the code in a numbered point-wise format.
 """
 
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    explain=completion.choices[0].message.content
+    explain = response.content
     return {'change_summary':explain}
+
+def modify_code (state:intellicode_state):
+    prompt = f"""You are an expert software engineer. Your sole task is to modify the given code based on the user's request.
+
+    ---
+    USER REQUEST:
+    {state['prompt']}
+
+    ---
+    ORIGINAL CODE:
+    {state['input_code']}
+
+    ---
+    INSTRUCTIONS:
+    1. Read the user's request carefully and understand exactly what change is needed.
+    2. Apply only the modifications requested — nothing more, nothing less.
+    3. Preserve all existing logic, structure, and style that is unrelated to the request.
+    4. Do not fix unrelated bugs, refactor, rename variables, or add unrequested features.
+
+    OUTPUT RULES (critical):
+    - Output raw code only.
+    - No markdown, no triple backticks, no code fences.
+    - No explanations, comments, or preamble.
+    - No "Here is the modified code:" or similar phrases.
+    - Return the complete modified file, not just the changed section.
+    """
+
+    response = llm.invoke([
+        {
+            'role': 'user',
+            'content': prompt,
+        }
+    ])
+    # extracting the content
+
+    code = response.content
+    return {'modified_code':code, 'latest_code_iteration':code}
+
+
+
+def modify_summary (state:intellicode_state):
+    prompt = f"""You are a coding assistant.
+    Your task is to generate a brief, point-wise summary of the modifications made to the code.
+
+    User request:
+    \"\"\"{state['prompt']}\"\"\"
+
+    Original code:
+    \"\"\"{state['input_code']}\"\"\"
+
+    Modified code:
+    \"\"\"{state['modified_code']}\"\"\"
+
+    Write a short, clear, point-wise summary describing exactly what was changed based on the user's request.
+    Focus only on intentional modifications:
+    - features added or removed
+    - logic changes
+    - structural changes
+    - behavior changes
+
+    Do NOT rewrite the code.
+    Do NOT include extra explanations.
+    Output only concise bullet points.
+    """
+
+    response = llm.invoke([
+        {
+            'role': 'user',
+            'content': prompt,
+        }
+    ])
+    # extracting the content
+
+    summary = response.content
+    return {'change_summary':summary}
+
 
 # defining the function which handles the debuggin of the code
 def debug_code (state:intellicode_state):
@@ -162,20 +314,16 @@ Do NOT include explanations, comments, or markdown formatting.
 Return raw code only.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    code=completion.choices[0].message.content
-    return {'modified_code':code}
+    code = response.content
+    return {'modified_code':code, 'latest_code_iteration':code}
 
 # defining the fuction for the node which handles the response of debugging the code
 def debug_summary (state:intellicode_state):
@@ -203,19 +351,15 @@ Do NOT include extra explanations.
 Output only concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the node which handles writing the code from scratch 
@@ -231,19 +375,15 @@ Do NOT include explanations, comments, markdown, or any extra text.
 Output raw executable code only.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    code=completion.choices[0].message.content
+    code = response.content
     return {'modified_code':code}
 
 # defining the function which handles the node for writing summary about the code written from scratch
@@ -263,19 +403,15 @@ Do NOT include unnecessary details.
 Only describe the key functionality in concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the node which handles the writing of the documents for the code
@@ -294,20 +430,16 @@ Output only the document content.
 Do NOT include explanations, comments, markdown formatting, or any extra text.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    doc=completion.choices[0].message.content
-    return {'modified_code':doc}
+    doc = response.content
+    return {'modified_code':doc, 'latest_code_iteration':doc}
 
 # defining the function for the node which handles wrting response for the document created 
 def docs_summary (state: intellicode_state):
@@ -330,33 +462,34 @@ Do NOT include unnecessary details.
 Output only concise bullet points.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    summary=completion.choices[0].message.content
+    summary = response.content
     return {'change_summary':summary}
 
 # defining the function for the collator node which intake summary points from the nodes and create a refined response from the user
 def collator (state: intellicode_state):
+    message_summary = summarize_messages(state.get('messeges', []))
     prompt = f"""You are a coding assistant.
 Your task is to generate a refined, medium-length response for the user based on:
 1. the original user prompt
 2. the point-wise summary of the work done
+3. the condensed memory summary of the conversation
 
 User prompt:
 \"\"\"{state['prompt']}\"\"\"
 
-Summary of changes / generated content:
-\"\"\"{state['change_summary']}\"\"\"
+ Conversation summary:
+ \"\"\"{message_summary or 'None'}\"\"\"
+
+ Summary of changes / generated content:
+ \"\"\"{state['change_summary']}\"\"\"
 
 Write a clear, polished response that:
 - starts with a short, refined paragraph explaining the result
@@ -367,81 +500,100 @@ Do NOT include code unless the user explicitly asked for it.
 Output a refined answer only—no extra commentary.
 """
 
-    completion = model.chat.completions.create(
-    
-    model="x-ai/grok-4.1-fast",
-    messages=[
+    response = llm.invoke([
         {
-        "role": "user",
-        "content": prompt
+            'role': 'user',
+            'content': prompt,
         }
-    ]
-    )
+    ])
     # extracting the content
 
-    final_answer=completion.choices[0].message.content
-    return {'final_answer':final_answer}
+    final_answer = response.content
+    updated_messages = _append_message(state.get('messeges', []), 'assistant', final_answer)
+
+    return {'final_answer':final_answer, 'messeges':updated_messages, 'message_summary':message_summary}
 
 # defining the function for the unknown node which handles prompt which are not in default catagories
 def unknown ( state: intellicode_state):
-    prompt = f"""You are a coding assistant.
-This node handles prompts that do not fit any predefined category. 
-Your task is to produce output that matches the schema with the fields:
-- summary: a brief, point-wise explanation of how the request was handled
-- modified_code: optional, only include corrected or generated code if the user's prompt explicitly requires code
-
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Input code (optional; may be null):
-\"\"\"{state['input_code']}\"\"\"
-
-Generate output following these rules:
-
-1. **summary**  
-   - Provide a short, clear, point-wise response addressing the user's request.  
-   - If input code is irrelevant or null, ignore it.  
-   - Keep the points concise and helpful.  
-   - No unnecessary details or commentary.
-
-2. **modified_code**  
-   - If the user's prompt requires producing or modifying code, return only the raw code here.  
-   - If not required, return null.
-
-Return your final output strictly in this JSON structure:
-
-{{
-  "summary": "...",
-  "modified_code": "..." or null
-}}
-"""
-
-    completion = model.beta.chat.completions.parse(
-
-    model="x-ai/grok-4.1-fast",
-    messages=[
-        {
-        "role": "user",
-        "content": prompt
-        }
-    ],
-    response_format=unknown_node_schema,
+    message_summary = summarize_messages(state.get('messeges', []))
+    user_response = interrupt(
+        "Your query could not be handled by the local model. "
+        "It needs to be sent to an external AI API. "
+        "Do you approve? (yes/no)"
     )
 
-    response=completion.choices[0].message.parsed
-    change_summary=response.summary
-    modified_code=response.modified_code
-    
-    return {'change_summary':change_summary,'modified_code': modified_code}
+    normalized_response = str(user_response).strip().lower()
+
+    if normalized_response == 'yes':
+        prompt_content = f'''You are a coding assistant.
+    Your task is to handle a prompt that does not fit the predefined categories.
+
+    User prompt:
+    """{state['prompt']}"""
+
+    Conversation summary:
+    """{message_summary or 'None'}"""
+
+    Input code (optional; may be null):
+    """{state['input_code']}"""
+
+    Instructions:
+    - Use the conversation summary only if it is relevant to the current user prompt.
+    - If it is not relevant, ignore it completely.
+    - Respond in a short, clear, point-wise way.
+    - If the request needs code, include the corrected or generated code in modified_code.
+    - Otherwise set modified_code to null.
+
+    Return your output strictly as JSON with the fields summary and modified_code.
+    '''
+
+        response = llm.invoke([
+            {
+                'role': 'user',
+                'content': prompt_content,
+            }
+        ])
+
+        parsed_response = _parse_json_response(response.content)
+        summary = parsed_response.get('summary', response.content)
+        modified_code = parsed_response.get('modified_code')
+
+        return {
+            'change_summary': summary,
+            'modified_code': modified_code,
+            'latest_code_iteration': modified_code,
+            'unknown_route': 'collator',
+        }
+
+    decline_message = 'Understood. Is there anything else I can help you with ?'
+    updated_messages = _append_message(state.get('messeges', []), 'assistant', decline_message)
+
+    return {
+        'change_summary': decline_message,
+        'final_answer': decline_message,
+        'modified_code': None,
+        'latest_code_iteration': None,
+        'messeges': updated_messages,
+        'unknown_route': 'end',
+    }
+
+
+def unknown_router(state: intellicode_state):
+    if state.get('unknown_route') == 'collator':
+        return 'collator'
+
+    return END
 
 # defining a function which handles the routing of the workflow from classifier node to the needed node for further processing 
 
-def task_router (state: intellicode_state)-> Literal['explain_slm','debug_code','write_code','docs_worker','unknown']:
+def task_router (state: intellicode_state)-> Literal['explain_slm','modify_code','debug_code','write_code','docs_worker','unknown']:
 
     if state['task_type']=='explain':
         return 'explain_slm'
     elif state['task_type']=='debug':
         return 'debug_code'
+    elif state['task_type']=='modify':
+        return 'modify_code'
     elif state['task_type']=='write':
         return 'write_code'
     elif state['task_type']=='docs':
@@ -463,6 +615,8 @@ graph.add_node('unknown',unknown)
 graph.add_node('explain_slm',explain_slm)
 graph.add_node('debug_code',debug_code)
 graph.add_node('debug_summary',debug_summary)
+graph.add_node('modify_code',modify_code)
+graph.add_node('modify_summary',modify_summary)
 graph.add_node('write_code',write_code)
 graph.add_node('write_summary',write_summary)
 graph.add_node('docs_worker',docs_worker)
@@ -474,12 +628,15 @@ graph.add_edge(START,'task_classifier')
 
 graph.add_conditional_edges('task_classifier',task_router)
 
-graph.add_edge('unknown','collator')
+graph.add_conditional_edges('unknown', unknown_router)
 
 graph.add_edge('explain_slm','collator')
 
 graph.add_edge('debug_code','debug_summary')
 graph.add_edge('debug_summary','collator')
+
+graph.add_edge('modify_code','modify_summary')
+graph.add_edge('modify_summary','collator')
 
 graph.add_edge('write_code','write_summary')
 graph.add_edge('write_summary','collator')
@@ -490,4 +647,5 @@ graph.add_edge('docs_summary','collator')
 graph.add_edge('collator',END)
 
 #compiling the workflow
-workflow=graph.compile()
+
+workflow=graph.compile(checkpointer=memory)
