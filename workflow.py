@@ -3,6 +3,7 @@
 import json
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
+from langgraph.types import interrupt
 from typing import TypedDict, Literal, Optional
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
@@ -66,6 +67,7 @@ class intellicode_state( TypedDict):
     # final response
     final_answer: Optional[str]
     modified_code: Optional[str]
+    unknown_route: Optional[str]
 
     # metasdata (left empty for future additions)
 
@@ -132,7 +134,17 @@ def run_workflow(initial_state: intellicode_state, session_id: Optional[str] = N
         'session_id': active_session_id,
         'messeges': list(initial_state.get('messeges', [])),
     }
-    return workflow.invoke(prepared_state, config={'configurable': {'thread_id': active_session_id}})
+    result = workflow.invoke(prepared_state, config={'configurable': {'thread_id': active_session_id}})
+
+    if isinstance(result, dict) and result.get('__interrupt__'):
+        interrupt_payload = result['__interrupt__'][0] if result['__interrupt__'] else None
+        interrupt_message = getattr(interrupt_payload, 'value', '') if interrupt_payload is not None else ''
+        return {
+            **result,
+            'final_answer': interrupt_message,
+        }
+
+    return result
 
 
 ## DEFINING THE FUNTIONS FOR ALL THE NODES OF THE WORKFLOW
@@ -504,53 +516,73 @@ Output a refined answer only—no extra commentary.
 # defining the function for the unknown node which handles prompt which are not in default catagories
 def unknown ( state: intellicode_state):
     message_summary = summarize_messages(state.get('messeges', []))
-    prompt = f"""You are a coding assistant.
-This node handles prompts that do not fit any predefined category. 
-Your task is to produce output that matches the schema with the fields:
-- summary: a brief, point-wise explanation of how the request was handled
-- modified_code: optional, only include corrected or generated code if the user's prompt explicitly requires code
+    user_response = interrupt(
+        "Your query could not be handled by the local model. "
+        "It needs to be sent to an external AI API. "
+        "Do you approve? (yes/no)"
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
+    normalized_response = str(user_response).strip().lower()
 
- Conversation summary:
- \"\"\"{message_summary or 'None'}\"\"\"
+    if normalized_response == 'yes':
+        prompt_content = f'''You are a coding assistant.
+    Your task is to handle a prompt that does not fit the predefined categories.
 
-Input code (optional; may be null):
-\"\"\"{state['input_code']}\"\"\"
+    User prompt:
+    """{state['prompt']}"""
 
-Generate output following these rules:
+    Conversation summary:
+    """{message_summary or 'None'}"""
 
-1. **summary**  
-   - Provide a short, clear, point-wise response addressing the user's request.  
-   - If input code is irrelevant or null, ignore it.  
-   - Keep the points concise and helpful.  
-   - No unnecessary details or commentary.
+    Input code (optional; may be null):
+    """{state['input_code']}"""
 
-2. **modified_code**  
-   - If the user's prompt requires producing or modifying code, return only the raw code here.  
-   - If not required, return null.
+    Instructions:
+    - Use the conversation summary only if it is relevant to the current user prompt.
+    - If it is not relevant, ignore it completely.
+    - Respond in a short, clear, point-wise way.
+    - If the request needs code, include the corrected or generated code in modified_code.
+    - Otherwise set modified_code to null.
 
-Return your final output strictly in this JSON structure:
+    Return your output strictly as JSON with the fields summary and modified_code.
+    '''
 
-{{
-  "summary": "...",
-  "modified_code": "..." or null
-}}
-"""
+        response = llm.invoke([
+            {
+                'role': 'user',
+                'content': prompt_content,
+            }
+        ])
 
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
+        parsed_response = _parse_json_response(response.content)
+        summary = parsed_response.get('summary', response.content)
+        modified_code = parsed_response.get('modified_code')
+
+        return {
+            'change_summary': summary,
+            'modified_code': modified_code,
+            'latest_code_iteration': modified_code,
+            'unknown_route': 'collator',
         }
-    ])
 
-    parsed_response = _parse_json_response(response.content)
-    change_summary = parsed_response.get('summary', '')
-    modified_code = parsed_response.get('modified_code') or None
-    
-    return {'change_summary':change_summary,'modified_code': modified_code,'latest_code_iteration': modified_code}
+    decline_message = 'Understood. Is there anything else I can help you with ?'
+    updated_messages = _append_message(state.get('messeges', []), 'assistant', decline_message)
+
+    return {
+        'change_summary': decline_message,
+        'final_answer': decline_message,
+        'modified_code': None,
+        'latest_code_iteration': None,
+        'messeges': updated_messages,
+        'unknown_route': 'end',
+    }
+
+
+def unknown_router(state: intellicode_state):
+    if state.get('unknown_route') == 'collator':
+        return 'collator'
+
+    return END
 
 # defining a function which handles the routing of the workflow from classifier node to the needed node for further processing 
 
@@ -596,7 +628,7 @@ graph.add_edge(START,'task_classifier')
 
 graph.add_conditional_edges('task_classifier',task_router)
 
-graph.add_edge('unknown','collator')
+graph.add_conditional_edges('unknown', unknown_router)
 
 graph.add_edge('explain_slm','collator')
 
