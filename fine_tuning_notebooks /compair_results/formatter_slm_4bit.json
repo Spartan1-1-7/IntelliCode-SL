@@ -1,0 +1,839 @@
+{
+  "config": "Formatter SLM \u2014 4-bit quantized (Unsloth)",
+  "pass_rate": 87.0,
+  "total_pass": 87,
+  "total": 100,
+  "avg_time_ms": 1792.0773196220398,
+  "per_task": {
+    "debug": {
+      "pass": 22,
+      "fail": 3,
+      "total": 25,
+      "pass_rate": 88.0,
+      "avg_time_ms": 2068.7783813476562
+    },
+    "generate": {
+      "pass": 25,
+      "fail": 0,
+      "total": 25,
+      "pass_rate": 100.0,
+      "avg_time_ms": 1725.660457611084
+    },
+    "explain": {
+      "pass": 22,
+      "fail": 3,
+      "total": 25,
+      "pass_rate": 88.0,
+      "avg_time_ms": 1757.0604228973389
+    },
+    "modify": {
+      "pass": 18,
+      "fail": 7,
+      "total": 25,
+      "pass_rate": 72.0,
+      "avg_time_ms": 1616.81001663208
+    }
+  },
+  "samples": [
+    {
+      "task": "debug",
+      "input": "- bug found on line 8: used + instead of -\n- missing null check at start\n- fixed",
+      "expected": "line 8",
+      "output": "A bug was identified on line 8 because used + instead of -. The code was updated so that missing null check at start was fixed and a small typo in the retrun note was corrected. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 5940.716981887817
+    },
+    {
+      "task": "debug",
+      "input": "- off by one error in loop\n- range should start at 0 not 1\n- corrected the range",
+      "expected": "loop",
+      "output": "A bug was identified in loop off by one error in loop. The code was updated so that range should start at 0 not 1. The change was then checked again, and corrected the range call. The failure no longer repeats.",
+      "passed": true,
+      "time_ms": 1590.4266834259033
+    },
+    {
+      "task": "debug",
+      "input": "- division by zero error when denominator is 0\n- added check before division\n- r",
+      "expected": "zero",
+      "output": "A bug was identified because division by zero error when denominator is 0. The code was updated so that check before division was added, and the problem is now resolved. The change was then checked again, and returns None if denominator is 0 were added. The failure no longer repeats.",
+      "passed": true,
+      "time_ms": 2489.508867263794
+    },
+    {
+      "task": "debug",
+      "input": "- wrong operator: used == instead of =\n- variable was never being assigned\n- fix",
+      "expected": "operator",
+      "output": "The problem came from in the operator: used == instead of =. The code was updated so that variable was checked before using it, and the problem is now resolved. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 2131.2015056610107
+    },
+    {
+      "task": "debug",
+      "input": "- missing return statement in else branch\n- function returned None unexpectedly\n",
+      "expected": "return",
+      "output": "A bug was identified in the reprise of branch 00.22. The code was updated so that the failure no longer occurred, and the problem is now resolved. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": false,
+      "time_ms": 1634.4234943389893
+    },
+    {
+      "task": "debug",
+      "input": "- key error when dict key does not exist\n- replaced direct access with .get()\n- ",
+      "expected": "key",
+      "output": "A bug was identified in the key error when dict key does not exist section. The code was updated so that replaced direct access with.get(), and the change was then checked again. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1708.4271907806396
+    },
+    {
+      "task": "debug",
+      "input": "- infinite loop detected: counter not incrementing\n- added i += 1 inside while l",
+      "expected": "loop",
+      "output": "A bug was identified because infinite loop detected: counter not incrementing. The code was updated so that added i += 1 inside while loop. The change was then checked again, and loop now terminates correctly. The failure did not repeat again.",
+      "passed": true,
+      "time_ms": 1573.413610458374
+    },
+    {
+      "task": "debug",
+      "input": "- type error: string passed where int expected\n- added int() conversion at input",
+      "expected": "type",
+      "output": "A bug was identified in the utility utility_19 because type error: string passed where int expected. The code was updated so that int() conversion was added at input, and the failure no longer repeats. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1813.462495803833
+    },
+    {
+      "task": "debug",
+      "input": "- index out of range on last element\n- len(lst) should be len(lst)-1\n- fixed the",
+      "expected": "index",
+      "output": "A bug was identified in index out of range on last element. The code was updated so that len(lst) should be len(lst)-1. The change was then checked again, and fixed the boundary condition. The guard was added near the failing branch, and the problem is now resolved.",
+      "passed": true,
+      "time_ms": 1815.8159255981445
+    },
+    {
+      "task": "debug",
+      "input": "- mutable default argument bug\n- list=[] in function signature shared across cal",
+      "expected": "default",
+      "output": "A bug was identified in 12-02-22 report 345. The code was mutated with mutable default argument bug. The code was updated so that list=[] in function signature shared across calls and list=None and initialized inside. The change was then checked again, and each call now gets a fresh list. Added a nu",
+      "passed": true,
+      "time_ms": 2775.773763656616
+    },
+    {
+      "task": "debug",
+      "input": "- scope error: variable used before assignment\n- moved variable initialization o",
+      "expected": "scope",
+      "output": "The problem came from in scope error: variable used before assignment. The code was updated so that moved variable initialization outside if block. The change was then checked again, and function now has correct variable scope. The failure did not repeat.",
+      "passed": true,
+      "time_ms": 1926.1739253997803
+    },
+    {
+      "task": "debug",
+      "input": "- recursion missing base case\n- function called itself infinitely\n- added base c",
+      "expected": "base case",
+      "output": "A bug was identified in the recursion because recursion missing base case. The code was updated so that the base case was added and the recursion now terminates. The change was then checked again, and function call order was cleaned up. Line 8 was the problem spot.",
+      "passed": true,
+      "time_ms": 1665.7135486602783
+    },
+    {
+      "task": "debug",
+      "input": "- wrong comparison: using 'is' instead of '=='\n- identity check was failing for ",
+      "expected": "comparison",
+      "output": "A bug was identified in the comparison 'is' instead of '=='. The code was updated so that 'is' was replaced with '=='. The change was then checked again, and comparison now works correctly. The fix stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1881.1471462249756
+    },
+    {
+      "task": "debug",
+      "input": "- file not closed after reading\n- resource leak detected\n- refactored to use 'wi",
+      "expected": "file",
+      "output": "A bug was identified in the file handling because file not closed after reading. The code was updated so that resource leak detected was addressed, and a bug was removed and the code was retested. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1763.5467052459717
+    },
+    {
+      "task": "debug",
+      "input": "- list modified during iteration causing skip\n- created copy of list before iter",
+      "expected": "iteration",
+      "output": "A bug was identified in the loop where some elements were skipped because the list was modified during iteration. The code was updated so that a copy of the list was created before iterating, and the problem is now resolved. The change stayed focused on the reported failure and did not add anything ",
+      "passed": true,
+      "time_ms": 1880.0559043884277
+    },
+    {
+      "task": "debug",
+      "input": "- global variable modified in function without global keyword\n- counter was not ",
+      "expected": "global",
+      "output": "A bug was identified in the global variable usage in function without global keyword. The code was updated so that counter was checked before updating globally. The change was then checked again, and counter was updated globally. The failure no longer repeats.",
+      "passed": true,
+      "time_ms": 1497.640609741211
+    },
+    {
+      "task": "debug",
+      "input": "- regex pattern incorrect: missing escape for dot\n- '.' was matching any charact",
+      "expected": "pattern",
+      "output": "A bug was identified in the regex pattern incorrect: missing escape for dot. The code was updated so that '.' was matched with a character, and the failure no longer occurred. The change was then checked again, and the parser now matches literal characters. Line 8 was the problem spot.",
+      "passed": true,
+      "time_ms": 2136.552333831787
+    },
+    {
+      "task": "debug",
+      "input": "- async function called without await\n- coroutine object returned instead of res",
+      "expected": "await",
+      "output": "A bug was identified in async function called without await. The code was updated so that coroutine object returned instead of result. The change was then checked again, and async function now executes correctly. The fix stayed focused on the reported failure and did not add anything beyond the note",
+      "passed": true,
+      "time_ms": 2395.1001167297363
+    },
+    {
+      "task": "debug",
+      "input": "- exception too broad: bare except clause\n- catching all exceptions including Ke",
+      "expected": "exception",
+      "output": "A bug was identified in zero zero twenty two because exception too broad: bare except clause. The code was updated so that catching all exceptions including KeyboardInterrupt was added. The change was then narrowed to ValueError, and the failure no longer repeats. Line 8 was the problem spot.",
+      "passed": true,
+      "time_ms": 1766.2818431854248
+    },
+    {
+      "task": "debug",
+      "input": "- float precision error in comparison\n- 0.1 + 0.2 != 0.3 due to floating point\n-",
+      "expected": "float",
+      "output": "A bug was identified in float precision error in comparison. The code was updated so that 0.1 + 0.2!= 0.3 due to floating point. The change was then checked again, and replaced with math.isclose(). The guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1843.790054321289
+    },
+    {
+      "task": "debug",
+      "input": "- class method missing self parameter\n- method treated as static function\n- adde",
+      "expected": "self",
+      "output": "A bug was identified in class method missing self parameter because method treated as static function. The code was updated so that method was redefined as class method, and the failure is now ruled out. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1784.132719039917
+    },
+    {
+      "task": "debug",
+      "input": "- list comprehension filtering wrong items\n- condition was inverted\n- fixed cond",
+      "expected": "condition",
+      "output": "The problem came from in merge_29. A bug was added to empty list handling and a small typo in the retrun note. The code was updated so that the empty list check was added before using the list. The change was then cleaned up while keeping the same behavior.",
+      "passed": false,
+      "time_ms": 1745.8157539367676
+    },
+    {
+      "task": "debug",
+      "input": "- string concatenation in loop is O(n^2)\n- rebuilt string by joining list instea",
+      "expected": "performance",
+      "output": "A bug was identified in string concatenation in loop is O(n^2). The code was updated so that string by joining list instead, and the change was then checked again. The code was then rewritten as a clean, professional note and the performance improvement came from O(n). The guard was added near the f",
+      "passed": true,
+      "time_ms": 2018.970012664795
+    },
+    {
+      "task": "debug",
+      "input": "- dictionary keys iterated while modifying\n- RuntimeError raised during iteratio",
+      "expected": "dictionary",
+      "output": "Two issues were found because of repeated work down the path. The code was updated so that the branch was reoptimized and the problem is now resolved. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": false,
+      "time_ms": 1739.5222187042236
+    },
+    {
+      "task": "debug",
+      "input": "- timezone-naive datetime compared with timezone-aware\n- TypeError raised on com",
+      "expected": "datetime",
+      "output": "Two issues were found in the comparison between timezone-naive datetime and timezone-aware datetime. The code was updated so that UTC timezone was added to naive datetime. The change was then checked again, and datetime comparison now works correctly. Line 8 was the fix.",
+      "passed": true,
+      "time_ms": 2201.846122741699
+    },
+    {
+      "task": "generate",
+      "input": "- wrote function is_prime(n)\n- handles edge cases: n < 2 returns False\n- checks ",
+      "expected": "prime",
+      "output": "The function is_prime(n) has been generated to determine whether a given integer is prime. It handles edge cases: n < 2 returns False. It also checks divisibility up to sqrt(n), and returns True if no divisors found.",
+      "passed": true,
+      "time_ms": 1715.8865928649902
+    },
+    {
+      "task": "generate",
+      "input": "- implemented binary search\n- takes sorted array and target value\n- uses left/ri",
+      "expected": "binary search",
+      "output": "The function implemented binary search and takes sorted array and target value. It uses left/right pointers with midpoint and returns index or -1 if not found. It also handles empty arrays are handled without error.",
+      "passed": true,
+      "time_ms": 1290.3671264648438
+    },
+    {
+      "task": "generate",
+      "input": "- created Stack class\n- push() appends to internal list\n- pop() removes and retu",
+      "expected": "Stack",
+      "output": "The class Stack was created. It has push() and pop(), and mutates the internal list. The result list is now empty except for the final item, and can be accessed with the original order. Checks divisibility up to the square root of n.",
+      "passed": true,
+      "time_ms": 1637.9914283752441
+    },
+    {
+      "task": "generate",
+      "input": "- wrote merge sort implementation\n- recursively splits array at midpoint\n- merge",
+      "expected": "merge sort",
+      "output": "The code merge sort implementation was written by me. It recursively splits array at midpoint and merges sorted halves back together. The result has a time complexity of O(n log n), and it also handles empty input stays empty.",
+      "passed": true,
+      "time_ms": 1411.017656326294
+    },
+    {
+      "task": "generate",
+      "input": "- implemented LRU cache\n- used OrderedDict to track access order\n- get() moves k",
+      "expected": "LRU",
+      "output": "The implementation LRU cache was implemented in response to the problem statement. It uses OrderedDict to track access order and handles the case where the cache is full. The result now includes the removed item\nkeeps the same overall behavior\ndoes not add new logic for the given flow\n- added a cach",
+      "passed": true,
+      "time_ms": 3457.386016845703
+    },
+    {
+      "task": "generate",
+      "input": "- created fibonacci generator\n- uses yield for memory efficiency\n- maintains pre",
+      "expected": "fibonacci",
+      "output": "The code fibonacci generator was created to determine whether a given integer is prime. It uses yield for memory efficiency and checks divisibility up to the square root of n. The result is now sorted before it is returned, and the guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1936.3429546356201
+    },
+    {
+      "task": "generate",
+      "input": "- wrote decorator for timing functions\n- wraps function with time.time() calls\n-",
+      "expected": "decorator",
+      "output": "A decorator for timing functions was written to improve performance in long-running code. It wraps function with time.time() calls and prints elapsed time after execution. The result is the original function result, and it keeps the same characters in reverse order.",
+      "passed": true,
+      "time_ms": 2083.390712738037
+    },
+    {
+      "task": "generate",
+      "input": "- implemented quicksort algorithm\n- picks pivot as middle element\n- partitions i",
+      "expected": "quicksort",
+      "output": "The quicksort algorithm was implemented by picking pivot as middle element and splitting into less, equal, and greater. The recursion now sorts in descending order, and the list size no longer raises an error. The guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1750.6864070892334
+    },
+    {
+      "task": "generate",
+      "input": "- wrote word frequency counter\n- splits text into words\n- uses dict to count occ",
+      "expected": "frequency",
+      "output": "The word frequency counter has been written as part of a response formatter job. It splits text into words and uses dict to count occurrences. It also returns sorted by frequency descending, and works iteratively.",
+      "passed": true,
+      "time_ms": 1281.9440364837646
+    },
+    {
+      "task": "generate",
+      "input": "- implemented graph BFS\n- uses deque for efficient queue operations\n- tracks vis",
+      "expected": "BFS",
+      "output": "The code graph BFS was implemented by implementing graph BFS. It uses deque for efficient queue operations and tracks visited nodes to avoid cycles. The result includes nodes in traversal order. It also halves the search space each step.",
+      "passed": true,
+      "time_ms": 1379.7776699066162
+    },
+    {
+      "task": "generate",
+      "input": "- created Caesar cipher encoder\n- shifts each letter by given amount\n- handles u",
+      "expected": "cipher",
+      "output": "The code Caesar cipher encoder has been created Caesar cipher encoder. It shifts each letter by given amount and handles uppercase and lowercase. The result is also lowercase, and it keeps the original characters with spaces and punctuation. It also the order of the keys does not matter.",
+      "passed": true,
+      "time_ms": 1719.6424007415771
+    },
+    {
+      "task": "generate",
+      "input": "- wrote palindrome checker\n- strips whitespace and lowercases\n- compares string ",
+      "expected": "palindrome",
+      "output": "The code palindrome_checker has been written to determine whether a given integer is prime. It strips whitespace and lowercases and compares string to its reverse. The result is True if palindrome, and it leaves empty input stays empty.",
+      "passed": true,
+      "time_ms": 1392.9274082183838
+    },
+    {
+      "task": "generate",
+      "input": "- implemented flatten function\n- handles arbitrarily nested lists\n- uses recursi",
+      "expected": "flatten",
+      "output": "The flatten function has been implemented to handle arbitrarily nested lists. It works by recursively checking the type of each element and removing empty sublists. The result is one single flat list, and it uses isinstance check.",
+      "passed": true,
+      "time_ms": 1331.5727710723877
+    },
+    {
+      "task": "generate",
+      "input": "- created memoize decorator\n- uses dict to cache results by args\n- checks cache ",
+      "expected": "memoize",
+      "output": "The memoize decorator was created using dict to cache results by args. The implementation includes a classmethod and a static helper. It works by caching the result of a function call and checks cache before computing. The result is then returned, and the same logic repeats for each call.",
+      "passed": true,
+      "time_ms": 1864.5966053009033
+    },
+    {
+      "task": "generate",
+      "input": "- wrote rate limiter class\n- tracks request timestamps in deque\n- rejects reques",
+      "expected": "rate limit",
+      "output": "The rate limiter class was written by adding a rate limiter class. It tracks request timestamps in deque and rejects requests over limit per window. The result now includes the rejected requests, and the function has been checked again.",
+      "passed": true,
+      "time_ms": 1899.7306823730469
+    },
+    {
+      "task": "generate",
+      "input": "- implemented trie data structure\n- insert() adds word character by character\n- ",
+      "expected": "trie",
+      "output": "The code implemented a trie data structure and used it to store a vocabulary of words. It adds word character by character and checks whether a given text is in the vocabulary. The result is the stored vocabulary, and it leaves empty input stays empty. It also keeps the same characters in reverse or",
+      "passed": true,
+      "time_ms": 2273.05269241333
+    },
+    {
+      "task": "generate",
+      "input": "- wrote context manager for DB connection\n- __enter__ opens connection\n- __exit_",
+      "expected": "context manager",
+      "output": "A class manager for database interactions was written as a context manager for DB connection. The code __enter__ opens connection and __exit__ closes connection. It also handles exceptions gracefully, and does not handle malformed quoting.",
+      "passed": true,
+      "time_ms": 1368.9556121826172
+    },
+    {
+      "task": "generate",
+      "input": "- implemented observer pattern\n- Subject class holds list of observers\n- notify(",
+      "expected": "observer",
+      "output": "The observer pattern was implemented in clean code. In the Subject class, a list of observers is held and notify() calls update() on all observers. The result now works as expected, and the code is easy for the user to read and understand.",
+      "passed": true,
+      "time_ms": 1577.436923980713
+    },
+    {
+      "task": "generate",
+      "input": "- created retry decorator\n- retries function up to n times on exception\n- uses e",
+      "expected": "retry",
+      "output": "The retry decorator was created retry decorator. It retries function up to n times on exception and uses exponential backoff between retries. It also handles the original failure and raises empty values.",
+      "passed": true,
+      "time_ms": 1154.5898914337158
+    },
+    {
+      "task": "generate",
+      "input": "- wrote run-length encoder\n- iterates through string counting repeats\n- appends ",
+      "expected": "run-length",
+      "output": "The code run-length encoder has been generated to determine whether a given integer is prime. It iterates through string counting repeats and appends count+char to result list. It also handles empty strings are handled cleanly, and keeps the result in sorted order.",
+      "passed": true,
+      "time_ms": 1631.0665607452393
+    },
+    {
+      "task": "generate",
+      "input": "- implemented sliding window max\n- uses monotonic deque\n- removes indices outsid",
+      "expected": "sliding window",
+      "output": "The code implemented sliding window max uses monotonic deque. It also removes indices outside window and keeps the result in sorted order. The result now starts from the end of the list, and the guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1738.7492656707764
+    },
+    {
+      "task": "generate",
+      "input": "- wrote topological sort\n- builds adjacency list from edges\n- uses DFS with visi",
+      "expected": "topological",
+      "output": "The function topological_sort has been written to build adjacency list from edges. It works by taking a directed graph and returns an ordered list of its vertices. The result is sorted by depth, and it leaves the result in sorted order. Builds the result as it goes.",
+      "passed": true,
+      "time_ms": 2260.854959487915
+    },
+    {
+      "task": "generate",
+      "input": "- created singleton class\n- uses class variable to store instance\n- __new__ chec",
+      "expected": "singleton",
+      "output": "The code singleton class was updated with a singleton class. The code uses class variable to store instance and checks __new__ for creation. The result now depends only on the class name, and the code is thread-safe with a lock.",
+      "passed": true,
+      "time_ms": 1953.927755355835
+    },
+    {
+      "task": "generate",
+      "input": "- implemented matrix multiplication\n- validates dimensions are compatible\n- uses",
+      "expected": "matrix",
+      "output": "The code matrix multiplication was updated with a validation check for dimensions compatibility and a nested loop refactor. These changes improve safer behavior while keeping the behavior aligned with the notes. The refactor stays focused on the reported work.",
+      "passed": true,
+      "time_ms": 1673.388957977295
+    },
+    {
+      "task": "generate",
+      "input": "- wrote Levenshtein distance function\n- builds 2D DP table\n- fills in edit costs",
+      "expected": "Levenshtein",
+      "output": "The code Levenshtein distance function was written by me. It builds 2D DP table and fills in edit costs row by row. It also returns bottom-right cell as answer, and works iteratively.",
+      "passed": true,
+      "time_ms": 1356.2283515930176
+    },
+    {
+      "task": "explain",
+      "input": "- function takes list as input\n- iterates through each element\n- multiplies each",
+      "expected": "doubles",
+      "output": "The function takes list as input and iterates through each element. It then multiplies each each by 2 and returns new list with doubled values. The result is each element doubled, and it leaves the original list intact. It also keeps the same characters in reverse order.",
+      "passed": false,
+      "time_ms": 1762.6938819885254
+    },
+    {
+      "task": "explain",
+      "input": "- class stores key-value pairs\n- hash function maps keys to buckets\n- handles co",
+      "expected": "hash",
+      "output": "The class stores key-value pairs. It works by keeping keys in sorted order and checking each element in order. The result is a list of keys and values, and it leaves the input must already be sorted. It also keeps the same characters in reverse order.",
+      "passed": false,
+      "time_ms": 1634.6955299377441
+    },
+    {
+      "task": "explain",
+      "input": "- function checks if number is even\n- uses modulo operator %\n- returns True if r",
+      "expected": "even",
+      "output": "This helper function checks if number is even. It uses modulo operator % and returns True if remainder is 0. It also handles the case where values are on opposite sides of zero. Checks whether a given integer is prime.",
+      "passed": true,
+      "time_ms": 1443.5529708862305
+    },
+    {
+      "task": "explain",
+      "input": "- recursively computes factorial\n- base case: n == 0 returns 1\n- recursive case:",
+      "expected": "factorial",
+      "output": "The function recursifies factorial\n- base case: n == 0 returns 1\n- recursive case: n * factorial(n-1)\n- call stack grows with each call\n- works for non-negative integers\n- keeps the same characters in reverse order",
+      "passed": true,
+      "time_ms": 1674.9560832977295
+    },
+    {
+      "task": "explain",
+      "input": "- decorator wraps original function\n- adds timing logic before and after\n- measu",
+      "expected": "timing",
+      "output": "The analysis started with a decorator wrapper on function six_. It added timing logic before and after the original function call and measured elapsed time with time.time_. The result was then cleaned up, and a small typo in the retrun note was corrected.",
+      "passed": true,
+      "time_ms": 1622.0815181732178
+    },
+    {
+      "task": "explain",
+      "input": "- generator yields values one at a time\n- uses yield keyword instead of return\n-",
+      "expected": "generator",
+      "output": "A generator yield values one at a time. It uses yield keyword instead of return and takes a caller-protected scope. The result is a generator, and the yield behavior leaves the variables cleaned up after the call. The guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 2181.9586753845215
+    },
+    {
+      "task": "explain",
+      "input": "- context manager manages resources\n- __enter__ acquires resource\n- __exit__ alw",
+      "expected": "resource",
+      "output": "A context manager manager resources\nWorks by __enter__ acquires resource and __exit__ releases it\nIt takes a manager and an value\nReturns the wrapped value\nIt leaves the original metadata is preserved",
+      "passed": true,
+      "time_ms": 1704.9751281738281
+    },
+    {
+      "task": "explain",
+      "input": "- binary search works on sorted arrays\n- checks midpoint element each iteration\n",
+      "expected": "binary search",
+      "output": "The conclusion for binary search works on sorted arrays explains that binary search works on sorted arrays. It then explains the step-by-step process, and ends with the same-level structure. The result is the same as the raw agent output.",
+      "passed": true,
+      "time_ms": 1466.1426544189453
+    },
+    {
+      "task": "explain",
+      "input": "- quicksort picks a pivot element\n- partitions array around pivot\n- recursively ",
+      "expected": "pivot",
+      "output": "The function quicksort picks a pivot element. It works by partitioning array around pivot and recursively sorts each partition. The result is sorted array, and the recursion stops when nothing stays sorted. The overall behavior is clean and easy for the user to read and understand.",
+      "passed": true,
+      "time_ms": 1684.2942237854004
+    },
+    {
+      "task": "explain",
+      "input": "- class implements iterator protocol\n- __iter__ returns self\n- __next__ returns ",
+      "expected": "iterator",
+      "output": "A class has been generated that implements iterator protocol. The __iter__ return self, and the __next__ return next value. It also raises StopIteration when done, and works iteratively.",
+      "passed": true,
+      "time_ms": 1233.9346408843994
+    },
+    {
+      "task": "explain",
+      "input": "- function uses dynamic programming\n- stores subproblem results in table\n- build",
+      "expected": "dynamic programming",
+      "output": "The implementation uses dynamic programming. It stores subproblem results in a table and builds up solution bottom-up. These approaches help avoid repeated work and improve performance. They also keep the same overall behavior as the original code.",
+      "passed": true,
+      "time_ms": 1379.1477680206299
+    },
+    {
+      "task": "explain",
+      "input": "- regex pattern matches email addresses\n- checks for local part before @\n- valid",
+      "expected": "email",
+      "output": "A regular expression pattern matches email addresses. The pattern regex pattern matches email addresses because it checks for local part before @. It also validates domain and TLD format. The result shows that each step is explained with a short comment.",
+      "passed": true,
+      "time_ms": 1443.0286884307861
+    },
+    {
+      "task": "explain",
+      "input": "- async function runs without blocking\n- uses await to pause at I/O\n- allows oth",
+      "expected": "async",
+      "output": "The async function runs without blocking. It uses await to pause at I/O and allows other coroutines to run. It also keeps the same characters in reverse order. These changes improve lighter behavior while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1477.6115417480469
+    },
+    {
+      "task": "explain",
+      "input": "- linked list stores nodes with pointers\n- each node holds value and next refere",
+      "expected": "linked list",
+      "output": "A static utility has been generated by someone who understands the behavior but may not understand the data. The implementation explains how the utility works, but lacks clarity about the input. Works on each element in order.",
+      "passed": false,
+      "time_ms": 1502.396821975708
+    },
+    {
+      "task": "explain",
+      "input": "- heap maintains min or max at root\n- push adds element and bubbles up\n- pop rem",
+      "expected": "heap",
+      "output": "A bug was identified in the heap maintenance in heap maintains min or max at root. The code was updated so that the mutation at root was removed and the bubble sort was replaced with sort in sorted order. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 2410.4812145233154
+    },
+    {
+      "task": "explain",
+      "input": "- function implements memoization\n- caches results in dictionary\n- checks cache ",
+      "expected": "cache",
+      "output": "The implementation implements memoization and caches results in a dictionary. It also checks cache before computing and reduces repeated computations. These techniques help improve performance while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1359.6160411834717
+    },
+    {
+      "task": "explain",
+      "input": "- lambda creates anonymous function\n- takes arguments before colon\n- expression ",
+      "expected": "lambda",
+      "output": "A generator lambda creates an anonymous function. It takes arguments before colon and expression after colon is returned. The result is always defined before it is used, and it can also yield control back to the event loop. Works with map, filter, and sorted.",
+      "passed": true,
+      "time_ms": 1615.7493591308594
+    },
+    {
+      "task": "explain",
+      "input": "- class uses __slots__ instead of __dict__\n- reduces memory per instance\n- only ",
+      "expected": "memory",
+      "output": "A change was made to uses __slots__ instead of __dict__. The change reduces memory per instance and only lists attributes allowed. The work stays the same, but the comment was added to the line that was changed.",
+      "passed": true,
+      "time_ms": 1400.5167484283447
+    },
+    {
+      "task": "explain",
+      "input": "- function uses list comprehension\n- shorter and faster than for loop\n- filters ",
+      "expected": "comprehension",
+      "output": "The function uses list comprehension. It has been optimized by shorter and faster than for loop. The code is then cleaned by adding a null check before using the result\n- the merge step was added before the return\n- the null check was added before using the result\n- the guard was added near the fail",
+      "passed": true,
+      "time_ms": 4393.25737953186
+    },
+    {
+      "task": "explain",
+      "input": "- GIL prevents true parallel threads\n- only one thread runs Python at a time\n- u",
+      "expected": "GIL",
+      "output": "A bug was identified in 10.0:39 because GIL prevents true parallel threads. The code was updated so that only one thread runs Python at a time, and the problem is now resolved. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1882.2205066680908
+    },
+    {
+      "task": "explain",
+      "input": "- property decorator creates getter\n- @x.setter creates setter method\n- allows v",
+      "expected": "property",
+      "output": "The property decorator creates getter. It works by applying the @property decorator to a property and takes a property docstring. The result is the gotten value. The change was then rewritten as @x.setter creates setter method, and the docstring explains the calculation.",
+      "passed": true,
+      "time_ms": 2218.2700634002686
+    },
+    {
+      "task": "explain",
+      "input": "- function uses walrus operator :=\n- assigns and evaluates in one step\n- useful ",
+      "expected": "walrus",
+      "output": "The description uses walrus operator: because assigns and evaluates in one step. It's useful in while loop conditions. It also yields control back to the event loop, and can be unsafe if not handled carefully. Works on each element in order.",
+      "passed": true,
+      "time_ms": 1950.6878852844238
+    },
+    {
+      "task": "explain",
+      "input": "- dataclass auto-generates __init__\n- field types declared as annotations\n- also",
+      "expected": "dataclass",
+      "output": "A bug was identified in the dataclass auto-generates __init__. The code was updated so that field types were declared as annotations, and the generate step was cleaned up and refactored as a focused helper. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1927.1597862243652
+    },
+    {
+      "task": "explain",
+      "input": "- function raises custom exception\n- inherits from base Exception class\n- adds d",
+      "expected": "exception",
+      "output": "The function raises custom exception. It inherits from base Exception class and adds domain-specific error message. The result is always calculated before it is exposed, and the failure is now handled without a null check. The guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1542.466163635254
+    },
+    {
+      "task": "explain",
+      "input": "- function uses zip to pair two lists\n- iterates both lists simultaneously\n- sto",
+      "expected": "zip",
+      "output": "The function uses zip to pair two lists. It iterates both lists simultaneously and stops at shortest list. It also handles empty lists are handled without error.",
+      "passed": true,
+      "time_ms": 1014.6152973175049
+    },
+    {
+      "task": "modify",
+      "input": "- added type hints to all parameters\n- added docstring explaining purpose\n- adde",
+      "expected": "type hints",
+      "output": "The code was updated with type hints on parameters and a docstring explaining purpose. Related changes included input validation for negative numbers and logging for debug purposes. These changes improve readability and debugging while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1417.6945686340332
+    },
+    {
+      "task": "modify",
+      "input": "- wrapped function in try/except block\n- catches ValueError and TypeError\n- logs",
+      "expected": "error handling",
+      "output": "The code was updated so that function wrapper in try/except block was added. The change came with two small issues: a logging call was added and a null check was added before using the result. These changes improve more predictable behavior while keeping the behavior aligned with the notes.",
+      "passed": false,
+      "time_ms": 1711.503267288208
+    },
+    {
+      "task": "modify",
+      "input": "- added @lru_cache decorator\n- cache size set to 128\n- recursive calls now reuse",
+      "expected": "cache",
+      "output": "The code @lru_cache decorator was updated with a cache size set to 128 and recursive calls now reuse results. Related changes included a focused branch and fewer duplicate checks. These changes improve performance while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1523.5333442687988
+    },
+    {
+      "task": "modify",
+      "input": "- converted sync function to async\n- added async keyword to def\n- added await be",
+      "expected": "async",
+      "output": "The merge function was updated to sync function to async. The change included async keyword to def and an await before I/O calls line. The result is the merged list now flows cleanly through the pipeline. Check the failure again.",
+      "passed": true,
+      "time_ms": 1883.040189743042
+    },
+    {
+      "task": "modify",
+      "input": "- added pagination support\n- accepts page and page_size params\n- slices results ",
+      "expected": "pagination",
+      "output": "The code was updated with pagination support and a helper for slices. Related changes included a docstring and a cleaner flow. These changes improve user readability while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1698.148488998413
+    },
+    {
+      "task": "modify",
+      "input": "- replaced if/elif chain with dict lookup\n- cleaner and more extensible\n- defaul",
+      "expected": "dictionary",
+      "output": "The code was updated with a nested if/elif chain replaced with dict lookup. The change was cleaner and more extensible. The guard was added near the failing branch, and the problem is now resolved. The failure no longer repeats.",
+      "passed": false,
+      "time_ms": 1554.3360710144043
+    },
+    {
+      "task": "modify",
+      "input": "- added @property decorator to getter\n- added setter with validation\n- private a",
+      "expected": "property",
+      "output": "The code was updated to add @property decorator to getter and add setter with validation. Related changes included private attribute now _value and docstring addition. These changes improve cleaner behavior while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1392.359972000122
+    },
+    {
+      "task": "modify",
+      "input": "- added __enter__ and __exit__ methods\n- resource acquired in __enter__\n- resour",
+      "expected": "context manager",
+      "output": "Two issues were found due to empty input. The code was updated so that a null check was added before using the data, and the problem is now resolved. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": false,
+      "time_ms": 1524.3840217590332
+    },
+    {
+      "task": "modify",
+      "input": "- added threading.Lock to class\n- lock acquired before state change\n- lock relea",
+      "expected": "thread-safe",
+      "output": "The code was updated to use threading.Lock to ensure a thread-safe lock. The change was then checked again and the guard was added near the failing branch. The fix stays focused on the reported failure and does not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1527.2705554962158
+    },
+    {
+      "task": "modify",
+      "input": "- added retry logic with backoff\n- retries up to 3 times on failure\n- waits 2^n ",
+      "expected": "retry",
+      "output": "The code was updated with retry logic with backoff. The behavior was tested, and retries up to 3 times on failure were added. The failure no longer repeats, and the code now raises exception after all retries. A small typo in the retrun note was corrected.",
+      "passed": true,
+      "time_ms": 1721.6382026672363
+    },
+    {
+      "task": "modify",
+      "input": "- refactored to use generator\n- replaced return list with yield\n- memory usage r",
+      "expected": "generator",
+      "output": "The code was updated to use generator instead of recursive recursion. The change came from line 8. The code was then checked again and found that a small typo in parse 14 was corrected and the failure no longer repeats. The guard was added near the failing branch.",
+      "passed": true,
+      "time_ms": 1700.5031108856201
+    },
+    {
+      "task": "modify",
+      "input": "- added observer list to class\n- subscribe() adds observer\n- unsubscribe() remov",
+      "expected": "observer",
+      "output": "The code was updated to add observer list to class. The change came from line 8. Subsequent lines addressed subscribe() adds observer and unsubscribe() removes observer. These changes improve cleaner behavior while keeping the behavior aligned with the notes.",
+      "passed": true,
+      "time_ms": 1825.474739074707
+    },
+    {
+      "task": "modify",
+      "input": "- added os.getenv calls for config\n- hardcoded values replaced with env vars\n- a",
+      "expected": "environment",
+      "output": "The code was updated to use os.getenv calls for config. The change helped with config readability and maintenance. A small typo in the retrun note was corrected and the flow remained aligned with the notes.",
+      "passed": false,
+      "time_ms": 1705.7316303253174
+    },
+    {
+      "task": "modify",
+      "input": "- added to_dict() method\n- added from_dict() class method\n- all fields included ",
+      "expected": "serialization",
+      "output": "The function to_dict() method was updated with add to_dict() method. The add to_dict() method was then checked and worked as expected. The change stayed focused on the reported work and did not add anything beyond the notes.",
+      "passed": false,
+      "time_ms": 1717.482089996338
+    },
+    {
+      "task": "modify",
+      "input": "- added audit log on create and delete\n- logs user, timestamp, and action\n- stor",
+      "expected": "audit",
+      "output": "Two changes were made to the code to improve audit logging. A log on create and delete was added to the flow. The change was then checked again, and logs now include user, timestamp, and action. The refactor stays focused on the reported work.",
+      "passed": true,
+      "time_ms": 1621.0458278656006
+    },
+    {
+      "task": "modify",
+      "input": "- added health check endpoint\n- checks DB connection\n- checks cache connection\n-",
+      "expected": "health",
+      "output": "The code was updated to add health check endpoint and check DB connection. The change came from line 8. The refactor stays focused on the reported work. The yield behavior is now clarified by the inline comment.",
+      "passed": true,
+      "time_ms": 1350.0537872314453
+    },
+    {
+      "task": "modify",
+      "input": "- added role parameter to method\n- checks role before executing\n- raises Permiss",
+      "expected": "role",
+      "output": "A bug was identified in the authentication logic because of a missing role parameter. The code was updated so that checks role before executing, and the failure no longer repeats. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1574.9938488006592
+    },
+    {
+      "task": "modify",
+      "input": "- added gzip compression option\n- compresses output if flag is True\n- uses gzip.",
+      "expected": "compression",
+      "output": "A bug was identified in the load_data branch because the merge logic was inverted. The code was updated so that the merge now follows the expected path. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+      "passed": false,
+      "time_ms": 1501.7032623291016
+    },
+    {
+      "task": "modify",
+      "input": "- added timeout parameter to request\n- default timeout set to 30 seconds\n- raise",
+      "expected": "timeout",
+      "output": "The code was updated with a timeout parameter to request. The default timeout was set to 30 seconds, and the behavior was updated so that raises TimeoutError on expiry. The change stayed focused on the reported behavior and did not add anything beyond the notes.",
+      "passed": true,
+      "time_ms": 1617.4960136413574
+    },
+    {
+      "task": "modify",
+      "input": "- added feature flag check\n- reads flag from config\n- new code path only runs if",
+      "expected": "feature flag",
+      "output": "Two issues were found in the module utility. A feature flag check was added and reads flag from config. The change was then checked again, and new code path only runs if flag enabled. The guard was added near the failing branch, and the problem is now resolved.",
+      "passed": true,
+      "time_ms": 1865.7076358795166
+    },
+    {
+      "task": "modify",
+      "input": "- added signal handler for SIGTERM\n- gracefully stops accepting requests\n- waits",
+      "expected": "shutdown",
+      "output": "The code was updated to add a signal handler for SIGTERM. The code works by checking whether we are running under signal handling and taking a static instance of the class. The change stays focused on the reported work and does not add anything beyond the notes. It also the docstring explains the ca",
+      "passed": false,
+      "time_ms": 2531.3918590545654
+    },
+    {
+      "task": "modify",
+      "input": "- replaced f-string with locale.format\n- supports multiple date formats\n- detect",
+      "expected": "locale",
+      "output": "The code was updated to replace f-string with locale.format. The change worked because supports multiple date formats. The change stayed focused on the reported work and did not add anything beyond the notes. It also the docstring explains the calculation.",
+      "passed": true,
+      "time_ms": 1615.27419090271
+    },
+    {
+      "task": "modify",
+      "input": "- added parameterized queries\n- replaced string formatting with ?\n- prevents SQL",
+      "expected": "SQL injection",
+      "output": "The code was updated with parameterized queries and a null check before use. These changes prevent SQL injection attacks and ensure safe behavior. The refactor stays focused on the reported work.",
+      "passed": true,
+      "time_ms": 1131.044626235962
+    },
+    {
+      "task": "modify",
+      "input": "- added rate limit decorator\n- tracks calls per time window\n- raises RateLimitEr",
+      "expected": "rate limit",
+      "output": "The code rate_limit_decorator_11 was updated with rate limit decorator rate_limit_decorator. It tracks calls per time window and raises RateLimitError when exceeded. It also configurable limit and window, and works iteratively.",
+      "passed": true,
+      "time_ms": 1391.2148475646973
+    },
+    {
+      "task": "modify",
+      "input": "- added lazy loading flag\n- data loaded only on first access\n- cached after firs",
+      "expected": "lazy",
+      "output": "The code was updated with lazy loading flag and a caching mechanism. The change stayed focused on the reported failure and did not add anything beyond the notes. A small typo in the retrun note was corrected.",
+      "passed": true,
+      "time_ms": 1317.2242641448975
+    }
+  ]
+}

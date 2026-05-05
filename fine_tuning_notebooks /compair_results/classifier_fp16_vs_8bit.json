@@ -1,0 +1,83 @@
+{
+  "test": "fp16 vs 8-bit",
+  "previous_4bit_reference": {
+    "accuracy": 93.0,
+    "avg_time_ms": 219.0
+  },
+  "config_A_fp16": {
+    "accuracy": 93.66666666666667,
+    "correct": 281,
+    "total": 300,
+    "avg_time_ms": 183.55567773183188,
+    "per_category": {
+      "debug": {
+        "correct": 42,
+        "total": 50,
+        "accuracy": 84.0
+      },
+      "generate": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "modify": {
+        "correct": 47,
+        "total": 50,
+        "accuracy": 94.0
+      },
+      "explain": {
+        "correct": 42,
+        "total": 50,
+        "accuracy": 84.0
+      },
+      "document": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "unknown": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "config_B_8bit": {
+    "accuracy": 93.33333333333333,
+    "correct": 280,
+    "total": 300,
+    "avg_time_ms": 535.227198600769,
+    "per_category": {
+      "debug": {
+        "correct": 41,
+        "total": 50,
+        "accuracy": 82.0
+      },
+      "generate": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "modify": {
+        "correct": 47,
+        "total": 50,
+        "accuracy": 94.0
+      },
+      "explain": {
+        "correct": 42,
+        "total": 50,
+        "accuracy": 84.0
+      },
+      "document": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "unknown": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      }
+    }
+  }
+}
