@@ -115,16 +115,25 @@ Summary:"""
 def _parse_json_response(content: str) -> dict:
     text = content.strip()
     if text.startswith("```"):
-        text = text.split("\n", 1)[1] if "\n" in text else ""
-        if text.endswith("```"):
-            text = text[:-3].strip()
+        lines = text.splitlines()
+        if lines:
+            lines = lines[1:]
+        if lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        text = "\n".join(lines).strip()
 
     start_index = text.find("{")
-    end_index = text.rfind("}")
-    if start_index != -1 and end_index != -1 and end_index > start_index:
-        text = text[start_index:end_index + 1]
+    if start_index == -1:
+        start_index = text.find("[")
 
-    return json.loads(text)
+    if start_index != -1:
+        text = text[start_index:]
+
+    parsed_response, _ = json.JSONDecoder().raw_decode(text)
+    if not isinstance(parsed_response, dict):
+        raise ValueError('Expected a JSON object response')
+
+    return parsed_response
 
 
 def run_workflow(initial_state: intellicode_state, session_id: Optional[str] = None):
@@ -181,7 +190,10 @@ Do not include any extra text, markdown, or keys.
         }
     ])
 
-    parsed_response = _parse_json_response(response.content)
+    try:
+        parsed_response = _parse_json_response(response.content)
+    except (json.JSONDecodeError, ValueError):
+        parsed_response = {'task_type': 'other'}
     task_type = parsed_response.get('task_type', 'other')
     if task_type not in ('explain', 'modify', 'debug', 'write', 'docs', 'other'):
         task_type = 'other'
@@ -481,6 +493,7 @@ Your task is to generate a refined, medium-length response for the user based on
 1. the original user prompt
 2. the point-wise summary of the work done
 3. the condensed memory summary of the conversation
+    Use the previous conversation summary only when it is relevant to the current prompt; otherwise ignore it completely.
 
 User prompt:
 \"\"\"{state['prompt']}\"\"\"
@@ -492,6 +505,7 @@ User prompt:
  \"\"\"{state['change_summary']}\"\"\"
 
 Write a clear, polished response that:
+
 - starts with a short, refined paragraph explaining the result
 - follows with brief, organized bullet points summarizing key actions or details
 - stays concise and helpful
@@ -554,8 +568,11 @@ def unknown ( state: intellicode_state):
             }
         ])
 
-        parsed_response = _parse_json_response(response.content)
-        summary = parsed_response.get('summary', response.content)
+        try:
+            parsed_response = _parse_json_response(response.content)
+        except (json.JSONDecodeError, ValueError):
+            parsed_response = {'summary': response.content.strip(), 'modified_code': None}
+        summary = parsed_response.get('summary', response.content)              
         modified_code = parsed_response.get('modified_code')
 
         return {
