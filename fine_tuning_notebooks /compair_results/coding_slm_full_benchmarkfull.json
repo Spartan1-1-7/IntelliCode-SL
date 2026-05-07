@@ -1,0 +1,170 @@
+{
+  "benchmark": "Coding SLM \u2014 Full 5-Config Benchmark",
+  "test_cases_per_task": {
+    "debug": 20,
+    "generate": 20,
+    "modify": 20
+  },
+  "configs": {
+    "A": {
+      "label": "Base fp16 (no FT)",
+      "avg_score": 97.5,
+      "full_pass": 57,
+      "partial": 3,
+      "fail": 0,
+      "total": 60,
+      "avg_time_ms": 14490.986188252768,
+      "per_task": {
+        "debug": {
+          "avg_score": 92.5,
+          "valid": 20,
+          "kw_pass": 17,
+          "total": 20,
+          "avg_time_ms": 14336.05043888092
+        },
+        "generate": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 15106.895005702972
+        },
+        "modify": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 14030.013120174408
+        }
+      }
+    },
+    "B": {
+      "label": "4-bit + Adapter (FT)",
+      "avg_score": 96.66666666666667,
+      "full_pass": 56,
+      "partial": 4,
+      "fail": 0,
+      "total": 60,
+      "avg_time_ms": 4218.3195392290745,
+      "per_task": {
+        "debug": {
+          "avg_score": 95.0,
+          "valid": 20,
+          "kw_pass": 18,
+          "total": 20,
+          "avg_time_ms": 2651.352107524872
+        },
+        "generate": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 5610.990571975708
+        },
+        "modify": {
+          "avg_score": 95.0,
+          "valid": 20,
+          "kw_pass": 18,
+          "total": 20,
+          "avg_time_ms": 4392.6159381866455
+        }
+      }
+    },
+    "E": {
+      "label": "4-bit Base (no FT)",
+      "avg_score": 96.66666666666667,
+      "full_pass": 56,
+      "partial": 4,
+      "fail": 0,
+      "total": 60,
+      "avg_time_ms": 16305.25257984797,
+      "per_task": {
+        "debug": {
+          "avg_score": 92.5,
+          "valid": 20,
+          "kw_pass": 17,
+          "total": 20,
+          "avg_time_ms": 15549.027812480927
+        },
+        "generate": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 16841.986787319183
+        },
+        "modify": {
+          "avg_score": 97.5,
+          "valid": 20,
+          "kw_pass": 19,
+          "total": 20,
+          "avg_time_ms": 16524.743139743805
+        }
+      }
+    },
+    "C": {
+      "label": "Qwen3-32B (API)",
+      "avg_score": 98.33333333333333,
+      "full_pass": 58,
+      "partial": 2,
+      "fail": 0,
+      "total": 60,
+      "avg_time_ms": 5151.4546275138855,
+      "per_task": {
+        "debug": {
+          "avg_score": 97.5,
+          "valid": 20,
+          "kw_pass": 19,
+          "total": 20,
+          "avg_time_ms": 3101.340389251709
+        },
+        "generate": {
+          "avg_score": 97.5,
+          "valid": 20,
+          "kw_pass": 19,
+          "total": 20,
+          "avg_time_ms": 6184.857881069183
+        },
+        "modify": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 6168.165612220764
+        }
+      }
+    },
+    "D": {
+      "label": "LLaMA3.3-70B (API)",
+      "avg_score": 99.16666666666667,
+      "full_pass": 59,
+      "partial": 1,
+      "fail": 0,
+      "total": 60,
+      "avg_time_ms": 1269.034194946289,
+      "per_task": {
+        "debug": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 148.7432360649109
+        },
+        "generate": {
+          "avg_score": 100.0,
+          "valid": 20,
+          "kw_pass": 20,
+          "total": 20,
+          "avg_time_ms": 1393.0439233779907
+        },
+        "modify": {
+          "avg_score": 97.5,
+          "valid": 20,
+          "kw_pass": 19,
+          "total": 20,
+          "avg_time_ms": 2265.3154253959656
+        }
+      }
+    }
+  }
+}

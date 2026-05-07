@@ -204,285 +204,153 @@ Do not include any extra text, markdown, or keys.
 
 # defining the function which handles the explaination node of the workflow
 def explain_slm (state:intellicode_state):
-    prompt = f"""You are a coding assistant. 
-Your task is to **explain the given input code** in a clear, concise, and point-wise format.
-Do NOT rewrite the code. Do NOT add unnecessary details.
-Produce a brief, easy-to-understand list of points describing what the code does.
-
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Input code:
-\"\"\"{state['input_code']}\"\"\"
-
-Now explain the code in a numbered point-wise format.
-"""
+    response = run_docs_slm('explain', state['input_code'])
+    unload_docs_slm()
+    return {'change_summary':response, 'task_output':response}
 
 
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
+def _build_code_input(state: intellicode_state) -> str:
+    parts = [f"User prompt:
+{state['prompt']}"]
+    if state.get('input_code') is not None:
+        parts.append(f"Input code:
+{state['input_code']}")
+    return '
 
-    explain = response.content
-    return {'change_summary':explain}
+'.join(parts)
+
+
+def _build_summary_input(*sections: str) -> str:
+    return '
+
+'.join(
+        section for section in sections if section is not None and str(section).strip()
+    )
 
 def modify_code (state:intellicode_state):
-    prompt = f"""You are an expert software engineer. Your sole task is to modify the given code based on the user's request.
-
-    ---
-    USER REQUEST:
-    {state['prompt']}
-
-    ---
-    ORIGINAL CODE:
-    {state['input_code']}
-
-    ---
-    INSTRUCTIONS:
-    1. Read the user's request carefully and understand exactly what change is needed.
-    2. Apply only the modifications requested — nothing more, nothing less.
-    3. Preserve all existing logic, structure, and style that is unrelated to the request.
-    4. Do not fix unrelated bugs, refactor, rename variables, or add unrequested features.
-
-    OUTPUT RULES (critical):
-    - Output raw code only.
-    - No markdown, no triple backticks, no code fences.
-    - No explanations, comments, or preamble.
-    - No "Here is the modified code:" or similar phrases.
-    - Return the complete modified file, not just the changed section.
-    """
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    code = response.content
-    return {'modified_code':code, 'latest_code_iteration':code}
+    combined_input = _build_code_input(state)
+    code = run_coding_slm('modify', combined_input)
+    return {'modified_code':code, 'latest_code_iteration':code, 'task_output':code}
 
 
 
 def modify_summary (state:intellicode_state):
-    prompt = f"""You are a coding assistant.
-    Your task is to generate a brief, point-wise summary of the modifications made to the code.
+    summary_input = _build_summary_input(
+        f"User request:
+{state['prompt']}",
+        f"Original code:
+{state['input_code']}",
+        f"Modified code:
+{state.get('task_output') or state['modified_code']}",
+        "Write a short, clear, point-wise summary describing exactly what was changed based on the user's request.",
+        "Focus only on intentional modifications:",
+        "- features added or removed",
+        "- logic changes",
+        "- structural changes",
+        "- behavior changes",
+        "Do NOT rewrite the code.",
+        "Do NOT include extra explanations.",
+        "Output only concise bullet points.",
+    )
 
-    User request:
-    \"\"\"{state['prompt']}\"\"\"
-
-    Original code:
-    \"\"\"{state['input_code']}\"\"\"
-
-    Modified code:
-    \"\"\"{state['modified_code']}\"\"\"
-
-    Write a short, clear, point-wise summary describing exactly what was changed based on the user's request.
-    Focus only on intentional modifications:
-    - features added or removed
-    - logic changes
-    - structural changes
-    - behavior changes
-
-    Do NOT rewrite the code.
-    Do NOT include extra explanations.
-    Output only concise bullet points.
-    """
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    summary = response.content
+    summary = run_coding_slm('modify', summary_input)
+    unload_coding_slm()
     return {'change_summary':summary}
 
 
 # defining the function which handles the debuggin of the code
 def debug_code (state:intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to debug the given input code.
-
-- Read the user's prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-- Read the input code:
-\"\"\"{state['input_code']}\"\"\"
-
-Fix all bugs, errors, and issues in the code.
-Improve correctness ONLY—do not change logic unless required to fix an error.
-
-IMPORTANT:
-Output **only** the fully corrected code.
-Do NOT include explanations, comments, or markdown formatting.
-Return raw code only.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    code = response.content
-    return {'modified_code':code, 'latest_code_iteration':code}
+    combined_input = _build_code_input(state)
+    code = run_coding_slm('debug', combined_input)
+    return {'modified_code':code, 'latest_code_iteration':code, 'task_output':code}
 
 # defining the fuction for the node which handles the response of debugging the code
 def debug_summary (state:intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to generate a brief, point-wise summary of the changes made during debugging.
+    summary_input = _build_summary_input(
+        f"User prompt:
+{state['prompt']}",
+        f"Original input code:
+{state['input_code']}",
+        f"Debugged code (final corrected version):
+{state.get('task_output') or state['modified_code']}",
+        "Write a short, clear, point-wise summary describing exactly what was fixed, changed, or improved.",
+        "Focus only on meaningful modifications:",
+        "- bug fixes",
+        "- syntax corrections",
+        "- logic corrections",
+        "- improvements required for the code to run",
+        "Do NOT rewrite the code.",
+        "Do NOT include extra explanations.",
+        "Output only concise bullet points.",
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Original input code:
-\"\"\"{state['input_code']}\"\"\"
-
-Debugged code (final corrected version):
-\"\"\"{state['modified_code']}\"\"\"
-
-Write a short, clear, point-wise summary describing exactly what was fixed, changed, or improved.
-Focus only on meaningful modifications:
-- bug fixes
-- syntax corrections
-- logic corrections
-- improvements required for the code to run
-
-Do NOT rewrite the code.
-Do NOT include extra explanations.
-Output only concise bullet points.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    summary = response.content
+    summary = run_coding_slm('debug', summary_input)
+    unload_coding_slm()
     return {'change_summary':summary}
 
 # defining the function for the node which handles writing the code from scratch 
 def write_code (state: intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to write the required code from scratch based on the user's prompt.
+    combined_input = _build_summary_input(
+        f"User prompt:
+{state['prompt']}",
+        "Generate only the code that satisfies the request.",
+        "Do NOT include explanations, comments, markdown, or any extra text.",
+        "Output raw executable code only.",
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Generate only the code that satisfies the request.
-Do NOT include explanations, comments, markdown, or any extra text.
-Output raw executable code only.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    code = response.content
-    return {'modified_code':code}
+    code = run_coding_slm('write', combined_input)
+    return {'modified_code':code, 'task_output':code}
 
 # defining the function which handles the node for writing summary about the code written from scratch
 def write_summary (state: intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to generate a brief, point-wise summary of the code that was written from scratch.
+    summary_input = _build_summary_input(
+        f"User prompt:
+{state['prompt']}",
+        f"Generated code:
+{state.get('task_output') or state['modified_code']}",
+        "Write a short, clear, point-wise summary explaining what the generated code does.",
+        "Do NOT rewrite the code.",
+        "Do NOT include unnecessary details.",
+        "Only describe the key functionality in concise bullet points.",
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Generated code:
-\"\"\"{state['modified_code']}\"\"\"
-
-Write a short, clear, point-wise summary explaining what the generated code does.
-Do NOT rewrite the code.
-Do NOT include unnecessary details.
-Only describe the key functionality in concise bullet points.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    summary = response.content
+    summary = run_coding_slm('write', summary_input)
+    unload_coding_slm()
     return {'change_summary':summary}
 
 # defining the function for the node which handles the writing of the documents for the code
 def docs_worker (state: intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to create the document requested by the user, using the provided code as context.
+    combined_input = _build_summary_input(
+        f"User prompt:
+{state['prompt']}",
+        f"Input code (context):
+{state['input_code']}",
+        "Generate the required document exactly as requested.",
+        "Output only the document content.",
+        "Do NOT include explanations, comments, markdown formatting, or any extra text.",
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Input code (context):
-\"\"\"{state['input_code']}\"\"\"
-
-Generate the required document exactly as requested.
-Output only the document content.
-Do NOT include explanations, comments, markdown formatting, or any extra text.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    doc = response.content
-    return {'modified_code':doc, 'latest_code_iteration':doc}
+    doc = run_docs_slm('docs', combined_input)
+    return {'modified_code':doc, 'latest_code_iteration':doc, 'task_output':doc}
 
 # defining the function for the node which handles wrting response for the document created 
 def docs_summary (state: intellicode_state):
-    prompt = f"""You are a coding assistant.
-Your task is to generate a brief, point-wise summary of the document that was created based on the user's request.
+    summary_input = _build_summary_input(
+        f"User prompt:
+{state['prompt']}",
+        f"Generated document content:
+{state.get('task_output') or state['modified_code']}",
+        "Write a short, clear, point-wise summary explaining:",
+        "- what the generated document contains",
+        "- what was done to create it",
+        "- which file format the document should be saved in (e.g., .md, .txt, .pdf, .docx) based on the user's request",
+        "Do NOT rewrite the document.",
+        "Do NOT include unnecessary details.",
+        "Output only concise bullet points.",
+    )
 
-User prompt:
-\"\"\"{state['prompt']}\"\"\"
-
-Generated document content:
-\"\"\"{state['modified_code']}\"\"\"
-
-Write a short, clear, point-wise summary explaining:
-- what the generated document contains
-- what was done to create it
-- which file format the document should be saved in (e.g., .md, .txt, .pdf, .docx) based on the user's request
-
-Do NOT rewrite the document.
-Do NOT include unnecessary details.
-Output only concise bullet points.
-"""
-
-    response = llm.invoke([
-        {
-            'role': 'user',
-            'content': prompt,
-        }
-    ])
-    # extracting the content
-
-    summary = response.content
+    summary = run_docs_slm('docs', summary_input)
+    unload_docs_slm()
     return {'change_summary':summary}
 
 # defining the function for the collator node which intake summary points from the nodes and create a refined response from the user
