@@ -637,65 +637,65 @@ Output only concise bullet points.
 
 
 # defining the function for the collator node which intake summary points from the nodes and create a refined response from the user
-# def collator(state: intellicode_state):
-#     message_summary = summarize_messages(state.get('messeges', []))
-
-#     change_summary = state.get('change_summary', '')
-#     prompt_text    = state.get('prompt', '')
-#     task           = state.get('task_type', '')
-
-#     # ── Build a simple formatter prompt matching fine-tuning format ──
-#     raw_agent_output = f"Task: {prompt_text}\n\n{change_summary}"
-
-#     formatter_prompt = f"""### Task:
-# You are a response formatter. Take the raw agent output below and rewrite it as a clean, professional, well-structured response that is easy for the user to read and understand.
-# Do not add new information. Only improve the clarity, structure, and readability of the existing content.
-
-# ### Raw Agent Output:
-# {raw_agent_output}
-
-# ### Formatted Response:
-# """
-
-#     raw_output = run_formatter(formatter_prompt)
-#     final_answer = None
-
-#     if raw_output.strip() and len(raw_output.strip()) > 30:
-#         final_answer = raw_output.strip()
-
-#     # ── Fallback — use change_summary directly if formatter fails ──
-#     if not final_answer:
-#         print('[collator] Formatter produced no output — using change_summary directly.')
-#         final_answer = change_summary
-
-#     updated_messages = _append_message(
-#         state.get('messeges', []), 'assistant', final_answer
-#     )
-#     return {
-#         'final_answer':     final_answer,
-#         'messeges':         updated_messages,
-#         'message_summary':  message_summary,
-#     }
-
 def collator(state: intellicode_state):
     message_summary = summarize_messages(state.get('messeges', []))
 
     change_summary = state.get('change_summary', '')
+    prompt_text    = state.get('prompt', '')
+    task           = state.get('task_type', '')
 
-    # Use change_summary directly as the final answer.
-    # The formatter SLM (1B) is not reliable enough to reformat
-    # arbitrary inputs without hallucinating — the bullet points
-    # from the task nodes are already clean and readable.
-    final_answer = change_summary if change_summary.strip() else 'Task completed.'
+    # ── Build a simple formatter prompt matching fine-tuning format ──
+    raw_agent_output = f"Task: {prompt_text}\n\n{change_summary}"
+
+    formatter_prompt = f"""### Task:
+You are a response formatter. Take the raw agent output below and rewrite it as a clean, professional, well-structured response that is easy for the user to read and understand.
+Do not add new information. Only improve the clarity, structure, and readability of the existing content.
+
+### Raw Agent Output:
+{raw_agent_output}
+
+### Formatted Response:
+"""
+
+    raw_output = run_formatter(formatter_prompt)
+    final_answer = None
+
+    if raw_output.strip() and len(raw_output.strip()) > 30:
+        final_answer = raw_output.strip()
+
+    # ── Fallback — use change_summary directly if formatter fails ──
+    if not final_answer:
+        print('[collator] Formatter produced no output — using change_summary directly.')
+        final_answer = change_summary
 
     updated_messages = _append_message(
         state.get('messeges', []), 'assistant', final_answer
     )
     return {
-        'final_answer':    final_answer,
-        'messeges':        updated_messages,
-        'message_summary': message_summary,
+        'final_answer':     final_answer,
+        'messeges':         updated_messages,
+        'message_summary':  message_summary,
     }
+
+# def collator(state: intellicode_state):
+#     message_summary = summarize_messages(state.get('messeges', []))
+
+#     change_summary = state.get('change_summary', '')
+
+#     # Use change_summary directly as the final answer.
+#     # The formatter SLM (1B) is not reliable enough to reformat
+#     # arbitrary inputs without hallucinating — the bullet points
+#     # from the task nodes are already clean and readable.
+#     final_answer = change_summary if change_summary.strip() else 'Task completed.'
+
+#     updated_messages = _append_message(
+#         state.get('messeges', []), 'assistant', final_answer
+#     )
+#     return {
+#         'final_answer':    final_answer,
+#         'messeges':        updated_messages,
+#         'message_summary': message_summary,
+#     }
 
 # defining the function for the unknown node which handles prompt which are not in default catagories
 def unknown(state: intellicode_state):
