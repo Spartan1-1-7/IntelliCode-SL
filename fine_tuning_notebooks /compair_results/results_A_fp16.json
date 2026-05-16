@@ -1,0 +1,1964 @@
+{
+  "config": "Config A: fp16 Full Precision",
+  "accuracy": 93.66666666666667,
+  "total_correct": 281,
+  "total": 300,
+  "avg_time_ms": 183.55567773183188,
+  "per_category": {
+    "debug": {
+      "correct": 42,
+      "total": 50,
+      "wrong": [
+        {
+          "prompt": "Rewrite this buggy function so it actually works",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "There's an off by one error in my loop, fix it and also add ",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "Fix the IndexError in my code and also make the variable nam",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "There is a bug on line 8, correct it and then add a docstrin",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "My loop is infinite, fix the termination condition and optim",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "Fix the null pointer exception and also handle the case wher",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "Fix this broken code",
+          "expected": "debug",
+          "predicted": "modify"
+        },
+        {
+          "prompt": "The function fails only on empty input, patch this",
+          "expected": "debug",
+          "predicted": "modify"
+        }
+      ]
+    },
+    "generate": {
+      "correct": 50,
+      "total": 50,
+      "wrong": []
+    },
+    "modify": {
+      "correct": 47,
+      "total": 50,
+      "wrong": [
+        {
+          "prompt": "This code works but crashes on None input, handle that case",
+          "expected": "modify",
+          "predicted": "debug"
+        },
+        {
+          "prompt": "The code runs but uses too much memory, optimize it",
+          "expected": "modify",
+          "predicted": "optimize"
+        },
+        {
+          "prompt": "The database queries in this function are N+1, fix the perfo",
+          "expected": "modify",
+          "predicted": "debug"
+        }
+      ]
+    },
+    "explain": {
+      "correct": 42,
+      "total": 50,
+      "wrong": [
+        {
+          "prompt": "Explain why this sorting algorithm is O(n log n) and not O(n",
+          "expected": "explain",
+          "predicted": "unknown"
+        },
+        {
+          "prompt": "What design pattern is being implemented here",
+          "expected": "explain",
+          "predicted": "unknown"
+        },
+        {
+          "prompt": "Explain the observer pattern being used in this code",
+          "expected": "explain",
+          "predicted": "unknown"
+        },
+        {
+          "prompt": "Why is this property decorated with @staticmethod",
+          "expected": "explain",
+          "predicted": "debug"
+        },
+        {
+          "prompt": "What will happen when this function is called with an empty ",
+          "expected": "explain",
+          "predicted": "unknown"
+        },
+        {
+          "prompt": "Trace through this code with input x equals 5",
+          "expected": "explain",
+          "predicted": "debug"
+        },
+        {
+          "prompt": "What happens if I call this method twice in a row",
+          "expected": "explain",
+          "predicted": "unknown"
+        },
+        {
+          "prompt": "Why is a set used here instead of a list",
+          "expected": "explain",
+          "predicted": "debug"
+        }
+      ]
+    },
+    "document": {
+      "correct": 50,
+      "total": 50,
+      "wrong": []
+    },
+    "unknown": {
+      "correct": 50,
+      "total": 50,
+      "wrong": []
+    }
+  },
+  "confusion": {
+    "debug": {
+      "modify": 8,
+      "debug": 42
+    },
+    "generate": {
+      "generate": 50
+    },
+    "modify": {
+      "modify": 47,
+      "debug": 2,
+      "optimize": 1
+    },
+    "explain": {
+      "explain": 42,
+      "unknown": 5,
+      "debug": 3
+    },
+    "document": {
+      "document": 50
+    },
+    "unknown": {
+      "unknown": 50
+    }
+  },
+  "results": [
+    {
+      "prompt": "Rewrite this buggy function so it actually works",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "My function crashes with a KeyError, fix it and add error handling",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "There's an off by one error in my loop, fix it and also add comments",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "This code is broken, can you take a look and repair it",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The output is wrong on edge cases, please correct the logic",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "I have a Python function that is supposed to calculate the average but it keeps throwing a ZeroDivisionError when the list is empty, can you fix the issue",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My recursive function works for small inputs but causes a RecursionError for large inputs, please fix this",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The sorting function I wrote produces correct output for most cases but fails when all elements are the same, fix this edge case",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "I am getting an AttributeError on line 15 that says NoneType has no attribute strip, please resolve this",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My database query function throws an exception when the result set is empty, I need this fixed",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Fix the IndexError in my code and also make the variable names clearer",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "There is a bug on line 8, correct it and then add a docstring",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "The logic is wrong here, fix it and add a unit test too",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Debug this function and while you are at it improve the error messages",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My loop is infinite, fix the termination condition and optimize the loop body",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "Getting TypeError: unsupported operand type in my calculator function",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "ValueError is being raised when I call parse_date with certain inputs",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "NameError: name result is not defined, what is wrong with my code",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My code throws RuntimeError: maximum recursion depth exceeded",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "ImportError when trying to use my custom module, help me fix it",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Why does my function return the wrong value for negative inputs",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The test cases are failing for my binary search implementation",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My code does not behave as expected when the input is an empty string",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The program gives incorrect results when processing large numbers",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My merge function is dropping some elements, there must be a bug",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Fix the null pointer exception and also handle the case where the list is empty",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "There are two bugs: the comparison operator is wrong and the loop starts at 1 instead of 0",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My function works but gives wrong results for floats, fix the precision issue",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The regex pattern is not matching correctly, fix it",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My API call fails with a 401 status, fix the authentication header",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Fix this broken code",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "Something is wrong with this function",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "This code has a bug",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My program crashes on startup",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The output is incorrect",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Resolve the segmentation fault in my C code",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My JavaScript function throws a ReferenceError",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The Java method throws NullPointerException unexpectedly",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "SQL query returns no rows when it should return data",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My shell script exits with code 1 and I cannot find why",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The counter increments twice instead of once, fix this",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My list gets reversed when I do not want it to be",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The function skips the first element every time",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My dictionary is missing keys after the update operation",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The calculation is off by exactly one, there must be an error",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The function fails only on empty input, patch this",
+      "expected": "debug",
+      "predicted": "modify",
+      "correct": false
+    },
+    {
+      "prompt": "Works fine in testing but crashes in production",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "My code handles most cases but fails for very large numbers",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "The function is correct but throws an exception when called twice",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Fix the race condition in my multithreaded code",
+      "expected": "debug",
+      "predicted": "debug",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to check if a string is a palindrome",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a class that implements a priority queue",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write code to parse a JSON file and extract all email addresses",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Implement a simple REST API client using requests",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to convert a binary tree to a list",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "I need a complete Python class for managing a library system that supports adding books, removing books, searching by title or author, checking out books, and returning books with proper error handling",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a decorator that limits how many times a function can be called per minute and raises an exception when the limit is exceeded",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a function that takes a list of transactions and returns a summary grouped by category with totals for each category",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a script that reads a CSV file, removes duplicate rows based on a given column, and writes the result to a new file",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Implement a thread-safe counter class that can be safely incremented and decremented from multiple threads simultaneously",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a function that takes existing code as a string and counts the number of functions defined in it",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a utility that wraps any function to add timing and logging automatically",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a class that behaves like a dictionary but also tracks how many times each key is accessed",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function that takes a buggy string of code and returns a list of line numbers with syntax errors",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Implement a function that generates test cases for a given function signature",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Code a solution to find the longest common substring of two strings",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to detect if a directed graph has a cycle",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Implement Dijkstra's shortest path algorithm",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write code to solve the coin change problem using dynamic programming",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a function to find the kth smallest element in an unsorted array",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a password generator",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a fibonacci sequence generator",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to flatten a nested dictionary",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a simple calculator class",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a URL validator function",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write unit tests for a stack implementation",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a mock API server for testing",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a script to monitor CPU and memory usage",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a file diff utility that shows line by line differences",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to serialize and deserialize a binary tree",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "From scratch, implement a hash map with chaining for collision resolution",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a complete tokenizer for simple arithmetic expressions",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Implement a bloom filter from scratch",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a simple state machine framework",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a connection pool implementation",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to paginate API results with cursor based pagination",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a simple in-memory job queue with worker threads",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to batch database inserts for performance",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a simple cache with TTL expiry",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a webhook signature verification function",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "I want a new function that does X, Y and Z",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Can you code up a solution for this problem",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Put together a class that handles file uploads",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Come up with an implementation of the observer pattern",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Produce a working example of a producer consumer queue",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to normalize a list of numbers between 0 and 1",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Create a function to compute a rolling average over a sliding window",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write code to group a list of objects by a given key",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Build a function that merges two sorted lists into one sorted list",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Write a function to detect outliers in a list using IQR",
+      "expected": "generate",
+      "predicted": "generate",
+      "correct": true
+    },
+    {
+      "prompt": "Add type hints to all functions in this file",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Refactor this code to use list comprehensions instead of for loops",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add logging to every function in this module",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Optimize this function to reduce its time complexity",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Convert this synchronous code to use async await",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "This code works but is very slow, make it faster",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "The function is correct but lacks input validation, add it",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "This code works but crashes on None input, handle that case",
+      "expected": "modify",
+      "predicted": "debug",
+      "correct": false
+    },
+    {
+      "prompt": "My function is fine but it mutates the input list, fix the side effect",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "The code runs but uses too much memory, optimize it",
+      "expected": "modify",
+      "predicted": "optimize",
+      "correct": false
+    },
+    {
+      "prompt": "Take this basic function and extend it to support batch processing",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Extend this class with three new utility methods",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Take this existing code and add pagination support to it",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Update this function to also support CSV input in addition to JSON",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Extend this API client to support authentication",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Refactor this large function into smaller single-responsibility functions",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Convert these repeated if-else chains into a strategy pattern",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Replace this mutable global state with dependency injection",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Refactor this class to follow the open closed principle",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Break this monolithic module into separate concerns",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "The database queries in this function are N+1, fix the performance issue",
+      "expected": "modify",
+      "predicted": "debug",
+      "correct": false
+    },
+    {
+      "prompt": "Add caching to this expensive computation",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Replace this O(n squared) algorithm with a more efficient approach",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add connection pooling to this database module",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Reduce the memory footprint of this data processing function",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Harden this function against SQL injection",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add input sanitization to this form handler",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Make this password comparison timing-safe",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add rate limiting to this endpoint",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Encrypt the sensitive fields in this data model",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add error handling to this function",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Make this code more readable",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Clean up this messy function",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Improve the performance of this code",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Update this code to use the new API",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Convert this class-based code to functional style",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Migrate this code from Python 2 syntax to Python 3",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Rewrite this using dataclasses instead of plain dictionaries",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Switch this from using raw SQL to using the ORM",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Convert this callback-based code to use promises",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add retry logic with exponential backoff to this API call",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add soft delete support to this repository class",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add event hooks to this processor so callers can react to changes",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add support for multiple output formats to this report generator",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add circuit breaker pattern to this service client",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Make this function more idiomatic Python",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Simplify this complex nested condition",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Remove the code duplication in this module",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Make the variable names more descriptive",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "Add assertions to validate the intermediate state in this algorithm",
+      "expected": "modify",
+      "predicted": "modify",
+      "correct": true
+    },
+    {
+      "prompt": "What does this recursive function do step by step",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain how this binary search implementation works",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Walk me through what this decorator is doing",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is happening in this async await code",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Can you explain the logic behind this dynamic programming solution",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is this function doing and why does it fail on empty input",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain what this code does and where the potential bug might be",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Walk me through this code and tell me if the logic looks correct",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What does this do and why might it be slow",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain this function to me, it seems to give wrong output sometimes",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What does each part of this code do, explain section by section",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Can you describe what this class and its methods are responsible for",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Break down this pipeline and explain each step",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Give me an overview of how this module works",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is the purpose of each function in this file",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain why this sorting algorithm is O(n log n) and not O(n squared)",
+      "expected": "explain",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "prompt": "What is the space complexity of this recursive approach",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why does this code use a deque instead of a list here",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain why this memoization makes the function faster",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is the purpose of the yield keyword in this generator",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What does this code do",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "How does this work",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is this function for",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why is this written this way",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What does this return",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What design pattern is being implemented here",
+      "expected": "explain",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "prompt": "Explain the observer pattern being used in this code",
+      "expected": "explain",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "prompt": "What is the purpose of this context manager",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain what this lambda function is doing",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is the role of this middleware function",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "I do not understand this code, can you explain it simply",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "This code is confusing to me, break it down",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Can you help me understand what this algorithm is doing",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Explain this to me like I am a beginner",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is the intuition behind this approach",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What is the purpose of the try except block in this code",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why does this function call super() here",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What does the double underscore in this method name mean",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why is this property decorated with @staticmethod",
+      "expected": "explain",
+      "predicted": "debug",
+      "correct": false
+    },
+    {
+      "prompt": "What does the walrus operator do in this if statement",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What will happen when this function is called with an empty list",
+      "expected": "explain",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "prompt": "Trace through this code with input x equals 5",
+      "expected": "explain",
+      "predicted": "debug",
+      "correct": false
+    },
+    {
+      "prompt": "What is the output of this code",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What side effects does this function have",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "What happens if I call this method twice in a row",
+      "expected": "explain",
+      "predicted": "unknown",
+      "correct": false
+    },
+    {
+      "prompt": "Why is a set used here instead of a list",
+      "expected": "explain",
+      "predicted": "debug",
+      "correct": false
+    },
+    {
+      "prompt": "Why does this algorithm start from the end of the array",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why is this variable initialized to None here",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why does this recursive call pass n minus 1",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Why is this lock needed here",
+      "expected": "explain",
+      "predicted": "explain",
+      "correct": true
+    },
+    {
+      "prompt": "Write docstrings for all functions in this file",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate a README for this project",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add inline comments explaining the logic of this algorithm",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create API documentation for these endpoints",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a docstring with Args Returns and Raises for this function",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add comments explaining what each section of this code does",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document this class so other developers understand how to use it",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add documentation that explains the purpose of each method",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write comments that describe the algorithm step by step",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create documentation that makes this code self-explanatory",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate Google style docstrings for this module",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write NumPy style documentation for this class",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create JSDoc comments for this JavaScript file",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write Sphinx-compatible documentation for this package",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate OpenAPI specification for this REST API",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a README with installation usage and examples sections",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create a README that explains what this library does and how to contribute",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate a README with badges for the CI status and coverage",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a getting started guide for this SDK",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create a quickstart tutorial for this framework",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add inline comments to this complex sorting algorithm",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Comment this regex pattern so it is clear what each part matches",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add comments to explain the purpose of each variable in this function",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Insert comments at every non-obvious step of this algorithm",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add section headers and comments throughout this long function",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document this function",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add docstrings to this class",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write documentation for this code",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Comment this code",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create docs for this module",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write release notes for version 2.0",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate a changelog entry for the new features added this sprint",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document the breaking changes in this API update",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a migration guide from version 1 to version 2",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create a deprecation notice for this old function",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write user documentation for this CLI tool",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create a tutorial walkthrough for this feature",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a how-to guide for integrating this library",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Generate example usage snippets for this module",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write a troubleshooting guide for common errors",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document the architecture and design decisions in this module",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write an architecture decision record for using this approach",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document the data flow through this pipeline",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Create a developer onboarding guide for this codebase",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Write technical documentation describing the system design",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Make this code more self-documenting",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add docstrings so this passes pydocstyle checks",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "The code has no comments at all, add appropriate documentation",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Document all public methods in this class",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "Add type documentation for all parameters in this module",
+      "expected": "document",
+      "predicted": "document",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between TCP and UDP",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain the CAP theorem in distributed systems",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between a process and a thread",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How does garbage collection work in Python",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between stack and heap memory",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Compare Python vs JavaScript for backend development",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What are the pros and cons of REST vs GraphQL",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Should I use PostgreSQL or MongoDB for this use case",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between Docker and a virtual machine",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Compare microservices versus monolithic architecture",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What programming language should I learn first",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How do I prepare for a software engineering interview",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What skills do I need to become a backend developer",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How long does it take to learn Python",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What certifications are useful for cloud engineers",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is event driven architecture",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain the SOLID principles",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is domain driven design",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is clean architecture",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain the twelve factor app methodology",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is Kubernetes used for",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How does Redis work",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is Kafka and when should I use it",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the purpose of a load balancer",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is a CDN and how does it work",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is OAuth2 and how does it work",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain public key cryptography",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is a SQL injection attack",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How does JWT authentication work",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is zero trust security",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the time complexity of quicksort in the worst case",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain Big O notation",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between BFS and DFS",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "When should I use dynamic programming",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the P vs NP problem",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is overfitting in machine learning",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain the difference between supervised and unsupervised learning",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is a transformer model",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is gradient descent",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "Explain transfer learning",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is recursion and why is it useful",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What are design patterns and why do they matter",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the difference between concurrency and parallelism",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is a closure in programming",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is dependency injection",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What are the best practices for writing clean code",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "How should I structure a large Python project",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What is the best way to handle errors in an API",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "When should I use a class versus a function",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    },
+    {
+      "prompt": "What are the most common code smells to avoid",
+      "expected": "unknown",
+      "predicted": "unknown",
+      "correct": true
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "config_A": {
+    "name": "Config A: Full Precision Base + Full Adapter",
+    "accuracy": 93.66666666666667,
+    "correct": 281,
+    "total": 300,
+    "avg_time_ms": 157.9883853594462,
+    "per_category": {
+      "debug": {
+        "correct": 42,
+        "total": 50,
+        "accuracy": 84.0
+      },
+      "generate": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "modify": {
+        "correct": 47,
+        "total": 50,
+        "accuracy": 94.0
+      },
+      "explain": {
+        "correct": 42,
+        "total": 50,
+        "accuracy": 84.0
+      },
+      "document": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "unknown": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "config_B": {
+    "name": "Config B: 4-bit Quantized Base + Full Adapter",
+    "accuracy": 93.0,
+    "correct": 279,
+    "total": 300,
+    "avg_time_ms": 218.82240215937296,
+    "per_category": {
+      "debug": {
+        "correct": 38,
+        "total": 50,
+        "accuracy": 76.0
+      },
+      "generate": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      },
+      "modify": {
+        "correct": 46,
+        "total": 50,
+        "accuracy": 92.0
+      },
+      "explain": {
+        "correct": 46,
+        "total": 50,
+        "accuracy": 92.0
+      },
+      "document": {
+        "correct": 49,
+        "total": 50,
+        "accuracy": 98.0
+      },
+      "unknown": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0
+      }
+    }
+  }
+}

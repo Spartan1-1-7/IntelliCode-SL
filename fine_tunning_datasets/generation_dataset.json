@@ -1,0 +1,2002 @@
+[
+  {
+    "input": "Write a Python function named math_tool_0 that returns the sum of two numbers.",
+    "output": "def math_tool_0(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_1 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_1(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_2 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_2(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_3 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_3(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_4 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_4(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_5 that returns the sum of two numbers.",
+    "output": "def math_tool_5(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_6 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_6(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_7 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_7(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_8 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_8(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_9 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_9(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_10 that returns the sum of two numbers.",
+    "output": "def math_tool_10(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_11 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_11(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_12 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_12(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_13 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_13(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_14 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_14(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_15 that returns the sum of two numbers.",
+    "output": "def math_tool_15(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_16 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_16(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_17 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_17(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_18 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_18(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_19 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_19(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_20 that returns the sum of two numbers.",
+    "output": "def math_tool_20(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_21 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_21(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_22 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_22(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_23 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_23(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_24 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_24(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_25 that returns the sum of two numbers.",
+    "output": "def math_tool_25(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_26 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_26(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_27 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_27(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_28 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_28(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_29 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_29(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_30 that returns the sum of two numbers.",
+    "output": "def math_tool_30(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_31 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_31(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_32 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_32(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_33 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_33(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_34 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_34(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_35 that returns the sum of two numbers.",
+    "output": "def math_tool_35(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_36 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_36(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_37 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_37(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_38 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_38(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_39 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_39(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_40 that returns the sum of two numbers.",
+    "output": "def math_tool_40(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_41 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_41(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_42 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_42(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_43 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_43(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_44 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_44(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_45 that returns the sum of two numbers.",
+    "output": "def math_tool_45(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_46 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_46(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_47 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_47(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_48 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_48(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_49 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_49(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_50 that returns the sum of two numbers.",
+    "output": "def math_tool_50(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_51 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_51(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_52 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_52(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_53 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_53(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_54 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_54(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_55 that returns the sum of two numbers.",
+    "output": "def math_tool_55(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_56 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_56(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_57 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_57(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_58 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_58(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_59 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_59(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_60 that returns the sum of two numbers.",
+    "output": "def math_tool_60(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_61 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_61(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_62 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_62(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_63 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_63(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_64 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_64(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_65 that returns the sum of two numbers.",
+    "output": "def math_tool_65(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_66 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_66(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_67 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_67(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_68 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_68(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_69 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_69(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_70 that returns the sum of two numbers.",
+    "output": "def math_tool_70(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_71 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_71(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_72 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_72(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_73 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_73(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_74 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_74(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_75 that returns the sum of two numbers.",
+    "output": "def math_tool_75(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_76 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_76(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_77 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_77(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_78 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_78(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_79 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_79(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_80 that returns the sum of two numbers.",
+    "output": "def math_tool_80(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_81 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_81(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_82 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_82(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_83 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_83(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_84 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_84(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_85 that returns the sum of two numbers.",
+    "output": "def math_tool_85(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_86 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_86(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_87 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_87(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_88 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_88(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_89 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_89(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_90 that returns the sum of two numbers.",
+    "output": "def math_tool_90(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_91 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_91(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_92 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_92(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_93 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_93(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_94 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_94(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a Python function named math_tool_95 that returns the sum of two numbers.",
+    "output": "def math_tool_95(a, b):\n    return a + b"
+  },
+  {
+    "input": "Make a Python function math_tool_96 that computes the average of a non-empty list of numbers.",
+    "output": "def math_tool_96(values):\n    if not values:\n        raise ValueError('values must not be empty')\n    return sum(values) / len(values)"
+  },
+  {
+    "input": "Write a function math_tool_97 that returns the larger of two inputs and works for numbers or strings.",
+    "output": "def math_tool_97(left, right):\n    return left if left >= right else right"
+  },
+  {
+    "input": "Create a function math_tool_98 that clamps value between lower and upper inclusive.",
+    "output": "def math_tool_98(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "Write a Python function math_tool_99 that computes the hypotenuse from two legs using math.sqrt.",
+    "output": "import math\n\ndef math_tool_99(a, b):\n    return math.sqrt(a * a + b * b)"
+  },
+  {
+    "input": "Write a function text_tool_0 that reverses a string.",
+    "output": "def text_tool_0(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_1 that counts vowels in a string.",
+    "output": "def text_tool_1(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_2 that removes duplicate words while preserving order.",
+    "output": "def text_tool_2(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_3 to normalize whitespace in a sentence.",
+    "output": "def text_tool_3(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_4 that chunks a list into groups of size n.",
+    "output": "def text_tool_4(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_5 that reverses a string.",
+    "output": "def text_tool_5(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_6 that counts vowels in a string.",
+    "output": "def text_tool_6(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_7 that removes duplicate words while preserving order.",
+    "output": "def text_tool_7(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_8 to normalize whitespace in a sentence.",
+    "output": "def text_tool_8(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_9 that chunks a list into groups of size n.",
+    "output": "def text_tool_9(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_10 that reverses a string.",
+    "output": "def text_tool_10(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_11 that counts vowels in a string.",
+    "output": "def text_tool_11(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_12 that removes duplicate words while preserving order.",
+    "output": "def text_tool_12(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_13 to normalize whitespace in a sentence.",
+    "output": "def text_tool_13(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_14 that chunks a list into groups of size n.",
+    "output": "def text_tool_14(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_15 that reverses a string.",
+    "output": "def text_tool_15(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_16 that counts vowels in a string.",
+    "output": "def text_tool_16(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_17 that removes duplicate words while preserving order.",
+    "output": "def text_tool_17(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_18 to normalize whitespace in a sentence.",
+    "output": "def text_tool_18(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_19 that chunks a list into groups of size n.",
+    "output": "def text_tool_19(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_20 that reverses a string.",
+    "output": "def text_tool_20(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_21 that counts vowels in a string.",
+    "output": "def text_tool_21(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_22 that removes duplicate words while preserving order.",
+    "output": "def text_tool_22(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_23 to normalize whitespace in a sentence.",
+    "output": "def text_tool_23(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_24 that chunks a list into groups of size n.",
+    "output": "def text_tool_24(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_25 that reverses a string.",
+    "output": "def text_tool_25(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_26 that counts vowels in a string.",
+    "output": "def text_tool_26(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_27 that removes duplicate words while preserving order.",
+    "output": "def text_tool_27(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_28 to normalize whitespace in a sentence.",
+    "output": "def text_tool_28(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_29 that chunks a list into groups of size n.",
+    "output": "def text_tool_29(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_30 that reverses a string.",
+    "output": "def text_tool_30(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_31 that counts vowels in a string.",
+    "output": "def text_tool_31(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_32 that removes duplicate words while preserving order.",
+    "output": "def text_tool_32(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_33 to normalize whitespace in a sentence.",
+    "output": "def text_tool_33(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_34 that chunks a list into groups of size n.",
+    "output": "def text_tool_34(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_35 that reverses a string.",
+    "output": "def text_tool_35(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_36 that counts vowels in a string.",
+    "output": "def text_tool_36(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_37 that removes duplicate words while preserving order.",
+    "output": "def text_tool_37(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_38 to normalize whitespace in a sentence.",
+    "output": "def text_tool_38(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_39 that chunks a list into groups of size n.",
+    "output": "def text_tool_39(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_40 that reverses a string.",
+    "output": "def text_tool_40(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_41 that counts vowels in a string.",
+    "output": "def text_tool_41(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_42 that removes duplicate words while preserving order.",
+    "output": "def text_tool_42(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_43 to normalize whitespace in a sentence.",
+    "output": "def text_tool_43(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_44 that chunks a list into groups of size n.",
+    "output": "def text_tool_44(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_45 that reverses a string.",
+    "output": "def text_tool_45(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_46 that counts vowels in a string.",
+    "output": "def text_tool_46(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_47 that removes duplicate words while preserving order.",
+    "output": "def text_tool_47(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_48 to normalize whitespace in a sentence.",
+    "output": "def text_tool_48(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_49 that chunks a list into groups of size n.",
+    "output": "def text_tool_49(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_50 that reverses a string.",
+    "output": "def text_tool_50(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_51 that counts vowels in a string.",
+    "output": "def text_tool_51(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_52 that removes duplicate words while preserving order.",
+    "output": "def text_tool_52(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_53 to normalize whitespace in a sentence.",
+    "output": "def text_tool_53(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_54 that chunks a list into groups of size n.",
+    "output": "def text_tool_54(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_55 that reverses a string.",
+    "output": "def text_tool_55(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_56 that counts vowels in a string.",
+    "output": "def text_tool_56(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_57 that removes duplicate words while preserving order.",
+    "output": "def text_tool_57(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_58 to normalize whitespace in a sentence.",
+    "output": "def text_tool_58(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_59 that chunks a list into groups of size n.",
+    "output": "def text_tool_59(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_60 that reverses a string.",
+    "output": "def text_tool_60(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_61 that counts vowels in a string.",
+    "output": "def text_tool_61(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_62 that removes duplicate words while preserving order.",
+    "output": "def text_tool_62(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_63 to normalize whitespace in a sentence.",
+    "output": "def text_tool_63(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_64 that chunks a list into groups of size n.",
+    "output": "def text_tool_64(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_65 that reverses a string.",
+    "output": "def text_tool_65(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_66 that counts vowels in a string.",
+    "output": "def text_tool_66(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_67 that removes duplicate words while preserving order.",
+    "output": "def text_tool_67(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_68 to normalize whitespace in a sentence.",
+    "output": "def text_tool_68(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_69 that chunks a list into groups of size n.",
+    "output": "def text_tool_69(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_70 that reverses a string.",
+    "output": "def text_tool_70(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_71 that counts vowels in a string.",
+    "output": "def text_tool_71(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_72 that removes duplicate words while preserving order.",
+    "output": "def text_tool_72(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_73 to normalize whitespace in a sentence.",
+    "output": "def text_tool_73(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_74 that chunks a list into groups of size n.",
+    "output": "def text_tool_74(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_75 that reverses a string.",
+    "output": "def text_tool_75(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_76 that counts vowels in a string.",
+    "output": "def text_tool_76(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_77 that removes duplicate words while preserving order.",
+    "output": "def text_tool_77(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_78 to normalize whitespace in a sentence.",
+    "output": "def text_tool_78(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_79 that chunks a list into groups of size n.",
+    "output": "def text_tool_79(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_80 that reverses a string.",
+    "output": "def text_tool_80(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_81 that counts vowels in a string.",
+    "output": "def text_tool_81(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_82 that removes duplicate words while preserving order.",
+    "output": "def text_tool_82(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_83 to normalize whitespace in a sentence.",
+    "output": "def text_tool_83(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_84 that chunks a list into groups of size n.",
+    "output": "def text_tool_84(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_85 that reverses a string.",
+    "output": "def text_tool_85(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_86 that counts vowels in a string.",
+    "output": "def text_tool_86(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_87 that removes duplicate words while preserving order.",
+    "output": "def text_tool_87(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_88 to normalize whitespace in a sentence.",
+    "output": "def text_tool_88(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_89 that chunks a list into groups of size n.",
+    "output": "def text_tool_89(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_90 that reverses a string.",
+    "output": "def text_tool_90(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_91 that counts vowels in a string.",
+    "output": "def text_tool_91(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_92 that removes duplicate words while preserving order.",
+    "output": "def text_tool_92(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_93 to normalize whitespace in a sentence.",
+    "output": "def text_tool_93(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_94 that chunks a list into groups of size n.",
+    "output": "def text_tool_94(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Write a function text_tool_95 that reverses a string.",
+    "output": "def text_tool_95(text):\n    return text[::-1]"
+  },
+  {
+    "input": "Make a function text_tool_96 that counts vowels in a string.",
+    "output": "def text_tool_96(text):\n    vowels = set('aeiouAEIOU')\n    return sum(1 for ch in text if ch in vowels)"
+  },
+  {
+    "input": "Write a Python function text_tool_97 that removes duplicate words while preserving order.",
+    "output": "def text_tool_97(words):\n    seen = set()\n    result = []\n    for word in words:\n        if word not in seen:\n            seen.add(word)\n            result.append(word)\n    return result"
+  },
+  {
+    "input": "Create text_tool_98 to normalize whitespace in a sentence.",
+    "output": "def text_tool_98(text):\n    return ' '.join(text.split())"
+  },
+  {
+    "input": "Write a function text_tool_99 that chunks a list into groups of size n.",
+    "output": "def text_tool_99(items, size):\n    return [items[index:index + size] for index in range(0, len(items), size)]"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_0 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_0:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_1 with increment and reset methods.",
+    "output": "class Invoice_1:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_2 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_2:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_3 that flattens a nested list.",
+    "output": "def ShapeBox_3(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_3(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_4 with add, pop, and size methods.",
+    "output": "class RateLimiter_4:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_5 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_5:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_6 with increment and reset methods.",
+    "output": "class ContactCard_6:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_7 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_7:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_8 that flattens a nested list.",
+    "output": "def CacheEntry_8(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_8(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_9 with add, pop, and size methods.",
+    "output": "class UserProfile_9:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_10 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_10:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_11 with increment and reset methods.",
+    "output": "class Invoice_11:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_12 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_12:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_13 that flattens a nested list.",
+    "output": "def ShapeBox_13(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_13(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_14 with add, pop, and size methods.",
+    "output": "class RateLimiter_14:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_15 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_15:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_16 with increment and reset methods.",
+    "output": "class ContactCard_16:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_17 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_17:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_18 that flattens a nested list.",
+    "output": "def CacheEntry_18(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_18(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_19 with add, pop, and size methods.",
+    "output": "class UserProfile_19:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_20 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_20:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_21 with increment and reset methods.",
+    "output": "class Invoice_21:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_22 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_22:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_23 that flattens a nested list.",
+    "output": "def ShapeBox_23(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_23(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_24 with add, pop, and size methods.",
+    "output": "class RateLimiter_24:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_25 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_25:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_26 with increment and reset methods.",
+    "output": "class ContactCard_26:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_27 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_27:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_28 that flattens a nested list.",
+    "output": "def CacheEntry_28(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_28(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_29 with add, pop, and size methods.",
+    "output": "class UserProfile_29:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_30 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_30:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_31 with increment and reset methods.",
+    "output": "class Invoice_31:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_32 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_32:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_33 that flattens a nested list.",
+    "output": "def ShapeBox_33(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_33(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_34 with add, pop, and size methods.",
+    "output": "class RateLimiter_34:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_35 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_35:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_36 with increment and reset methods.",
+    "output": "class ContactCard_36:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_37 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_37:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_38 that flattens a nested list.",
+    "output": "def CacheEntry_38(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_38(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_39 with add, pop, and size methods.",
+    "output": "class UserProfile_39:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_40 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_40:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_41 with increment and reset methods.",
+    "output": "class Invoice_41:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_42 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_42:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_43 that flattens a nested list.",
+    "output": "def ShapeBox_43(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_43(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_44 with add, pop, and size methods.",
+    "output": "class RateLimiter_44:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_45 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_45:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_46 with increment and reset methods.",
+    "output": "class ContactCard_46:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_47 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_47:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_48 that flattens a nested list.",
+    "output": "def CacheEntry_48(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_48(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_49 with add, pop, and size methods.",
+    "output": "class UserProfile_49:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_50 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_50:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_51 with increment and reset methods.",
+    "output": "class Invoice_51:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_52 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_52:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_53 that flattens a nested list.",
+    "output": "def ShapeBox_53(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_53(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_54 with add, pop, and size methods.",
+    "output": "class RateLimiter_54:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_55 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_55:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_56 with increment and reset methods.",
+    "output": "class ContactCard_56:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_57 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_57:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_58 that flattens a nested list.",
+    "output": "def CacheEntry_58(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_58(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_59 with add, pop, and size methods.",
+    "output": "class UserProfile_59:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_60 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_60:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_61 with increment and reset methods.",
+    "output": "class Invoice_61:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_62 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_62:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_63 that flattens a nested list.",
+    "output": "def ShapeBox_63(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_63(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_64 with add, pop, and size methods.",
+    "output": "class RateLimiter_64:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_65 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_65:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_66 with increment and reset methods.",
+    "output": "class ContactCard_66:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_67 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_67:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_68 that flattens a nested list.",
+    "output": "def CacheEntry_68(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_68(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_69 with add, pop, and size methods.",
+    "output": "class UserProfile_69:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_70 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_70:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_71 with increment and reset methods.",
+    "output": "class Invoice_71:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_72 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_72:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_73 that flattens a nested list.",
+    "output": "def ShapeBox_73(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_73(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_74 with add, pop, and size methods.",
+    "output": "class RateLimiter_74:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_75 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_75:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_76 with increment and reset methods.",
+    "output": "class ContactCard_76:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_77 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_77:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_78 that flattens a nested list.",
+    "output": "def CacheEntry_78(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_78(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_79 with add, pop, and size methods.",
+    "output": "class UserProfile_79:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_80 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_80:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_81 with increment and reset methods.",
+    "output": "class Invoice_81:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_82 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_82:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_83 that flattens a nested list.",
+    "output": "def ShapeBox_83(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_83(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_84 with add, pop, and size methods.",
+    "output": "class RateLimiter_84:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_85 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_85:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_86 with increment and reset methods.",
+    "output": "class ContactCard_86:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_87 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_87:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_88 that flattens a nested list.",
+    "output": "def CacheEntry_88(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_88(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_89 with add, pop, and size methods.",
+    "output": "class UserProfile_89:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Wallet_90 with width, height, area, and perimeter methods.",
+    "output": "class Wallet_90:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class Invoice_91 with increment and reset methods.",
+    "output": "class Invoice_91:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class Counter_92 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class Counter_92:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function ShapeBox_93 that flattens a nested list.",
+    "output": "def ShapeBox_93(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(ShapeBox_93(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class RateLimiter_94 with add, pop, and size methods.",
+    "output": "class RateLimiter_94:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Define a Rectangle class named Notebook_95 with width, height, area, and perimeter methods.",
+    "output": "class Notebook_95:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\n    def area(self):\n        return self.width * self.height\n\n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+  },
+  {
+    "input": "Create a simple counter class ContactCard_96 with increment and reset methods.",
+    "output": "class ContactCard_96:\n    def __init__(self, start=0):\n        self.value = start\n\n    def increment(self, amount=1):\n        self.value += amount\n        return self.value\n\n    def reset(self):\n        self.value = 0\n        return self.value"
+  },
+  {
+    "input": "Write a BankAccount-style class TaskQueue_97 with deposit and withdraw methods that reject overdrafts.",
+    "output": "class TaskQueue_97:\n    def __init__(self, balance=0):\n        self.balance = balance\n\n    def deposit(self, amount):\n        self.balance += amount\n        return self.balance\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('insufficient funds')\n        self.balance -= amount\n        return self.balance"
+  },
+  {
+    "input": "Write a recursive function CacheEntry_98 that flattens a nested list.",
+    "output": "def CacheEntry_98(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(CacheEntry_98(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "Create a task queue class UserProfile_99 with add, pop, and size methods.",
+    "output": "class UserProfile_99:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop(0)\n\n    def size(self):\n        return len(self.items)"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_0.",
+    "output": "def algorithm_tool_0(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_0(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_1 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_1(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_2 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_2(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_3 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_3(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_4 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_4(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_5.",
+    "output": "def algorithm_tool_5(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_5(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_6 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_6(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_7 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_7(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_8 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_8(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_9 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_9(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_10.",
+    "output": "def algorithm_tool_10(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_10(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_11 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_11(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_12 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_12(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_13 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_13(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_14 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_14(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_15.",
+    "output": "def algorithm_tool_15(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_15(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_16 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_16(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_17 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_17(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_18 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_18(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_19 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_19(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_20.",
+    "output": "def algorithm_tool_20(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_20(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_21 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_21(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_22 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_22(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_23 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_23(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_24 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_24(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_25.",
+    "output": "def algorithm_tool_25(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_25(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_26 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_26(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_27 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_27(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_28 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_28(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_29 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_29(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_30.",
+    "output": "def algorithm_tool_30(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_30(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_31 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_31(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_32 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_32(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_33 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_33(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_34 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_34(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_35.",
+    "output": "def algorithm_tool_35(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_35(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_36 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_36(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_37 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_37(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_38 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_38(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_39 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_39(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_40.",
+    "output": "def algorithm_tool_40(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_40(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_41 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_41(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_42 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_42(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_43 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_43(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_44 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_44(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_45.",
+    "output": "def algorithm_tool_45(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_45(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_46 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_46(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_47 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_47(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_48 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_48(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_49 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_49(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_50.",
+    "output": "def algorithm_tool_50(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_50(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_51 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_51(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_52 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_52(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_53 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_53(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_54 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_54(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_55.",
+    "output": "def algorithm_tool_55(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_55(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_56 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_56(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_57 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_57(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_58 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_58(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_59 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_59(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_60.",
+    "output": "def algorithm_tool_60(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_60(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_61 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_61(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_62 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_62(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_63 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_63(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_64 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_64(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_65.",
+    "output": "def algorithm_tool_65(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_65(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_66 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_66(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_67 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_67(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_68 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_68(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_69 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_69(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_70.",
+    "output": "def algorithm_tool_70(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_70(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_71 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_71(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_72 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_72(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_73 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_73(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_74 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_74(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_75.",
+    "output": "def algorithm_tool_75(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_75(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_76 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_76(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_77 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_77(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_78 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_78(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_79 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_79(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_80.",
+    "output": "def algorithm_tool_80(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_80(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_81 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_81(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_82 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_82(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_83 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_83(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_84 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_84(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_85.",
+    "output": "def algorithm_tool_85(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_85(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_86 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_86(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_87 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_87(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_88 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_88(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_89 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_89(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_90.",
+    "output": "def algorithm_tool_90(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_90(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_91 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_91(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_92 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_92(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_93 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_93(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_94 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_94(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a recursive factorial function named algorithm_tool_95.",
+    "output": "def algorithm_tool_95(n):\n    if n <= 1:\n        return 1\n    return n * algorithm_tool_95(n - 1)"
+  },
+  {
+    "input": "Make a binary search function algorithm_tool_96 that returns the index of a target in a sorted list or -1.",
+    "output": "def algorithm_tool_96(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "Write a merge helper algorithm_tool_97 that merges two sorted lists into one sorted list.",
+    "output": "def algorithm_tool_97(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "Create a generator algorithm_tool_98 that yields running totals from a sequence of numbers.",
+    "output": "def algorithm_tool_98(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n        yield total"
+  },
+  {
+    "input": "Write a function algorithm_tool_99 that validates an email address with a simple check and returns a boolean.",
+    "output": "def algorithm_tool_99(email):\n    return isinstance(email, str) and '@' in email and '.' in email.split('@')[-1]"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_1 that always returns the same instance.",
+    "output": "class api_tool_1:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_2 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_2(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_3 that stores objects in a list and can list all items.",
+    "output": "class api_tool_3:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_6 that always returns the same instance.",
+    "output": "class api_tool_6:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_7 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_7(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_8 that stores objects in a list and can list all items.",
+    "output": "class api_tool_8:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_11 that always returns the same instance.",
+    "output": "class api_tool_11:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_12 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_12(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_13 that stores objects in a list and can list all items.",
+    "output": "class api_tool_13:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_16 that always returns the same instance.",
+    "output": "class api_tool_16:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_17 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_17(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_18 that stores objects in a list and can list all items.",
+    "output": "class api_tool_18:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_21 that always returns the same instance.",
+    "output": "class api_tool_21:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_22 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_22(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_23 that stores objects in a list and can list all items.",
+    "output": "class api_tool_23:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_26 that always returns the same instance.",
+    "output": "class api_tool_26:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_27 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_27(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_28 that stores objects in a list and can list all items.",
+    "output": "class api_tool_28:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_31 that always returns the same instance.",
+    "output": "class api_tool_31:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_32 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_32(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_33 that stores objects in a list and can list all items.",
+    "output": "class api_tool_33:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_36 that always returns the same instance.",
+    "output": "class api_tool_36:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_37 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_37(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_38 that stores objects in a list and can list all items.",
+    "output": "class api_tool_38:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_41 that always returns the same instance.",
+    "output": "class api_tool_41:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_42 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_42(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_43 that stores objects in a list and can list all items.",
+    "output": "class api_tool_43:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_46 that always returns the same instance.",
+    "output": "class api_tool_46:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_47 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_47(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_48 that stores objects in a list and can list all items.",
+    "output": "class api_tool_48:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_51 that always returns the same instance.",
+    "output": "class api_tool_51:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_52 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_52(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_53 that stores objects in a list and can list all items.",
+    "output": "class api_tool_53:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_56 that always returns the same instance.",
+    "output": "class api_tool_56:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_57 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_57(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_58 that stores objects in a list and can list all items.",
+    "output": "class api_tool_58:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_61 that always returns the same instance.",
+    "output": "class api_tool_61:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_62 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_62(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_63 that stores objects in a list and can list all items.",
+    "output": "class api_tool_63:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_66 that always returns the same instance.",
+    "output": "class api_tool_66:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_67 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_67(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_68 that stores objects in a list and can list all items.",
+    "output": "class api_tool_68:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_71 that always returns the same instance.",
+    "output": "class api_tool_71:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_72 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_72(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_73 that stores objects in a list and can list all items.",
+    "output": "class api_tool_73:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_76 that always returns the same instance.",
+    "output": "class api_tool_76:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_77 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_77(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_78 that stores objects in a list and can list all items.",
+    "output": "class api_tool_78:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_81 that always returns the same instance.",
+    "output": "class api_tool_81:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_82 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_82(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_83 that stores objects in a list and can list all items.",
+    "output": "class api_tool_83:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_86 that always returns the same instance.",
+    "output": "class api_tool_86:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_87 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_87(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_88 that stores objects in a list and can list all items.",
+    "output": "class api_tool_88:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_91 that always returns the same instance.",
+    "output": "class api_tool_91:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_92 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_92(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_93 that stores objects in a list and can list all items.",
+    "output": "class api_tool_93:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  },
+  {
+    "input": "Write a Flask-style endpoint stub that returns a JSON dict with status ok.",
+    "output": "def endpoint():\n    return {'status': 'ok'}"
+  },
+  {
+    "input": "Create a singleton class api_tool_96 that always returns the same instance.",
+    "output": "class api_tool_96:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance"
+  },
+  {
+    "input": "Write a factory function api_tool_97 that creates a shape object from a kind string.",
+    "output": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\nclass Square:\n    def __init__(self, side):\n        self.side = side\n\ndef api_tool_97(kind, size):\n    if kind == 'circle':\n        return Circle(size)\n    if kind == 'square':\n        return Square(size)\n    raise ValueError('unknown kind')"
+  },
+  {
+    "input": "Write a repository-style class api_tool_98 that stores objects in a list and can list all items.",
+    "output": "class api_tool_98:\n    def __init__(self):\n        self.items = []\n\n    def add(self, item):\n        self.items.append(item)\n\n    def all(self):\n        return list(self.items)"
+  },
+  {
+    "input": "Create a data validation function that checks a payload has id, name, and score fields.",
+    "output": "def validate_payload(payload):\n    required = ['id', 'name', 'score']\n    return all(field in payload for field in required)"
+  }
+]

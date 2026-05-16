@@ -1,0 +1,1046 @@
+[
+  {
+    "id": 1,
+    "task": "explain",
+    "difficulty": "beginner",
+    "label": "Simple math function",
+    "input": "def celsius_to_fahrenheit(celsius):\n    return (celsius * 9 / 5) + 32",
+    "output": "The generator celsius_to_fahrenheit uses Celsius-based conversion to transform celsius and return a Fahrenheit value. It begins with the function's main control flow, then follows each step until the final result is produced. It accepts celsius, returns a Fahrenheit temperature and returns the Celsius value. One notable detail is that the input temperature must be a number able to be converted.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "temperature",
+      "conversion",
+      "fahrenheit",
+      "celsius"
+    ],
+    "kw_missing": [
+      "multiply"
+    ]
+  },
+  {
+    "id": 2,
+    "task": "explain",
+    "difficulty": "beginner",
+    "label": "String reversal",
+    "input": "def reverse_words(sentence):\n    words = sentence.split(' ')\n    reversed_words = words[::-1]\n    return ' '.join(reversed_words)",
+    "output": "The function reverse_words uses slice-based string reversal to transform sentence and words into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts sentence, words and returns the reversed string. One notable detail is that it preserves whitespace while reversing.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "words",
+      "reverse"
+    ],
+    "kw_missing": [
+      "order",
+      "split",
+      "join"
+    ]
+  },
+  {
+    "id": 3,
+    "task": "explain",
+    "difficulty": "beginner",
+    "label": "List filtering",
+    "input": "def filter_positives(numbers):\n    result = []\n    for num in numbers:\n        if num > 0:\n            result.append(num)\n    return result",
+    "output": "The recursive filter_positives uses a filter-transform-select method to transform numbers and result into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts numbers, result and returns a list of positive numbers. One notable detail is that zero never gets filtered out.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "positive",
+      "numbers",
+      "filter",
+      "list"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 4,
+    "task": "explain",
+    "difficulty": "beginner",
+    "label": "Dictionary frequency counter",
+    "input": "def count_occurrences(items):\n    counts = {}\n    for item in items:\n        if item in counts:\n            counts[item] += 1\n        else:\n            counts[item] = 1\n    return counts",
+    "output": "The recursive count_occurrences uses dictionary accumulation with lookups to transform items and counts into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts items, counts and returns the total count of occurrences. One notable detail is that new items always become keys and already existing keys become values.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "count",
+      "dictionary",
+      "occurrences"
+    ],
+    "kw_missing": [
+      "frequency"
+    ]
+  },
+  {
+    "id": 5,
+    "task": "explain",
+    "difficulty": "beginner",
+    "label": "Find maximum value",
+    "input": "def find_max(numbers):\n    if not numbers:\n        return None\n    max_val = numbers[0]\n    for num in numbers[1:]:\n        if num > max_val:\n            max_val = num\n    return max_val",
+    "output": "The recursive find_max uses order-preserving iteration to transform numbers and max_val into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts numbers, max_val and returns the largest number from the list. One notable detail is that empty numbers returns None instead of zero.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "largest",
+      "value",
+      "list"
+    ],
+    "kw_missing": [
+      "maximum"
+    ]
+  },
+  {
+    "id": 6,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Binary search",
+    "input": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "output": "The algorithm binary_search uses binary search to transform arr and target into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts arr, target and returns the index of target or negative one. One notable detail is that the search assumes arr is already sorted.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "binary",
+      "search",
+      "sorted"
+    ],
+    "kw_missing": [
+      "array",
+      "middle",
+      "divide"
+    ]
+  },
+  {
+    "id": 7,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Merge sort",
+    "input": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result",
+    "output": "The function merge_sort uses partition-based sorting with a recursive return path to transform arr and len into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts arr, len and returns a sorted list. One notable detail is that the internal merge algorithm uses the len of the inputs to optimize for speed.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "merge",
+      "sort",
+      "recursive"
+    ],
+    "kw_missing": [
+      "divide",
+      "conquer",
+      "halves"
+    ]
+  },
+  {
+    "id": 8,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Decorator with wraps",
+    "input": "import time\nfrom functools import wraps\n\ndef timer(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end - start:.4f} seconds')\n        return result\n    return wrapper",
+    "output": "The algorithm timer uses a timing wrapper to transform func and args into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts func, args and returns the wrapped function result after printing elapsed time. One notable detail is that the wrapper preserves the original function metadata with wraps().",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "timer",
+      "time",
+      "wraps"
+    ],
+    "kw_missing": [
+      "decorator",
+      "measures",
+      "execution"
+    ]
+  },
+  {
+    "id": 9,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Generator with yield",
+    "input": "def chunked(iterable, size):\n    chunk = []\n    for item in iterable:\n        chunk.append(item)\n        if len(chunk) == size:\n            yield chunk\n            chunk = []\n    if chunk:\n        yield chunk",
+    "output": "The function chunked uses generator-based chunking to transform iterable and size into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts iterable, size and returns lists of items in successive chunks. One notable detail is that the final chunk may be yielded again if the length is not divisible by size.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "generator",
+      "chunks",
+      "yield",
+      "iterable"
+    ],
+    "kw_missing": [
+      "batches"
+    ]
+  },
+  {
+    "id": 10,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Class with inheritance",
+    "input": "class Animal:\n    def __init__(self, name, sound):\n        self.name = name\n        self.sound = sound\n\n    def speak(self):\n        return f'{self.name} says {self.sound}'\n\nclass Dog(Animal):\n    def __init__(self, name):\n        super().__init__(name, 'Woof')\n\n    def fetch(self, item):\n        return f'{self.name} fetches the {item}'",
+    "output": "This decorator Animal and Dog uses inheritance and method overriding to transform self and super into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts self, super and returns a speaking dog result. One notable detail is that the derived class returns the item directly instead of calling the base speak method.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "inheritance",
+      "class",
+      "animal",
+      "dog",
+      "super"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 11,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Context manager",
+    "input": "class ManagedFile:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n        self.file = None\n\n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if self.file:\n            self.file.close()\n        return False",
+    "output": "The method ManagedFile uses a context manager to transform filename and mode into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts filename, mode and returns an open file object. One notable detail is that exceptions are not suppressed because __exit__ closes the file on exit.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "context",
+      "manager",
+      "file",
+      "open",
+      "close",
+      "exit"
+    ],
+    "kw_missing": [
+      "enter"
+    ]
+  },
+  {
+    "id": 12,
+    "task": "explain",
+    "difficulty": "intermediate",
+    "label": "Retry decorator with backoff",
+    "input": "import time\nfrom functools import wraps\n\ndef retry(max_attempts=3, delay=1.0, exceptions=(Exception,)):\n    def decorator(func):\n        @wraps(func)\n        def wrapper(*args, **kwargs):\n            attempts = 0\n            while attempts < max_attempts:\n                try:\n                    return func(*args, **kwargs)\n                except exceptions as e:\n                    attempts += 1\n                    if attempts == max_attempts:\n                        raise\n                    time.sleep(delay * attempts)\n        return wrapper\n    return decorator",
+    "output": "The algorithm retry(max_attempts=3, delay=1.0, exceptions=(Exception,)) uses retry with a wrapper to transform func and args into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts func, args and returns the successful return value of the wrapped function. One notable detail is that after max_attempts is reached, exceptions are raised again.",
+    "score": 5,
+    "max_score": 6,
+    "flags": [
+      "\u26a0\ufe0f  Markdown or bullet points found \u2014 should be pure prose"
+    ],
+    "kw_found": [
+      "retry",
+      "attempts",
+      "delay",
+      "exception"
+    ],
+    "kw_missing": [
+      "decorator",
+      "backoff"
+    ]
+  },
+  {
+    "id": 13,
+    "task": "explain",
+    "difficulty": "advanced",
+    "label": "LRU Cache implementation",
+    "input": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key, value):\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "output": "The method LRUCache uses an inverted dictionary to transform capacity and key into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts capacity, key and returns the cached value or None. One notable detail is that keys must be ordered for lookups.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "lru",
+      "cache",
+      "capacity",
+      "ordered"
+    ],
+    "kw_missing": [
+      "evict",
+      "least",
+      "recently"
+    ]
+  },
+  {
+    "id": 14,
+    "task": "explain",
+    "difficulty": "advanced",
+    "label": "Graph BFS traversal",
+    "input": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    order = []\n    while queue:\n        node = queue.popleft()\n        order.append(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    return order",
+    "output": "The algorithm bfs uses breadth-first search to transform graph and start into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts graph, start and returns the order list after traversal. One notable detail is that unreachable nodes never appear in the returned list.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "breadth",
+      "first",
+      "search",
+      "graph",
+      "traversal"
+    ],
+    "kw_missing": [
+      "queue",
+      "visited"
+    ]
+  },
+  {
+    "id": 15,
+    "task": "explain",
+    "difficulty": "advanced",
+    "label": "Memoized recursive Fibonacci",
+    "input": "def make_fibonacci():\n    memo = {}\n    def fib(n):\n        if n in memo:\n            return memo[n]\n        if n <= 1:\n            return n\n        memo[n] = fib(n - 1) + fib(n - 2)\n        return memo[n]\n    return fib\n\nfibonacci = make_fibonacci()",
+    "output": "The generator make_fibonacci uses recursive memoization to transform n and fib into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts n, fib and returns the Fibonacci value. One notable detail is that it uses a memoized fib calculation, so calls to the function after the memory store returns the cached result.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "memoization",
+      "fibonacci",
+      "cache",
+      "recursive"
+    ],
+    "kw_missing": [
+      "closure"
+    ]
+  },
+  {
+    "id": 16,
+    "task": "explain",
+    "difficulty": "advanced",
+    "label": "Observer pattern",
+    "input": "class EventEmitter:\n    def __init__(self):\n        self._listeners = {}\n\n    def on(self, event, callback):\n        if event not in self._listeners:\n            self._listeners[event] = []\n        self._listeners[event].append(callback)\n\n    def off(self, event, callback):\n        if event in self._listeners:\n            self._listeners[event].remove(callback)\n\n    def emit(self, event, *args, **kwargs):\n        for callback in self._listeners.get(event, []):\n            callback(*args, **kwargs)",
+    "output": "The method EventEmitter uses an event-driven model to transform event and callback into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts event, callback and returns an event emission result when called. One notable detail is that the internal list is cleared with each event call.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "event",
+      "emit",
+      "callback"
+    ],
+    "kw_missing": [
+      "observer",
+      "listener",
+      "pattern"
+    ]
+  },
+  {
+    "id": 17,
+    "task": "explain",
+    "difficulty": "advanced",
+    "label": "Async fetch with semaphore",
+    "input": "import asyncio\n\nasync def fetch_all(urls, max_concurrent=5):\n    semaphore = asyncio.Semaphore(max_concurrent)\n    results = []\n\n    async def fetch_one(url):\n        async with semaphore:\n            await asyncio.sleep(0.1)\n            return f'response from {url}'\n\n    tasks = [fetch_one(url) for url in urls]\n    results = await asyncio.gather(*tasks)\n    return results",
+    "output": "The algorithm fetch_all uses asyncio.gather with a semaphore to transform urls and max_concurrent into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts urls, max_concurrent and returns the gathered response as a list. One notable detail is that multiple requests can be made in parallel, but the semaphore limits the number of concurrent executions.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "async",
+      "semaphore",
+      "concurrent",
+      "limit",
+      "gather"
+    ],
+    "kw_missing": [
+      "tasks"
+    ]
+  },
+  {
+    "id": 18,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Empty function body",
+    "input": "def placeholder():\n    pass",
+    "output": "The generator placeholder() uses a blank function body to transform args into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts args, returns whatever the wrapped callable returns or None. One notable detail is that it accepts args but never returns a value because the function returns nothing.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "placeholder",
+      "nothing"
+    ],
+    "kw_missing": [
+      "empty"
+    ]
+  },
+  {
+    "id": 19,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "One liner lambda assign",
+    "input": "square = lambda x: x ** 2",
+    "output": "The generator square uses lambda calculus to transform x and square into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts x, square and returns the squared value. One notable detail is that square is called with the function argument while recursion completes inside the lambda.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "square",
+      "lambda"
+    ],
+    "kw_missing": [
+      "power"
+    ]
+  },
+  {
+    "id": 20,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Deeply nested conditionals",
+    "input": "def classify(x):\n    if x > 0:\n        if x > 100:\n            if x > 1000:\n                return 'huge'\n            return 'large'\n        return 'medium'\n    elif x == 0:\n        return 'zero'\n    else:\n        if x < -100:\n            return 'very negative'\n        return 'negative'",
+    "output": "The function classify uses if-else decision-making to transform x and return a classification. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts x, returns a string classification and returns zero for empty input. One notable detail is that negative numbers less than -100 fall into the negative category.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "classify"
+    ],
+    "kw_missing": [
+      "range",
+      "nested",
+      "conditions",
+      "categories"
+    ]
+  },
+  {
+    "id": 21,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Very long multi-function module",
+    "input": "def validate_email(email):\n    return '@' in email and '.' in email.split('@')[-1]\n\ndef validate_age(age):\n    return isinstance(age, int) and 0 <= age <= 150\n\ndef validate_username(username):\n    return (\n        isinstance(username, str) and\n        3 <= len(username) <= 30 and\n        username.isalnum()\n    )\n\ndef validate_user(user_dict):\n    errors = []\n    if not validate_email(user_dict.get('email', '')):\n        errors.append('Invalid email')\n    if not validate_age(user_dict.get('age', -1)):\n        errors.append('Invalid age')\n    if not validate_username(user_dict.get('username', '')):\n        errors.append('Invalid username')\n    return errors if errors else None",
+    "output": "The function validate_user uses error handling with if-else blocks and validatable functions to transform user_dict into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts user_dict, email, age and returns a list of errors or None. One notable detail is that missing validation will return None instead of raising an exception.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "validate",
+      "user",
+      "email",
+      "age",
+      "errors"
+    ],
+    "kw_missing": [
+      "username"
+    ]
+  },
+  {
+    "id": 22,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Single return comprehension",
+    "input": "def matrix_transpose(matrix):\n    return [[row[i] for row in matrix] for i in range(len(matrix[0]))]",
+    "output": "Built around matrix_transpose uses a list comprehension to transform matrix and row into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts matrix, row and returns a flattened list of lists. One notable detail is that the matrix input is inverted during the final pass.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "transpose",
+      "matrix"
+    ],
+    "kw_missing": [
+      "rows",
+      "columns",
+      "swap"
+    ]
+  },
+  {
+    "id": 23,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Cryptic variable names",
+    "input": "def f(a, b, c=True):\n    r = []\n    for x in a:\n        if c:\n            if x not in r:\n                r.append(x)\n        else:\n            if x in b:\n                r.append(x)\n    return r",
+    "output": "The method f uses list compression to transform a and b into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts a, b and returns a list of unique values. One notable detail is that new lists are created on every pass.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "list"
+    ],
+    "kw_missing": [
+      "deduplicate",
+      "filter",
+      "intersect"
+    ]
+  },
+  {
+    "id": 24,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Recursive tree flatten",
+    "input": "def flatten_tree(node, result=None):\n    if result is None:\n        result = []\n    if node is None:\n        return result\n    result.append(node.get('value'))\n    for child in node.get('children', []):\n        flatten_tree(child, result)\n    return result",
+    "output": "The generator flatten_tree uses recursive tree flattening to transform node and result into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts node, result and returns a flattened tree as a list. One notable detail is that the recursive call returns the tree root when node is None.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "tree",
+      "flatten",
+      "recursive"
+    ],
+    "kw_missing": [
+      "children",
+      "nodes"
+    ]
+  },
+  {
+    "id": 25,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Non-Python looking structure",
+    "input": "ROUTES = {\n    '/home'   : 'home_handler',\n    '/about'  : 'about_handler',\n    '/api/v1' : 'api_handler',\n}\n\ndef dispatch(path):\n    handler = ROUTES.get(path)\n    if handler is None:\n        return '404 Not Found'\n    return f'Dispatching to {handler}'",
+    "output": "The function ROUTES uses a dictionary to transform path and handler into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts path, handler and returns the handled path or a custom message. One notable detail is that missing path keys fall back to a default '404 Not Found'.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "route",
+      "handler",
+      "path",
+      "dictionary"
+    ],
+    "kw_missing": [
+      "dispatch"
+    ]
+  },
+  {
+    "id": 26,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Long pipeline with chained operations",
+    "input": "def process_sales_data(records):\n    filtered  = [r for r in records if r.get('amount', 0) > 0]\n    grouped   = {}\n    for r in filtered:\n        region = r.get('region', 'unknown')\n        if region not in grouped:\n            grouped[region] = []\n        grouped[region].append(r['amount'])\n    summary = {\n        region: {\n            'total'   : sum(amounts),\n            'average' : sum(amounts) / len(amounts),\n            'count'   : len(amounts),\n        }\n        for region, amounts in grouped.items()\n    }\n    return dict(sorted(summary.items(), key=lambda x: x[1]['total'], reverse=True))",
+    "output": "The function process_sales_data uses a multi-step pipeline to transform records and filtered into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts records, filtered and returns a sorted dictionary of sales summaries. One notable detail is that empty regions fall back to the generic amount value.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "sales",
+      "region",
+      "sorted"
+    ],
+    "kw_missing": [
+      "group",
+      "total",
+      "average",
+      "summary"
+    ]
+  },
+  {
+    "id": 27,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Async generator",
+    "input": "import asyncio\n\nasync def async_range(start, stop, delay=0.1):\n    current = start\n    while current < stop:\n        await asyncio.sleep(delay)\n        yield current\n        current += 1",
+    "output": "The method async_range uses asyncio.gather with a small delay to transform start and stop into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts start, stop, delay and returns an iterable of values between start and stop. One notable detail is that it yields control back to the event loop on every pass.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "async",
+      "yield",
+      "range",
+      "delay"
+    ],
+    "kw_missing": [
+      "generator"
+    ]
+  },
+  {
+    "id": 28,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Singleton pattern",
+    "input": "class Singleton:\n    _instance = None\n\n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n\n    def __init__(self, value=None):\n        if not hasattr(self, '_initialized'):\n            self.value = value\n            self._initialized = True",
+    "output": "The algorithm Singleton uses the singleton pattern to transform args and kwargs into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts args, kwargs and returns the same instance every time. One notable detail is that state is shared because __new__ reuses the cached instance.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "singleton",
+      "one",
+      "instance",
+      "pattern"
+    ],
+    "kw_missing": [
+      "class"
+    ]
+  },
+  {
+    "id": 29,
+    "task": "explain",
+    "difficulty": "edge",
+    "label": "Extremely long complex class",
+    "input": "class TaskQueue:\n    def __init__(self, max_size=100):\n        self._queue = []\n        self._max_size = max_size\n        self._completed = []\n        self._failed = []\n\n    def enqueue(self, task):\n        if len(self._queue) >= self._max_size:\n            raise OverflowError(f'Queue full: max {self._max_size} tasks')\n        self._queue.append({'task': task, 'status': 'pending'})\n\n    def dequeue(self):\n        if not self._queue:\n            raise IndexError('Queue is empty')\n        return self._queue.pop(0)\n\n    def complete(self, task):\n        task['status'] = 'completed'\n        self._completed.append(task)\n\n    def fail(self, task, reason):\n        task['status'] = 'failed'\n        task['reason'] = reason\n        self._failed.append(task)\n\n    def stats(self):\n        return {\n            'pending'   : len(self._queue),\n            'completed' : len(self._completed),\n            'failed'    : len(self._failed),\n        }",
+    "output": "The function TaskQueue uses queue stacking with a status list to transform self and self.queue into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts self.queue, self.max_size and returns a queue report. One notable detail is that tasks are stored in order of entry and completed/failed are swapped.",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "task",
+      "queue",
+      "complete",
+      "fail"
+    ],
+    "kw_missing": [
+      "enqueue",
+      "dequeue",
+      "stats",
+      "pending"
+    ]
+  },
+  {
+    "id": 30,
+    "task": "document",
+    "difficulty": "beginner",
+    "label": "Simple addition function",
+    "input": "def add(a, b):\n    return a + b",
+    "output": "def add(a, b):\n    \"\"\"Add two values together.\n\n    Args:\n        a: The first number.\n        b: The second number.\n\n    Returns:\n        The sum of a and b.\n    \"\"\"\n    return a + b",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 31,
+    "task": "document",
+    "difficulty": "beginner",
+    "label": "Check palindrome",
+    "input": "def is_palindrome(s):\n    return s == s[::-1]",
+    "output": "def is_palindrome(s):\n    \"\"\"Check if a string is a palindrome.\n\n    Args:\n        s: String to check.\n\n    Returns:\n        True if the string is the same when reversed, False otherwise.\n    \"\"\"\n    return s == s[::-1]",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 32,
+    "task": "document",
+    "difficulty": "beginner",
+    "label": "Clamp function",
+    "input": "def clamp(value, min_val, max_val):\n    return max(min_val, min(value, max_val))",
+    "output": "def clamp(value, min_val, max_val):\n    \"\"\"Clamp a value into an inclusive range.\n\n    Args:\n        value: Number to clamp.\n        min_val: Minimum allowed value.\n        max_val: Maximum allowed value.\n\n    Returns:\n        The original value when it is inside the range, otherwise a boundary.\n    \"\"\"\n    return max(min_val, min(value, max_val))",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "clamp"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 33,
+    "task": "document",
+    "difficulty": "beginner",
+    "label": "Repeat string",
+    "input": "def repeat_string(s, n):\n    return s * n",
+    "output": "def repeat_string(s, n):\n    \"\"\"Repeat a string by a number.\n\n    Args:\n        s: String to repeat.\n        n: Number of times to repeat.\n\n    Returns:\n        The repeated string.\n    \"\"\"\n    return s * n",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 34,
+    "task": "document",
+    "difficulty": "beginner",
+    "label": "Safe divide",
+    "input": "def safe_divide(a, b):\n    if b == 0:\n        return None\n    return a / b",
+    "output": "def safe_divide(a, b):\n    \"\"\"Divide two values while guarding against zero division.\n\n    Args:\n        a: Number to divide.\n        b: Number to divide.\n\n    Returns:\n        The quotient, or None when b is zero.\n    \"\"\"\n    if b == 0:\n        return None\n    return a / b",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 35,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Class BankAccount",
+    "input": "class BankAccount:\n    def __init__(self, owner, balance=0.0):\n        self.owner = owner\n        self.balance = balance\n        self.transactions = []\n\n    def deposit(self, amount):\n        if amount <= 0:\n            raise ValueError('Deposit must be positive')\n        self.balance += amount\n        self.transactions.append(('deposit', amount))\n\n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise ValueError('Insufficient funds')\n        self.balance -= amount\n        self.transactions.append(('withdraw', amount))\n\n    def get_history(self):\n        return list(self.transactions)",
+    "output": "class BankAccount:\n    \"\"\"Model a simple bank account with a balance and transactions.\n    \"\"\"\n\n    def __init__(self, owner, balance=0.0):\n        \"\"\"Initialize the account owner and balance.\n\n        Attributes:\n            owner: Account holder name.\n            balance: Current balance.\n            transactions: Stored transaction records.\n        \"\"\"\n        self.owner = owner\n        self.balance = balance\n        self.transactions = []\n\n    def deposit(self, amount):\n        \"\"\"Add a deposit record.\n\n        Args:\n            amount: Amount to add.\n        \"\"\"\n        if amount <= 0:\n            raise ValueError('Deposit must be positive')\n        self.balance += amount\n        self.transactions.append(('deposit', amount))\n\n    def withdraw(self, amount):\n        \"\"\"Remove a withdrawal when enough funds are available.\n\n        Args:\n            amount: Amount to remove.\n        \"\"\"\n        if amount > self.balance:\n            raise ValueError('Insufficient funds')\n        self.balance -= amount\n        self.transactions.append(('withdraw', amount))\n\n    def get_history(self):\n        \"\"\"Return the stored transaction records.\n\n        Returns:\n            A list of transaction records.\n        \"\"\"\n        return list(self.transactions)",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "attributes"
+    ],
+    "kw_missing": [
+      "raises"
+    ]
+  },
+  {
+    "id": 36,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Retry decorator",
+    "input": "import time\nfrom functools import wraps\n\ndef retry(max_attempts, delay):\n    def decorator(func):\n        @wraps(func)\n        def wrapper(*args, **kwargs):\n            for attempt in range(max_attempts):\n                try:\n                    return func(*args, **kwargs)\n                except Exception as e:\n                    if attempt == max_attempts - 1:\n                        raise\n                    time.sleep(delay)\n        return wrapper\n    return decorator",
+    "output": "import time\nfrom functools import wraps\n\ndef retry(max_attempts, delay):\n    \"\"\"Retry the wrapped function until the last produced success.\n\n    Args:\n        max_attempts: Maximum number of retries.\n        delay: Delay in seconds between attempts.\n\n    Returns:\n        A wrapper that retries on exceptions.\n    \"\"\"\n    def decorator(func):\n        @wraps(func)\n        def wrapper(*args, **kwargs):\n            for attempt in range(max_attempts):\n                try:\n                    return func(*args, **kwargs)\n                except Exception as e:\n                    if attempt == max_attempts - 1:\n                        raise\n                    time.sleep(delay)\n        return wrapper\n    return decorator",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "decorator",
+      "retry"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 37,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Stack class",
+    "input": "class Stack:\n    def __init__(self):\n        self._data = []\n\n    def push(self, item):\n        self._data.append(item)\n\n    def pop(self):\n        if self.is_empty():\n            raise IndexError('Stack is empty')\n        return self._data.pop()\n\n    def peek(self):\n        if self.is_empty():\n            raise IndexError('Stack is empty')\n        return self._data[-1]\n\n    def is_empty(self):\n        return len(self._data) == 0\n\n    def size(self):\n        return len(self._data)",
+    "output": "class Stack:\n    \"\"\"Represent a last-in, first-out collection.\n    \"\"\"\n\n    def __init__(self):\n        \"\"\"Initialize an empty stack.\n\n        Attributes:\n            _data: Stored stack values.\n        \"\"\"\n        self._data = []\n\n    def push(self, item):\n        \"\"\"Push a value onto the stack.\n\n        Args:\n            item: Item to store.\n        \"\"\"\n        self._data.append(item)\n\n    def pop(self):\n        \"\"\"Remove and return the most recent item.\n\n        Returns:\n            The top item from the stack.\n\n        Raises:\n            IndexError: Raised when access to the stack is empty.\n        \"\"\"\n        if self.is_empty():\n            raise IndexError('Stack is empty')\n        return self._data.pop()\n\n    def peek(self):\n        \"\"\"Return the item without removing it.\n\n        Returns:\n            The oldest item from the stack.\n        \"\"\"\n        if self.is_empty():\n            raise IndexError('Stack is empty')\n        return self._data[-1]\n\n    def is_empty(self):\n        \"\"\"Check if the stack is empty.\n\n        Returns:\n            True when the stack is vacant, False otherwise.\n        \"\"\"\n        return len(self._data) == 0\n\n    def size(self):\n        \"\"\"Return the number of stored items.\n\n        Returns:\n            The count of stored values.\n        \"\"\"\n        return len(self._data)",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "raises",
+      "attributes",
+      "stack"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 38,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Chunked generator",
+    "input": "def chunked(iterable, size):\n    chunk = []\n    for item in iterable:\n        chunk.append(item)\n        if len(chunk) == size:\n            yield chunk\n            chunk = []\n    if chunk:\n        yield chunk",
+    "output": "def chunked(iterable, size):\n    \"\"\"Yield fixed-size chunks from a sequence.\n\n    Args:\n        iterable: Sequence to split.\n        size: Chunk size.\n\n    Yields:\n        Slices of up to size items.\n    \"\"\"\n    chunk = []\n    for item in iterable:\n        chunk.append(item)\n        if len(chunk) == size:\n            yield chunk\n            chunk = []\n    if chunk:\n        yield chunk",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "yields",
+      "args"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 39,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Config loader with defaults",
+    "input": "import os\n\ndef load_config(filepath, defaults=None):\n    config = defaults.copy() if defaults else {}\n    if not os.path.exists(filepath):\n        return config\n    with open(filepath, 'r') as f:\n        for line in f:\n            line = line.strip()\n            if not line or line.startswith('#'):\n                continue\n            key, _, value = line.partition('=')\n            config[key.strip()] = value.strip()\n    return config",
+    "output": "import os\n\ndef load_config(filepath, defaults=None):\n    \"\"\"Load configuration from a file.\n\n    Args:\n        filepath: Path to the configuration file.\n        defaults: Default values for missing keys.\n\n    Returns:\n        A dictionary containing the configured data.\n    \"\"\"\n    config = defaults.copy() if defaults else {}\n    if not os.path.exists(filepath):\n        return config\n    with open(filepath, 'r') as f:\n        for line in f:\n            line = line.strip()\n            if not line or line.startswith('#'):\n                continue\n            key, _, value = line.partition('=')\n            config[key.strip()] = value.strip()\n    return config",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "config",
+      "defaults"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 40,
+    "task": "document",
+    "difficulty": "intermediate",
+    "label": "Multi-function script",
+    "input": "def read_csv(filepath):\n    rows = []\n    with open(filepath, 'r') as f:\n        headers = f.readline().strip().split(',')\n        for line in f:\n            values = line.strip().split(',')\n            rows.append(dict(zip(headers, values)))\n    return rows\n\ndef filter_rows(rows, column, value):\n    return [r for r in rows if r.get(column) == value]\n\ndef compute_average(rows, column):\n    values = [float(r[column]) for r in rows if column in r]\n    return sum(values) / len(values) if values else 0.0",
+    "output": "def read_csv(filepath):\n    \"\"\"Read values from a CSV file.\n\n    Args:\n        filepath: Path to the CSV file.\n\n    Returns:\n        A list of dictionary rows.\n    \"\"\"\n    rows = []\n    with open(filepath, 'r') as f:\n        headers = f.readline().strip().split(',')\n        for line in f:\n            values = line.strip().split(',')\n            rows.append(dict(zip(headers, values)))\n    return rows\n\ndef filter_rows(rows, column, value):\n    \"\"\"Filter rows by a matching value.\n\n    Args:\n        rows: A list of row dictionaries.\n        column: Key to look for.\n        value: Matching string.\n\n    Returns:\n        A filtered list of row dictionaries.\n    \"\"\"\n    return [r for r in rows if r.get(column) == value]\n\ndef compute_average(rows, column):\n    \"\"\"Compute the average of a numeric column.\n\n    Args:\n        rows: A list of row dictionaries.\n        column: Column index to sum.\n\n    Returns:\n        The arithmetic mean or None if the column is missing.\n    \"\"\"\n    values = [float(r[column]) for r in rows if column in r]\n    return sum(values) if values else 0.0",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": [
+      "module",
+      "functions"
+    ]
+  },
+  {
+    "id": 41,
+    "task": "document",
+    "difficulty": "advanced",
+    "label": "LRU Cache class",
+    "input": "from collections import OrderedDict\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key, value):\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "output": "from collections import OrderedDict\n\nclass LRUCache:\n    \"\"\"Represent a cache with O(1) access to values.\n    \"\"\"\n\n    def __init__(self, capacity):\n        \"\"\"Initialize the cache with a capacity.\n\n        Attributes:\n            capacity: Maximum number of entries.\n        \"\"\"\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        \"\"\"Return the value associated with key without removing it.\n\n        Args:\n            key: Key to look up.\n\n        Returns:\n            The cached value, or -1 when the key is missing.\n        \"\"\"\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key, value):\n        \"\"\"Store a value and move it to the end of the cache.\n\n        Args:\n            key: Key to store.\n            value: Value to store.\n        \"\"\"\n        if key in self.cache:\n            self.cache.move_to_end(key)\n        self.cache[key] = value\n        if len(self.cache) > self.capacity:\n            self.cache.popitem(last=False)",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "attributes",
+      "capacity",
+      "cache"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 42,
+    "task": "document",
+    "difficulty": "advanced",
+    "label": "Observer / EventEmitter",
+    "input": "class EventEmitter:\n    def __init__(self):\n        self._listeners = {}\n\n    def on(self, event, callback):\n        if event not in self._listeners:\n            self._listeners[event] = []\n        self._listeners[event].append(callback)\n\n    def off(self, event, callback):\n        if event in self._listeners:\n            self._listeners[event].remove(callback)\n\n    def emit(self, event, *args, **kwargs):\n        for cb in self._listeners.get(event, []):\n            cb(*args, **kwargs)",
+    "output": "class EventEmitter:\n    \"\"\"Represent an event emitter with callback registration and emission.\n    \"\"\"\n\n    def __init__(self):\n        \"\"\"Initialize an empty event list.\n\n        Attributes:\n            _listeners: Stored callback functions for events.\n        \"\"\"\n        self._listeners = {}\n\n    def on(self, event, callback):\n        \"\"\"Register a callback for an event.\n\n        Args:\n            event: Event type.\n            callback: Function to call when the event occurs.\n        \"\"\"\n        if event not in self._listeners:\n            self._listeners[event] = []\n        self._listeners[event].append(callback)\n\n    def off(self, event, callback):\n        \"\"\"Remove a callback for an event.\n\n        Args:\n            event: Event type.\n            callback: Function to remove.\n        \"\"\"\n        if event in self._listeners:\n            self._listeners[event].remove(callback)\n\n    def emit(self, event, *args, **kwargs):\n        \"\"\"Emit the event with stored callbacks.\n\n        Args:\n            event: Event type.\n            *args: Positional arguments.\n            **kwargs: Keyword arguments.\n        \"\"\"\n        for cb in self._listeners.get(event, []):\n            cb(*args, **kwargs)\n```",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "attributes",
+      "listeners",
+      "event"
+    ],
+    "kw_missing": [
+      "returns"
+    ]
+  },
+  {
+    "id": 43,
+    "task": "document",
+    "difficulty": "advanced",
+    "label": "Async fetch with semaphore",
+    "input": "import asyncio\n\nasync def fetch_all(urls, max_concurrent=5):\n    semaphore = asyncio.Semaphore(max_concurrent)\n\n    async def fetch_one(url):\n        async with semaphore:\n            await asyncio.sleep(0.1)\n            return f'response:{url}'\n\n    tasks = [fetch_one(url) for url in urls]\n    return await asyncio.gather(*tasks)",
+    "output": "import asyncio\n\nasync def fetch_all(urls, max_concurrent=5):\n    \"\"\"Fetch responses from multiple URLs with a semaphore.\n\n    Args:\n        urls: List of URLs to request.\n        max_concurrent: Number of concurrent requests.\n\n    Returns:\n        A list of responses.\n    \"\"\"\n    semaphore = asyncio.Semaphore(max_concurrent)\n\n    async def fetch_one(url):\n        async with semaphore:\n            await asyncio.sleep(0.1)\n            return f'response:{url}'\n\n    tasks = [fetch_one(url) for url in urls]\n    return await asyncio.gather(*tasks)",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "async",
+      "semaphore"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 44,
+    "task": "document",
+    "difficulty": "advanced",
+    "label": "Full data pipeline class",
+    "input": "class DataPipeline:\n    def __init__(self):\n        self._steps = []\n        self._errors = []\n\n    def add_step(self, name, func):\n        self._steps.append((name, func))\n\n    def run(self, data):\n        result = data\n        for name, func in self._steps:\n            try:\n                result = func(result)\n            except Exception as e:\n                self._errors.append((name, str(e)))\n                return None\n        return result\n\n    def get_errors(self):\n        return list(self._errors)\n\n    def reset(self):\n        self._steps = []\n        self._errors = []",
+    "output": "class DataPipeline:\n    \"\"\"Represent a pipeline of functions that transform data into a result.\n    \"\"\"\n\n    def __init__(self):\n        \"\"\"Initialize the pipeline with empty steps and errors.\n\n        Attributes:\n            _steps: Stored function steps.\n            _errors: Stored error messages.\n        \"\"\"\n        self._steps = []\n        self._errors = []\n\n    def add_step(self, name, func):\n        \"\"\"Add a function step to the pipeline.\n\n        Args:\n            name: Step name.\n            func: Function to apply.\n        \"\"\"\n        self._steps.append((name, func))\n\n    def run(self, data):\n        \"\"\"Apply all steps to the data.\n\n        Args:\n            data: Input to process.\n\n        Returns:\n            The final result or None if a error occurs.\n        \"\"\"\n        result = data\n        for name, func in self._steps:\n            try:\n                result = func(result)\n            except Exception as e:\n                self._errors.append((name, str(e)))\n                return None\n        return result\n\n    def get_errors(self):\n        \"\"\"Return the stored error messages.\n\n        Returns:\n            A list of error tuples.\n        \"\"\"\n        return list(self._errors)\n    \"\"\"Return the stored error messages.\n\"\"\"",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "attributes",
+      "pipeline",
+      "steps"
+    ],
+    "kw_missing": [
+      "raises"
+    ]
+  },
+  {
+    "id": 45,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "One liner function",
+    "input": "def double(x):\n    return x * 2",
+    "output": "def double(x):\n    \"\"\"Double a number while preserving order.\n\n    Args:\n        x: Value to process.\n\n    Returns:\n        The doubled value.\n    \"\"\"\n    return x * 2",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 46,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Function with no return",
+    "input": "def log_event(event_type, message):\n    print(f'[{event_type.upper()}] {message}')",
+    "output": "def log_event(event_type, message):\n    \"\"\"Log events with a timestamp.\n\n    Args:\n        event_type: Event category.\n        message: Event description.\n    \"\"\"\n    print(f'[{event_type.upper()}] {message}')",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args"
+    ],
+    "kw_missing": [
+      "returns",
+      "none"
+    ]
+  },
+  {
+    "id": 47,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Function with *args and **kwargs",
+    "input": "def build_query(*fields, **filters):\n    query = 'SELECT ' + ', '.join(fields) if fields else 'SELECT *'\n    if filters:\n        conditions = ' AND '.join(f'{k} = {v!r}' for k, v in filters.items())\n        query += ' WHERE ' + conditions\n    return query",
+    "output": "def build_query(*fields, **filters):\n    \"\"\"Construct a SQL query string.\n\n    Args:\n        fields: List of column names to include.\n        **filters: Mapping of field names to values.\n\n    Returns:\n        A string starting with the query template.\n    \"\"\"\n    query = 'SELECT'+ ', '.join(fields) if fields else 'SELECT *'\n    if filters:\n        conditions ='AND '.join(f'{k} = {v!r}' for k, v in filters.items())\n        query +='WHERE'+ conditions\n    return query",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "fields",
+      "filters"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 48,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Nested functions",
+    "input": "def make_multiplier(factor):\n    def multiplier(x):\n        return x * factor\n    return multiplier",
+    "output": "def make_multiplier(factor):\n    \"\"\"Multiply a value by a factor.\n\n    Args:\n        factor: Scaling factor.\n\n    Returns:\n        A function that multiplies the input value.\n    \"\"\"\n    def multiplier(x):\n        return x * factor\n    return multiplier",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "factor"
+    ],
+    "kw_missing": [
+      "closure"
+    ]
+  },
+  {
+    "id": 49,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Class with classmethod and staticmethod",
+    "input": "class Temperature:\n    def __init__(self, celsius):\n        self.celsius = celsius\n\n    @classmethod\n    def from_fahrenheit(cls, f):\n        return cls((f - 32) * 5 / 9)\n\n    @staticmethod\n    def absolute_zero():\n        return -273.15\n\n    def to_fahrenheit(self):\n        return (self.celsius * 9 / 5) + 32",
+    "output": "class Temperature:\n    \"\"\"Represent temperature with Celsius or Fahrenheit.\n    \"\"\"\n\n    def __init__(self, celsius):\n        \"\"\"Store Celsius value.\n\n        Attributes:\n            celsius: Celsius temperature.\n        \"\"\"\n        self.celsius = celsius\n\n    @classmethod\n    def from_fahrenheit(cls, f):\n        \"\"\"Convert Fahrenheit to Temperature.\n\n        Args:\n            f: Fahrenheit temperature.\n\n        Returns:\n            A Temperature instance with Fahrenheit value.\n        \"\"\"\n        return cls((f - 32) * 5 / 9)\n\n    @staticmethod\n    def absolute_zero():\n        \"\"\"Represent freezing point of water.\n\n        Returns:\n            The freezing point in Celsius.\n        \"\"\"\n        return -273.15",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "classmethod",
+      "staticmethod",
+      "attributes"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 50,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Function raising multiple exceptions",
+    "input": "def parse_record(record):\n    if not isinstance(record, dict):\n        raise TypeError('record must be a dict')\n    if 'id' not in record:\n        raise KeyError('record must contain id')\n    if not isinstance(record['id'], int):\n        raise ValueError('id must be an integer')\n    return record['id'], record.get('name', 'unknown')",
+    "output": "def parse_record(record):\n    \"\"\"Extract an integer id and name from a record dictionary.\n\n    Args:\n        record: Record dictionary to parse.\n\n    Returns:\n        The parsed id and name.\n\n    Raises:\n        TypeError: Raised when record is not a dict.\n        KeyError: Raised when record missing id.\n        ValueError: Raised when id is not an integer.\n    \"\"\"\n    if not isinstance(record, dict):\n        raise TypeError('record must be a dict')\n    if 'id' not in record:\n        raise KeyError('record must contain id')\n    if not isinstance(record['id'], int):\n        raise ValueError('id must be an integer')\n    return record['id'], record.get('name', 'unknown')",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "raises",
+      "typeerror",
+      "keyerror",
+      "valueerror",
+      "args",
+      "returns"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 51,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Property-based class",
+    "input": "class Circle:\n    def __init__(self, radius):\n        self._radius = radius\n\n    @property\n    def radius(self):\n        return self._radius\n\n    @radius.setter\n    def radius(self, value):\n        if value < 0:\n            raise ValueError('Radius cannot be negative')\n        self._radius = value\n\n    @property\n    def area(self):\n        import math\n        return math.pi * self._radius ** 2\n\n    @property\n    def circumference(self):\n        import math\n        return 2 * math.pi * self._radius",
+    "output": "class Circle:\n    \"\"\"Represent a circle with helper constructors and accessors.\n    \"\"\"\n\n    def __init__(self, radius):\n        \"\"\"Initialize the circle radius.\n\n        Attributes:\n            radius: Circle radius value.\n        \"\"\"\n        self._radius = radius\n\n    @property\n    def radius(self):\n        \"\"\"Return the internal radius value.\n\n        Returns:\n            The stored radius value.\n        \"\"\"\n        return self._radius\n\n    @radius.setter\n    def radius(self, value):\n        \"\"\"Set the circle radius.\n\n        Args:\n            value: Positive radius value.\n        \"\"\"\n        if value < 0:\n            raise ValueError('Radius cannot be negative')\n        self._radius = value\n\n    @property\n    def area(self):\n        \"\"\"Compute the area of the circle.\n\n        Returns:\n            The area value.\n        \"\"\"\n        import math\n        return math.pi * self._radius ** 2\n\n    @property\n    def circumference(self):\n        \"\"\"Compute the circumference of the circle.\n\n        Returns:\n            The circumference value.\n        \"\"\"\n        import math\n        return 2 * math.pi * self._radius",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "property",
+      "attributes"
+    ],
+    "kw_missing": [
+      "raises"
+    ]
+  },
+  {
+    "id": 52,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Very long pipeline with multiple steps",
+    "input": "def process_user_records(raw_records):\n    cleaned = []\n    for record in raw_records:\n        if not isinstance(record, dict):\n            continue\n        name  = record.get('name', '').strip()\n        email = record.get('email', '').strip().lower()\n        age   = record.get('age')\n        if not name or not email or not isinstance(age, int):\n            continue\n        if '@' not in email or age < 0 or age > 150:\n            continue\n        cleaned.append({'name': name, 'email': email, 'age': age})\n    deduped = []\n    seen_emails = set()\n    for record in cleaned:\n        if record['email'] not in seen_emails:\n            deduped.append(record)\n            seen_emails.add(record['email'])\n    return sorted(deduped, key=lambda r: r['name'].lower())",
+    "output": "def process_user_records(raw_records):\n    \"\"\"Process user records by stripping unnecessary information and sorting.\n\n    Args:\n        raw_records: Dictionary-like record cache.\n\n    Returns:\n        A sorted list of cleaned user records.\n    \"\"\"\n    cleaned = []\n    for record in raw_records:\n        if not isinstance(record, dict):\n            continue\n        name  = record.get('name', '').strip()\n        email = record.get('email', '').strip().lower()\n        age   = record.get('age')\n        if not name or not email or not isinstance(age, int):\n            continue\n        if '@' not in email or age < 0 or age > 150:\n            continue\n        cleaned.append({'name': name, 'email': email, 'age': age})\n    deduped = []\n    seen_emails = set()\n    for record in cleaned:\n        if record['email'] not in seen_emails:\n            deduped.append(record)\n            seen_emails.add(record['email'])\n    return sorted(deduped, key=lambda r: r['name'].lower())",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "cleaned",
+      "deduped",
+      "sorted"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 53,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Async generator function",
+    "input": "import asyncio\n\nasync def paginate(fetch_func, start_page=1, max_pages=10):\n    page = start_page\n    while page <= max_pages:\n        data = await fetch_func(page)\n        if not data:\n            break\n        yield data\n        page += 1",
+    "output": "import asyncio\n\nasync def paginate(fetch_func, start_page=1, max_pages=10):\n    \"\"\"Yield paginated results from a fetchable function.\n\n    Args:\n        fetch_func: Callable to fetch pages.\n        start_page: Starting page index.\n        max_pages: Maximum number of pages to yield.\n\n    Yields:\n        Pages containing the requested data.\n    \"\"\"\n    page = start_page\n    while page <= max_pages:\n        data = await fetch_func(page)\n        if not data:\n            break\n        yield data\n        page += 1",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "yields",
+      "args",
+      "async",
+      "paginate"
+    ],
+    "kw_missing": []
+  },
+  {
+    "id": 54,
+    "task": "document",
+    "difficulty": "edge",
+    "label": "Empty class skeleton",
+    "input": "class Plugin:\n    def load(self):\n        pass\n\n    def execute(self, context):\n        pass\n\n    def unload(self):\n        pass",
+    "output": "class Plugin:\n    \"\"\"Represent a plugin factory with load, execute and unload methods.\n    \"\"\"\n\n    def load(self):\n        \"\"\"Load the plugin.\n\n        Returns:\n            None\n        \"\"\"\n        pass\n\n    def execute(self, context):\n        \"\"\"Execute the plugin script.\n\n        Args:\n            context: Context to wrap.\n\n        Returns:\n            The returned value of the script.\n        \"\"\"\n        pass\n\n    def unload(self):\n        \"\"\"Unload the plugin factory.\n\n        Returns:\n            None\n        \"\"\"\n        pass",
+    "score": 6,
+    "max_score": 6,
+    "flags": [],
+    "kw_found": [
+      "args",
+      "returns",
+      "plugin"
+    ],
+    "kw_missing": [
+      "base"
+    ]
+  }
+]

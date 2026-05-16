@@ -7,7 +7,7 @@
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.0.4-green.svg)](https://langchain-ai.github.io/langgraph/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **BTech Final Year Project** - An intelligent coding assistant that combines the power of Large Language Models with an intuitive VS Code-like interface to help developers write, debug, explain, and document code seamlessly.
+> **BTech Final Year Project** - An intelligent coding assistant that combines local fine-tuned models, Groq fallback, and a VS Code-like interface to help developers write, debug, explain, modify, and document code seamlessly.
 
 ---
 
@@ -31,93 +31,63 @@
 
 ## 🎯 Overview
 
-**IntelliCode-SL** is an intelligent coding assistant designed to enhance developer productivity by providing real-time AI-powered assistance for various coding tasks. The system features a web-based IDE interface with an integrated chat assistant that can:
+**IntelliCode-SL** is a Streamlit-based coding assistant with a VS Code-style editor on the left and a chat assistant on the right. The app accepts a natural-language prompt plus optional editor code, routes the request through a LangGraph workflow, and returns one of the following outcomes:
 
-- **Explain** existing code with detailed breakdowns
-- **Debug** code by identifying and fixing errors automatically
-- **Write** new code from scratch based on natural language descriptions
-- **Document** code with proper comments and documentation
-- **Assist** with general coding queries and best practices
+- explain existing code
+- debug or modify code
+- generate new code from scratch
+- generate documentation text
+- handle uncategorized prompts through an interrupt/approval path
 
-The project leverages **LangGraph** for orchestrating a multi-agent workflow and uses state-of-the-art language models through **OpenRouter API** to provide intelligent responses. The interface is built using **Streamlit** with a custom VS Code-inspired code editor.
+The runtime now uses local fine-tuned SLMs for classification and task execution, with Groq used as the fallback path when a local model fails. The editor is powered by `streamlit-ace` and supports Python, JavaScript, Java, C++, C, Go, Rust, and TypeScript.
 
 ---
 
 ## ✨ Key Features
 
 ### 🖥️ **Interactive IDE Interface**
-- **Monaco Editor Integration** - VS Code's powerful editor with syntax highlighting
-- **Multi-language Support** - Python, JavaScript, Java, C++, Go, Rust, TypeScript, and more
-- **Real-time Code Statistics** - Line and character count display
-- **Responsive Design** - Split-pane layout optimized for coding and chatting
+- VS Code-style editor with syntax highlighting and keyboard shortcuts
+- Multi-language support for the main languages used in the project
+- Real-time code statistics for line and character counts
+- Split-pane layout optimized for coding and chatting
 
 ### 🤖 **Intelligent AI Assistant**
-- **Task Classification** - Automatically identifies user intent (explain/debug/write/docs/other)
-- **Context-Aware Responses** - Considers both user prompt and existing code
-- **Code Generation** - Generates clean, executable code from natural language
-- **Bug Detection & Fixing** - Identifies and corrects errors automatically
-- **Code Explanation** - Provides clear, point-wise explanations of code logic
-- **Documentation Generation** - Creates comprehensive code documentation
+- Task classification into `explain`, `debug`, `modify`, `write`, `docs`, or `other`
+- Context-aware responses that consider both the prompt and editor code
+- Code generation and code editing flows for common coding tasks
+- Bug fixing and code explanation in concise, user-friendly output
+- Documentation generation for comments and descriptive text
 
-### 💬 **ChatGPT-Style Interface**
-- **Auto-scrolling Chat** - Always shows latest messages
-- **Thinking Indicator** - Real-time feedback during processing
-- **Message History** - Maintains conversation context
-- **Instant Input Clearing** - Seamless user experience
+### 💬 **Chat-Style Interface**
+- Persistent conversation history
+- Thinking and resuming indicators while the workflow runs
+- Enter-to-send chat input
+- Clean code replacement when the workflow returns modified code
 
-### 🔄 **Multi-Agent Workflow**
-- **LangGraph Orchestration** - State machine-based agent coordination
-- **Conditional Routing** - Intelligent task routing based on classification
-- **Modular Design** - Separate agents for different tasks
-- **Collator Agent** - Synthesizes outputs into refined responses
+### 🔄 **Multi-Model Workflow**
+- LangGraph orchestration for conditional routing
+- Local SLMs for classifier, coding, docs, and formatter tasks
+- Groq fallback for robustness when a local model returns empty output
+- Interrupt-driven approval flow for uncategorized requests
 
 ---
 
 ## 🏗️ Architecture
 
-IntelliCode-SL uses a **state-based multi-agent architecture** powered by LangGraph:
+IntelliCode-SL uses a state-based workflow that keeps the UI thin and pushes task decisions into `workflow.py`.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      USER INTERFACE                         │
-│  ┌──────────────────────┐     ┌──────────────────────┐    │
-│  │   Code Editor (IDE)  │     │   Chat Assistant     │    │
-│  │  - Monaco Editor     │     │  - Message History   │    │
-│  │  - Syntax Highlight  │     │  - Input/Output      │    │
-│  └──────────────────────┘     └──────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    WORKFLOW ENGINE                          │
-│                                                             │
-│  START → Task Classifier → [Conditional Router]            │
-│                                   ↓                         │
-│              ┌────────────────────┼────────────────┐        │
-│              ↓         ↓          ↓        ↓       ↓        │
-│         Explain    Debug      Write    Docs   Unknown      │
-│              ↓         ↓          ↓        ↓       ↓        │
-│              └────────────────────┼────────────────┘        │
-│                                   ↓                         │
-│                            Collator Agent                   │
-│                                   ↓                         │
-│                                  END                        │
-└─────────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    LLM BACKEND                              │
-│  OpenRouter API → Grok-4.1-Fast Model                      │
-└─────────────────────────────────────────────────────────────┘
-```
+![IntelliCode-SL Architecture](media/Group%201.png)
 
-### Workflow Components:
+### Workflow Components
 
-1. **Task Classifier** - Categorizes user requests into 5 types
-2. **Explain Agent** - Provides code explanations
-3. **Debug Agent** - Identifies and fixes bugs, generates summary
-4. **Write Agent** - Generates new code, creates summary
-5. **Docs Agent** - Creates documentation, generates summary
-6. **Unknown Agent** - Handles uncategorized requests
-7. **Collator Agent** - Synthesizes final user-friendly response
+1. **Task Classifier** - Categorizes user requests into the active routing labels used by the graph.
+2. **Explain Agent** - Produces point-wise code explanations.
+3. **Debug Agent** - Returns corrected code and a summary of the fix.
+4. **Modify Agent** - Applies requested edits and keeps the rest of the file intact.
+5. **Write Agent** - Generates new code from scratch.
+6. **Docs Agent** - Creates documentation or descriptive text.
+7. **Unknown Agent** - Handles uncategorized requests through approval.
+8. **Collator Agent** - Synthesizes the raw output into the final chat response.
 
 ---
 
@@ -125,18 +95,21 @@ IntelliCode-SL uses a **state-based multi-agent architecture** powered by LangGr
 
 ### **Frontend**
 - **Streamlit** (1.51.0) - Web application framework
-- **Streamlit-Ace** (0.1.1) - Monaco code editor component
-- **HTML/CSS** - Custom styling for ChatGPT-like interface
+- **Streamlit-Ace** (0.1.1) - Monaco-style code editor component
+- **HTML/CSS** - Custom styling for the chat and editor layout
 
-### **Backend & AI**
-- **LangGraph** (1.0.4) - Multi-agent workflow orchestration
+### **Backend & Workflow**
+- **LangGraph** (1.0.4) - Graph-based workflow orchestration
 - **LangChain** (1.1.0) - LLM application framework
-- **OpenAI SDK** (2.8.1) - API client for OpenRouter
+- **LangChain-Groq** - Groq integration for fallback inference
 - **Python-dotenv** (1.2.1) - Environment variable management
 
-### **LLM Provider**
-- **OpenRouter API** - Access to Grok-4.1-Fast model
-- **X.AI's Grok-4.1-Fast** - Primary language model
+### **LLM / SLM Layer**
+- **Local classifier model** - merged fp16 checkpoint
+- **Local formatter model** - merged fp16 checkpoint
+- **Coding SLM** - 4-bit base model plus adapter
+- **Docs / explain SLM** - 4-bit base model plus adapter
+- **Groq** - Fallback runtime when local inference is unavailable
 
 ### **Development**
 - **Python 3.11+** - Core programming language
@@ -151,7 +124,8 @@ IntelliCode-SL uses a **state-based multi-agent architecture** powered by LangGr
 - Python 3.11 or higher
 - Conda (Anaconda/Miniconda)
 - Git
-- OpenRouter API key ([Get one here](https://openrouter.ai/))
+- A Groq API key for fallback inference
+- Optional: Hugging Face token if you need to restore private local artifacts
 
 ### Step 1: Clone the Repository
 ```bash
@@ -173,17 +147,17 @@ pip install -r requirements.txt
 ### Step 4: Configure API Key
 Create a `.env` file in the project root:
 ```bash
-echo "open_router_api=YOUR_API_KEY_HERE" > .env
+groq_api_key=YOUR_GROQ_API_KEY
 ```
 
-Replace `YOUR_API_KEY_HERE` with your actual OpenRouter API key.
+You can also set `GROQ_API_KEY` instead. If you need to restore gated Hugging Face artifacts, add `HF_TOKEN` as well.
 
 ### Step 5: Run the Application
 ```bash
 streamlit run main.py
 ```
 
-The application will open in your default browser at `http://localhost:8501`
+The application opens in your default browser at `http://localhost:8501`.
 
 ---
 
@@ -192,45 +166,50 @@ The application will open in your default browser at `http://localhost:8501`
 ### Basic Workflow
 
 1. **Launch the Application**
-   ```bash
-   streamlit run main.py
-   ```
+	```bash
+	streamlit run main.py
+	```
 
 2. **Write or Paste Code**
-   - Use the left panel code editor
-   - Select programming language from dropdown
-   - Edit code with full VS Code features
+	- Use the left panel code editor
+	- Select the programming language from the dropdown
+	- Edit code with a VS Code-like experience
 
-3. **Interact with AI Assistant**
-   - Type your request in the chat input
-   - Press Enter to send
-   - See "🤔 Thinking..." indicator while processing
-   - View response and any code modifications
+3. **Interact with the AI Assistant**
+	- Type your request in the chat input
+	- Press Enter or click send
+	- See the thinking indicator while processing
+	- View the response and any code modifications
 
 ### Example Prompts
 
 **Explain Code:**
-```
+```text
 Explain this sorting algorithm
 ```
 
 **Debug Code:**
-```
+```text
 Find and fix the bugs in this code
 ```
 
-**Write Code:**
+**Modify Code:**
+```text
+Refactor this function to use early returns
 ```
+
+**Write Code:**
+```text
 Write a function to calculate factorial recursively
 ```
 
 **Generate Documentation:**
-```
+```text
 Create comprehensive documentation for this class
 ```
 
 **General Questions:**
-```
+```text
 What are the best practices for exception handling in Python?
 ```
 
@@ -238,44 +217,37 @@ What are the best practices for exception handling in Python?
 
 ## 📁 Project Structure
 
-```
+```text
 IntelliCode-SL/
 │
-├── main.py                    # Main Streamlit application
+├── main.py                    # Streamlit application entry point
 ├── workflow.py                # LangGraph workflow definition
+├── model_loader.py            # Local model loading and inference
 ├── requirements.txt           # Python dependencies
-├── .env                       # API keys (not in repo)
-├── .gitignore                # Git ignore rules
+├── README.md                  # Project documentation
+├── README_STREAMLIT.md        # Older Streamlit reference
+├── context.md                 # Canonical repo context
 │
 ├── styles/
-│   ├── components.py         # UI component renderers
-│   └── chat_styles.css       # Custom CSS styling
+│   ├── components.py          # UI component renderers
+│   ├── chat_styles.css        # Custom CSS styling
+│   ├── image.png              # Screenshot used in the README
+│   └── send_button.png        # Send button asset
 │
 ├── testing_files/
-│   └── test.py               # Workflow testing scripts
+│   └── test.py                # Workflow testing scripts
 │
-└── README.md                 # This file
+├── scripts/
+│   └── restore_hf_artifacts.py # Local artifact restore helper
+│
+├── adapters/                  # LoRA adapters and tokenizer assets
+├── base_models/               # Local base model snapshots
+├── merged_models/             # Local merged checkpoints
+├── fine_tuning_notebooks /    # Training and comparison notebooks
+└── fine_tunning_datasets/     # JSON datasets used for fine-tuning
 ```
 
-### Key Files
-
-#### **main.py**
-- Streamlit application entry point
-- UI layout and session state management
-- Integration between editor and workflow
-- Real-time chat interface
-
-#### **workflow.py**
-- LangGraph state machine definition
-- Multi-agent orchestration logic
-- LLM prompt engineering
-- Task routing and response synthesis
-
-#### **styles/components.py**
-- Reusable UI components
-- Chat history rendering
-- Code statistics overlay
-- Custom button components
+The repository also includes benchmark results and other model assets that support local inference and evaluation.
 
 ---
 
@@ -284,33 +256,45 @@ IntelliCode-SL/
 ### State Schema
 ```python
 class intellicode_state(TypedDict):
-    # User inputs
-    prompt: str                    # User's natural language request
-    input_code: Optional[str]      # Existing code in editor
-    
-    # Routing
-    task_type: Literal['explain', 'debug', 'write', 'docs', 'other']
-    
-    # Processing
-    change_summary: Optional[str]  # Point-wise summary of changes
-    
-    # Final outputs
-    final_answer: str              # Response to user (shown in chat)
-    modified_code: Optional[str]   # Updated code (shown in editor)
+	 session_id: Optional[str]
+	 prompt: str
+	 input_code: Optional[str]
+	 messeges: list[dict[str, str]]
+	 message_summary: Optional[str]
+	 latest_code_iteration: Optional[str]
+	 task_type: Literal['explain', 'modify', 'debug', 'write', 'docs', 'other']
+	 task_output: Optional[str]
+	 change_summary: Optional[str]
+	 final_answer: Optional[str]
+	 modified_code: Optional[str]
+	 unknown_route: Optional[str]
 ```
+
+### Execution Flow
+
+1. `main.py` renders the editor, chat, and session state.
+2. A user prompt is passed into `workflow.invoke(...)`.
+3. `task_classifier` tries the local classifier model first.
+4. If local classification fails, Groq is used as the fallback.
+5. The selected task node generates the answer or code.
+6. `collator` formats the final response for the chat panel.
+7. If modified code is returned, the editor content is replaced.
+8. If the prompt is uncategorized, the approval flow is triggered.
 
 ### Agent Functions
 
-1. **task_classifier** - Categorizes user intent using structured output
-2. **explain_slm** - Generates point-wise code explanations
-3. **debug_code** - Fixes bugs and returns corrected code
-4. **debug_summary** - Summarizes debugging changes
-5. **write_code** - Generates new code from scratch
-6. **write_summary** - Explains generated code
-7. **docs_worker** - Creates documentation
-8. **docs_summary** - Summarizes documentation
-9. **collator** - Synthesizes refined user response
-10. **unknown** - Handles edge cases and general queries
+1. **task_classifier** - Categorizes the user request.
+2. **explain_slm** - Generates point-wise explanations.
+3. **debug_code** - Fixes bugs and returns corrected code.
+4. **debug_summary** - Summarizes debugging changes.
+5. **modify_code** - Applies requested edits to the code.
+6. **modify_summary** - Summarizes the modifications.
+7. **write_code** - Generates new code from scratch.
+8. **write_summary** - Summarizes generated code.
+9. **docs_worker** - Creates documentation or descriptive text.
+10. **docs_summary** - Summarizes documentation output.
+11. **collator** - Synthesizes the final response.
+12. **unknown** - Handles approval-based fallback requests.
 
 ---
 
@@ -331,8 +315,8 @@ class intellicode_state(TypedDict):
 - [ ] **Version Control Integration** - Git integration for code changes
 - [ ] **Collaborative Editing** - Real-time multi-user support
 - [ ] **Code Templates** - Pre-built templates for common patterns
-- [ ] **Custom Model Selection** - Choose different LLMs
-- [ ] **Offline Mode** - Local LLM support (Ollama integration)
+- [ ] **Custom Model Selection** - Choose different LLMs or local models
+- [ ] **Offline Mode** - Improve fully local inference paths
 - [ ] **Export Functionality** - Export chat history and code
 - [ ] **Syntax Error Detection** - Real-time error highlighting
 - [ ] **Code Formatting** - Auto-format with Black, Prettier, etc.
@@ -340,7 +324,7 @@ class intellicode_state(TypedDict):
 - [ ] **Performance Profiling** - Code optimization suggestions
 
 ### Research Directions
-- **Fine-tuned Models** - Train specialized models for code tasks
+- **Fine-tuned Models** - Train more specialized models for code tasks
 - **RAG Integration** - Add codebase-specific context retrieval
 - **Code Security Scanning** - Vulnerability detection
 - **Multi-modal Support** - Diagram and flowchart generation
@@ -349,7 +333,7 @@ class intellicode_state(TypedDict):
 
 ## 🤝 Contributing
 
-Contributions are welcome! This is an academic project, but improvements and suggestions are appreciated.
+Contributions are welcome. This is an academic project, but improvements and suggestions are appreciated.
 
 ### How to Contribute
 1. Fork the repository
@@ -360,9 +344,9 @@ Contributions are welcome! This is an academic project, but improvements and sug
 
 ### Development Guidelines
 - Follow PEP 8 style guidelines for Python code
-- Add docstrings to all functions
+- Add docstrings to functions where needed
 - Test changes thoroughly before submitting
-- Update documentation for new features
+- Update documentation for new behavior
 
 ---
 
@@ -381,11 +365,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Technologies & Libraries
 - [Streamlit](https://streamlit.io/) - Web framework
-- [LangGraph](https://langchain-ai.github.io/langgraph/) - Agent orchestration
+- [LangGraph](https://langchain-ai.github.io/langgraph/) - Workflow orchestration
 - [LangChain](https://python.langchain.com/) - LLM framework
-- [OpenRouter](https://openrouter.ai/) - LLM API provider
-- [X.AI Grok](https://x.ai/) - Language model
-- [Monaco Editor](https://microsoft.github.io/monaco-editor/) - Code editor
+- [Groq](https://groq.com/) - Fallback LLM provider
+- [Monaco Editor](https://microsoft.github.io/monaco-editor/) - Code editor inspiration
 
 ### Inspiration
 - ChatGPT's conversational interface
@@ -400,18 +383,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Project Repository:** [https://github.com/Spartan1-1-7/IntelliCode-SL](https://github.com/Spartan1-1-7/IntelliCode-SL)
 
 **Issues & Bugs:** [GitHub Issues](https://github.com/Spartan1-1-7/IntelliCode-SL/issues)
-
----
-<!-- 
-## 📊 Project Statistics
-
-- **Lines of Code:** ~1,000+
-- **Languages:** Python, HTML, CSS, JavaScript
-- **Development Time:** 4 months
-- **Agent Count:** 10 specialized agents
-- **Supported Languages:** 8 programming languages
-
---- -->
 
 <div align="center">
 

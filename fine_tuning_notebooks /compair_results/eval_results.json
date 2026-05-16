@@ -1,0 +1,369 @@
+[
+  {
+    "id": 1,
+    "category": "debug",
+    "difficulty": "beginner",
+    "label": "Off-by-one in range",
+    "input": "def sum_list(nums):\n    total = 0\n    for i in range(1, len(nums)):\n        total += nums[i]\n    return total",
+    "expected": "range(len(nums)) or range(0, len(nums))",
+    "output": "def sum_list(nums):\n    total = 0\n    for num in nums:\n        total += num\n    return total",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'range(len(nums)) or range(0, len(nums))'"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "debug",
+    "difficulty": "intermediate",
+    "label": "Wrong operator",
+    "input": "def is_even(n):\n    return n % 2 == 1",
+    "expected": "n % 2 == 0",
+    "output": "def is_even(n):\n    return n % 2 == 0",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'n % 2 == 0'"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "debug",
+    "difficulty": "intermediate",
+    "label": "Mutable default argument",
+    "input": "def append_item(val, lst=[]):\n    lst.append(val)\n    return lst",
+    "expected": "lst=None, then if lst is None: lst = []",
+    "output": "def append_item(val, lst=None):\n    if lst is None:\n        lst = []\n    lst.append(val)\n    return lst",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 4,
+    "category": "debug",
+    "difficulty": "intermediate",
+    "label": "Missing return in recursion",
+    "input": "def factorial(n):\n    if n == 0:\n        return 1\n    factorial(n - 1)",
+    "expected": "return factorial(n - 1) or return n * factorial(n-1)",
+    "output": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 5,
+    "category": "debug",
+    "difficulty": "advanced",
+    "label": "Wrong recursion logic",
+    "input": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n - 1) + fib(n - 3)",
+    "expected": "fib(n-1) + fib(n-2)",
+    "output": "def fib(n):\n    if n <= 1:\n        return n\n    if n == 2:\n        return 1\n    return fib(n - 1) + fib(n - 2)",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'fib(n-1) + fib(n-2)'"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Empty function body",
+    "input": "def process(data):\n    pass\n    return data",
+    "expected": "remove pass or add actual processing",
+    "output": "def process(data):\n    return data",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'remove pass or add actual processing'"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Division by zero risk",
+    "input": "def average(nums):\n    return sum(nums) / len(nums)",
+    "expected": "check if len(nums) == 0 first",
+    "output": "def average(nums):\n    if not nums:\n        raise ValueError('nums cannot be empty')\n    return sum(nums) / len(nums)",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 8,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "String vs int comparison",
+    "input": "def check_age(age):\n    if age > '18':\n        return 'adult'\n    return 'minor'",
+    "expected": "compare with integer 18, not string '18'",
+    "output": "def check_age(age):\n    if age > 18:\n        return 'adult'\n    return 'minor'",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'compare with integer 18, not string '18''"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Infinite loop",
+    "input": "def countdown(n):\n    while n > 0:\n        print(n)\n    return 'done'",
+    "expected": "add n -= 1 inside loop",
+    "output": "def countdown(n):\n    while n > 0:\n        print(n)\n        n -= 1\n    return 'done'",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'add n -= 1 inside loop'"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Index out of range",
+    "input": "def get_last(lst):\n    return lst[len(lst)]",
+    "expected": "lst[len(lst) - 1] or lst[-1]",
+    "output": "def get_last(lst):\n    return lst[-1]",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 11,
+    "category": "generate",
+    "difficulty": "beginner",
+    "label": "Reverse a string",
+    "input": "Write a Python function that reverses a string.",
+    "expected": "return s[::-1] or loop-based reversal",
+    "output": "def reverse_string(text):\n    return text[::-1]",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 12,
+    "category": "generate",
+    "difficulty": "beginner",
+    "label": "Check palindrome",
+    "input": "Write a function that checks if a given string is a palindrome.",
+    "expected": "s == s[::-1] or equivalent",
+    "output": "def is_palindrome(text):\n    return text == text[::-1]",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 's == s[::-1] or equivalent'"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "generate",
+    "difficulty": "intermediate",
+    "label": "Fibonacci generator",
+    "input": "Write a Python generator function that yields Fibonacci numbers up to n.",
+    "expected": "use yield, track a and b",
+    "output": "def fibonacci_generator(n):\n    a, b = 0, 1\n    while a <= n:\n        yield a\n        a, b = b, a + b",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'use yield, track a and b'"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "generate",
+    "difficulty": "intermediate",
+    "label": "Flatten nested list",
+    "input": "Write a recursive Python function to flatten a nested list of arbitrary depth.",
+    "expected": "recurse on lists, yield/append non-lists",
+    "output": "def flatten(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'recurse on lists, yield/append non-lists'"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "generate",
+    "difficulty": "advanced",
+    "label": "LRU Cache decorator",
+    "input": "Write a Python class-based LRU cache with a max size that supports get and put operations.",
+    "expected": "OrderedDict or doubly linked list + dict",
+    "output": "class LRUCache:\n    def __init__(self, max_size):\n        self.max_size = max_size\n        self.cache = []\n        self.access_order = {}\n\n    def put(self, key, value):\n        if key in self.access_order:\n            self.cache.remove(self.access_order[key])\n        self.cache.append((key, value))\n        self.access_order[key] = len(self.cache) - 1\n\n    def get(self, key):\n        if key not in self.access_order:\n            return None\n        index = self.access_order[key]\n        value = self.cache[index][1]\n        self.cache.pop(index)\n        self.cache.append(self.cache.pop(index))\n        self.access_order[key] = len(self.cache) - 1\n        return value",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'OrderedDict or doubly linked list + dict'"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Ambiguous one-liner prompt",
+    "input": "make a func",
+    "expected": "any valid function definition",
+    "output": "def safe_parse_32(words):\n    result = []\n    for word in words:\n        if not word.isalpha():\n            continue\n        result.append(word)\n    return result",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'any valid function definition'"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Empty input description",
+    "input": "",
+    "expected": "graceful output or basic stub",
+    "output": "def check_tool_79(values):\n    return all(value > 0 for value in values)",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'graceful output or basic stub'"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Very long prompt",
+    "input": "Write a Python function that takes a list of integers, filters out all negative numbers, squares the remaining numbers, sorts them in descending order, removes duplicates, and returns the result as a list along with the count of elements.",
+    "expected": "multi-step: filter, square, sort desc, deduplicate, return list + count",
+    "output": "def process_numbers(values):\n    result = []\n    for value in values:\n        if value < 0:\n            continue\n        squared = value * value\n        result.append(squared)\n    result.sort(reverse=True)\n    unique = []\n    for value in result:\n        if value in unique:\n            continue\n        unique.append(value)\n    return unique, len(unique)",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 19,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Non-Python request",
+    "input": "Write a JavaScript function to fetch data from an API.",
+    "expected": "model should produce Python or note the mismatch",
+    "output": "async function fetchData(url) {\n    const response = await fetch(url);\n    if (!response.ok) {\n        throw new Error('Network response was not ok');\n    }\n    return await response.json();\n}",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'model should produce Python or note the mismatch'",
+      "\u26a0\ufe0f  No function definition found"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Already valid code as prompt",
+    "input": "def add(a, b):\n    return a + b",
+    "expected": "model should generate something sensible",
+    "output": "def add_numbers(a, b):\n    return a + b",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'model should generate something sensible'"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "modify",
+    "difficulty": "beginner",
+    "label": "Add type hints",
+    "input": "def multiply(a, b):\n    return a * b\n\nInstruction: Add type hints for integers and return type.",
+    "expected": "def multiply(a: int, b: int) -> int",
+    "output": "def multiply(a: int, b: int) -> int:\n    return a * b",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 22,
+    "category": "modify",
+    "difficulty": "beginner",
+    "label": "Add docstring",
+    "input": "def celsius_to_fahrenheit(c):\n    return (c * 9/5) + 32\n\nInstruction: Add a descriptive docstring.",
+    "expected": "triple-quoted docstring describing params and return",
+    "output": "def celsius_to_fahrenheit(celsius):\n    \"\"\"Convert a temperature from Celsius to Fahrenheit.\"\"\"\n    return celsius * 9.0 / 5 + 32",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 23,
+    "category": "modify",
+    "difficulty": "intermediate",
+    "label": "Loop to list comprehension",
+    "input": "def get_evens(nums):\n    result = []\n    for n in nums:\n        if n % 2 == 0:\n            result.append(n)\n    return result\n\nInstruction: Refactor using a list comprehension.",
+    "expected": "return [n for n in nums if n % 2 == 0]",
+    "output": "def get_evens(nums):\n    return [n for n in nums if n % 2 == 0]",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 24,
+    "category": "modify",
+    "difficulty": "intermediate",
+    "label": "Add try-except",
+    "input": "def divide(a, b):\n    return a / b\n\nInstruction: Add error handling for division by zero.",
+    "expected": "try/except ZeroDivisionError",
+    "output": "def divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 0",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 25,
+    "category": "modify",
+    "difficulty": "advanced",
+    "label": "Add memoization",
+    "input": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)\n\nInstruction: Add memoization using a decorator.",
+    "expected": "@functools.lru_cache or manual memo dict",
+    "output": "def memoize(fn):\n    cache = {}\n    def wrapper(n):\n        if n not in cache:\n            cache[n] = fn(n)\n        return cache[n]\n    return wrapper\n\n@memoize\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)",
+    "score": 3,
+    "flags": []
+  },
+  {
+    "id": 26,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Conflicting instruction",
+    "input": "def add(a, b):\n    return a + b\n\nInstruction: Make this function do subtraction and also addition.",
+    "expected": "model handles ambiguity somehow",
+    "output": "def add_or_subtract(a, b, operation='add'):\n    if operation == 'add':\n        return a + b\n    if operation == 'sub':\n        return a - b\n    raise ValueError('unknown operation')",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'model handles ambiguity somehow'"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Instruction without code",
+    "input": "\n\nInstruction: Add logging to the function.",
+    "expected": "graceful output or stub",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_32(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            logger.info('even %s', item)\n        else:\n            logger.info('odd %s', item)\n        result.append(item)\n    return result",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'graceful output or stub'"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "No instruction keyword",
+    "input": "def greet(name):\n    print('Hello ' + name)\n\nPlease add a return statement.",
+    "expected": "model may or may not follow without Instruction: keyword",
+    "output": "def greet(name):\n    print('Hello ' + name)\n    return 'Hello ' + name",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'model may or may not follow without Instruction: keyword'"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Destructive instruction",
+    "input": "def important_function(data):\n    return sorted(data)\n\nInstruction: Delete everything in the function body.",
+    "expected": "model should handle gracefully",
+    "output": "def important_function(data):\n    return data",
+    "score": 2,
+    "flags": [
+      "\u26a0\ufe0f  Missing expected pattern: 'model should handle gracefully'"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Very large code block",
+    "input": "class DataProcessor:\n    def __init__(self):\n        self.data = []\n    def load(self, items):\n        for item in items:\n            self.data.append(item)\n    def process(self):\n        result = []\n        for d in self.data:\n            if d > 0:\n                result.append(d * 2)\n        return result\n    def reset(self):\n        self.data = []\n\nInstruction: Refactor all loops to list comprehensions and add type hints.",
+    "expected": "list comprehensions + type hints throughout",
+    "output": "class DataProcessor:\n    def __init__(self):\n        self.data: list[int] = []\n\n    def load(self, items: list[int]) -> None:\n        self.data.extend(items)\n\n    def process(self) -> list[int]:\n        return [d * 2 for d in self.data if d > 0]\n\n    def reset(self) -> None:\n        self.data.clear()",
+    "score": 3,
+    "flags": []
+  }
+]

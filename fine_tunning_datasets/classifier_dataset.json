@@ -1,0 +1,7202 @@
+[
+  {
+    "instruction": "Fix the metaclass error",
+    "label": "debug"
+  },
+  {
+    "instruction": "My function returns opposite of expected",
+    "label": "debug"
+  },
+  {
+    "instruction": "My variable is None when it shouldn't be",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a form validation function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this state pattern implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Request headers causing API error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is the time complexity of quicksort?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this nested patch do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the threading bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Infinite loop in recursive method",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is service mesh?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this abstract base class",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a middleware function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this tilt file",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for this pandas operation",
+    "label": "document"
+  },
+  {
+    "instruction": "SyntaxError: invalid syntax on line 3",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document the QA process",
+    "label": "document"
+  },
+  {
+    "instruction": "Add localization to this module",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use classes instead of functions",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this bson document",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for SDP parser",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement database connection pooling",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is penetration testing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add fallback behavior when error occurs",
+    "label": "modify"
+  },
+  {
+    "instruction": "Improve the space complexity",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain how the internet works",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain precision and recall",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this decorator pattern do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "My click command not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add total count to pagination",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is behavior driven development?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is Lamport timestamp?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this flatbuffers schema",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the argparse error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this ExitStack usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this patch object doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this non-greedy quantifier doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function for Prometheus metrics",
+    "label": "generate"
+  },
+  {
+    "instruction": "Compare microservices vs monolithic architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use adjacency list",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix stack overflow from recursion",
+    "label": "debug"
+  },
+  {
+    "instruction": "How long does it take to learn Python?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this named tuple",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this reader monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this docker config",
+    "label": "explain"
+  },
+  {
+    "instruction": "Resolve the index error in this code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add RTL language support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function to find strongly connected components",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this mathematical formula in code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Generate docstrings for this Python function",
+    "label": "document"
+  },
+  {
+    "instruction": "Program crashes unexpectedly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use content negotiation",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is optimistic locking?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Optimize this recursive function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this assert not called",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add data lineage tracking",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create TURN server client",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is overfitting?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "My program exits with error code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to support right to be forgotten",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add JSONB support",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this conftest plugin do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the wrong variable being updated",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this regular expression pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "Implement state machine",
+    "label": "generate"
+  },
+  {
+    "instruction": "API response parsing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this request interceptor doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this concurrent futures usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is technical debt?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write docstrings for this dask operation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this configuration code doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this type annotation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function to format dates",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this pytest mark",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is the difference between a process and a thread?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Stack overflow from deep recursion",
+    "label": "debug"
+  },
+  {
+    "instruction": "Extend to support multiple languages",
+    "label": "modify"
+  },
+  {
+    "instruction": "Too many values to unpack",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain timestamp ordering",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain lock free programming",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain artificial intelligence",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Improve time complexity of this algorithm",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this attrs class",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use domain types",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this compose function do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain vector clocks",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create fenwick tree implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this scope parameter",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix polymorphism bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this slots declaration doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this context manager implement?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain clock algorithm",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain software bill of materials",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add mock support to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add snapshot support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add composition over inheritance",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is paging in operating systems?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use nested sets",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain the concept of virtual memory",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write code for TimescaleDB query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use page token",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is cache eviction policy?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain P vs NP problem",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Unexpected token error in JavaScript",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write protocol documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this nonlocal mock",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create breaking changes documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Rewrite without using recursion",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the failing assertion in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this trie data structure",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a function to find all permutations",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this enum class represent?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this currying function do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Generate docstrings with raises section",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use crosstab queries",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is Raft consensus?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the database migrations",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the class method not being inherited",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this binary tree code do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this generic class",
+    "label": "document"
+  },
+  {
+    "instruction": "Create architecture documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add composite type",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this redirect stdout doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is garbage collection?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use connection pooling",
+    "label": "modify"
+  },
+  {
+    "instruction": "ModuleNotFoundError: No module named",
+    "label": "debug"
+  },
+  {
+    "instruction": "Why does my while loop not terminate?",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is trusted execution environment?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "My string interpolation is wrong",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this CQRS implementation do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this argocd application",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write code for refund calculation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this ORM query",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain functional programming concepts",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create decorator design pattern in code",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this parametrize decorator",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is a mutex?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write comments for complex logic",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this dockerfile",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain thrashing in OS",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write runbook for this service",
+    "label": "document"
+  },
+  {
+    "instruction": "Clean up this messy code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document the database tables",
+    "label": "document"
+  },
+  {
+    "instruction": "Create minimum spanning tree algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain the purpose of this interface",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix uninitialized variable usage",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this bit manipulation do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add comments to environment variables",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to make testing easier",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add caching to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for this abstractclassmethod",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement a BMI calculator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write code for OpenTelemetry span",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create a priority queue",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the import error in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function for digital signature",
+    "label": "generate"
+  },
+  {
+    "instruction": "Convert this procedural code to OOP",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is quantum error correction?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this data preprocessing do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this frozen dataclass",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this heap implementation do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Extract interface from this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "File path is incorrect causing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is the best way to learn algorithms?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create sudoku solver",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debug the unicode warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the KeyError in my dictionary",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this greedy algorithm doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix ValueError in list operation",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain code review best practices",
+    "label": "unknown"
+  },
+  {
+    "instruction": "IOError when reading file",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this conftest usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add path enumeration",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the memory overflow bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create Aho-Corasick algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create a LinkedList class",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this either type",
+    "label": "document"
+  },
+  {
+    "instruction": "Create SAML authentication",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add compliance reporting",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add inline comments to this code",
+    "label": "document"
+  },
+  {
+    "instruction": "Create Avro schema handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for utilities",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for REST API",
+    "label": "document"
+  },
+  {
+    "instruction": "Break up this monolithic class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create incident response documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Heap space exhausted error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add tokenization",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create schema documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this abstractstaticmethod",
+    "label": "document"
+  },
+  {
+    "instruction": "Add filtering support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use FILLFACTOR",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this functools reduce",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement infinite scroll",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement BFS for a graph",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain Bankers algorithm",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this singleton pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is Terraform?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the syntax error in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain NUMA architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this saltstack state",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix abstract method implementation error",
+    "label": "debug"
+  },
+  {
+    "instruction": "My set operations give wrong result",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the REST API error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for Datadog metric",
+    "label": "generate"
+  },
+  {
+    "instruction": "Generate project structure documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add domain events",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain priority inheritance",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this mock configure do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain open policy agent",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create CockroachDB operation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create Cassandra query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Promise not resolving correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a utility to generate random passwords",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this runtime checkable",
+    "label": "document"
+  },
+  {
+    "instruction": "Create gamification logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix type conversion error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create documentation for this collections counter",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this circular buffer code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this with statement usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add dark mode support to component",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is the CAP theorem?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this redirect stderr",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain the concept of segmentation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add timestamp to this logging function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write troubleshooting documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function to solve maze problem",
+    "label": "generate"
+  },
+  {
+    "instruction": "My null handler not suppressing logs",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add SQL injection prevention",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this returns result type",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use materialized path",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for database triggers",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this closure in JavaScript",
+    "label": "explain"
+  },
+  {
+    "instruction": "GC overhead limit exceeded",
+    "label": "debug"
+  },
+  {
+    "instruction": "Make this more flexible with optional parameters",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use aggregate root",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is out of order execution?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix tuple unpacking mistake",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix foreign key constraint error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Null pointer exception on object creation",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add sorting capability to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is replication in databases?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain dirty read",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix connection timeout error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Optimize this sorting algorithm",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain database sharding",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Dict comprehension error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a deployment automation script",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this adapter pattern do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain stream processing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the broken loop condition",
+    "label": "debug"
+  },
+  {
+    "instruction": "Event listener not firing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this file descriptor usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create AES encryption implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function to count word frequency",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement number to words converter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create documentation for this functools total ordering",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the Python decorator bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write docstrings for this descriptor",
+    "label": "document"
+  },
+  {
+    "instruction": "What is blockchain technology?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create documentation for this numpy broadcasting function",
+    "label": "document"
+  },
+  {
+    "instruction": "What is computational complexity?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain mTLS in service mesh",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this dataclass",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use search index",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this monad implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is batch processing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write snapshot tests for React component",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for union types",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the scope issue in nested function",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is zero knowledge proof?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the dictionary update error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Implement drag and drop functionality",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain public key cryptography",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this dagger pipeline do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function for longest common subsequence",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add encryption to file storage",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create Supabase query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix dotenv not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Implement a Singleton design pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this state monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Write integration tests for API",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add query timeout handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this network protocol implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain LRU cache eviction",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this model evaluation code",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is the difference between concurrency and parallelism?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use inbox pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use service locator",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this two pointer technique",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix missing module error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a function to process JSON data",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain what this class hierarchy does",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is SOLID principles?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this frozen dataclass",
+    "label": "document"
+  },
+  {
+    "instruction": "Incorrect pointer arithmetic",
+    "label": "debug"
+  },
+  {
+    "instruction": "Rewrite using functional programming",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is in-toto attestation?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add sparse fieldsets",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add SSR support to this component",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this query optimization",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add authentication check to this route",
+    "label": "modify"
+  },
+  {
+    "instruction": "My resource limit error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a circular buffer",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create a class for student management",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement rate limiter using token bucket",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for abstract methods",
+    "label": "document"
+  },
+  {
+    "instruction": "What is a page fault?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the division by zero error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use filter expressions",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to support data retention",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add file locking mechanism",
+    "label": "modify"
+  },
+  {
+    "instruction": "Regex not capturing group correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function for Z algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debug the wrong branch being executed",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is FPGA used for?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the infinite loop in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create concurrent request limiter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this error handling logic",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function to normalize data",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this nox session",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for this paramspec",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this GraphQL resolver do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add readiness probe to this service",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create Protocol Buffers serializer",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is causal consistency?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate README with usage examples",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use abstract factory",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create Redis pub sub listener",
+    "label": "generate"
+  },
+  {
+    "instruction": "My string is not being modified correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this indirect parametrize do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this mock reset call",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add request queuing",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this async function",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this pub sub pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this messagepack usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Add accessibility attributes",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is a compiler?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a neural network?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write architecture decision record",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this continuation monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use configuration driven behavior",
+    "label": "modify"
+  },
+  {
+    "instruction": "Extend this to handle nested data",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for this swig wrapper",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this lexer code",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this tokenizer do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a text classification pipeline",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain repeatable read",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a function to check if number is prime",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this mock side effect",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this branch coverage showing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Optimize memory usage in this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement proper password hashing",
+    "label": "modify"
+  },
+  {
+    "instruction": "My code crashes at runtime",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain starvation in OS",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use field level encryption",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this literal type",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use bitmap scans",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write integration guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Create docstrings for all methods in this file",
+    "label": "document"
+  },
+  {
+    "instruction": "Create Grafana dashboard config",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain how Kubernetes works",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain what Kafka is",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add CQRS pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this semgrep rule doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create package documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Database connection error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Implement dynamic programming for knapsack",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is federated learning?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is object oriented programming?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add timeout to this request",
+    "label": "modify"
+  },
+  {
+    "instruction": "Iterator exhausted too early",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function for adaptive throttling",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is service oriented architecture?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain two phase commit protocol",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add outbox pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this boost python",
+    "label": "document"
+  },
+  {
+    "instruction": "Debug the unicode error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for load shedding",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix memory corruption bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write step by step tutorial",
+    "label": "document"
+  },
+  {
+    "instruction": "Global variable not updating",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use query plan cache",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add repository pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the zip function mismatch",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the null dereference bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this terraform module",
+    "label": "explain"
+  },
+  {
+    "instruction": "Memory not being freed properly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Generate README with screenshots section",
+    "label": "document"
+  },
+  {
+    "instruction": "Create rolling hash function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this typed memoryview",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this database view do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write code for Firestore listener",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is scrum methodology?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is instruction level parallelism?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain admission controllers",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this decorator",
+    "label": "document"
+  },
+  {
+    "instruction": "Create a function to evaluate model accuracy",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create Rollbar error tracking",
+    "label": "generate"
+  },
+  {
+    "instruction": "Generate documentation for this SDK",
+    "label": "document"
+  },
+  {
+    "instruction": "Data corruption from race condition",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain the actor model",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Null pointer dereference crash",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is write skew anomaly?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate cookbook documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Generate Google style docstrings",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this flux config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add webhook support to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create New Relic instrumentation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Memory usage keeps growing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add keyboard navigation support",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this chef recipe doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain the time complexity of this code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Error in my error handler",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this sigstore sign do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this protocol",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement a progress bar component",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use slots",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write how to guide for this API",
+    "label": "document"
+  },
+  {
+    "instruction": "Create A star pathfinding algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the wrong output from my function",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code to find anagrams",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is a data lake?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the helper functions",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain cross validation concept",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is this call count checking?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the log level not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain dependency injection concept",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add window function support",
+    "label": "modify"
+  },
+  {
+    "instruction": "My regex pattern not matching correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain work stealing scheduler",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to remove code duplication",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a file upload handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the query returning wrong results",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use HATEOAS",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this contextlib usage doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this numpy masked array",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function to calculate GCD",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this overloaded function",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this cipher algorithm do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add comments to this algorithm",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the keyboard interrupt handling",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain ACID properties in databases",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create quickstart guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for Bellman-Ford algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add compression to file handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this IO monad usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for semaphore based limiter",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this negative lookbehind do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "My switch case falls through incorrectly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create docstrings for this enum",
+    "label": "document"
+  },
+  {
+    "instruction": "Create AVL tree implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create function to rotate array",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create token bucket rate limiter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write performance documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add code splitting support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement k-means clustering",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this sonarqube config",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this async await code",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this build script do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this observable do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is the Raft algorithm?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate README with badges",
+    "label": "document"
+  },
+  {
+    "instruction": "Create documentation for this ctypes usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Create documentation for this itertools groupby",
+    "label": "document"
+  },
+  {
+    "instruction": "Generate changelog from commit messages",
+    "label": "document"
+  },
+  {
+    "instruction": "What is Nginx used for?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create docstrings for this mixin",
+    "label": "document"
+  },
+  {
+    "instruction": "Add comments explaining each step",
+    "label": "document"
+  },
+  {
+    "instruction": "Create API changelog documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the zero division error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write comments for regex patterns",
+    "label": "document"
+  },
+  {
+    "instruction": "My calculation gives wrong result",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain snapshot isolation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use unit of work pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain preemptive scheduling",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is kyverno?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create distributed rate limiter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function to reverse a string",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write currency formatter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add dry run mode to this script",
+    "label": "modify"
+  },
+  {
+    "instruction": "Rename variables to be more descriptive",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add dependency injection to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add A/B testing support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use anti-corruption layer",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain test driven development",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write deprecation notices",
+    "label": "document"
+  },
+  {
+    "instruction": "ImportError when running my script",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix environment variable not loading",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is EDF scheduling?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the testing strategy",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this ini configuration",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is Consul connect?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "My http handler not sending logs",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this nonlocal mock",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this asyncio code doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix permission denied error on file",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this quicksort algorithm do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for this functools wraps",
+    "label": "document"
+  },
+  {
+    "instruction": "What is serializability?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add input validation to this method",
+    "label": "modify"
+  },
+  {
+    "instruction": "My mutable default argument causes bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is confidential computing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create Argon2 password hashing",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write an algorithm for matrix multiplication",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement a neural network in PyTorch",
+    "label": "generate"
+  },
+  {
+    "instruction": "NullPointerException in constructor",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this chain of responsibility doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the bracket mismatch error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain Paxos consensus",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain happens before relation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Getting index out of range error",
+    "label": "debug"
+  },
+  {
+    "instruction": "My code produces unexpected output",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is WebSocket?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create test cases for login function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create documentation for this beartype function",
+    "label": "document"
+  },
+  {
+    "instruction": "Type error in function argument",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the async await bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is transfer learning?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this pulumi stack",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this context manager properly",
+    "label": "document"
+  },
+  {
+    "instruction": "Create documentation for this polars query",
+    "label": "document"
+  },
+  {
+    "instruction": "Add input sanitization",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a Django view for login",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this pyproject config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create B-tree implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add cleanup on exit",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a script to scrape web data",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this system call do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the tuple immutability error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for billing calculation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create documentation for database views",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this memoization implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Implement data deduplication logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement two sum solution",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add try catch blocks to this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this flake8 config",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this codeqlconfig do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add environment variable support",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this helm chart doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document the caching strategy",
+    "label": "document"
+  },
+  {
+    "instruction": "Create docstrings for static methods",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this database index do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create test plan documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this setup cfg option",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain the gossip protocol",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the socket handler issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this database migration",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this msgspec struct",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for feature flag evaluation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document optional parameters",
+    "label": "document"
+  },
+  {
+    "instruction": "Document external dependencies",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this contextlib usage doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the string format error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for this decorator",
+    "label": "document"
+  },
+  {
+    "instruction": "Write version history documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this autospec usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Implement date range calculator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document this abstractproperty",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain the concept of pointers in C",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add full text search",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this patch dict usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Encrypt sensitive data in this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement a deque data structure",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add geospatial support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this threading implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add retry logic to this API call",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add data masking",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add read model",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this collections deque",
+    "label": "document"
+  },
+  {
+    "instruction": "Instrument this code with metrics",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this trivy scan doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the missing break statement",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is optimistic concurrency control?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "SQL constraint violation error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this assert not called",
+    "label": "explain"
+  },
+  {
+    "instruction": "Compare Python vs Java for backend development",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write DFS traversal algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this argo workflow",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add lazy loading to this component",
+    "label": "modify"
+  },
+  {
+    "instruction": "Debug the fire library issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain quantum gate operations",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Convert to use enum instead of constants",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix buffer overflow in C code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code to implement a trie data structure",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this mock configure do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "My arithmetic error not caught",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create Swagger documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this redirect stdout doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this type alias",
+    "label": "document"
+  },
+  {
+    "instruction": "What programming language should I learn first?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the enum values",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor away from god object",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this module with proper headers",
+    "label": "document"
+  },
+  {
+    "instruction": "What is the difference between compiled and interpreted languages?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is this call count checking?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add pivot support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Segmentation fault in C code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write HTML entity encoder",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is memory mapped IO?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "ValueError: invalid literal for int",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this option type usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Remove magic numbers from this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this coverage xml doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create docstrings for this mixin",
+    "label": "document"
+  },
+  {
+    "instruction": "Create OpenSearch client",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this docker multi stage doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create migration guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Create a carousel component",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this ansible playbook do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write longest increasing subsequence",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the walrus operator bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix JSON parsing error from API",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add logging to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix greedy regex consuming too much",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this cosign signature",
+    "label": "explain"
+  },
+  {
+    "instruction": "Module import failing silently",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create vendor documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "My generator is not producing values",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add hypermedia support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this structural subtyping",
+    "label": "document"
+  },
+  {
+    "instruction": "Write function to detect cycle in linked list",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this warns context",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is a foreign key?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Debug the queue handler error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create extension documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this compression algorithm do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this pydantic model",
+    "label": "document"
+  },
+  {
+    "instruction": "Debug the f-string formatting error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this Promise chain do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add feature flags to this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is DevOps?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add faceted search",
+    "label": "modify"
+  },
+  {
+    "instruction": "How do I prepare for coding interviews?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is Docker used for?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create threat model documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this encoding scheme",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this thrift struct",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the value error in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain the concept of APIs",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is priority inversion?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add progress bar to this loop",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add test coverage to this module",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain memory management in programming",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write integration test documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is cooperative multitasking?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain GPT architecture concept",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this descriptor do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this typeguard usage",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this pytest fixture doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix deadlock between two threads",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create documentation for test helpers",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this backpropagation code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create subscription management logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is Linkerd?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add inversion of control",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain virtual synchrony",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create documentation for this cudf operation",
+    "label": "document"
+  },
+  {
+    "instruction": "Create longest common substring finder",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use keyset pagination",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a migration script",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain quantum decoherence",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this event emitter do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix argument unpacking in function call",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function to check balanced parentheses",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this covariant type",
+    "label": "document"
+  },
+  {
+    "instruction": "What is pod security admission?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix double free error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is eventual consistency?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain what recursion is",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this named tuple usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "EOF error when reading file",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for this numpy vectorize",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix security vulnerability in this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this jenkins pipeline",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this marshmallow schema",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix concurrent access bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain the waterfall model",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Out of memory error when running",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this pytest plugin",
+    "label": "explain"
+  },
+  {
+    "instruction": "Improve error messages in this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Debug the list mutation bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this type alias",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this dataclass",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain speculative execution",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create documentation for this writer monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain stackless coroutine",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is hyperthreading?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor this code to use list comprehension",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix broken import statement",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add immutable logging",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement soft delete in database",
+    "label": "generate"
+  },
+  {
+    "instruction": "Convert this loop to use map and filter",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this assert called with",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this variadic generic",
+    "label": "document"
+  },
+  {
+    "instruction": "Add rate limiting to this endpoint",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain SIMD instructions",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain the concept of swap space",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is this stack implementation doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Refactor to use schema registry",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this context manager properly",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the bug causing wrong variable assignment",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a simple calculator program",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is a semaphore?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this assert called with",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is MVC architecture?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is the difference between frontend and backend?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add expression indexes",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create skip list data structure",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this hookimpl doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Debug the reduce function bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this abstract base class",
+    "label": "document"
+  },
+  {
+    "instruction": "What skills do I need for web development?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a virtual machine?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write README with architecture overview",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for consistent hashing",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write fibonacci using memoization",
+    "label": "generate"
+  },
+  {
+    "instruction": "My function exits too early",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this graph traversal code do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is cache coherence?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use CTE",
+    "label": "modify"
+  },
+  {
+    "instruction": "Convert this to use dataclasses",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this suppress context manager",
+    "label": "explain"
+  },
+  {
+    "instruction": "Make this thread safe",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the wrong default argument",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for gRPC service",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add autovacuum tuning",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is pipeline hazard?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement test for async function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this earthfile",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add tenant isolation",
+    "label": "modify"
+  },
+  {
+    "instruction": "Break up this monolithic class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Debug the timeout error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write strategy design pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document this frozen dataclass",
+    "label": "document"
+  },
+  {
+    "instruction": "Package not found error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add section comments to this file",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this lambda function",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create an automation script for data export",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this async function",
+    "label": "document"
+  },
+  {
+    "instruction": "What is Shor's algorithm used for?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the data flow",
+    "label": "document"
+  },
+  {
+    "instruction": "What is a design pattern?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add signal handling to this process",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add circuit breaker to API calls",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add range type support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create a script to send email notifications",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is clean architecture?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "My json loads throwing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create XML validator",
+    "label": "generate"
+  },
+  {
+    "instruction": "My logger not outputting messages",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add support for multiple data types",
+    "label": "modify"
+  },
+  {
+    "instruction": "Simplify this nested if-else",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this struct pack",
+    "label": "document"
+  },
+  {
+    "instruction": "Add connection retry logic",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create security best practices guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement command pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create data dictionary",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this syft sbom do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this collections chainmap",
+    "label": "document"
+  },
+  {
+    "instruction": "Add custom exception classes",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create edit distance function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Environment variable undefined error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code to implement OAuth2 flow",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the exception not being caught",
+    "label": "debug"
+  },
+  {
+    "instruction": "Network request failing silently",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use field masks",
+    "label": "modify"
+  },
+  {
+    "instruction": "Make this code more secure",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this patch builtins doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this coverage combine",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix dangling pointer in C++",
+    "label": "debug"
+  },
+  {
+    "instruction": "Generate Postman collection documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the comprehension filter bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this mock patch usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this message queue doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add database connection validation",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the warning filter not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for feature flags",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this CI/CD pipeline doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "AttributeError: NoneType object has no attribute",
+    "label": "debug"
+  },
+  {
+    "instruction": "My function is skipping iterations",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add locale formatting",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is Git and why use it?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create tutorial for this function",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement base64 encoding",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write code to load and split dataset",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this dependabot config",
+    "label": "explain"
+  },
+  {
+    "instruction": "My decorator not working correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the list slicing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function for chaos engineering test",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create backpressure mechanism",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create articulation points finder",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain underfitting",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create documentation for this metaclass",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this missing coverage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write test scenario documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Create streak tracking",
+    "label": "generate"
+  },
+  {
+    "instruction": "Improve error recovery logic",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain distributed transactions",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain cloud computing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this binary search implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add verbose mode option",
+    "label": "modify"
+  },
+  {
+    "instruction": "How do I become a software engineer?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for suffix tree",
+    "label": "generate"
+  },
+  {
+    "instruction": "My code throws unexpected exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create an Express.js route handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is write through caching?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain Paxos algorithm",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Memory address error in pointer",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is real time operating system?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write docstrings for this rapids function",
+    "label": "document"
+  },
+  {
+    "instruction": "Which is better React or Angular?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use spatial index",
+    "label": "modify"
+  },
+  {
+    "instruction": "Cannot convert string to int error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a script to sync files between folders",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debug the deprecation warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain the concept of Big O notation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add graceful degradation",
+    "label": "modify"
+  },
+  {
+    "instruction": "Convert to use threading",
+    "label": "modify"
+  },
+  {
+    "instruction": "Convert switch statement to dictionary",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to support regulatory requirements",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is a confusion matrix?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a consensus algorithm?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Which is better Flask or Django?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a CDN?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create Solr search client",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this visitor pattern do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this feature extraction doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this signal handler",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write technical documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write function to find middle of linked list",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this nullcontext do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this AST transformation doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain Envoy proxy",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write docstrings for this unpack",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this voluptuous schema",
+    "label": "document"
+  },
+  {
+    "instruction": "Create achievement system",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debug the syntax warning issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is a data warehouse?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement a script to compress images",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this cached property",
+    "label": "document"
+  },
+  {
+    "instruction": "Star unpacking not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Debug the csv reader error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for this pybind11 binding",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this loss function",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the bytes warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the logging configuration error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create HMAC implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain cross site scripting",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Debug the dictionary comprehension bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain hardware security module",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain the difference between stack and queue",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this parquet reader",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use custom types",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is a firewall?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this async context manager",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add consent management",
+    "label": "modify"
+  },
+  {
+    "instruction": "FileNotFoundError when opening file",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for mock objects",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain lost update problem",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this training loop do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain ETL process",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add bounded context separation",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement cross validation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the import warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add configuration options to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this named tuple",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for configuration file",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this mixin class doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this spec argument doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Make this database query more efficient",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the base case in my recursion",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add unit tests to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create Jaeger trace",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain anti corruption layer",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this covariant type",
+    "label": "document"
+  },
+  {
+    "instruction": "What is serverless computing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add parallel query support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain HTTP vs HTTPS",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this embedding layer",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this staticmethoddescriptor",
+    "label": "document"
+  },
+  {
+    "instruction": "My condition is always true",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix wild pointer dereference",
+    "label": "debug"
+  },
+  {
+    "instruction": "My array index is out of bounds",
+    "label": "debug"
+  },
+  {
+    "instruction": "Debug the continue statement issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Getting NoneType has no attribute error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Make this function configurable",
+    "label": "modify"
+  },
+  {
+    "instruction": "Break this large function into smaller ones",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a query to get top 10 records",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this context manager do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create Rabin-Karp algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Simplify this complex condition",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create payment processing handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "Make this code more testable",
+    "label": "modify"
+  },
+  {
+    "instruction": "My yaml config not loading",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for this type var",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use exclusion constraints",
+    "label": "modify"
+  },
+  {
+    "instruction": "Runtime exception in my Java program",
+    "label": "debug"
+  },
+  {
+    "instruction": "How do I build a portfolio?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this hashing function",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a webhook handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is deadlock avoidance?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for Kafka producer",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write tests for authentication middleware",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement factory design pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement a Queue data structure",
+    "label": "generate"
+  },
+  {
+    "instruction": "Off by one error in my loop",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this free monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for error codes",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this linked list implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write NumPy style docstrings for this function",
+    "label": "document"
+  },
+  {
+    "instruction": "Add graceful shutdown handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is SLSA framework?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this code generation logic",
+    "label": "explain"
+  },
+  {
+    "instruction": "Make errors more descriptive",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain supervised learning",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate postmortem template",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this builder pattern do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for this runtime checkable",
+    "label": "document"
+  },
+  {
+    "instruction": "Add parallel processing capability",
+    "label": "modify"
+  },
+  {
+    "instruction": "Use after free bug in C",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write API documentation for these endpoints",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to support multitenancy",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the set comprehension error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Extend this class with new methods",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create changelog documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write file level documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this pre commit hook doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function to find bridges in graph",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain the concept of transactions",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a cache miss?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate JSDoc comments for this JavaScript function",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for stored procedures",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain reactive programming",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the user warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain backend for frontend pattern",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write string compression function",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is two factor authentication?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this numpy ufunc",
+    "label": "document"
+  },
+  {
+    "instruction": "TypeError: unsupported operand type",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create docstrings for this generator",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this redirect stderr",
+    "label": "explain"
+  },
+  {
+    "instruction": "Instrument this code with metrics",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is Byzantine fault tolerance?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create documentation for this capnp schema",
+    "label": "document"
+  },
+  {
+    "instruction": "Boolean logic is reversed",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write matrix rotation function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this kustomize overlay",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this tekton pipeline doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this contravariant type",
+    "label": "document"
+  },
+  {
+    "instruction": "Write ROT13 encoder decoder",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create documentation for this library",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for leaderboard management",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write troubleshooting runbook",
+    "label": "document"
+  },
+  {
+    "instruction": "Index error when accessing list element",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is earliest deadline first?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "My system exit not caught",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the partial function error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add event emission to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this black config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is structural hazard?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create Caesar cipher encoder",
+    "label": "generate"
+  },
+  {
+    "instruction": "Cannot import name from module",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for coupon validation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use table statistics",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create docstrings with examples",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for RSA encryption",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this ion document",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use time based partitioning",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a quicksort algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document this protobuf message",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this coverage config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this swarm stack do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add error boundary to this component",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for this heapq module usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Clean up unused imports",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement coin change dynamic programming",
+    "label": "generate"
+  },
+  {
+    "instruction": "Class attribute vs instance attribute bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is phantom read?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is homomorphic encryption?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this buildx config",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write code for feature engineering",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this grype scan",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this self type",
+    "label": "document"
+  },
+  {
+    "instruction": "Create network flow algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add audit trail",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for flags",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this skaffold config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this create autospec call",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this overload",
+    "label": "document"
+  },
+  {
+    "instruction": "Generate documentation for webhooks",
+    "label": "document"
+  },
+  {
+    "instruction": "Write user guide for this feature",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain secure aggregation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this nullcontext do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write parameterized tests",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this callback protocol",
+    "label": "document"
+  },
+  {
+    "instruction": "Incompatible types in assignment",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write interface documentation with types",
+    "label": "document"
+  },
+  {
+    "instruction": "Which is better AWS or Azure?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix indentation error in Python",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this github actions workflow",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for plugins",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this approx comparison doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is the difference between TCP and UDP?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write release notes",
+    "label": "document"
+  },
+  {
+    "instruction": "Create namespace documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Convert this synchronous code to async",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add hierarchical data support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function to implement bloom filter",
+    "label": "generate"
+  },
+  {
+    "instruction": "My code has a missing colon error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this spec argument doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Regular expression error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create ZeroMQ socket handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this drone ci config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is quantum computing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add anonymization",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is a Turing machine?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement a function to flatten nested list",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a cron job script",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is a distributed hash table?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for reward system",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement binary search tree",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add distributed tracing to this service",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add tree structure support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create certificate validation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this bisect usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the logic error in my sorting function",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add comments to SQL query",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for WebRTC signaling",
+    "label": "generate"
+  },
+  {
+    "instruction": "Compare SQL vs NoSQL databases",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add cleanup on exit",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this character class in regex",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add atomic file write support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function for red-black tree",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create ICE candidate handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix broken file path in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain neuromorphic computing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Object is null unexpectedly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add XSS protection to this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create fault injection logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is message passing?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the xml parsing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this queue data structure code",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is pair programming?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this parser implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this SQL query",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is green thread?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add index only scans",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this backtracking solution",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create suffix array builder",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix file not found exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Dictionary key not found error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a data transformation pipeline",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write code to read and write Excel files",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement mock for database calls",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this async context manager",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this reactive programming code",
+    "label": "explain"
+  },
+  {
+    "instruction": "SQL injection vulnerability in query",
+    "label": "debug"
+  },
+  {
+    "instruction": "Debug the ini file reading error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor legacy code incrementally",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this itertools product",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the memory handler bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use pseudonymization",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this patch multiple",
+    "label": "explain"
+  },
+  {
+    "instruction": "What certifications are useful for developers?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add check constraints",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for secrets management",
+    "label": "document"
+  },
+  {
+    "instruction": "Debug the syslog handler issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Generate OpenAPI specification",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this isort configuration",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix closure bug in JavaScript",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this yield fixture do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write function to convert Roman numerals",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create traffic splitting function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for badge award logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Update to use new syntax",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create README with contributing guidelines",
+    "label": "document"
+  },
+  {
+    "instruction": "What is strangler fig pattern?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this named capture group",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain the concept of indexing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is machine learning?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain ROC curve",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add toast configuration",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this descriptor",
+    "label": "document"
+  },
+  {
+    "instruction": "Debug the incorrect output of this method",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this mypy config",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the encoding error in file read",
+    "label": "debug"
+  },
+  {
+    "instruction": "Method override not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create topological sort implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is MVCC?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write docstrings for this class",
+    "label": "document"
+  },
+  {
+    "instruction": "What is gossip protocol?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this arrow table operation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this Protocol class",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain Istio architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to event sourcing",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain operational transformation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain binary authorization",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain SGX enclave",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the formatter error in logging",
+    "label": "debug"
+  },
+  {
+    "instruction": "What are differences between Java and C++?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is read committed isolation?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use sagas",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this docker secret doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the callback hell issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Extend this function to handle edge cases",
+    "label": "modify"
+  },
+  {
+    "instruction": "Make component responsive",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this event sourcing code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the toml parsing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document the types used in this function",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function to detect if graph is bipartite",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this assert any call do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Implement memoization for a function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Generate docstrings for class methods",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix duplicate key error in database",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document exception types",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain Grover's algorithm",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add health check endpoint",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain what an interpreter does",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this transaction code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain agile methodology",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this custom mark",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this event loop code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add change data capture",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write package init documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Migrate from Python 2 to Python 3",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add transaction support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add process pool executor",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings with type hints",
+    "label": "document"
+  },
+  {
+    "instruction": "Debug this failing test case",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a class for a bank account",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement run length encoding",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement merge sort in Python",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this partial application code",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this Kubernetes manifest do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write request response documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this patch object doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Reduce the number of database queries",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write docstrings for this numpy structured array",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain superscalar processor",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a quantum circuit?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Why is my variable returning None?",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a log parser",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is a binary search tree?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a script to monitor system resources",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain data hazard in CPU",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement pagination for API results",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debugging segfault in pointer arithmetic",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is regularization?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is quantum supremacy?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create distributed trace context",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create a modal component in React",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this autospec usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Type error when adding variables",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for sliding window rate limiter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement JSON serializer",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this skip decorator do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain rate monotonic scheduling",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain distributed consensus",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the variable scoping issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write documentation for this functools singledispatch",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for leaky bucket algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this magic mock do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for class properties",
+    "label": "document"
+  },
+  {
+    "instruction": "What is viewstamped replication?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add graceful shutdown handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is the two phase commit?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document the data models",
+    "label": "document"
+  },
+  {
+    "instruction": "What is BERT?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create blue green deployment logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this captured output do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this functools lru cache",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use tablespace",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write adapter pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this autouse fixture doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this observer pattern implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this template method pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is an operating system?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use service locator",
+    "label": "modify"
+  },
+  {
+    "instruction": "Generate help text for arguments",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain the difference between process and thread",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the resource warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the incorrect comparison operator",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create documentation for this generic class",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this pyright config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for test data",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to support forward compatibility",
+    "label": "modify"
+  },
+  {
+    "instruction": "Decorator changing function signature",
+    "label": "debug"
+  },
+  {
+    "instruction": "My future warning causing issues",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use document store features",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document authentication flows",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use closure table",
+    "label": "modify"
+  },
+  {
+    "instruction": "Improve error logging in this code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add internationalization support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function for polynomial hashing",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for palindrome partitioning",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain condition variables",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this gitlab ci config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add error handling to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this yapf config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain hard real time systems",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is this skipif condition doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write interface documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is fine tuning in ML?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is a DDoS attack?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create URL encoder function",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this cdk construct doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a function to find longest palindrome",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create error handling guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for Sentry error capture",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create function to reverse linked list",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write docstrings for this classmethoddescriptor",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this avro schema",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this generator function doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Refactor to use covering indexes",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is SQL injection?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write an Animal class with inheritance",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this docker network do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this API gateway code do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document the upgrade path",
+    "label": "document"
+  },
+  {
+    "instruction": "Generate module level documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the generator exit error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write security documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this slots class",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this magic mock do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this final class",
+    "label": "document"
+  },
+  {
+    "instruction": "Create docstrings for this generator",
+    "label": "document"
+  },
+  {
+    "instruction": "Create documentation for this functools partial",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix config parsing error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain the flow of this state machine",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a recommendation system function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Variable shadowing causing wrong value",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is F1 score?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to use abstract factory",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement a function to check palindrome",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a React component for a todo list",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document the application settings",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement a Graph class",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain Spark vs Hadoop",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain GPU architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Make this function pure for easier testing",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add proper exception handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add readiness probe to this service",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create a function to find all permutations",
+    "label": "generate"
+  },
+  {
+    "instruction": "Cannot open file for writing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write event documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add response caching to API client",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to comply with GDPR",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this dive analysis",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain control hazard",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add file backup before write",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the HTTP 500 error in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code to parse a CSV file",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this mock call args doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add dependency injection to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the NullPointerException in my Java code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a password hashing function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain fiber vs coroutine",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this ExitStack usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add connection pooling to database code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Generate SDK documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this cython cdef",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this Makefile rule",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write design document for this feature",
+    "label": "document"
+  },
+  {
+    "instruction": "Optimize this loop for better performance",
+    "label": "modify"
+  },
+  {
+    "instruction": "Rewrite this in TypeScript",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement CSV validator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this numpy matrix ops",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a SQL query to find duplicates",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add strangler fig pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for this maybe monad",
+    "label": "document"
+  },
+  {
+    "instruction": "Create usage tracking function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for tax calculation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create documentation for this nogil block",
+    "label": "document"
+  },
+  {
+    "instruction": "Mutex not working correctly",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is the purpose of this helper function?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function for Sphinx search",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain ambassador pattern",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this raises context do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is deadlock prevention?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is server sent events?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add liveness check implementation",
+    "label": "modify"
+  },
+  {
+    "instruction": "API authentication error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain strong consistency",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write code for shadow traffic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix race condition in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is a monitor in concurrency?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is livelock?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for custom types",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a bubble sort function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain the logic of this hash map",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this context manager implement?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write explanatory comments for this function",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain what Jenkins does",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Generate component documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for quota management",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this dunder method do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add partial response support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a REST API endpoint in Flask",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create media stream handler",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain long polling",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix null reference error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is version control?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this xfail mark",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create benchmarking documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the typer CLI error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write docstrings for this itertools islice",
+    "label": "document"
+  },
+  {
+    "instruction": "Create a query to join three tables",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the bytes decoding error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function to solve N-queens problem",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the wrong comparison in if statement",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain kanban board",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Convert this SQL query to ORM syntax",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain write back caching",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this TypeVar do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is Elasticsearch?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write code to convert XML to JSON",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write YAML config loader",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for KMP string matching",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix index error in my for loop",
+    "label": "debug"
+  },
+  {
+    "instruction": "Make this component more testable",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this abstract class do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this REST endpoint code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this array module usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Create a function to chunk an array",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this list comprehension",
+    "label": "explain"
+  },
+  {
+    "instruction": "Rewrite using modern ES6 syntax",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor projections",
+    "label": "modify"
+  },
+  {
+    "instruction": "Handle edge cases in this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this collections defaultdict",
+    "label": "document"
+  },
+  {
+    "instruction": "What is stackful coroutine?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for test cases",
+    "label": "document"
+  },
+  {
+    "instruction": "Create documentation for this metaclass",
+    "label": "document"
+  },
+  {
+    "instruction": "My rotating file handler broken",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the pickle serialization error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this puppet manifest",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this pylint config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Try catch block not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Generate docstrings for async functions",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for sparse table",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create a search filter component",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the timed rotating handler",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add distributed tracing to this service",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write developer documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the pending deprecation warning",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create XML parser function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this recwarn fixture",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add export functionality to this module",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is dynamic programming?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Invalid syntax near keyword",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain event driven architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement word break problem solution",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this validation function check?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is FIFO cache replacement?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add recursive query support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain zero trust security",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this typed dict",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this Docker configuration",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this modin usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Add timezone handling",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this pandas merge",
+    "label": "document"
+  },
+  {
+    "instruction": "Create A/B test assignment",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a loan EMI calculator",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this recursive function do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is resource allocation graph?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a rate limiting function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function to deep clone an object",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this pandas apply function",
+    "label": "document"
+  },
+  {
+    "instruction": "What is demand paging?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create technical specification document",
+    "label": "document"
+  },
+  {
+    "instruction": "Thread safety issue in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this response transformer",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix error in exception handling",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function to find factorial",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this map filter reduce do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create phone number validator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Wrong value being returned",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this multiprocessing code do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Refactor this code to be more modular",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add composition over inheritance",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create fixed window counter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this type var",
+    "label": "document"
+  },
+  {
+    "instruction": "Add support for custom configuration",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this functor doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document the indexes",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the ORM query error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix SQL syntax error in my query",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write comments for configuration options",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this tmp path do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "KeyError when accessing dict key",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is supply chain security?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this buildkite pipeline",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is rego language used for?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement spiral matrix traversal",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain reinforcement learning",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create observer design pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this metaclass implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the ArrayIndexOutOfBoundsException",
+    "label": "debug"
+  },
+  {
+    "instruction": "Translate this Java code to Python",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this capfd usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Why am I getting index out of bounds?",
+    "label": "debug"
+  },
+  {
+    "instruction": "Stack overflow in recursive function",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create documentation for this scipy function",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix KeyError in JSON parsing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add bulkhead pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function for interval scheduling",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this collections ordereddict",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain firm real time systems",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write README with changelog",
+    "label": "document"
+  },
+  {
+    "instruction": "Make this function more generic",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use aggregations",
+    "label": "modify"
+  },
+  {
+    "instruction": "Concurrent modification exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this cython extension",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for edit distance",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this assert any call do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain gRPC",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement a file watcher script",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add callback support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Wrong output from recursive function",
+    "label": "debug"
+  },
+  {
+    "instruction": "My counter is incrementing incorrectly",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write authorization documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add liveness check implementation",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this JOIN operation do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this database trigger doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create onboarding documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is a transformer model?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain OLAP vs OLTP",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a FastAPI route for user registration",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for Zipkin trace",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this attention mechanism do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain load balancing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Update to use newer library version",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this mock return value do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this travis ci config",
+    "label": "explain"
+  },
+  {
+    "instruction": "Remove redundant code from this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add health check endpoint",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to use append only store",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this bandit security check",
+    "label": "explain"
+  },
+  {
+    "instruction": "My filter not removing correct elements",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this request handler",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write code for data preprocessing",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain domain driven design",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is soft real time?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is DNS?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add middleware support to this pipeline",
+    "label": "modify"
+  },
+  {
+    "instruction": "My list comprehension giving wrong output",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the runtime error in my program",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create an ORM model for users",
+    "label": "generate"
+  },
+  {
+    "instruction": "My lambda expression is wrong",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the unhandled promise rejection",
+    "label": "debug"
+  },
+  {
+    "instruction": "Make this code follow PEP8 standards",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the file handling exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write unit tests for a calculator function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use set operations",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this smile format usage",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain what Redis is used for",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document environment variables",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the TypeError in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this parametrize combinations",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for queries",
+    "label": "document"
+  },
+  {
+    "instruction": "Add startup initialization logic",
+    "label": "modify"
+  },
+  {
+    "instruction": "Make this code run faster",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain what Ansible is used for",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Debug the variable not updating in loop",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use async await",
+    "label": "modify"
+  },
+  {
+    "instruction": "Document this typed dict",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the misplaced return statement",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this garden config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the unpacking error in Python",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write API getting started guide",
+    "label": "document"
+  },
+  {
+    "instruction": "Compare MongoDB vs PostgreSQL",
+    "label": "unknown"
+  },
+  {
+    "instruction": "List index out of range on line 5",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write docstrings for this paramspec",
+    "label": "document"
+  },
+  {
+    "instruction": "Create docstrings for this enum",
+    "label": "document"
+  },
+  {
+    "instruction": "Convert this code to use generators",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add specification pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create man page documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain hexagonal architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Debug the stop iteration issue",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a tip calculator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create word ladder solver",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the sorted function not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create suffix automaton",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this regex lookahead",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is a message broker?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this docker compose do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix async generator error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What does this safety check do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create test fixtures for user data",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is policy as code?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for maximum bipartite matching",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add pagination cursor support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this mock reset call",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add color coding to terminal output",
+    "label": "modify"
+  },
+  {
+    "instruction": "Refactor to support data governance",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create job sequencing algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix synchronization error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add deferred constraints",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain deadlock detection",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain differential privacy",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to dependency injection pattern",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for this literal type",
+    "label": "document"
+  },
+  {
+    "instruction": "Implement data validation function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the state mutation bug in React",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add virtual scrolling",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the recursive call order",
+    "label": "debug"
+  },
+  {
+    "instruction": "Semicolon missing error in C++",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix buffer underflow bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "Config file not being read",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write deployment documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this captured output do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the yield statement bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this mock call args doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is saga pattern?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a debounce function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a README with API documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain this proxy pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain cache hit ratio",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this itertools chain",
+    "label": "document"
+  },
+  {
+    "instruction": "What is branch prediction?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this strategy pattern",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this create autospec call",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this socket code doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add default parameter values to function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create zigzag traversal",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix the regex causing wrong results",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the floating point error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix infinite recursion in my function",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a stored procedure",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document this pandas groupby",
+    "label": "document"
+  },
+  {
+    "instruction": "Document this concatenate type",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain secure multiparty computation",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Implement LRU cache",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a custom React hook",
+    "label": "generate"
+  },
+  {
+    "instruction": "Extend to support batch processing",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this request fixture",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a function to validate email",
+    "label": "generate"
+  },
+  {
+    "instruction": "Convert callbacks to promises",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this circle ci config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Refactor to use partial indexes",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain shared memory concurrency",
+    "label": "unknown"
+  },
+  {
+    "instruction": "The loop runs one extra time",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use value objects",
+    "label": "modify"
+  },
+  {
+    "instruction": "Debug this broken condition check",
+    "label": "debug"
+  },
+  {
+    "instruction": "Nested comprehension bug",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this activation function doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add proper authentication check",
+    "label": "modify"
+  },
+  {
+    "instruction": "Inheritance not working as expected",
+    "label": "debug"
+  },
+  {
+    "instruction": "Memory access violation error",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is gradient descent?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write circuit breaker pattern",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create README for open source project",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this cffi binding",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain SSL TLS encryption",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create API reference documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use row level security",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function for bcrypt hashing",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this coverage report",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this final class",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this abstract base class enforce?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is this checksum calculation doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create Firebase query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Implement a hash table from scratch",
+    "label": "generate"
+  },
+  {
+    "instruction": "Sanitize user input in this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function to deep merge objects",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create function to merge k sorted lists",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this collections namedtuple",
+    "label": "document"
+  },
+  {
+    "instruction": "Upgrade deprecated API usage",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write function to validate JSON",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is MapReduce?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add plugin architecture",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write scalability documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Generate FAQ documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Add API versioning",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is leader election?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for DynamoDB operation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create temperature converter",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a README for this project",
+    "label": "document"
+  },
+  {
+    "instruction": "Add signal handling to this process",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain wait for graph",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this snyk scan",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write email validator with regex",
+    "label": "generate"
+  },
+  {
+    "instruction": "Fix missing base case in recursive code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create load testing documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "My runtime warning not caught",
+    "label": "debug"
+  },
+  {
+    "instruction": "Document this vaex computation",
+    "label": "document"
+  },
+  {
+    "instruction": "Recursive function never terminates",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add multiprocessing support",
+    "label": "modify"
+  },
+  {
+    "instruction": "Make variable names more meaningful",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain conftest usage",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain this suppress context manager",
+    "label": "explain"
+  },
+  {
+    "instruction": "My function returns wrong output",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write Dijkstra's algorithm",
+    "label": "generate"
+  },
+  {
+    "instruction": "Make this pluggable",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create a grade calculator",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add assertions to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add data deletion capability",
+    "label": "modify"
+  },
+  {
+    "instruction": "Implement LCM calculation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write code to implement a circular queue",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create Sphinx docstrings",
+    "label": "document"
+  },
+  {
+    "instruction": "What does this recursive function return?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this contravariant type",
+    "label": "document"
+  },
+  {
+    "instruction": "Add array operations",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write code for Neo4j graph query",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is database normalization?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "ValueError when converting data types",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is three phase commit?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create end to end test for signup flow",
+    "label": "generate"
+  },
+  {
+    "instruction": "Missing parenthesis causing syntax error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain Turing completeness",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for third party integrations",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix file read/write error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a class for inventory management",
+    "label": "generate"
+  },
+  {
+    "instruction": "Make this code more readable",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write documentation for CLI commands",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for segment tree",
+    "label": "generate"
+  },
+  {
+    "instruction": "Debug the handler not attached",
+    "label": "debug"
+  },
+  {
+    "instruction": "Library not found when importing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add filtering options to this query",
+    "label": "modify"
+  },
+  {
+    "instruction": "What does this tox config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix memory allocation error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Implement a retry mechanism",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function to merge two sorted arrays",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this env file doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix generator not yielding values",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a throttle function",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this property getter doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create documentation for this pandas pivot table",
+    "label": "document"
+  },
+  {
+    "instruction": "Database transaction not committing",
+    "label": "debug"
+  },
+  {
+    "instruction": "Debug the overflow error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain software architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is API gateway pattern?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain sigstore project",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What does this mock return value do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add docstrings to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this mock patch usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a README with installation instructions",
+    "label": "document"
+  },
+  {
+    "instruction": "Document this structural subtyping",
+    "label": "document"
+  },
+  {
+    "instruction": "Make this API call more efficient",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for this orc writer",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this monkeypatch doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add CSRF protection",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a Binary Tree class",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document the test fixtures",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a function for canary deployment check",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write code to train a linear regression model",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this in toto attestation doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add type hints to this Python code",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain DMA in computer architecture",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add time series support",
+    "label": "modify"
+  },
+  {
+    "instruction": "HTTP request throwing exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create AMQP message consumer",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this LRU cache implementation do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this inheritance structure",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add pagination to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Array subscript out of range error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Maximum recursion depth exceeded",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create discount application logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this autopep8 usage",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this hadolint config do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "What does this pragma no cover do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Compare REST vs GraphQL",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor away from god object",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the IndexError in my Python list",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this dynamic programming code doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain pessimistic locking",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is sidecar pattern?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a script to backup database",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add inversion of control",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix broken ternary operator logic",
+    "label": "debug"
+  },
+  {
+    "instruction": "Refactor to use analytical queries",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the syntax error in my function definition",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create a database schema for blog",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is CRDTs?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create a binary search function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add feature toggle",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is containerization?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix type mismatch error",
+    "label": "debug"
+  },
+  {
+    "instruction": "How do I get my first programming job?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create message format documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this renovate config doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the map function error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain qubit vs classical bit",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write function to find missing number",
+    "label": "generate"
+  },
+  {
+    "instruction": "Document this pandas rolling window",
+    "label": "document"
+  },
+  {
+    "instruction": "What are differences between Python 2 and 3?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Convert to functional programming style",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the string concatenation error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write docstrings for this cbor encoding",
+    "label": "document"
+  },
+  {
+    "instruction": "What is conflict free replicated data type?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create proxy pattern implementation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this abstractmethod",
+    "label": "document"
+  },
+  {
+    "instruction": "My program gives incorrect results",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain this compose override",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add schema versioning",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this docker ignore",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create proration logic",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add statistics targets",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain the concept of OAuth",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What do these generic types mean?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Implement JWT authentication",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add telemetry to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "Fix the API call returning 404",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create documentation for this cerberus validation",
+    "label": "document"
+  },
+  {
+    "instruction": "Refactor to use event log",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this setter method",
+    "label": "explain"
+  },
+  {
+    "instruction": "What is AUC score?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Debug the enumerate offset error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Add prepared statement cache",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain the logic of this BFS traversal",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this middleware function",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write documentation for this slots class",
+    "label": "document"
+  },
+  {
+    "instruction": "Write a Stack class in Python",
+    "label": "generate"
+  },
+  {
+    "instruction": "Refactor to use materialized views",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add graph traversal support",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is secure boot?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is the halting problem?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Parameterize hardcoded strings",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add property decorators to this class",
+    "label": "modify"
+  },
+  {
+    "instruction": "Write a function for NATS subscriber",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for Thrift client",
+    "label": "generate"
+  },
+  {
+    "instruction": "What is this command pattern doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add telemetry to this function",
+    "label": "modify"
+  },
+  {
+    "instruction": "My function is not being called",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create ER diagram documentation",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for database schema",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this effect type",
+    "label": "document"
+  },
+  {
+    "instruction": "Explain code signing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Add screen reader support",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this coroutine doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix memory leak in my program",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is tensor core?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create InfluxDB measurement",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a dark mode toggle",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this dataclass definition",
+    "label": "explain"
+  },
+  {
+    "instruction": "Refactor to use named tuples",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain this rekor log",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function to insert records into database",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this docker volume",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a script to rename files in bulk",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain MESI protocol",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Fix the stop async iteration",
+    "label": "debug"
+  },
+  {
+    "instruction": "Create string hashing function",
+    "label": "generate"
+  },
+  {
+    "instruction": "Replace deprecated function calls",
+    "label": "modify"
+  },
+  {
+    "instruction": "Generator function not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Convert this Python code to JavaScript",
+    "label": "modify"
+  },
+  {
+    "instruction": "Create documentation for generic types",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix set comprehension not working",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write code for MQTT client",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain Zab protocol",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is unsupervised learning?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "What is this stored procedure doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Fix the boolean flag not toggling",
+    "label": "debug"
+  },
+  {
+    "instruction": "Wrong type being passed to function",
+    "label": "debug"
+  },
+  {
+    "instruction": "What is this route handler doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Document this schematics model",
+    "label": "document"
+  },
+  {
+    "instruction": "Write docstrings for this pandas resample",
+    "label": "document"
+  },
+  {
+    "instruction": "Write code for Elasticsearch query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write a function for STUN protocol",
+    "label": "generate"
+  },
+  {
+    "instruction": "Create usage documentation for CLI tool",
+    "label": "document"
+  },
+  {
+    "instruction": "Thread deadlock in my program",
+    "label": "debug"
+  },
+  {
+    "instruction": "Make hardcoded values into parameters",
+    "label": "modify"
+  },
+  {
+    "instruction": "Explain attention mechanism concept",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Document this numba jit function",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the key not found exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function for invoice generation",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this coverage html report",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write docstrings for this overloaded function",
+    "label": "document"
+  },
+  {
+    "instruction": "Database timeout exception",
+    "label": "debug"
+  },
+  {
+    "instruction": "Write a function to check balanced parentheses",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain this neural network code",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this slsa provenance",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this mock side effect",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create function to count vowels",
+    "label": "generate"
+  },
+  {
+    "instruction": "Explain network policy",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Explain quantum entanglement in computing",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Refactor to support includes",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is this factory pattern doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Add backward compatibility",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add startup initialization logic",
+    "label": "modify"
+  },
+  {
+    "instruction": "Add PWA capabilities",
+    "label": "modify"
+  },
+  {
+    "instruction": "What is database partitioning?",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write a function for PlanetScale query",
+    "label": "generate"
+  },
+  {
+    "instruction": "Add type documentation to this code",
+    "label": "document"
+  },
+  {
+    "instruction": "What is this graph adjacency list doing?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Write a function for secure random generation",
+    "label": "generate"
+  },
+  {
+    "instruction": "What does this authentication code do?",
+    "label": "explain"
+  },
+  {
+    "instruction": "Explain this WebSocket implementation",
+    "label": "explain"
+  },
+  {
+    "instruction": "Create a heap data structure",
+    "label": "generate"
+  },
+  {
+    "instruction": "Write documentation for this protocol",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix the circular import error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the recursion limit error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Fix the smtp handler error",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain epidemic broadcast",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Write documentation for this type guard",
+    "label": "document"
+  },
+  {
+    "instruction": "Write documentation for this ubjson",
+    "label": "document"
+  },
+  {
+    "instruction": "Fix data type mismatch in my code",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain linearizability",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Recursion causing memory issues",
+    "label": "debug"
+  },
+  {
+    "instruction": "Explain CI/CD pipeline",
+    "label": "unknown"
+  },
+  {
+    "instruction": "Create loyalty points calculator",
+    "label": "generate"
+  }
+]

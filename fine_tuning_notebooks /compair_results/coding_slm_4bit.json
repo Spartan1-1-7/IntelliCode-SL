@@ -1,0 +1,1224 @@
+{
+  "config": "Coding SLM \u2014 4-bit quantized (Unsloth)",
+  "pass_rate": 60.40268456375839,
+  "total_pass": 90,
+  "total": 149,
+  "avg_time_ms": 4476.55719718677,
+  "per_task": {
+    "debug": {
+      "pass": 10,
+      "fail": 40,
+      "total": 50,
+      "pass_rate": 20.0,
+      "avg_time_ms": 2088.0271434783936
+    },
+    "generate": {
+      "pass": 49,
+      "fail": 1,
+      "total": 50,
+      "pass_rate": 98.0,
+      "avg_time_ms": 6369.74365234375
+    },
+    "modify": {
+      "pass": 31,
+      "fail": 18,
+      "total": 49,
+      "pass_rate": 63.26530612244898,
+      "avg_time_ms": 4982.00984876983
+    }
+  },
+  "samples": [
+    {
+      "task": "debug",
+      "input": "def get_last(lst):\n    return lst[len(lst)]",
+      "expected": "lst[-1] or lst[len(lst)-1]",
+      "output": "def get_last(lst):\n    return lst[-1]",
+      "passed": false,
+      "time_ms": 5151.589632034302
+    },
+    {
+      "task": "debug",
+      "input": "def count(s):\n    total = 0\n    for i in range(1, len(s)):\n        total += 1\n  ",
+      "expected": "range(0, len(s))",
+      "output": "def count(s):\n    total = 0\n    for i in range(len(s)):\n        total += 1\n    return total",
+      "passed": false,
+      "time_ms": 2051.9020557403564
+    },
+    {
+      "task": "debug",
+      "input": "def sum_list(nums):\n    total = 0\n    for i in range(1, len(nums)):\n        tota",
+      "expected": "range(0, len(nums))",
+      "output": "def sum_list(nums):\n    total = 0\n    for num in nums:\n        total += num\n    return total",
+      "passed": false,
+      "time_ms": 2245.8105087280273
+    },
+    {
+      "task": "debug",
+      "input": "def mid(lst):\n    return lst[len(lst)/2]",
+      "expected": "integer division //",
+      "output": "def mid(lst):\n    return lst[len(lst) // 2]",
+      "passed": false,
+      "time_ms": 1565.6647682189941
+    },
+    {
+      "task": "debug",
+      "input": "nums = [1,2,3]\nfor i in range(1, len(nums)+1):\n    print(nums[i])",
+      "expected": "range(0, len(nums))",
+      "output": "nums = [1,2,3]\nfor i in range(1, len(nums)):\n    print(nums[i])",
+      "passed": false,
+      "time_ms": 2282.5207710266113
+    },
+    {
+      "task": "debug",
+      "input": "def subtract(a, b):\n    return a + b",
+      "expected": "a - b",
+      "output": "def subtract(a, b):\n    return a - b",
+      "passed": true,
+      "time_ms": 963.289737701416
+    },
+    {
+      "task": "debug",
+      "input": "def is_even(n):\n    return n % 2 == 1",
+      "expected": "n % 2 == 0",
+      "output": "def is_even(n):\n    return n % 2 == 0",
+      "passed": true,
+      "time_ms": 1171.3542938232422
+    },
+    {
+      "task": "debug",
+      "input": "def area(w, h):\n    return w + h",
+      "expected": "w * h",
+      "output": "def area(w, h):\n    return w * h",
+      "passed": true,
+      "time_ms": 969.4819450378418
+    },
+    {
+      "task": "debug",
+      "input": "def power(b, e):\n    return b + e",
+      "expected": "b ** e",
+      "output": "def power(b, e):\n    result = 1\n    for _ in range(e):\n        result *= b\n    return result",
+      "passed": false,
+      "time_ms": 2083.5139751434326
+    },
+    {
+      "task": "debug",
+      "input": "def is_positive(n):\n    return n < 0",
+      "expected": "n > 0",
+      "output": "def is_positive(n):\n    return n > 0",
+      "passed": true,
+      "time_ms": 951.3874053955078
+    },
+    {
+      "task": "debug",
+      "input": "def square(n):\n    result = n * n",
+      "expected": "add return result",
+      "output": "def square(n):\n    result = 0\n    result += n * n\n    return result",
+      "passed": false,
+      "time_ms": 1553.4629821777344
+    },
+    {
+      "task": "debug",
+      "input": "def greet(name):\n    msg = f'Hello {name}'",
+      "expected": "add return msg",
+      "output": "def greet(name):\n    msg = f'Hello {name}!'",
+      "passed": false,
+      "time_ms": 1340.8503532409668
+    },
+    {
+      "task": "debug",
+      "input": "def double(x):\n    x = x * 2",
+      "expected": "add return x",
+      "output": "def double(x):\n    return x * 2",
+      "passed": false,
+      "time_ms": 1201.6360759735107
+    },
+    {
+      "task": "debug",
+      "input": "def factorial(n):\n    if n == 0:\n        return 0\n    return n * factorial(n-1)",
+      "expected": "return 1 for base case",
+      "output": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)",
+      "passed": false,
+      "time_ms": 2477.7262210845947
+    },
+    {
+      "task": "debug",
+      "input": "def fib(n):\n    if n <= 0:\n        return n\n    return fib(n-1) + fib(n-2)",
+      "expected": "if n <= 1",
+      "output": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)",
+      "passed": true,
+      "time_ms": 2117.499351501465
+    },
+    {
+      "task": "debug",
+      "input": "age = input('age: ')\nif age > 18:\n    print('adult')",
+      "expected": "int(input(...))",
+      "output": "age = int(input('age: '))\nif age > 18:\n    print('adult')",
+      "passed": false,
+      "time_ms": 1616.3897514343262
+    },
+    {
+      "task": "debug",
+      "input": "def add(a, b):\n    return a + b\n\nadd('5', 3)",
+      "expected": "int(a) + int(b) or type check",
+      "output": "def add(a, b):\n    return int(a) + int(b)\n\nadd('5', 3)",
+      "passed": false,
+      "time_ms": 1749.046802520752
+    },
+    {
+      "task": "debug",
+      "input": "name = 'Alice'\nage = 30\nprint('Name: ' + name + ' Age: ' + age)",
+      "expected": "f-string or str(age)",
+      "output": "name = 'Alice'\nage = 30\nprint('Name: ' + name + ' Age: ' + str(age))",
+      "passed": false,
+      "time_ms": 2054.6443462371826
+    },
+    {
+      "task": "debug",
+      "input": "def price(p):\n    return '$' + p",
+      "expected": "f'${p}' or str conversion",
+      "output": "def price(p):\n    return '$' + str(p)",
+      "passed": false,
+      "time_ms": 1003.4468173980713
+    },
+    {
+      "task": "debug",
+      "input": "result = 7 / 2\nprint(result)  # expected 3",
+      "expected": "7 // 2",
+      "output": "result = 7.0 / 2\nprint(result)  # expected 3.5",
+      "passed": false,
+      "time_ms": 1795.4750061035156
+    },
+    {
+      "task": "debug",
+      "input": "def get_name(d):\n    return d['name']\n\nget_name({'age': 25})",
+      "expected": "d.get('name')",
+      "output": "def get_name(d):\n    return d.get('name', 'unknown')",
+      "passed": false,
+      "time_ms": 1650.0022411346436
+    },
+    {
+      "task": "debug",
+      "input": "scores = {'a': 1}\nprint(scores['b'])",
+      "expected": "scores.get('b', default)",
+      "output": "scores = {'a': 1}\ntry:\n    print(scores['b'])\nexcept KeyError:\n    print('no score for b')",
+      "passed": false,
+      "time_ms": 2391.6125297546387
+    },
+    {
+      "task": "debug",
+      "input": "def upper(s):\n    return s.upper()\n\nupper(None)",
+      "expected": "None check",
+      "output": "def upper(s):\n    if s is None:\n        return ''\n    return s.upper()",
+      "passed": false,
+      "time_ms": 1438.2009506225586
+    },
+    {
+      "task": "debug",
+      "input": "def update(d, k):\n    d[k] += 1\n\nupdate({}, 'x')",
+      "expected": "d.get(k, 0) + 1",
+      "output": "def update(d, k):\n    if k not in d:\n        d[k] = 0\n    d[k] += 1\n\nupdate({}, 'x')",
+      "passed": false,
+      "time_ms": 2571.5808868408203
+    },
+    {
+      "task": "debug",
+      "input": "cfg = {'host': 'localhost'}\nport = cfg['port']",
+      "expected": "cfg.get('port', 8080)",
+      "output": "cfg = {'host': 'localhost', 'port': 80}\nport = cfg['port']",
+      "passed": false,
+      "time_ms": 1669.20804977417
+    },
+    {
+      "task": "debug",
+      "input": "def countdown(n):\n    while n > 0:\n        print(n)",
+      "expected": "add n -= 1",
+      "output": "def countdown(n):\n    while n > 0:\n        print(n)\n        n -= 1",
+      "passed": false,
+      "time_ms": 1552.7358055114746
+    },
+    {
+      "task": "debug",
+      "input": "i = 0\nwhile i < 10:\n    print(i)",
+      "expected": "add i += 1",
+      "output": "i = 0\nwhile i < 10:\n    print(i)\n    i += 1",
+      "passed": false,
+      "time_ms": 1697.1783638000488
+    },
+    {
+      "task": "debug",
+      "input": "def repeat(s, n):\n    r = ''\n    while n > 0:\n        r += s\n    return r",
+      "expected": "add n -= 1",
+      "output": "def repeat(s, n):\n    r = ''\n    while n > 0:\n        r += s\n        n -= 1\n    return r",
+      "passed": false,
+      "time_ms": 3163.052558898926
+    },
+    {
+      "task": "debug",
+      "input": "x = 10\nwhile x != 0:\n    x -= 3",
+      "expected": "x > 0",
+      "output": "x = 10\nwhile x > 0:\n    x -= 3",
+      "passed": true,
+      "time_ms": 1428.8136959075928
+    },
+    {
+      "task": "debug",
+      "input": "def find(lst, v):\n    i = 0\n    while lst[i] != v:\n        i += 0\n    return i",
+      "expected": "i += 1",
+      "output": "def find(lst, v):\n    i = 0\n    while lst[i] != v:\n        i += 1\n    return i",
+      "passed": true,
+      "time_ms": 2193.077325820923
+    },
+    {
+      "task": "debug",
+      "input": "def append_item(item, lst=[]):\n    lst.append(item)\n    return lst",
+      "expected": "lst=None, then if None: lst=[]",
+      "output": "def append_item(item, lst=None):\n    if lst is None:\n        lst = []\n    lst.append(item)\n    return lst",
+      "passed": false,
+      "time_ms": 2013.9448642730713
+    },
+    {
+      "task": "debug",
+      "input": "def add_tag(tag, tags={}):\n    tags[tag] = True\n    return tags",
+      "expected": "tags=None, then if None: tags={}",
+      "output": "def add_tag(tag, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(tag)\n    return tags",
+      "passed": false,
+      "time_ms": 1979.5951843261719
+    },
+    {
+      "task": "debug",
+      "input": "def avg(nums):\n    return sum(nums) / len(nums)",
+      "expected": "check if not nums",
+      "output": "def avg(nums):\n    if not nums:\n        raise ValueError('nums cannot be empty')\n    return sum(nums) / len(nums)",
+      "passed": false,
+      "time_ms": 2038.2449626922607
+    },
+    {
+      "task": "debug",
+      "input": "def pct(part, total):\n    return (part / total) * 100",
+      "expected": "check total == 0",
+      "output": "def pct(part, total):\n    if total == 0:\n        return 0\n    return (part / total) * 100",
+      "passed": false,
+      "time_ms": 2987.5924587249756
+    },
+    {
+      "task": "debug",
+      "input": "total = 0\ndef add(n):\n    total += n\n    return total",
+      "expected": "global total",
+      "output": "total = 0\ndef add(n):\n    total += n\n    return total",
+      "passed": false,
+      "time_ms": 1964.3328189849854
+    },
+    {
+      "task": "debug",
+      "input": "def make_counter():\n    count = 0\n    def inc():\n        count += 1\n        retu",
+      "expected": "nonlocal count",
+      "output": "def make_counter():\n    count = 0\n    def inc():\n        nonlocal count\n        count += 1\n        return count\n    return inc",
+      "passed": true,
+      "time_ms": 2388.211488723755
+    },
+    {
+      "task": "debug",
+      "input": "def rm_evens(nums):\n    for n in nums:\n        if n % 2 == 0:\n            nums.r",
+      "expected": "list comprehension",
+      "output": "def rm_evens(nums):\n    result = []\n    for n in nums:\n        if n % 2 != 0:\n            result.append(n)\n    return result",
+      "passed": false,
+      "time_ms": 2510.850429534912
+    },
+    {
+      "task": "debug",
+      "input": "a = [1,2,3]\nb = a\nb.append(4)",
+      "expected": "b = a.copy()",
+      "output": "a = [1, 2, 3]\nb = a[:]\nb.append(4)",
+      "passed": false,
+      "time_ms": 1548.5517978668213
+    },
+    {
+      "task": "debug",
+      "input": "def valid_age(age):\n    return age > 0 or age < 150",
+      "expected": "use 'and'",
+      "output": "def valid_age(age):\n    return age > 0 and age < 150",
+      "passed": false,
+      "time_ms": 1455.4994106292725
+    },
+    {
+      "task": "debug",
+      "input": "def can_vote(age, citizen):\n    return age >= 18 or citizen",
+      "expected": "use 'and'",
+      "output": "def can_vote(age, citizen):\n    return age >= 18 and citizen",
+      "passed": false,
+      "time_ms": 1303.623914718628
+    },
+    {
+      "task": "debug",
+      "input": "def safe_div(a, b):\n    try:\n        return a / b\n    except:\n        pass",
+      "expected": "except ZeroDivisionError, return None",
+      "output": "def safe_div(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 0",
+      "passed": false,
+      "time_ms": 2650.012731552124
+    },
+    {
+      "task": "debug",
+      "input": "def parse(s):\n    try:\n        return int(s)\n    except ValueError as e:\n       ",
+      "expected": "return default value",
+      "output": "def parse(s):\n    try:\n        return int(s)\n    except ValueError:\n        print('not a number')",
+      "passed": false,
+      "time_ms": 2079.655408859253
+    },
+    {
+      "task": "debug",
+      "input": "def is_palindrome(s):\n    return s == s[::-2]",
+      "expected": "s[::-1]",
+      "output": "def is_palindrome(s):\n    return s == s[::-1]",
+      "passed": true,
+      "time_ms": 1240.37504196167
+    },
+    {
+      "task": "debug",
+      "input": "words = 'hello world'\nprint(words.split()[0].upper)",
+      "expected": "upper() with parentheses",
+      "output": "words = 'hello world'\nprint(words.split()[0].upper())",
+      "passed": false,
+      "time_ms": 1160.8033180236816
+    },
+    {
+      "task": "debug",
+      "input": "class Dog:\n    def __init__(name, breed):\n        self.name = name",
+      "expected": "add self as first param",
+      "output": "class Dog:\n    def __init__(self, name, breed):\n        self.name = name\n        self.breed = breed",
+      "passed": false,
+      "time_ms": 1970.3915119171143
+    },
+    {
+      "task": "debug",
+      "input": "class Counter:\n    count = 0\n    def inc(self):\n        count += 1",
+      "expected": "self.count",
+      "output": "class Counter:\n    count = 0\n\n    def inc(self):\n        type(self).count += 1",
+      "passed": false,
+      "time_ms": 1702.117919921875
+    },
+    {
+      "task": "debug",
+      "input": "def read(path):\n    f = open(path, 'r')\n    content = f.read()\n    return conten",
+      "expected": "use with open(...) as f:",
+      "output": "def read(path):\n    with open(path, 'r') as f:\n        content = f.read()\n    return content",
+      "passed": false,
+      "time_ms": 1834.320068359375
+    },
+    {
+      "task": "debug",
+      "input": "def sort_desc(lst):\n    return sorted(lst)",
+      "expected": "reverse=True",
+      "output": "def sort_desc(lst):\n    return sorted(lst, reverse=True)",
+      "passed": true,
+      "time_ms": 1192.5716400146484
+    },
+    {
+      "task": "debug",
+      "input": "def most_freq(lst):\n    counts = {}\n    for x in lst:\n        counts[x] = counts",
+      "expected": "max(counts, key=counts.get)",
+      "output": "def most_freq(lst):\n    counts = {}\n    for x in lst:\n        counts[x] = counts.get(x, 0) + 1\n    max_count = 0\n    for count in counts.values():\n        if count > max_count:\n            max_count = count\n    for x, count in counts.items():\n        if count == max_count:\n            return x",
+      "passed": false,
+      "time_ms": 6700.9429931640625
+    },
+    {
+      "task": "debug",
+      "input": "def merge(a, b):\n    r = []\n    i = j = 0\n    while i < len(a) or j < len(b):\n  ",
+      "expected": "use 'and' not 'or', extend remaining",
+      "output": "def merge(a, b):\n    r = []\n    i = j = 0\n    while i < len(a) and j < len(b):\n        if a[i] < b[j]:\n            r.append(a[i]); i += 1\n        else:\n            r.append(b[j]); j += 1\n    while i < len(a):\n        r.append(a[i]); i += 1\n    while j < len(b):\n        r.append(b[j]); j += 1\n    ret",
+      "passed": false,
+      "time_ms": 7577.564001083374
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to check if a number is prime",
+      "expected": "def is_prime",
+      "output": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True",
+      "passed": true,
+      "time_ms": 7736.867666244507
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to reverse a string without using slicing",
+      "expected": "def reverse",
+      "output": "def reverse_string(text):\n    result = []\n    for ch in text:\n        result.insert(0, ch)\n    return ''.join(result)",
+      "passed": true,
+      "time_ms": 2217.054605484009
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the factorial of a number using recursion",
+      "expected": "def factorial",
+      "output": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "passed": true,
+      "time_ms": 2024.278163909912
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to flatten a nested list",
+      "expected": "def flatten",
+      "output": "def flatten(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result",
+      "passed": true,
+      "time_ms": 3802.105188369751
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to count word frequencies in a string",
+      "expected": "def",
+      "output": "def word_count(text):\n    words = text.split()\n    count = {}\n    for word in words:\n        if word in count:\n            count[word] += 1\n        else:\n            count[word] = 1\n    return count",
+      "passed": true,
+      "time_ms": 3781.9032669067383
+    },
+    {
+      "task": "generate",
+      "input": "Implement a binary search function that works on a sorted list",
+      "expected": "def binary_search",
+      "output": "def binary_search(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    r",
+      "passed": true,
+      "time_ms": 6037.079811096191
+    },
+    {
+      "task": "generate",
+      "input": "Write a Stack class with push, pop, peek, and is_empty methods",
+      "expected": "class Stack",
+      "output": "class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop()\n\n    def peek(self):\n        return self.items[-1]\n\n    def is_empty(self):\n        return len(self.items) == 0",
+      "passed": true,
+      "time_ms": 5630.002498626709
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to check if a string has balanced brackets",
+      "expected": "def",
+      "output": "def is_balanced(s):\n    stack = []\n    for ch in s:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in ')]}':\n            if not stack:\n                return False\n            if (ch == ')' and stack[-1] == '(') or \\\n               (ch == ']' and stack[-1] == '[') or \\\n        ",
+      "passed": true,
+      "time_ms": 7704.694986343384
+    },
+    {
+      "task": "generate",
+      "input": "Write a merge sort implementation",
+      "expected": "def merge",
+      "output": "def merge_sort(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged\n\ndef merge_sort(values):\n    if len(v",
+      "passed": true,
+      "time_ms": 9010.831594467163
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find all permutations of a list",
+      "expected": "def",
+      "output": "def permute(values):\n    if len(values) == 0:\n        return [[]]\n    result = []\n    for value in values:\n        for existing in permute(values[:index] + values[index+1:]):\n            result.append([value] + existing)\n    return result",
+      "passed": true,
+      "time_ms": 4233.990669250488
+    },
+    {
+      "task": "generate",
+      "input": "Write a decorator that times how long a function takes to run",
+      "expected": "def",
+      "output": "def time_decorator(func):\n    import time\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end - start} seconds')\n        return result\n    return wrapper",
+      "passed": true,
+      "time_ms": 5520.44415473938
+    },
+    {
+      "task": "generate",
+      "input": "Write a memoize decorator for caching function results",
+      "expected": "def memoize",
+      "output": "def memoize(func):\n    cache = {}\n    def wrapper(*args):\n        if args not in cache:\n            cache[args] = func(*args)\n        return cache[args]\n    return wrapper",
+      "passed": true,
+      "time_ms": 2838.7043476104736
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to validate an email address using regex",
+      "expected": "import re",
+      "output": "import re\n\ndef validate_email(address):\n    return bool(re.match(r'^[\\w.-]+@[\\w.-]+\\.\\w+$', address))",
+      "passed": true,
+      "time_ms": 2186.0127449035645
+    },
+    {
+      "task": "generate",
+      "input": "Implement a Queue class using two stacks",
+      "expected": "class Queue",
+      "output": "class Queue:\n    def __init__(self):\n        self.stack1 = []\n        self.stack2 = []\n\n    def enqueue(self, item):\n        self.stack1.append(item)\n\n    def dequeue(self):\n        if not self.stack2:\n            while self.stack1:\n                self.stack2.append(self.stack1.pop())\n        retur",
+      "passed": true,
+      "time_ms": 5371.725082397461
+    },
+    {
+      "task": "generate",
+      "input": "Write a function that generates all subsets of a list",
+      "expected": "def",
+      "output": "def all_subsets(items):\n    result = []\n    for size in range(len(items) + 1):\n        for combo in combinations(items, size):\n            result.append(list(combo))\n    return result",
+      "passed": true,
+      "time_ms": 3615.7875061035156
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to implement quicksort",
+      "expected": "def quicksort",
+      "output": "def quicksort(values):\n    if len(values) <= 1:\n        return values\n    pivot = values[len(values) // 2]\n    left = [x for x in values if x < pivot]\n    middle = [x for x in values if x == pivot]\n    right = [x for x in values if x > pivot]\n    return quicksort(left) + middle + quicksort(right)",
+      "passed": true,
+      "time_ms": 5952.433824539185
+    },
+    {
+      "task": "generate",
+      "input": "Implement a simple LRU cache using OrderedDict",
+      "expected": "OrderedDict",
+      "output": "from collections import OrderedDict\n\nclass SimpleLRUCache:\n    def __init__(self, size):\n        self.size = size\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        if key not in self.cache:\n            return None\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n",
+      "passed": true,
+      "time_ms": 9043.407917022705
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to detect a cycle in a linked list using Floyd's algorithm",
+      "expected": "def",
+      "output": "class Node:\n    def __init__(self, value=0, next=None):\n        self.value = value\n        self.next = next\n\ndef has_cycle(head):\n    slow = fast = head\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n        if slow == fast:\n            return True\n    return Fa",
+      "passed": true,
+      "time_ms": 5202.747583389282
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the two numbers that sum to a target in O(n)",
+      "expected": "def",
+      "output": "def two_sum(numbers, target):\n    seen = {}\n    for number in numbers:\n        complement = target - number\n        if complement in seen:\n            return [complement, number]\n        seen[number] = True\n    return []",
+      "passed": true,
+      "time_ms": 4023.7348079681396
+    },
+    {
+      "task": "generate",
+      "input": "Write a context manager that measures execution time",
+      "expected": "contextmanager",
+      "output": "import time\n\nclass Timer:\n    def __init__(self, label=''):\n        self.label = label\n\n    def __enter__(self):\n        self.start = time.perf_counter()\n        return self\n\n    def __exit__(self, *exc):\n        end = time.perf_counter()\n        elapsed = end - self.start\n        print(f'{self.labe",
+      "passed": false,
+      "time_ms": 6422.736406326294
+    },
+    {
+      "task": "generate",
+      "input": "Write a generator function that yields chunks of a list",
+      "expected": "yield",
+      "output": "def chunk_generator(items, size):\n    for index in range(0, len(items), size):\n        yield items[index:index + size]",
+      "passed": true,
+      "time_ms": 2155.3902626037598
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to implement the Sieve of Eratosthenes",
+      "expected": "def sieve",
+      "output": "def sieve_of_eratosthenes(limit):\n    is_prime = [True] * (limit + 1)\n    is_prime[0] = is_prime[1] = False\n    for start in range(2, int(limit**0.5) + 1):\n        if is_prime[start]:\n            for multiple in range(start*start, limit + 1, start):\n                is_prime[multiple] = False\n    pri",
+      "passed": true,
+      "time_ms": 8581.164121627808
+    },
+    {
+      "task": "generate",
+      "input": "Write a thread-safe singleton class",
+      "expected": "class",
+      "output": "class SafeSingleton:\n    _instance = None\n    _lock = threading.Lock()\n\n    def __new__(cls, *args, **kwargs):\n        with cls._lock:\n            if cls._instance is None:\n                cls._instance = super().__new__(cls)\n        return cls._instance",
+      "passed": true,
+      "time_ms": 4344.2418575286865
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to compute Levenshtein distance between two strings",
+      "expected": "def",
+      "output": "def levenshtein_distance(left, right):\n    if len(left) < len(right):\n        left, right = right, left\n\n    # keep track of the number of edits\n    count = 0\n    for index, value in enumerate(right):\n        if value != left[index]:\n            count += 1\n\n    # add the remaining edits\n    count +=",
+      "passed": true,
+      "time_ms": 6967.989683151245
+    },
+    {
+      "task": "generate",
+      "input": "Write a simple rate limiter class using a sliding window",
+      "expected": "class",
+      "output": "class SimpleRateLimiter:\n    def __init__(self, limit):\n        self.limit = limit\n        self.window = []\n\n    def allow(self, value):\n        self.window.append(value)\n        if len(self.window) > self.limit:\n            self.window.pop(0)\n        return len(self.window) <= self.limit",
+      "passed": true,
+      "time_ms": 4668.754100799561
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the longest increasing subsequence",
+      "expected": "def",
+      "output": "def longest_increasing_subsequence(nums):\n    if not nums:\n        return 0\n\n    dp = [1] * len(nums)\n    for i in range(1, len(nums)):\n        for j in range(i):\n            if nums[i] > nums[j]:\n                dp[i] = max(dp[i], dp[j] + 1)\n    return max(dp)",
+      "passed": true,
+      "time_ms": 5375.491380691528
+    },
+    {
+      "task": "generate",
+      "input": "Implement a Trie data structure with insert and search methods",
+      "expected": "class Trie",
+      "output": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.end = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n\n    def insert(self, word):\n        node = self.root\n        for ch in word:\n            node = node.children.setdefault(ch, TrieNode())\n  ",
+      "passed": true,
+      "time_ms": 9043.396949768066
+    },
+    {
+      "task": "generate",
+      "input": "Write a retry decorator with exponential backoff",
+      "expected": "def retry",
+      "output": "def retry_exponential(backoff=100, max_tries=5):\n    def decorate(func):\n        def wrapper(*args, **kwargs):\n            for try_ in range(1, max_tries + 1):\n                try:\n                    return func(*args, **kwargs)\n                except Exception:\n                    if try_ == max_t",
+      "passed": true,
+      "time_ms": 7865.8342361450195
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to serialize and deserialize a binary tree",
+      "expected": "def",
+      "output": "class TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\ndef serialize(root):\n    if not root:\n        return []\n    queue = [root]\n    result = []\n    while queue:\n        node = queue.pop(0)\n        if node:\n            result.append(node.",
+      "passed": true,
+      "time_ms": 16518.423080444336
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find all pairs in a list that sum to a target",
+      "expected": "def",
+      "output": "def find_pairs(numbers, target):\n    seen = set()\n    result = []\n    for number in numbers:\n        complement = target - number\n        if complement in seen:\n            result.append((complement, number))\n        seen.add(number)\n    return result",
+      "passed": true,
+      "time_ms": 3789.5054817199707
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to rotate a matrix 90 degrees clockwise",
+      "expected": "def",
+      "output": "def rotate_matrix_90_clockwise(matrix):\n    return list(zip(*matrix[::-1]))",
+      "passed": true,
+      "time_ms": 1538.8801097869873
+    },
+    {
+      "task": "generate",
+      "input": "Write a Caesar cipher encoder and decoder",
+      "expected": "def caesar",
+      "output": "def caesar_encode(text, shift):\n    result = []\n    for ch in text:\n        if 'a' <= ch <= 'z':\n            base = ord('a')\n        elif 'A' <= ch <= 'Z':\n            base = ord('A')\n        else:\n            result.append(ch)\n            continue\n        offset = (ord(ch) - base + shift) % 26\n    ",
+      "passed": true,
+      "time_ms": 8874.651670455933
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to run-length encode a string",
+      "expected": "def",
+      "output": "def run_length_encode(text):\n    if not text:\n        return ''\n    result = []\n    count = 1\n    for i in range(1, len(text)):\n        if text[i] == text[i - 1]:\n            count += 1\n        else:\n            result.append(text[i - 1])\n            if count > 1:\n                result.append(str(c",
+      "passed": true,
+      "time_ms": 8390.678405761719
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the kth largest element in an array",
+      "expected": "def",
+      "output": "def find_kth_largest(nums, k):\n    return sorted(nums, reverse=True)[k - 1]",
+      "passed": true,
+      "time_ms": 2243.5734272003174
+    },
+    {
+      "task": "generate",
+      "input": "Write a class for a min heap with push and pop operations",
+      "expected": "class",
+      "output": "class MinHeap:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n        self._bubble_up(len(self.items) - 1)\n\n    def pop(self):\n        if not self.items:\n            return None\n        if len(self.items) == 1:\n            return self.items",
+      "passed": true,
+      "time_ms": 21748.00753593445
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to check if a sudoku board is valid",
+      "expected": "def",
+      "output": "def is_valid_sudoku(board):\n    seen = set()\n    for row in range(9):\n        for col in range(9):\n            value = board[row][col]\n            if value == 0:\n                continue\n            for box in [(row, col), (row // 3, col // 3)]:\n                if (value, box) in seen:\n             ",
+      "passed": true,
+      "time_ms": 7506.207704544067
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to generate all valid parentheses combinations for n pairs",
+      "expected": "def",
+      "output": "def generate_parentheses(n):\n    result = []\n    def backtrack(path, left, right):\n        if len(path) == 2 * n:\n            result.append(path)\n            return\n        if left < n:\n            backtrack(path + '(', left + 1, right)\n        if right < left:\n            backtrack(path + ')', left",
+      "passed": true,
+      "time_ms": 6343.899250030518
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the shortest path in an unweighted graph using BFS",
+      "expected": "def",
+      "output": "def bfs_shortest_path(start, goal, graph):\n    queue = [[start]]\n    visited = set()\n    while queue:\n        path = queue.pop(0)\n        node = path[-1]\n        if node not in visited:\n            visited.add(node)\n            for neighbor in graph[node]:\n                new_path = path.copy()\n    ",
+      "passed": true,
+      "time_ms": 7614.388227462769
+    },
+    {
+      "task": "generate",
+      "input": "Write a doubly linked list class with append, prepend, and delete methods",
+      "expected": "class",
+      "output": "class DoublyLinkedListNode:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n        self.prev = None\n\nclass DoublyLinkedList:\n    def __init__(self):\n        self.head = None\n        self.tail = None\n\n    def append(self, value):\n        node = DoublyLinkedListNode",
+      "passed": true,
+      "time_ms": 18369.868278503418
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to compute the power set of a list",
+      "expected": "def",
+      "output": "def power_set(items):\n    result = []\n    for combo in range(1 << len(items)):\n        result.append([items[i] for i in range(len(items)) if (combo >> i) & 1])\n    return result",
+      "passed": true,
+      "time_ms": 4094.8872566223145
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the number of islands in a 2D grid",
+      "expected": "def",
+      "output": "def count_islands(grid):\n    if not grid or not grid[0]:\n        return 0\n\n    rows = len(grid)\n    cols = len(grid[0])\n    count = 0\n\n    def dfs(i, j):\n        if i < 0 or i >= rows or j < 0 or j >= cols or grid[i][j] == '0':\n            return\n        grid[i][j] = '0'\n        dfs(i + 1, j)\n      ",
+      "passed": true,
+      "time_ms": 12753.134965896606
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to implement topological sort on a DAG",
+      "expected": "def",
+      "output": "def topological_sort(nodes):\n    result = []\n    visited = set()\n    def visit(node):\n        if node in visited:\n            return\n        visited.add(node)\n        for neighbor in node.neighbors:\n            visit(neighbor)\n        result.append(node)\n    for node in nodes:\n        visit(node)\n  ",
+      "passed": true,
+      "time_ms": 5524.1379737854
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to detect if two strings are anagrams",
+      "expected": "def",
+      "output": "def are_anagrams(str1, str2):\n    return sorted(str1) == sorted(str2)",
+      "passed": true,
+      "time_ms": 1650.4478454589844
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find the maximum subarray sum using Kadane's algorithm",
+      "expected": "def",
+      "output": "def max_subarray_sum(nums):\n    max_so_far = nums[0]\n    max_ending_here = nums[0]\n    for num in nums[1:]:\n        max_ending_here = max(num, max_ending_here + num)\n        max_so_far = max(max_so_far, max_ending_here)\n    return max_so_far",
+      "passed": true,
+      "time_ms": 5315.6774044036865
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to implement the knapsack problem using dynamic programming",
+      "expected": "def",
+      "output": "def knapsack(values, weights, capacity):\n    n = len(values)\n    dp = [[0] * (capacity + 1) for _ in range(n + 1)]\n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            if weights[i - 1] > w:\n                dp[i][w] = dp[i - 1][w]\n            else:\n                dp[i]",
+      "passed": true,
+      "time_ms": 10893.331050872803
+    },
+    {
+      "task": "generate",
+      "input": "Write a simple event emitter class",
+      "expected": "class",
+      "output": "class EventEmitter:\n    def __init__(self):\n        self.listeners = []\n\n    def on(self, event, listener):\n        self.listeners.append((event, listener))\n\n    def emit(self, event, *args, **kwargs):\n        for event_listener in self.listeners:\n            if event_listener[0] == event:\n         ",
+      "passed": true,
+      "time_ms": 6610.666990280151
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to convert a decimal number to binary without using bin()",
+      "expected": "def",
+      "output": "def decimal_to_binary(n):\n    if n == 0:\n        return '0'\n    binary = ''\n    while n > 0:\n        binary = str(n % 2) + binary\n        n = n // 2\n    return binary",
+      "passed": true,
+      "time_ms": 4030.29465675354
+    },
+    {
+      "task": "generate",
+      "input": "Write a function that checks if a number is a perfect square without using sqrt",
+      "expected": "def",
+      "output": "def is_perfect_square(n):\n    if n < 0:\n        return False\n    root = 1\n    while root * root <= n:\n        if root * root == n:\n            return True\n        root += 1\n    return False",
+      "passed": true,
+      "time_ms": 3917.337417602539
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to calculate the number of ways to climb n stairs taking 1 or 2",
+      "expected": "def",
+      "output": "def count_ways(n):\n    if n <= 1:\n        return 1\n    return count_ways(n - 1) + count_ways(n - 2)",
+      "passed": true,
+      "time_ms": 3460.219621658325
+    },
+    {
+      "task": "generate",
+      "input": "Write a function to find all paths between two nodes in a graph",
+      "expected": "def",
+      "output": "def find_all_paths(graph, start, end):\n    paths = []\n    stack = [(start, [start])]\n\n    while stack:\n        node, path = stack.pop()\n        if node == end:\n            paths.append(path)\n            continue\n        for neighbor in graph[node]:\n            if neighbor not in path:\n              ",
+      "passed": true,
+      "time_ms": 5940.158843994141
+    },
+    {
+      "task": "modify",
+      "input": "Add type hints to this function:\ndef add(a, b):\n    return a + b",
+      "expected": "->",
+      "output": "def add(a: int, b: int) -> int:\n    return a + b",
+      "passed": true,
+      "time_ms": 1441.0107135772705
+    },
+    {
+      "task": "modify",
+      "input": "Add error handling to this function:\ndef divide(a, b):\n    return a / b",
+      "expected": "ZeroDivision",
+      "output": "def divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 0",
+      "passed": true,
+      "time_ms": 1974.8256206512451
+    },
+    {
+      "task": "modify",
+      "input": "Add logging to this function:\ndef process(data):\n    result = [x*2 for x in data",
+      "expected": "logging",
+      "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef process(data):\n    logger.info('processing %s items', len(data))\n    result = [x*2 for x in data]\n    logger.info('done processing')\n    return result",
+      "passed": true,
+      "time_ms": 4203.442335128784
+    },
+    {
+      "task": "modify",
+      "input": "Convert this loop to a list comprehension:\ndef squares(nums):\n    result = []\n  ",
+      "expected": "[",
+      "output": "def squares(nums):\n    return [n**2 for n in nums]",
+      "passed": true,
+      "time_ms": 1589.9896621704102
+    },
+    {
+      "task": "modify",
+      "input": "Add input validation to this function:\ndef get_elem(lst, idx):\n    return lst[id",
+      "expected": "raise",
+      "output": "def get_elem(lst, idx):\n    if idx < 0 or idx >= len(lst):\n        raise IndexError('index out of range')\n    return lst[idx]",
+      "passed": true,
+      "time_ms": 2527.89044380188
+    },
+    {
+      "task": "modify",
+      "input": "Refactor to use a dictionary instead of if-elif:\ndef day_name(n):\n    if n==1: r",
+      "expected": "dict",
+      "output": "def day_name(n):\n    days = ['Mon', 'Tue', 'Wed', 'Unknown']\n    return days[n]",
+      "passed": false,
+      "time_ms": 2021.6822624206543
+    },
+    {
+      "task": "modify",
+      "input": "Add caching to this function:\ndef fib(n):\n    if n <= 1: return n\n    return fib",
+      "expected": "lru_cache",
+      "output": "memo = {}\n\ndef fib(n):\n    if n in memo: return memo[n]\n    if n <= 1: result = n\n    else: result = fib(n-1) + fib(n-2)\n    memo[n] = result\n    return result",
+      "passed": false,
+      "time_ms": 4013.735771179199
+    },
+    {
+      "task": "modify",
+      "input": "Convert to async:\ndef fetch(url):\n    import requests\n    return requests.get(ur",
+      "expected": "async",
+      "output": "async def fetch(url):\n    import requests\n    return await requests.get(url).json()",
+      "passed": true,
+      "time_ms": 1632.4951648712158
+    },
+    {
+      "task": "modify",
+      "input": "Add retry logic to this API call:\ndef call_api(url):\n    import requests\n    ret",
+      "expected": "retry",
+      "output": "import time\n\ndef call_api(url):\n    for attempt in range(5):\n        try:\n            import requests\n            return requests.get(url).json()\n        except requests.RequestException as e:\n            print(f'Attempt {attempt + 1} failed: {e}')\n            time.sleep(2 ** attempt)\n    raise Exce",
+      "passed": false,
+      "time_ms": 6074.788570404053
+    },
+    {
+      "task": "modify",
+      "input": "Refactor this class to use properties:\nclass Circle:\n    def __init__(self, r):\n",
+      "expected": "@property",
+      "output": "class Circle:\n    def __init__(self, r):\n        self._radius = r\n\n    @property\n    def radius(self):\n        return self._radius\n\n    @radius.setter\n    def radius(self, value):\n        if value < 0:\n            raise ValueError('radius must be non-negative')\n        self._radius = value\n\n    @pro",
+      "passed": true,
+      "time_ms": 6584.671974182129
+    },
+    {
+      "task": "modify",
+      "input": "Add context manager support to this class:\nclass DB:\n    def __init__(self):\n   ",
+      "expected": "__enter__",
+      "output": "class DB:\n    def __init__(self):\n        self.conn = None\n\n    def connect(self):\n        self.conn = 'fake connection'\n        return self\n\n    def disconnect(self):\n        self.conn = None\n        return self\n\n    def __enter__(self):\n        self.connect()\n        return self\n\n    def __exit__(",
+      "passed": true,
+      "time_ms": 6807.367324829102
+    },
+    {
+      "task": "modify",
+      "input": "Make this class thread-safe:\nclass Counter:\n    def __init__(self):\n        self",
+      "expected": "Lock",
+      "output": "class Counter:\n    def __init__(self):\n        self.val = 0\n        self.lock = threading.Lock()\n\n    def inc(self):\n        with self.lock:\n            self.val += 1",
+      "passed": true,
+      "time_ms": 2938.768148422241
+    },
+    {
+      "task": "modify",
+      "input": "Add pagination to this function:\ndef get_users(db):\n    return db.query('SELECT ",
+      "expected": "page",
+      "output": "def get_users(db, page=1, per_page=10):\n    offset = (page - 1) * per_page\n    return db.query('SELECT * FROM users LIMIT :per_page OFFSET :offset', per_page=per_page, offset=offset)",
+      "passed": true,
+      "time_ms": 4028.432607650757
+    },
+    {
+      "task": "modify",
+      "input": "Optimize this O(n^2) function:\ndef has_dups(lst):\n    for i in range(len(lst)):\n",
+      "expected": "set",
+      "output": "Optimized solution using a set:\n\ndef has_dups(lst):\n    seen = set()\n    for item in lst:\n        if item in seen:\n            return True\n        seen.add(item)\n    return False",
+      "passed": true,
+      "time_ms": 4068.753957748413
+    },
+    {
+      "task": "modify",
+      "input": "Add soft delete to this class:\nclass Repo:\n    def __init__(self, db):\n        s",
+      "expected": "deleted_at",
+      "output": "class Repo:\n    def __init__(self, db):\n        self.db = db\n    def delete(self, id):\n        self.db.execute('UPDATE users SET deleted=1 WHERE id=?', (id,))\n    def is_deleted(self, id):\n        cursor = self.db.execute('SELECT deleted FROM users WHERE id=?', (id,))\n        return cursor.fetchone(",
+      "passed": false,
+      "time_ms": 5659.634828567505
+    },
+    {
+      "task": "modify",
+      "input": "Refactor to use generators:\ndef read_file(path):\n    with open(path) as f:\n     ",
+      "expected": "yield",
+      "output": "def read_file(path):\n    with open(path) as f:\n        for line in f:\n            yield line.strip()",
+      "passed": true,
+      "time_ms": 1838.9613628387451
+    },
+    {
+      "task": "modify",
+      "input": "Add method chaining to this builder:\nclass QueryBuilder:\n    def __init__(self, ",
+      "expected": "return self",
+      "output": "class QueryBuilder:\n    def __init__(self, table):\n        self.table = table\n        self.conditions = []\n\n    def where(self, c):\n        self.conditions.append(c)\n        return self\n\n    def build(self):\n        condition_part = ' WHERE ' + ' AND '.join(self.conditions) if self.conditions else '",
+      "passed": true,
+      "time_ms": 6672.04737663269
+    },
+    {
+      "task": "modify",
+      "input": "Extend cache with TTL support:\nclass Cache:\n    def __init__(self):\n        self",
+      "expected": "time",
+      "output": "from datetime import datetime, timedelta\n\nclass CacheEntry:\n    def __init__(self, value, expires_at):\n        self.value = value\n        self.expires_at = expires_at\n\nclass Cache:\n    def __init__(self):\n        self._data = {}\n\n    def _is_expired(self, entry):\n        return entry.expires_at < da",
+      "passed": true,
+      "time_ms": 11210.907459259033
+    },
+    {
+      "task": "modify",
+      "input": "Add batch support to this sender:\ndef send_email(to, subject, body):\n    pass  #",
+      "expected": "list",
+      "output": "def send_emails(tos, subjects, bodies):\n    for to, subject, body in zip(tos, subjects, bodies):\n        send_email(to, subject, body)",
+      "passed": false,
+      "time_ms": 2988.1515502929688
+    },
+    {
+      "task": "modify",
+      "input": "Add schema validation to this function:\ndef create_user(data):\n    db.insert('us",
+      "expected": "valid",
+      "output": "import jsonschema\n\ndef create_user(data):\n    schema = {\n        'type': 'object',\n        'properties': {\n            'name': {'type': 'string'},\n            'age': {'type': 'integer'}\n        },\n        'required': ['name', 'age']\n    }\n    jsonschema.validate(instance=data, schema=schema)\n    db.",
+      "passed": true,
+      "time_ms": 5811.59782409668
+    },
+    {
+      "task": "modify",
+      "input": "Add metrics tracking to this cache:\nclass SimpleCache:\n    def __init__(self): s",
+      "expected": "hit",
+      "output": "class SimpleCache:\n    def __init__(self): self._d = {} self._hits = 0 self._misses = 0\n    def get(self, k):\n        if k in self._d:\n            self._hits += 1\n            return self._d[k]\n        self._misses += 1\n        return None\n    def set(self, k, v):\n        self._d[k] = v\n    def repor",
+      "passed": true,
+      "time_ms": 8440.531253814697
+    },
+    {
+      "task": "modify",
+      "input": "Add observer support to this class:\nclass Inventory:\n    def __init__(self):\n   ",
+      "expected": "observer",
+      "output": "class Inventory:\n    def __init__(self):\n        self.items = {}\n        self.observers = []\n\n    def add(self, name, qty):\n        self.items[name] = self.items.get(name, 0) + qty\n        for observer in self.observers:\n            observer.update(name, qty)\n\n    def register(self, observer):\n     ",
+      "passed": true,
+      "time_ms": 6335.067510604858
+    },
+    {
+      "task": "modify",
+      "input": "Add circuit breaker to this client:\nclass Client:\n    def __init__(self, url):\n ",
+      "expected": "circuit",
+      "output": "class Client:\n    def __init__(self, url):\n        self.url = url\n    def _request(self, endpoint):\n        import requests\n        return requests.get(f'{self.url}/{endpoint}').json()\n    def call(self, endpoint):\n        try:\n            return self._request(endpoint)\n        except requests.Reque",
+      "passed": false,
+      "time_ms": 7180.618047714233
+    },
+    {
+      "task": "modify",
+      "input": "Add multiple auth strategies to this API:\nclass API:\n    def __init__(self, toke",
+      "expected": "auth",
+      "output": "Add multiple auth strategies to this API:\nclass API:\n    def __init__(self, token=None, oauth=None):\n        self.token = token\n        self.oauth = oauth\n    def request(self, endpoint):\n        import requests\n        if self.token:\n            headers = {'Authorization': f'Bearer {self.token}'}\n ",
+      "passed": true,
+      "time_ms": 7381.040573120117
+    },
+    {
+      "task": "modify",
+      "input": "Convert to support multiple output formats:\ndef report(data, title):\n    lines =",
+      "expected": "format",
+      "output": "def report(data, title):\n    header = f'# {title}'\n    items = ['- {k}: {v}'.format(k=k, v=v) for k, v in data.items()]\n    return '\\n'.join([header] + items)",
+      "passed": true,
+      "time_ms": 4784.560918807983
+    },
+    {
+      "task": "modify",
+      "input": "Add environment variable config to this class:\nclass Config:\n    HOST = 'localho",
+      "expected": "os.getenv",
+      "output": "import os\n\nclass Config:\n    HOST = os.getenv('CONFIG_HOST', 'localhost')\n    PORT = int(os.getenv('CONFIG_PORT', '8080'))",
+      "passed": true,
+      "time_ms": 2548.738956451416
+    },
+    {
+      "task": "modify",
+      "input": "Add serialization to this model:\nclass User:\n    def __init__(self, id, name, em",
+      "expected": "to_dict",
+      "output": "import json\n\nclass User:\n    def __init__(self, id, name, email):\n        self.id = id\n        self.name = name\n        self.email = email\n\n    def serialize(self):\n        return json.dumps([self.id, self.name, self.email])\n\n    @staticmethod\n    def deserialize(data):\n        values = json.loads(d",
+      "passed": false,
+      "time_ms": 6193.197011947632
+    },
+    {
+      "task": "modify",
+      "input": "Add async iteration to this loader:\nclass Loader:\n    def __init__(self, data, s",
+      "expected": "__aiter__",
+      "output": "class Loader:\n    def __init__(self, data, size=32):\n        self.data = data\n        self.size = size\n    async def __aiter__(self):\n        for i in range(0, len(self.data), self.size):\n            yield self.data[i:i+self.size]",
+      "passed": true,
+      "time_ms": 5395.272016525269
+    },
+    {
+      "task": "modify",
+      "input": "Add structured logging to this setup:\nimport logging\ndef setup_logger(name):\n   ",
+      "expected": "json",
+      "output": "import logging\nlogger = logging.getLogger('my_logger')\nlogger.setLevel(logging.DEBUG)\n\ndef setup_logger(name):\n    return logger",
+      "passed": false,
+      "time_ms": 1861.8276119232178
+    },
+    {
+      "task": "modify",
+      "input": "Add plugin support to this processor:\nclass TextProcessor:\n    def __init__(self",
+      "expected": "plugin",
+      "output": "class TextProcessor:\n    def __init__(self, text, plugin=None):\n        self.text = text\n        if plugin:\n            plugin(self)\n\n    def process(self):\n        return self.text.strip().lower()",
+      "passed": true,
+      "time_ms": 3163.792848587036
+    },
+    {
+      "task": "modify",
+      "input": "Add export to this pipeline:\nclass Pipeline:\n    def __init__(self, data):\n     ",
+      "expected": "json",
+      "output": "class Pipeline:\n    def __init__(self, data):\n        self.data = list(data)\n    def filter(self, fn):\n        self.data = [x for x in self.data if fn(x)]\n        return self\nexport Pipeline",
+      "passed": false,
+      "time_ms": 3535.207509994507
+    },
+    {
+      "task": "modify",
+      "input": "Add compression support to this writer:\ndef write_file(path, content):\n    with ",
+      "expected": "gzip",
+      "output": "import zlib\n\ndef write_file(path, content):\n    compressed = zlib.compress(content.encode('utf-8'))\n    with open(path, 'wb') as f:\n        f.write(compressed)",
+      "passed": false,
+      "time_ms": 3790.776014328003
+    },
+    {
+      "task": "modify",
+      "input": "Add file watching to this manager:\nclass FileManager:\n    def __init__(self, dir",
+      "expected": "watch",
+      "output": "import os\nfrom watchdog.observers import Observer\nfrom watchdog.events import FileSystemEventHandler\n\nclass FileListWatcher(FileSystemEventHandler):\n    def __init__(self, directory):\n        self.directory = directory\n        self.files = set(os.listdir(directory))\n\n    def on_modified(self, event)",
+      "passed": true,
+      "time_ms": 13447.769165039062
+    },
+    {
+      "task": "modify",
+      "input": "Refactor this to use dependency injection:\nclass UserService:\n    def __init__(s",
+      "expected": "def __init__(self, db",
+      "output": "class UserService:\n    def __init__(self, db):\n        self.db = db\n    def get_user(self, id):\n        return self.db.find(id)",
+      "passed": true,
+      "time_ms": 2495.8345890045166
+    },
+    {
+      "task": "modify",
+      "input": "Add rate limiting to this endpoint:\ndef get_data(request):\n    data = fetch_from",
+      "expected": "rate",
+      "output": "from django.core.cache import cache\nimport time\n\ndef get_data(request):\n    if request.method == 'GET':\n        cached = cache.get('data')\n        if cached is not None:\n            return cached\n    data = fetch_from_db()\n    cache.set('data', data, 60)  # Cache for 60 seconds\n    return {'data': d",
+      "passed": false,
+      "time_ms": 5458.629369735718
+    },
+    {
+      "task": "modify",
+      "input": "Add connection retry to this DB class:\nclass DB:\n    def __init__(self, host, po",
+      "expected": "retry",
+      "output": "import psycopg2\nfrom psycopg2 import sql\n\nclass DB:\n    def __init__(self, host, port):\n        for attempt in range(5):\n            try:\n                conn_string = sql.SQL('dbname=default user=default host={} port={}')\n                self.conn = psycopg2.connect(conn_string.format(host, port))\n",
+      "passed": true,
+      "time_ms": 8861.700773239136
+    },
+    {
+      "task": "modify",
+      "input": "Add report formatting to this generator:\ndef generate(data, title):\n    return f",
+      "expected": "format",
+      "output": "def generate(data, title):\n    return f'### {title}\\n\\n{data}'",
+      "passed": false,
+      "time_ms": 1527.8239250183105
+    },
+    {
+      "task": "modify",
+      "input": "Add support for multiple hash algorithms to this hasher:\ndef hash_password(passw",
+      "expected": "algorithm",
+      "output": "import hashlib\n\ndef hash_password(password, algorithm='md5'):\n    algorithm = algorithm.lower()\n    if algorithm == 'md5':\n        hash_obj = hashlib.md5\n    elif algorithm == 'sha1':\n        hash_obj = hashlib.sha1\n    elif algorithm == 'sha256':\n        hash_obj = hashlib.sha256\n    else:\n        ",
+      "passed": true,
+      "time_ms": 7579.770803451538
+    },
+    {
+      "task": "modify",
+      "input": "Add request timeout to this HTTP client:\nclass HTTPClient:\n    def __init__(self",
+      "expected": "timeout",
+      "output": "Add request timeout to this HTTP client:\nclass HTTPClient:\n    def __init__(self, base_url, timeout=10):\n        self.base_url = base_url\n        self.timeout = timeout\n    def get(self, path):\n        import requests\n        return requests.get(f'{self.base_url}{path}', timeout=self.timeout).json()",
+      "passed": true,
+      "time_ms": 5227.745056152344
+    },
+    {
+      "task": "modify",
+      "input": "Add event sourcing to this aggregate:\nclass Order:\n    def __init__(self, id):\n ",
+      "expected": "event",
+      "output": "from collections import deque\n\nclass Order:\n    def __init__(self, id):\n        self.id = id\n        self.events = deque()\n        self._apply_events()\n\n    def submit(self):\n        self._record_event(OrderSubmitted(self.id))\n\n    def _record_event(self, event):\n        self.events.append(event)\n  ",
+      "passed": true,
+      "time_ms": 9626.214265823364
+    },
+    {
+      "task": "modify",
+      "input": "Add role-based access to this service:\nclass DataService:\n    def __init__(self)",
+      "expected": "role",
+      "output": "class DataService:\n    def __init__(self, user):\n        if user != 'admin':\n            raise PermissionError('unauthorized')\n        pass\n    def get_all(self):\n        return db.query('SELECT * FROM data')",
+      "passed": false,
+      "time_ms": 3363.2068634033203
+    },
+    {
+      "task": "modify",
+      "input": "Add internationalization to this formatter:\ndef format_date(dt):\n    return dt.s",
+      "expected": "locale",
+      "output": "def format_date(dt, locale='en'):\n    return dt.strftime('%B %d, %Y', locale=locale)",
+      "passed": true,
+      "time_ms": 1929.7540187835693
+    },
+    {
+      "task": "modify",
+      "input": "Add SQL injection protection to this query builder:\ndef query(table, condition):",
+      "expected": "param",
+      "output": "def query(table, condition):\n    return f'SELECT * FROM {table} WHERE {condition.replace(\"\\\\\", \"\\\\\\\\\")}'",
+      "passed": false,
+      "time_ms": 2057.358980178833
+    },
+    {
+      "task": "modify",
+      "input": "Refactor to use strategy pattern:\ndef sort_data(data, method):\n    if method == ",
+      "expected": "strategy",
+      "output": "class BubbleSortStrategy:\n    def execute(self, data):\n        return bubble_sort(data)\n\nclass MergeSortStrategy:\n    def execute(self, data):\n        return merge_sort(data)\n\nclass SortAlgorithm:\n    def __init__(self, strategy):\n        self.strategy = strategy\n\n    def sort(self, data):\n        r",
+      "passed": true,
+      "time_ms": 9196.210384368896
+    },
+    {
+      "task": "modify",
+      "input": "Add lazy loading to this repository:\nclass ProductRepo:\n    def __init__(self, d",
+      "expected": "lazy",
+      "output": "class ProductRepo:\n    def __init__(self, db):\n        self.db = db\n\n    def get_all(self):\n        if not hasattr(self, 'products'):\n            self.products = self.db.query('SELECT * FROM products')\n        return self.products",
+      "passed": false,
+      "time_ms": 3668.539524078369
+    },
+    {
+      "task": "modify",
+      "input": "Add audit logging to this user service:\nclass UserService:\n    def create(self, ",
+      "expected": "audit",
+      "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\nclass UserService:\n    def create(self, data):\n        user = db.insert('users', data)\n        logger.info('created user %s', user)\n        return user\n    def delete(self, id):\n        db.delete('users', id)\n        logger.info('deleted user %s'",
+      "passed": false,
+      "time_ms": 6015.151262283325
+    },
+    {
+      "task": "modify",
+      "input": "Add health check to this service:\nclass Service:\n    def __init__(self, db, cach",
+      "expected": "health",
+      "output": "import http.server\nimport socketserver\n\nclass HealthCheckHandler(http.server.SimpleHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == '/health':\n            self.send_response(200)\n            self.end_headers()\n            self.wfile.write(b'ok')\n        else:\n            super().do",
+      "passed": true,
+      "time_ms": 10463.518142700195
+    },
+    {
+      "task": "modify",
+      "input": "Add feature flags to this processor:\nclass FeatureProcessor:\n    def process(sel",
+      "expected": "flag",
+      "output": "class FeatureProcessor:\n    def __init__(self, use_feature):\n        self.use_feature = use_feature\n\n    def process(self, data):\n        if not self.use_feature:\n            return transform(data)\n        result = transform(data)\n        enhance(result)\n        return result",
+      "passed": false,
+      "time_ms": 4706.352233886719
+    },
+    {
+      "task": "modify",
+      "input": "Add graceful shutdown to this server:\nclass Server:\n    def __init__(self, port)",
+      "expected": "signal",
+      "output": "class Server:\n    def __init__(self, port):\n        self.port = port\n        self.running = False\n\n    def start(self):\n        self.running = True\n        return self\n\n    def stop(self):\n        self.running = False\n        return self",
+      "passed": false,
+      "time_ms": 3793.1180000305176
+    }
+  ]
+}

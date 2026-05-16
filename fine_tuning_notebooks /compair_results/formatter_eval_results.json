@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "category": "debug",
+    "difficulty": "standard",
+    "label": "Simple operator bug",
+    "input": "- bug on line 8: used + instead of -\n- fixed operator\n- function now returns correct value",
+    "output": "The fix addressed in 8 was: bug on line 8: used + instead of -. The code was updated so that fixed operator was corrected. The change was then checked again, and function now returns correct value. The guard was added near the failing branch.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 2,
+    "category": "debug",
+    "difficulty": "standard",
+    "label": "Missing return statement",
+    "input": "- function was not returning anything\n- found missing return on line 14\n- added return statement\n- verified output is now correct",
+    "output": "The problem came from in parse_data_11. The code was updated so that a missing return was found on line 14. The change was added return statement. The guard was added before the loop. The failure no longer repeats.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 3,
+    "category": "debug",
+    "difficulty": "standard",
+    "label": "Off by one in loop",
+    "input": "- loop was iterating one index too far\n- range(1, len(nums)+1) changed to range(len(nums))\n- was causing index out of range on last iteration\n- fixed and tested with multiple inputs",
+    "output": "The problem came from in loop was iterating one index too far. The code was updated so that range(1, len(nums)) changed to range(len(nums)), and the problem is now resolved. The change was then checked with was causing index out of range on last iteration. The guard was added near the failing branch.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 4,
+    "category": "debug",
+    "difficulty": "standard",
+    "label": "Multiple bugs fixed",
+    "input": "- found 3 bugs in calculate_discount function\n- bug 1: wrong comparison operator on line 5\n- bug 2: missing null check for empty input\n- bug 3: return value was not being cast to float\n- all three fixed\n- ran tests - all passing now",
+    "output": "An error was traced in calculate_discount function because bug 1: wrong comparison operator on line 5. The code was updated so that bug 2: missing null check for empty input was handled. The change was then checked again, and bug 3: return value was not being cast to float. The fix was then checked once more, and the failure no longer repeats.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 5,
+    "category": "debug",
+    "difficulty": "standard",
+    "label": "Mutable default argument",
+    "input": "- parse_config had mutable default argument bug\n- default list [] in function signature\n- changed to None with if check inside\n- prevents shared state across calls",
+    "output": "The fix addressed in parse_config had mutable default argument bug. The code was updated so that default list [] in function signature. The change was then checked with if check inside. The guard was added near the failing branch, and the failure no longer repeats.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 6,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Typo-heavy agent notes",
+    "input": "- foudn bug on ln 7 wrng opertor\n- fixxed the retrun statment\n- also nul chek was mising\n- all fixd now tessted ok",
+    "output": "A bug was identified on line 7 because wrong operator was used as a function call. The code was updated so that the retrun statment was fixed and all further lines were checked. The change was then checked again, and all issues were accepted. Line 8 was the fix.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Low content overlap with input (only 2 shared words)"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "debug",
+    "difficulty": "edge",
+    "label": "Very terse single bug",
+    "input": "- wrong op\n- fixed",
+    "output": "A bug was identified in the wrong op because wrong op. The code was updated so that the comparison was corrected and the branch now follows the expected path. The change stayed focused on the reported failure and did not add anything beyond the notes.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Low content overlap with input (only 1 shared words)"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "debug",
+    "difficulty": "tricky",
+    "label": "Conflicting notes in input",
+    "input": "- added null check to validate_email\n- removed null check because it broke other logic\n- added different validation instead\n- fixed the original bug too",
+    "output": "The code was updated with null check to validate_email and a small typo in the retrun note was corrected. The change was then cleaned up the loop and added documentation for the static methods. The refactor stays focused on the reported work.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 9,
+    "category": "debug",
+    "difficulty": "tricky",
+    "label": "Very long debug report",
+    "input": "- reviewed entire retry_request function\n- bug 1: max_attempts was never being decremented correctly\n- bug 2: delay timer was using time.time() not time.sleep()\n- bug 3: exception type was too broad catching all exceptions\n- bug 4: missing return on success path causing None return\n- bug 5: infinite loop possible when max_attempts set to zero\n- bug 6: logging was printing before the attempt not after\n- fixed all 6 issues\n- added guard clause for max_attempts less than one\n- retested all edge cases - all passing",
+    "output": "The code was updated with bug 1: max_attempts was never being decremented correctly. The fix was added and the problem is now resolved. The change was then checked again, and bug 2 was addressed. The guard clause was added before using max_attempts.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 10,
+    "category": "debug",
+    "difficulty": "tricky",
+    "label": "No bug found report",
+    "input": "- reviewed process_sales_data thoroughly\n- no bugs found in main logic\n- code is functioning as expected\n- no changes made",
+    "output": "The routine process_sales_data was reviewed thoroughly. No bugs were found in main logic, and code is functioning as expected. The guard was added near the failing branch, and the failure no longer repeats. Line 8 was the problem spot.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 11,
+    "category": "generate",
+    "difficulty": "standard",
+    "label": "Simple function generated",
+    "input": "- wrote reverse_string(s)\n- returns reversed version of input string\n- handles empty string by returning empty",
+    "output": "The function reverse_string(s) has been generated to determine whether a given integer is prime. It returns reversed version of input string and handles empty string by returning empty. It also uses functools.wraps.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 12,
+    "category": "generate",
+    "difficulty": "standard",
+    "label": "Class generated",
+    "input": "- created BankAccount class\n- has owner and balance attributes\n- methods: deposit, withdraw, get_balance\n- deposit raises ValueError for negative amounts\n- withdraw raises ValueError if insufficient funds",
+    "output": "The BankAccount class was created by updating the class BankAccount. It has owner and balance attributes and methods: deposit, withdraw, get_balance. It also raises ValueError for negative amounts. Checks divisibility up to the square root of n.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 13,
+    "category": "generate",
+    "difficulty": "standard",
+    "label": "Recursive function generated",
+    "input": "- wrote flatten_nested(lst)\n- recursively flattens nested lists\n- handles arbitrary depth\n- returns flat list\n- empty list returns empty list",
+    "output": "The function flatten_nested(lst) has been generated to determine whether a given integer is prime. It recursively flattens nested lists and handles arbitrary depth. It also keeps the same characters in reverse order, and mutates the original list.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 14,
+    "category": "generate",
+    "difficulty": "standard",
+    "label": "Generator function generated",
+    "input": "- wrote chunked(iterable, size)\n- yields fixed size chunks\n- last chunk may be smaller\n- uses yield not return\n- works with any iterable",
+    "output": "The function chunked(iterable, size) has been generated to determine whether a given integer is prime. It yields fixed size chunks and works with any iterable. It also handles the last chunk may be smaller, and removes spaces and punctuation.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 15,
+    "category": "generate",
+    "difficulty": "standard",
+    "label": "Async function generated",
+    "input": "- wrote async fetch_all(urls, max_concurrent=5)\n- uses asyncio semaphore to limit concurrency\n- gathers all results\n- returns list of responses",
+    "output": "The async fetch_all function has been generated to determine whether a given integer is prime. It works by fetching all possible results and checks each one in turn. The result is gathered as a list, and the original list is left unchanged. Works on each element in order.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 16,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Very minimal generation notes",
+    "input": "- wrote sort func\n- works",
+    "output": "The sorted func was written by me. It works and takes a list of values. It sorts in ascending order and leaves the original list is mutated. Works on each element in order.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Low content overlap with input (only 2 shared words)"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "generate",
+    "difficulty": "edge",
+    "label": "Generation with limitations noted",
+    "input": "- wrote parse_csv(filepath)\n- reads file and returns list of dicts\n- does NOT handle quoted commas in fields\n- does NOT handle utf-8 encoding errors\n- basic implementation only",
+    "output": "The routine parse_csv(filepath) has been generated to determine whether a given integer is prime. It reads file and returns list of dicts. It also does NOT handle quoted commas in fields, and keeps the result in sorted order.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 18,
+    "category": "generate",
+    "difficulty": "tricky",
+    "label": "Very long generation report",
+    "input": "- wrote DataPipeline class\n- __init__ sets up empty steps list and errors list\n- add_step(name, func) appends to steps\n- run(data) applies each step in order\n- if any step raises exception it is caught and stored\n- run returns None if any step failed\n- get_errors() returns list of error tuples\n- reset() clears both steps and errors\n- all methods documented\n- edge case: empty pipeline returns input unchanged",
+    "output": "The class DataPipeline class was written by doing the following:\n- __init__ sets up empty steps list and errors list\n- add_step(name, func) appends to steps\n- run(data) applies each step in order\n- if any step raises exception it is caught and stored\n- run returns None if any step fails\n- all methods documented\n- edge case: empty pipeline returns input unchanged",
+    "score": 6,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Bullet points found in output (7 lines)",
+      "\u26a0\ufe0f  Markdown found: bold",
+      "\u26a0\ufe0f  Sentence count off (1 \u2014 expected 2-6)"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "generate",
+    "difficulty": "tricky",
+    "label": "Jumbled unordered notes",
+    "input": "- returns True if found False if not\n- binary_search(arr, target)\n- assumes arr is sorted\n- uses left right mid pointer approach\n- O(log n) complexity\n- wrote it",
+    "output": "The function binary_search(arr, target) returns True if found False if not. It assumes arr is sorted and uses left right mid pointer approach. The result is always the matching element or None, and it O(log n) complexity. It also halves the search space each step.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 20,
+    "category": "generate",
+    "difficulty": "tricky",
+    "label": "Generation with surprising edge case",
+    "input": "- wrote calculate_average(numbers)\n- sums all values and divides by count\n- returns None for empty list instead of raising\n- handles list of one element correctly\n- does not filter out non-numeric values",
+    "output": "The function calculate_average(numbers) has been generated to determine whether a given integer is prime. It sums all values and divides by count and returns None for empty list instead of raising. It also handles list of one element correctly, and mutates the original list.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 21,
+    "category": "modify",
+    "difficulty": "standard",
+    "label": "Added type hints and docstring",
+    "input": "- added type hints to all parameters\n- added return type hint\n- added Google style docstring\n- included Args and Returns sections",
+    "output": "The code was updated with type hints on parameters and a docstring. Related changes included a list of possible outcomes and an inline comment on the loop. These changes improve readability and maintainability while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 22,
+    "category": "modify",
+    "difficulty": "standard",
+    "label": "Refactored loop to comprehension",
+    "input": "- refactored for loop in get_evens to list comprehension\n- more concise and pythonic\n- same output as before\n- no logic changes",
+    "output": "The code was refactored in get_evens to list comprehension. The implementation was updated with more concise and pythonic code. The change stayed focused on the reported work and did not add anything beyond the notes. A small typo in the retrun note was corrected.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 23,
+    "category": "modify",
+    "difficulty": "standard",
+    "label": "Added error handling",
+    "input": "- added try except block to divide function\n- catches ZeroDivisionError\n- returns None on error instead of raising\n- added logging for the caught exception",
+    "output": "The code was updated with try except block to divide function. The change included catches ZeroDivisionError and returns None on error instead of raising. The code was also cleaned up near the failure and the docstring was added. A small typo in the retrun note was corrected.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 24,
+    "category": "modify",
+    "difficulty": "standard",
+    "label": "Added memoization",
+    "input": "- added memoization to fib function\n- used functools lru_cache decorator\n- significantly improves performance for large n\n- no changes to core logic",
+    "output": "The code was updated with memoization to fib function and a wrapper using functools lru_cache decorator. The change improves performance for large n by several percent. The refactor stays focused on the reported work.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 25,
+    "category": "modify",
+    "difficulty": "standard",
+    "label": "Multiple small changes",
+    "input": "- renamed single letter variables to descriptive names\n- added input validation at top of function\n- split large function into two smaller ones\n- added default parameter values\n- added logging statements throughout",
+    "output": "The code was updated to rename single letter variables to descriptive names and add input validation at top of function. Related changes included adding default parameter values and split large function into two smaller ones. These changes improve clearer edge-case handling while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 26,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Very terse modification notes",
+    "input": "- added hints\n- added docs\n- refactored",
+    "output": "The code was updated with hints and docs for each helper. The refactor stayed focused on the reported work. The inline comment explains the cleanup of a repeated branch.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Low content overlap with input (only 2 shared words)"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "modify",
+    "difficulty": "edge",
+    "label": "Contradictory modification notes",
+    "input": "- added loop to process_records\n- removed loop and used map instead\n- added error handling\n- removed error handling as not needed\n- final version uses map with no error handling",
+    "output": "The code was updated to loop to process_records. The code was updated with removal of loop and a mapped version of the job. The change did not affect the behavior. The change was then checked again, and error handling was added.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 28,
+    "category": "modify",
+    "difficulty": "tricky",
+    "label": "Very long modification report",
+    "input": "- updated validate_user_record function significantly\n- added type hints to all 6 parameters\n- added comprehensive Google style docstring\n- added input validation for name field: must be non-empty string\n- added input validation for email: must contain @ and domain\n- added input validation for age: must be int between 0 and 150\n- refactored three nested if statements into early return pattern\n- extracted email validation into separate helper function\n- added logging at info level for successful validation\n- added logging at warning level for failed validation\n- added unit test style assertions at bottom of function\n- overall function is now more readable and maintainable",
+    "output": "The update validate_user_record function was significantly updated with type hints on parameters and a comprehensive Google style docstring. Related changes included input validation for missing fields and early return pattern refactor. These changes improve readability and maintainability while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 29,
+    "category": "modify",
+    "difficulty": "tricky",
+    "label": "Modification that changes behavior",
+    "input": "- changed sort_items to sort in descending order instead of ascending\n- updated default parameter from ascending=True to ascending=False\n- updated docstring to reflect new default\n- existing callers that relied on ascending order will be affected",
+    "output": "The code was updated to sort in descending order instead of ascending. Related changes included default parameter cleanup and an inline comment on branching logic. These changes improve the user experience by reducing duplicate work. The refactor stays focused on the reported work.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 30,
+    "category": "modify",
+    "difficulty": "tricky",
+    "label": "Jumbled modification notes",
+    "input": "- docstring now has Raises section\n- fetch_data now async\n- converted to async def\n- added await to all internal calls\n- updated type hints for async return type\n- added Raises section to docstring for timeout errors",
+    "output": "The code was updated with async fetch_data and async def syntax. Related changes included type hints for async return type and an Raises section in the Raises section. These changes improve performance and maintainability while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 31,
+    "category": "explain",
+    "difficulty": "standard",
+    "label": "Simple function explanation",
+    "input": "- takes list of numbers\n- filters out negatives\n- returns only positive values\n- does not modify original list",
+    "output": "The function takes a list of numbers and returns a new list with only the positive values. It also does not modify original list, and keeps the same characters in reverse order. It also uses functools.wraps.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 32,
+    "category": "explain",
+    "difficulty": "standard",
+    "label": "Class explanation",
+    "input": "- Stack class implements last in first out structure\n- push adds item to top\n- pop removes and returns top item\n- raises IndexError if pop called on empty stack\n- peek returns top without removing",
+    "output": "The class Stack implements last in first out structure. It works by keeping a list of items in sorted order and takes a list of values. The result is always in sorted order, and it leaves empty input stays empty. It also raises IndexError if pop calls on empty stack.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 33,
+    "category": "explain",
+    "difficulty": "standard",
+    "label": "Algorithm explanation",
+    "input": "- binary_search takes sorted list and target\n- uses left right pointer approach\n- calculates midpoint each iteration\n- returns index if found\n- returns -1 if not found\n- O(log n) time complexity",
+    "output": "The function binary_search takes sorted list and target. It uses left right pointer approach and calculates midpoint each iteration. The result is the index if found, or -1 if not found. It also O(log n) time complexity.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 34,
+    "category": "explain",
+    "difficulty": "standard",
+    "label": "Decorator explanation",
+    "input": "- timer decorator wraps any function\n- records start time before call\n- records end time after call\n- prints elapsed time to console\n- preserves original function metadata with wraps",
+    "output": "The timer decorator wraps any function. It records start time before call and records end time after call. It also prints elapsed time to console. The result is the wrapped function result, and it preserves original function metadata with wraps.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 35,
+    "category": "explain",
+    "difficulty": "standard",
+    "label": "Generator explanation",
+    "input": "- chunked takes iterable and chunk size\n- yields lists of given size\n- last chunk may be smaller if items dont divide evenly\n- memory efficient - does not load all at once",
+    "output": "The function chunked has been generated to determine whether a given integer is prime. It takes iterable and chunk size and yields lists of given size. It also handles last chunk may be smaller if items dont divide evenly, and keeps the result in sorted order.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 36,
+    "category": "explain",
+    "difficulty": "edge",
+    "label": "Extremely terse explanation notes",
+    "input": "- takes num\n- squares it\n- returns result",
+    "output": "The helper takes num and squares it. It returns result and works iteratively. It also keeps the same characters in reverse order. Checks divisibility up to the square root of n.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 37,
+    "category": "explain",
+    "difficulty": "edge",
+    "label": "Technical shorthand in notes",
+    "input": "- merge_sort impl\n- divide and conquer\n- O(n log n) time\n- O(n) space\n- stable sort\n- recursive halving then merge",
+    "output": "The merge_sort impl has been generated to determine whether a given integer is prime. It divides the problem into smaller subproblems and reuses the recursion helper. The result is stable sort, and the recursion now terminates cleanly. The guard was added near the failing branch.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 38,
+    "category": "explain",
+    "difficulty": "tricky",
+    "label": "Very long explanation notes",
+    "input": "- process_sales_data takes list of record dicts\n- first filters out records where amount is zero or negative\n- then groups remaining records by region field\n- unknown region key falls back to string unknown\n- for each region calculates total sum of amounts\n- for each region calculates average of amounts\n- for each region counts number of records\n- builds summary dict with total average and count per region\n- sorts final result by total in descending order\n- returns sorted dict of region summaries\n- empty input returns empty dict",
+    "output": "The function process_sales_data takes list of record dicts and returns a sorted dict of region summaries. It first filters out records where amount is zero or negative and then groups remaining records by region field. The result is then sorted by total in descending order, and empty input returns empty dict.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 39,
+    "category": "explain",
+    "difficulty": "tricky",
+    "label": "Out of order jumbled notes",
+    "input": "- returns the result\n- LRUCache class\n- uses OrderedDict internally\n- get returns -1 if key missing\n- capacity set at init\n- put evicts least recently used when full\n- get moves accessed key to end\n- fixed size cache",
+    "output": "The LRUCache class comes from functools and is used to store a cache of results. It uses OrderedDict internally and gets -1 if key missing. It also capates at init, and mutates the original list.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 40,
+    "category": "explain",
+    "difficulty": "tricky",
+    "label": "Explanation with contradictory notes",
+    "input": "- function modifies input list in place\n- function does not modify input list\n- returns new sorted list\n- sorts using bubble sort algorithm\n- accepts any list of comparable items",
+    "output": "The function modifies input list in place. It also does not modify input list, and returns new sorted list. It also sorts using bubble sort algorithm, and accepts any list of comparable items. The result is the sorted list, and it leaves the original list is left unchanged.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 41,
+    "category": "document",
+    "difficulty": "standard",
+    "label": "Simple function documented",
+    "input": "- added docstring to add function\n- included Args section with a and b described\n- included Returns section\n- no Raises as function does not raise",
+    "output": "The docstring was added to add function. The code was updated with a comment in the loop. The change stayed focused on the reported work and did not add anything beyond the notes. A small typo in the retrun note was corrected.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 42,
+    "category": "document",
+    "difficulty": "standard",
+    "label": "Class fully documented",
+    "input": "- added class level docstring to BankAccount\n- documented __init__ with Attributes section\n- documented deposit with Args and Raises sections\n- documented withdraw with Args and Raises sections\n- documented get_history with Returns section",
+    "output": "The code was updated with a class level docstring to BankAccount and documentation for __init__ with Attributes section. Related changes included documentation for deposit and withdraw and a split between retry and logging. These changes improve clearer edge-case handling while keeping the behavior aligned with the notes.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Markdown found: bold"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "document",
+    "difficulty": "standard",
+    "label": "Generator documented with Yields",
+    "input": "- added docstring to chunked generator\n- included Args section\n- used Yields instead of Returns\n- described what each yielded chunk contains",
+    "output": "The code was updated with chunked generator and a docs string. Related changes included Args section and a yield note. These changes improve readability and maintainability while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 44,
+    "category": "document",
+    "difficulty": "standard",
+    "label": "Module level docstring added",
+    "input": "- added module level docstring at top of file\n- lists all three functions: read_csv, filter_rows, compute_average\n- one line description for each function\n- documented each function individually too",
+    "output": "The changes included a module level docstring at the top of the file and lists all three functions: read_csv, filter_rows, and compute_average. The inline comments describe the file handling. A docstring was added to the public section.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 45,
+    "category": "document",
+    "difficulty": "standard",
+    "label": "Documentation with intentional omissions",
+    "input": "- documented safe_divide function\n- added Args section for a and b\n- added Returns section\n- no Raises section - function returns None instead of raising\n- added inline comment explaining the zero check",
+    "output": "The documentation for safe_divide documented the function safe_divide. It included Args section and an inline comment explaining the zero check. It also the return value is now None when needed. The yield behavior is still handled by the generator.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 46,
+    "category": "document",
+    "difficulty": "edge",
+    "label": "Very terse documentation notes",
+    "input": "- added docs\n- added args\n- added returns",
+    "output": "The implementation was updated with docs for the class method and an inline comment on load. The change was then checked again and the inline comment was removed. The guard was added near the failing branch.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Low content overlap with input (only 2 shared words)"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "document",
+    "difficulty": "edge",
+    "label": "Async function documented",
+    "input": "- documented fetch_all async function\n- added Args for urls and max_concurrent\n- added Returns section\n- noted async behavior in summary line\n- documented inner fetch_one function too",
+    "output": "The implementation fetch_all async function was updated with Args for urls and max_concurrent and an Returns section. Related changes included an inline comment on async behavior and a docstring. These changes improve clearer edge-case handling while keeping the behavior aligned with the notes.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  },
+  {
+    "id": 48,
+    "category": "document",
+    "difficulty": "tricky",
+    "label": "Very long documentation report",
+    "input": "- documented entire DataPipeline class\n- class level docstring describes pipeline pattern\n- __init__ documented with Attributes: _steps and _errors\n- add_step documented with Args: name and func\n- run documented with Args: data, Returns: result or None\n- run has Raises section for unexpected errors\n- get_errors documented with Returns: list of error tuples\n- reset documented with Returns: None\n- added inline comment in run explaining the try except pattern\n- added inline comment explaining why None is returned on failure\n- all sections use Google style format\n- no type hints added per project rules",
+    "output": "The documentation for DataPipeline class documented the pipeline pattern. It includes a class level docstring and __init__ documentation with Attributes: _steps and _errors. It also the run documented with Args: data, Returns: result or None. The result is the cleaned agent output, and the structure and readability were improved while keeping the same overall behavior.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Markdown found: bold"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "document",
+    "difficulty": "tricky",
+    "label": "Property based class documented",
+    "input": "- documented Circle class\n- class docstring describes it as geometric shape model\n- __init__ has Attributes section for _radius\n- radius property getter documented with Returns\n- radius setter documented with Args and Raises for negative value\n- area property documented with Returns\n- circumference property documented with Returns\n- no type hints added",
+    "output": "The documentation for Circle class includes a class docstring that describes it as geometric shape model. The docstring explains the class's behavior and attributes. It also includes __init__ and Raises sections. The property documentation explains the calculation of the property value. The yield behavior is documented with Yield.",
+    "score": 8,
+    "max_score": 9,
+    "flags": [
+      "\u26a0\ufe0f  Markdown found: bold"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "document",
+    "difficulty": "tricky",
+    "label": "Jumbled documentation notes",
+    "input": "- Returns section added\n- is_palindrome function\n- no Raises since no exceptions\n- Args section has s parameter described\n- docstring added\n- one line summary says checks if string reads same forwards and backwards",
+    "output": "The function is_palindrome function returns section added. It is generated by a generator and does not raise. The Args section includes s parameter described. The yield behavior is documented, and one line summary explains the calculation.",
+    "score": 9,
+    "max_score": 9,
+    "flags": []
+  }
+]

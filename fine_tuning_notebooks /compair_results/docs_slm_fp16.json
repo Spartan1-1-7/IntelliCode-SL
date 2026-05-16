@@ -1,0 +1,777 @@
+{
+  "config": "Docs+Explanation SLM \u2014 fp16 full precision",
+  "pass_rate": 80.85106382978722,
+  "total_pass": 76,
+  "total": 94,
+  "avg_time_ms": 2806.9649199221994,
+  "per_task": {
+    "explain": {
+      "pass": 45,
+      "fail": 1,
+      "total": 46,
+      "pass_rate": 97.82608695652173,
+      "avg_time_ms": 2295.795979707137
+    },
+    "document": {
+      "pass": 31,
+      "fail": 17,
+      "total": 48,
+      "pass_rate": 64.58333333333334,
+      "avg_time_ms": 3296.8351542949677
+    }
+  },
+  "samples": [
+    {
+      "task": "explain",
+      "input": "def factorial(n):\n    if n == 0: return 1\n    return n * factorial(n-1)",
+      "expected": "factorial",
+      "output": "The generator factorial uses recursive multiplication to transform n and n-1 into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts n, n-1 and returns the factorial of n. One notable detail is that it uses the n == 0 base ",
+      "passed": true,
+      "time_ms": 7634.6635818481445
+    },
+    {
+      "task": "explain",
+      "input": "def fib(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a+b\n    ret",
+      "expected": "fibonacci",
+      "output": "The generator fib uses recursive multiplication to transform n and a into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts n, a and returns the Fibonacci sequence number. One notable detail is that it begins with the init",
+      "passed": true,
+      "time_ms": 1928.3568859100342
+    },
+    {
+      "task": "explain",
+      "input": "def binary_search(arr, t):\n    l,r = 0,len(arr)-1\n    while l<=r:\n        m=(l+r",
+      "expected": "search",
+      "output": "The function binary_search uses binary search to transform arr and t into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts arr, t and returns the index of t or negative one. One notable detail is that the search assumes a",
+      "passed": true,
+      "time_ms": 1793.1365966796875
+    },
+    {
+      "task": "explain",
+      "input": "def flatten(lst):\n    result=[]\n    for item in lst:\n        if isinstance(item,",
+      "expected": "nested",
+      "output": "The generator flatten uses recursion to transform lst into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts lst, result and returns a flattened list. One notable detail is that nested lists are preserved entirely.",
+      "passed": true,
+      "time_ms": 1529.0486812591553
+    },
+    {
+      "task": "explain",
+      "input": "def memoize(f):\n    cache={}\n    def wrapper(*args):\n        if args not in cach",
+      "expected": "cache",
+      "output": "The recursive memoize function uses a memoizing decorator to transform f and args into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts f, args and returns the cached result or the wrapped function call. One notable detai",
+      "passed": true,
+      "time_ms": 1909.1951847076416
+    },
+    {
+      "task": "explain",
+      "input": "def quicksort(arr):\n    if len(arr)<=1: return arr\n    pivot=arr[len(arr)//2]\n  ",
+      "expected": "sort",
+      "output": "The function quicksort uses the quickselect algorithm to transform arr and pivot into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts arr, pivot and returns the sorted list. One notable detail is that the recursive call ",
+      "passed": true,
+      "time_ms": 2741.908073425293
+    },
+    {
+      "task": "explain",
+      "input": "class Stack:\n    def __init__(self): self.items=[]\n    def push(self,x): self.it",
+      "expected": "stack",
+      "output": "The recursive stack function uses an in-order traversal to transform __init__, push and pop into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts __init__, push and pop as inputs and returns an empty stack object. One not",
+      "passed": true,
+      "time_ms": 2767.9951190948486
+    },
+    {
+      "task": "explain",
+      "input": "def count_words(text):\n    words=text.lower().split()\n    freq={}\n    for w in w",
+      "expected": "word",
+      "output": "The function count_words uses dictionary computation with a loop to transform text and words into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts text, words and returns a dictionary of word frequencies. One notable deta",
+      "passed": true,
+      "time_ms": 2081.378698348999
+    },
+    {
+      "task": "explain",
+      "input": "def is_palindrome(s):\n    s=s.lower().replace(' ','')\n    return s==s[::-1]",
+      "expected": "palindrome",
+      "output": "The function is_palindrome uses string reversal and comparison to transform s into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, returns True if the string is a palindrome and False otherwise. One notable detail is ",
+      "passed": true,
+      "time_ms": 1974.4009971618652
+    },
+    {
+      "task": "explain",
+      "input": "def gcd(a,b):\n    while b: a,b=b,a%b\n    return a",
+      "expected": "greatest common",
+      "output": "The generator gcd uses the Euclidean algorithm to transform a and b into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts a and b, returns the greatest common divisor of a and b. One notable detail is that it returns the ",
+      "passed": true,
+      "time_ms": 2167.43540763855
+    },
+    {
+      "task": "explain",
+      "input": "def sieve(n):\n    primes=[True]*(n+1)\n    p=2\n    while p*p<=n:\n        if prime",
+      "expected": "prime",
+      "output": "The generator sieve uses the Sieve of Eratosthenes algorithm to transform n and p into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts n, p and returns a list of primes. One notable detail is that the generator returns a",
+      "passed": true,
+      "time_ms": 2238.234043121338
+    },
+    {
+      "task": "explain",
+      "input": "def merge_sort(arr):\n    if len(arr)<=1: return arr\n    mid=len(arr)//2\n    left",
+      "expected": "sort",
+      "output": "The function merge_sort uses divide-and-conquer algorithm to transform arr and left into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts arr, left and returns the sorted array. One notable detail is that the internal mer",
+      "passed": true,
+      "time_ms": 2768.2831287384033
+    },
+    {
+      "task": "explain",
+      "input": "def lru_cache(cap):\n    from collections import OrderedDict\n    cache=OrderedDic",
+      "expected": "cache",
+      "output": "The generator lru_cache uses a caching decorator to transform cap and get into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts cap, get and returns a caching result. One notable detail is that the cache grows up to cap i",
+      "passed": true,
+      "time_ms": 2266.313314437866
+    },
+    {
+      "task": "explain",
+      "input": "def dijkstra(graph, start):\n    import heapq\n    dist={node:float('inf') for nod",
+      "expected": "shortest path",
+      "output": "The function dijkstra uses shortest path finding to transform graph and start into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts graph, start and returns the shortest distance from start to all other nodes. One notable",
+      "passed": true,
+      "time_ms": 1918.8382625579834
+    },
+    {
+      "task": "explain",
+      "input": "class Node:\n    def __init__(self,val=0,left=None,right=None): self.val=val; sel",
+      "expected": "tree",
+      "output": "The recursive inorder function uses a depth-first search tree traversal algorithm to transform root and val into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts root, val and returns the inorder traversal of the tree as ",
+      "passed": true,
+      "time_ms": 2181.187152862549
+    },
+    {
+      "task": "explain",
+      "input": "def two_sum(nums, target):\n    seen={}\n    for i,n in enumerate(nums):\n        i",
+      "expected": "sum",
+      "output": "The function two_sum uses a dictionary to transform nums and target into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, target and returns the index pair that add up to target. One notable detail is that the retur",
+      "passed": true,
+      "time_ms": 1869.4977760314941
+    },
+    {
+      "task": "explain",
+      "input": "def rotate_matrix(m):\n    n=len(m)\n    for i in range(n):\n        for j in range",
+      "expected": "rotat",
+      "output": "The function rotate_matrix uses matrix rotation to transform m into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts m, returns the rotated matrix. One notable detail is that the matrix is flipped and reversed in one pass",
+      "passed": true,
+      "time_ms": 1657.7398777008057
+    },
+    {
+      "task": "explain",
+      "input": "def valid_brackets(s):\n    stack=[]\n    mapping={')':'(',']':'[','}':'{'}\n    fo",
+      "expected": "bracket",
+      "output": "The function valid_brackets uses stack-based validation with a mapping to transform s and c into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, c and returns a boolean indicating bracket validity. One notable detail ",
+      "passed": true,
+      "time_ms": 2208.893299102783
+    },
+    {
+      "task": "explain",
+      "input": "def run_length_encode(s):\n    if not s: return ''\n    result=[]\n    count=1\n    ",
+      "expected": "encod",
+      "output": "The function run_length_encode uses prefix increment counting to transform s and count into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, count and returns an encoded string. One notable detail is that the final cou",
+      "passed": true,
+      "time_ms": 2480.205535888672
+    },
+    {
+      "task": "explain",
+      "input": "def max_subarray(nums):\n    max_sum=cur=nums[0]\n    for n in nums[1:]:\n        c",
+      "expected": "subarray",
+      "output": "The function max_subarray uses a sliding window approach to transform nums and n into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, n and returns the maximum subarray sum. One notable detail is that it assumes th",
+      "passed": true,
+      "time_ms": 2017.8022384643555
+    },
+    {
+      "task": "explain",
+      "input": "def coin_change(coins,amount):\n    dp=[float('inf')]*(amount+1)\n    dp[0]=0\n    ",
+      "expected": "coin",
+      "output": "The function coin_change uses dynamic programming to transform coins and amount into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts coins, amount and returns the minimum number of coins needed to make the target amount ",
+      "passed": true,
+      "time_ms": 2146.1968421936035
+    },
+    {
+      "task": "explain",
+      "input": "def number_of_islands(grid):\n    def dfs(i,j):\n        if i<0 or i>=len(grid) or",
+      "expected": "island",
+      "output": "The function number_of_islands uses depth-first search to transform grid and i into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts grid, i and returns the number of islands. One notable detail is that islands are counte",
+      "passed": true,
+      "time_ms": 1851.7651557922363
+    },
+    {
+      "task": "explain",
+      "input": "def knapsack(weights,values,cap):\n    n=len(weights)\n    dp=[[0]*(cap+1) for _ i",
+      "expected": "knapsack",
+      "output": "The function knapsack uses dynamic programming to transform weights and values into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts weights, values and cap as input and returns the maximum value that can be carried. One ",
+      "passed": true,
+      "time_ms": 2423.7911701202393
+    },
+    {
+      "task": "explain",
+      "input": "def topological_sort(graph):\n    visited=set()\n    stack=[]\n    def dfs(v):\n    ",
+      "expected": "topological",
+      "output": "The function topological_sort uses depth-first search to transform graph and visited into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts graph, visited and returns a sorted list of nodes. One notable detail is that edge",
+      "passed": true,
+      "time_ms": 1847.900390625
+    },
+    {
+      "task": "explain",
+      "input": "def levenshtein(s1,s2):\n    m,n=len(s1),len(s2)\n    dp=[[0]*(n+1) for _ in range",
+      "expected": "distance",
+      "output": "The function levenshtein uses dynamic programming to transform s1 and s2 into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s1 and s2 as input and returns the Levenshtein distance between the strings. One notable detai",
+      "passed": true,
+      "time_ms": 2818.9120292663574
+    },
+    {
+      "task": "explain",
+      "input": "def power_set(lst):\n    result=[[]]\n    for x in lst: result+=[s+[x] for s in re",
+      "expected": "subset",
+      "output": "The generator power_set uses generator-based computation to transform lst and result into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts lst, result and returns a power set as a list of lists. One notable detail is that",
+      "passed": false,
+      "time_ms": 2296.905517578125
+    },
+    {
+      "task": "explain",
+      "input": "def caesar_cipher(text,shift):\n    result=[]\n    for c in text:\n        if c.isa",
+      "expected": "cipher",
+      "output": "The function caesar_cipher uses the Caesar cipher algorithm to transform text and shift into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts text, shift and returns the encrypted text. One notable detail is that it prese",
+      "passed": true,
+      "time_ms": 1786.2894535064697
+    },
+    {
+      "task": "explain",
+      "input": "def bfs(graph,start):\n    from collections import deque\n    visited=set([start])",
+      "expected": "breadth",
+      "output": "The generator bfs uses breadth-first search to transform graph and start into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts graph, start and returns the order of vertices visited in ascending order. One notable detail ",
+      "passed": true,
+      "time_ms": 1981.3668727874756
+    },
+    {
+      "task": "explain",
+      "input": "def trie_insert(root,word):\n    node=root\n    for c in word:\n        if c not in",
+      "expected": "trie",
+      "output": "The recursive trie_insert function inserts words into a trie data structure. It begins with the function's main control flow, then follows each step until the final result is produced. It accepts root, word and returns the root of the trie. One notable detail is that the final word is stored with a ",
+      "passed": true,
+      "time_ms": 1721.1201190948486
+    },
+    {
+      "task": "explain",
+      "input": "def longest_common_subsequence(s1,s2):\n    m,n=len(s1),len(s2)\n    dp=[[0]*(n+1)",
+      "expected": "subsequence",
+      "output": "The function longest_common_subsequence uses dynamic programming to transform s1 and s2 into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s1 and s2 as input and returns the length of the longest common subsequence. On",
+      "passed": true,
+      "time_ms": 2253.5085678100586
+    },
+    {
+      "task": "explain",
+      "input": "def sliding_window_max(nums,k):\n    from collections import deque\n    dq=deque()",
+      "expected": "window",
+      "output": "The function sliding_window_max uses a sliding window approach to transform nums and k into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, k and returns a list of maximum values from each window. One notable detai",
+      "passed": true,
+      "time_ms": 2420.123338699341
+    },
+    {
+      "task": "explain",
+      "input": "def subset_sum(nums,target):\n    dp={0}\n    for n in nums: dp={x+n for x in dp}|",
+      "expected": "sum",
+      "output": "The function subset_sum uses dynamic programming to transform nums and target into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, target and returns a boolean indicating whether the target is a subset of nums. One",
+      "passed": true,
+      "time_ms": 2826.7056941986084
+    },
+    {
+      "task": "explain",
+      "input": "def matrix_multiply(A,B):\n    rows_A,cols_A=len(A),len(A[0])\n    rows_B,cols_B=l",
+      "expected": "multipl",
+      "output": "The function matrix_multiply uses matrix multiplication to transform A and B into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts A, B and returns a flattened matrix. One notable detail is that the rows and columns of A ",
+      "passed": true,
+      "time_ms": 2700.66499710083
+    },
+    {
+      "task": "explain",
+      "input": "def word_break(s,wordDict):\n    dp=[False]*(len(s)+1); dp[0]=True\n    for i in r",
+      "expected": "word",
+      "output": "The function word_break uses dynamic programming to transform s and wordDict into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, wordDict and returns a boolean indicating word break success. One notable detail is tha",
+      "passed": true,
+      "time_ms": 1841.5238857269287
+    },
+    {
+      "task": "explain",
+      "input": "def find_median(nums1,nums2):\n    merged=sorted(nums1+nums2)\n    n=len(merged)\n ",
+      "expected": "median",
+      "output": "The function find_median uses binary search to transform nums1 and nums2 into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums1, nums2 and returns the median of the combined list. One notable detail is that the final",
+      "passed": true,
+      "time_ms": 1895.5693244934082
+    },
+    {
+      "task": "explain",
+      "input": "def group_anagrams(strs):\n    from collections import defaultdict\n    groups=def",
+      "expected": "anagram",
+      "output": "The function group_anagrams uses a dictionary-based group-by-comprehension to transform strs and strs sorted into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts strs, strs sorted and returns a list of groups. One notabl",
+      "passed": true,
+      "time_ms": 2255.128860473633
+    },
+    {
+      "task": "explain",
+      "input": "def zigzag(s,rows):\n    if rows==1: return s\n    fence=['']*(rows); row=0; step=",
+      "expected": "zigzag",
+      "output": "The generator zigzag uses a zigzag transformation to transform s and rows into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, rows and returns a string in reverse. One notable detail is that the inner loop starts wit",
+      "passed": true,
+      "time_ms": 2787.130832672119
+    },
+    {
+      "task": "explain",
+      "input": "def first_missing_positive(nums):\n    nums=set(nums); i=1\n    while i in nums: i",
+      "expected": "missing",
+      "output": "The function first_missing_positive uses a set-based algorithm to transform nums and i into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, i and returns the smallest positive integer missing from the set. One nota",
+      "passed": true,
+      "time_ms": 2553.3761978149414
+    },
+    {
+      "task": "explain",
+      "input": "def trap_water(height):\n    left,right=0,len(height)-1; left_max=right_max=water",
+      "expected": "water",
+      "output": "The function trap_water uses two-pointers to transform height and left/right into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts height, left and returns the amount of water that would be trapped. One notable detail is ",
+      "passed": true,
+      "time_ms": 2098.522186279297
+    },
+    {
+      "task": "explain",
+      "input": "def jump_game(nums):\n    max_reach=0\n    for i,n in enumerate(nums):\n        if ",
+      "expected": "jump",
+      "output": "The function jump_game uses trial division with a loop to transform nums and i into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, i and returns a boolean indicating whether the final value is valid. One notable d",
+      "passed": true,
+      "time_ms": 1885.789155960083
+    },
+    {
+      "task": "explain",
+      "input": "def unique_paths(m,n):\n    dp=[[1]*n for _ in range(m)]\n    for i in range(1,m):",
+      "expected": "path",
+      "output": "The function unique_paths uses dynamic programming to transform m and n into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts m and n as input and returns the number of unique paths from the top left to the bottom right. ",
+      "passed": true,
+      "time_ms": 2408.707857131958
+    },
+    {
+      "task": "explain",
+      "input": "def decode_ways(s):\n    n=len(s); dp=[0]*(n+1); dp[0]=1; dp[1]=0 if s[0]=='0' el",
+      "expected": "decod",
+      "output": "The function decode_ways uses dynamic programming to transform s and dp into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts s, dp and returns the number of ways to decode the string. One notable detail is that it assume",
+      "passed": true,
+      "time_ms": 1884.4306468963623
+    },
+    {
+      "task": "explain",
+      "input": "def spiral_order(matrix):\n    result=[]\n    while matrix:\n        result+=matrix",
+      "expected": "spiral",
+      "output": "The function spiral_order uses a double-pushed list algorithm to transform matrix and result into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts matrix, result and returns a flattened list. One notable detail is that th",
+      "passed": true,
+      "time_ms": 2410.3946685791016
+    },
+    {
+      "task": "explain",
+      "input": "def search_rotated(nums,target):\n    l,r=0,len(nums)-1\n    while l<=r:\n        m",
+      "expected": "search",
+      "output": "The function search_rotated uses binary search to transform nums and target into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, target and returns the index of target or -1. One notable detail is that the search a",
+      "passed": true,
+      "time_ms": 2271.7199325561523
+    },
+    {
+      "task": "explain",
+      "input": "def course_schedule(n,prereqs):\n    from collections import defaultdict,deque\n  ",
+      "expected": "course",
+      "output": "The function course_schedule uses top-down dynamic programming to transform n and prereqs into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts n, prereqs and returns a boolean indicating whether all prerequisites have be",
+      "passed": true,
+      "time_ms": 2040.822982788086
+    },
+    {
+      "task": "explain",
+      "input": "def partition_equal_subset(nums):\n    total=sum(nums)\n    if total%2: return Fal",
+      "expected": "subset",
+      "output": "The function partition_equal_subset uses the partition scheme to transform nums and target into a result. It begins with the function's main control flow, then follows each step until the final value is produced. It accepts nums, target and returns a boolean indicating whether the list contains a su",
+      "passed": true,
+      "time_ms": 2063.734531402588
+    },
+    {
+      "task": "document",
+      "input": "def factorial(n):\n    if n == 0: return 1\n    return n * factorial(n-1)",
+      "expected": "param",
+      "output": "def factorial(n):\n    \"\"\"Compute the factorial of a number.\n\n    Args:\n        n: Non-negative integer to process.\n\n    Returns:\n        The factorial of n.\n    \"\"\"\n    if n == 0: return 1\n    return n * factorial(n-1)",
+      "passed": false,
+      "time_ms": 1532.8938961029053
+    },
+    {
+      "task": "document",
+      "input": "def binary_search(arr, target):\n    l, r = 0, len(arr) - 1\n    while l <= r:\n   ",
+      "expected": "return",
+      "output": "def binary_search(arr, target):\n    \"\"\"Search for a target value in a sorted array.\n\n    Args:\n        arr: Sorted list to search.\n        target: Value to search for.\n\n    Returns:\n        The index of the target, or negative one if not found.\n    \"\"\"\n    l, r = 0, len(arr) - 1\n    while l <= r:\n  ",
+      "passed": true,
+      "time_ms": 3474.437475204468
+    },
+    {
+      "task": "document",
+      "input": "class Stack:\n    def __init__(self):\n        self.items = []\n    def push(self, ",
+      "expected": "class",
+      "output": "class Stack:\n    \"\"\"Represent a last-in, first-out collection.\n    \"\"\"\n\n    def __init__(self):\n        \"\"\"Initialize an empty stack.\n\n        Attributes:\n            items: Stored stack values.\n        \"\"\"\n        self.items = []\n\n    def push(self, x): \"\"\"Push a value onto the stack.\n\n    Args:\n  ",
+      "passed": true,
+      "time_ms": 6022.716522216797
+    },
+    {
+      "task": "document",
+      "input": "def merge_sort(arr):\n    if len(arr) <= 1: return arr\n    mid = len(arr) // 2\n  ",
+      "expected": "param",
+      "output": "def merge_sort(arr):\n    \"\"\"Sort a list using the merge sort algorithm.\n\n    Args:\n        arr: List of values to sort.\n\n    Returns:\n        A new list with the values in ascending order.\n    \"\"\"\n    if len(arr) <= 1: return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = m",
+      "passed": false,
+      "time_ms": 4835.988283157349
+    },
+    {
+      "task": "document",
+      "input": "def flatten(lst):\n    result = []\n    for item in lst:\n        if isinstance(ite",
+      "expected": "param",
+      "output": "def flatten(lst):\n    \"\"\"Flatten a nested list into a single value.\n\n    Args:\n        lst: Nested list to flatten.\n\n    Returns:\n        A flat list containing all nested values.\n    \"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list): result.extend(flatten(item))\n        els",
+      "passed": false,
+      "time_ms": 2038.5499000549316
+    },
+    {
+      "task": "document",
+      "input": "def count_words(text):\n    words = text.lower().split()\n    freq = {}\n    for w ",
+      "expected": "return",
+      "output": "def count_words(text):\n    \"\"\"Count the occurrence of each word in a text.\n\n    Args:\n        text: Input string to count words from.\n\n    Returns:\n        A dictionary with words as keys and their counts as values.\n    \"\"\"\n    words = text.lower().split()\n    freq = {}\n    for w in words: freq[w] =",
+      "passed": true,
+      "time_ms": 2672.969341278076
+    },
+    {
+      "task": "document",
+      "input": "def gcd(a, b):\n    while b: a, b = b, a % b\n    return a",
+      "expected": "param",
+      "output": "def gcd(a, b):\n    \"\"\"Compute the greatest common divisor of two integers.\n\n    Args:\n        a: First integer.\n        b: Second integer.\n\n    Returns:\n        The greatest common divisor.\n    \"\"\"\n    while b: a, b = b, a % b\n    return a",
+      "passed": false,
+      "time_ms": 2282.364845275879
+    },
+    {
+      "task": "document",
+      "input": "def sieve(n):\n    primes = [True] * (n+1)\n    p = 2\n    while p*p <= n:\n        ",
+      "expected": "prime",
+      "output": "def sieve(n):\n    \"\"\"Return a list of prime numbers up to n.\n\n    Args:\n        n: Number to check for primality.\n\n    Returns:\n        A list of primes.\n    \"\"\"\n    primes = [True] * (n+1)\n    p = 2\n    while p*p <= n:\n        if primes[p]:\n            for i in range(p*p, n+1, p): primes[i] = False",
+      "passed": true,
+      "time_ms": 3155.2021503448486
+    },
+    {
+      "task": "document",
+      "input": "def lru_cache_fn(cap):\n    from collections import OrderedDict\n    cache = Order",
+      "expected": "cache",
+      "output": "def lru_cache_fn(cap):\n    \"\"\"Cache results for key-value queries.\n\n    Args:\n        cap: Maximum number of cached entries.\n\n    Returns:\n        A double-ended list cache with get and put operations.\n    \"\"\"\n    from collections import OrderedDict\n    cache = OrderedDict()\n    def get(k):\n        ",
+      "passed": true,
+      "time_ms": 3462.6307487487793
+    },
+    {
+      "task": "document",
+      "input": "def dijkstra(graph, start):\n    import heapq\n    dist = {node: float('inf') for ",
+      "expected": "param",
+      "output": "def dijkstra(graph, start):\n    \"\"\"Compute shortest distances from a start node.\n\n    Args:\n        graph: Mapping of nodes to their adjacent nodes and weights.\n        start: Node to start from.\n\n    Returns:\n        A dictionary of shortest distances from the start node.\n    \"\"\"\n    import heapq\n ",
+      "passed": false,
+      "time_ms": 4484.282732009888
+    },
+    {
+      "task": "document",
+      "input": "def memoize(f):\n    cache = {}\n    def wrapper(*args):\n        if args not in ca",
+      "expected": "decorator",
+      "output": "def memoize(f):\n    \"\"\"Memoize a callable with cache storage.\n\n    Args:\n        f: Callable to memoize.\n\n    Returns:\n        A memoizing wrapper.\n    \"\"\"\n    cache = {}\n    def wrapper(*args):\n        if args not in cache: cache[args] = f(*args)\n        return cache[args]\n    return wrapper",
+      "passed": false,
+      "time_ms": 2560.1725578308105
+    },
+    {
+      "task": "document",
+      "input": "def quicksort(arr):\n    if len(arr) <= 1: return arr\n    pivot = arr[len(arr)//2",
+      "expected": "pivot",
+      "output": "def quicksort(arr):\n    \"\"\"Quicksort a list of values.\n\n    Args:\n        arr: Values to sort.\n\n    Returns:\n        A new list sorted in place by the built-in list sort method.\n    \"\"\"\n    if len(arr) <= 1: return arr\n    pivot = arr[len(arr)//2]\n    left = [x for x in arr if x < pivot]\n    mid = [",
+      "passed": true,
+      "time_ms": 3215.489387512207
+    },
+    {
+      "task": "document",
+      "input": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n      ",
+      "expected": "param",
+      "output": "def two_sum(nums, target):\n    \"\"\"Find two values in a list that add up to a target.\n\n    Args:\n        nums: Sequence of numbers.\n        target: Target sum.\n\n    Returns:\n        A list of indices where the values add up to the target.\n    \"\"\"\n    seen = {}\n    for i, n in enumerate(nums):\n       ",
+      "passed": false,
+      "time_ms": 2518.2528495788574
+    },
+    {
+      "task": "document",
+      "input": "def valid_brackets(s):\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{",
+      "expected": "return",
+      "output": "def valid_brackets(s):\n    \"\"\"Validate a stack of brackets.\n\n    Args:\n        s: String containing brackets.\n\n    Returns:\n        True if the string contains valid brackets, False otherwise.\n    \"\"\"\n    stack = []\n    mapping = {')': '(', ']': '[', '}': '{'}\n    for c in s:\n        if c in mapping",
+      "passed": true,
+      "time_ms": 2761.7413997650146
+    },
+    {
+      "task": "document",
+      "input": "def max_subarray(nums):\n    max_sum = cur = nums[0]\n    for n in nums[1:]:\n     ",
+      "expected": "param",
+      "output": "def max_subarray(nums):\n    \"\"\"Compute the maximum subarray sum.\n\n    Args:\n        nums: Sequence of numbers.\n\n    Returns:\n        The maximum subarray sum.\n    \"\"\"\n    max_sum = cur = nums[0]\n    for n in nums[1:]:\n        cur = max(n, cur + n)\n        max_sum = max(max_sum, cur)\n    return max_s",
+      "passed": false,
+      "time_ms": 2423.898935317993
+    },
+    {
+      "task": "document",
+      "input": "def coin_change(coins, amount):\n    dp = [float('inf')] * (amount+1)\n    dp[0] =",
+      "expected": "param",
+      "output": "def coin_change(coins, amount):\n    \"\"\"Compute the minimum number of coins needed to cover an amount.\n\n    Args:\n        coins: List of coin values.\n        amount: Amount to spend.\n\n    Returns:\n        The minimum number of coins, or negative one for impossible cases.\n    \"\"\"\n    dp = [float('inf'",
+      "passed": false,
+      "time_ms": 4177.648305892944
+    },
+    {
+      "task": "document",
+      "input": "def knapsack(weights, values, cap):\n    n = len(weights)\n    dp = [[0]*(cap+1) f",
+      "expected": "param",
+      "output": "def knapsack(weights, values, cap):\n    \"\"\"Compute the optimal value for a knapsack problem.\n\n    Args:\n        weights: Values of items.\n        values: Desires of items.\n        cap: Maximum weight capacity.\n\n    Returns:\n        The maximum value that can be carried.\n    \"\"\"\n    n = len(weights)\n",
+      "passed": false,
+      "time_ms": 4401.497364044189
+    },
+    {
+      "task": "document",
+      "input": "def topological_sort(graph):\n    visited = set(); stack = []\n    def dfs(v):\n   ",
+      "expected": "param",
+      "output": "def topological_sort(graph):\n    \"\"\"Compute a topological sort for a graph.\n\n    Args:\n        graph: A mapping of nodes to their successors.\n\n    Returns:\n        A list of nodes in ascending order.\n    \"\"\"\n    visited = set(); stack = []\n    def dfs(v):\n        visited.add(v)\n        for u in grap",
+      "passed": false,
+      "time_ms": 2993.375778198242
+    },
+    {
+      "task": "document",
+      "input": "def levenshtein(s1, s2):\n    m, n = len(s1), len(s2)\n    dp = [[0]*(n+1) for _ i",
+      "expected": "distance",
+      "output": "def levenshtein(s1, s2):\n    \"\"\"Compute the Levenshtein distance between two strings.\n\n    Args:\n        s1: First string.\n        s2: Second string.\n\n    Returns:\n        The minimum number of operations required to transform s1 into s2.\n    \"\"\"\n    m, n = len(s1), len(s2)\n    dp = [[0]*(n+1) for _",
+      "passed": true,
+      "time_ms": 6882.507085800171
+    },
+    {
+      "task": "document",
+      "input": "def sliding_window_max(nums, k):\n    from collections import deque\n    dq = dequ",
+      "expected": "window",
+      "output": "def sliding_window_max(nums, k):\n    \"\"\"Compute the maximum value in a sliding window.\n\n    Args:\n        nums: Sequence of numbers.\n        k: Window size.\n\n    Returns:\n        A list of maximum values.\n    \"\"\"\n    from collections import deque\n    dq = deque(); result = []\n    for i, n in enumera",
+      "passed": true,
+      "time_ms": 3492.5668239593506
+    },
+    {
+      "task": "document",
+      "input": "def matrix_multiply(A, B):\n    rows_A, cols_A = len(A), len(A[0])\n    cols_B = l",
+      "expected": "matrix",
+      "output": "def matrix_multiply(A, B):\n    \"\"\"Multiply two matrices.\n\n    Args:\n        A: First matrix.\n        B: Second matrix.\n\n    Returns:\n        A flattened matrix.\n    \"\"\"\n    rows_A, cols_A = len(A), len(A[0])\n    cols_B = len(B[0])\n    C = [[0]*cols_B for _ in range(rows_A)]\n    for i in range(rows_A",
+      "passed": true,
+      "time_ms": 3250.704526901245
+    },
+    {
+      "task": "document",
+      "input": "def group_anagrams(strs):\n    from collections import defaultdict\n    groups = d",
+      "expected": "param",
+      "output": "def group_anagrams(strs):\n    \"\"\"Group strings by sorted alphabetically.\n\n    Args:\n        strs: Strings to group.\n\n    Returns:\n        A list of groups containing sorted strings.\n    \"\"\"\n    from collections import defaultdict\n    groups = defaultdict(list)\n    for s in strs: groups[tuple(sorted(",
+      "passed": false,
+      "time_ms": 2466.6106700897217
+    },
+    {
+      "task": "document",
+      "input": "def number_of_islands(grid):\n    def dfs(i, j):\n        if i < 0 or i >= len(gri",
+      "expected": "island",
+      "output": "def number_of_islands(grid):\n    \"\"\"Compute the number of islands in a grid.\n\n    Args:\n        grid: A 2D list of '1' and '0'.\n\n    Returns:\n        The number of islands.\n    \"\"\"\n    def dfs(i, j):\n        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j]!= '1': return\n       ",
+      "passed": true,
+      "time_ms": 5147.438526153564
+    },
+    {
+      "task": "document",
+      "input": "def trap_water(height):\n    left, right = 0, len(height)-1\n    left_max = right_",
+      "expected": "water",
+      "output": "def trap_water(height):\n    \"\"\"Traps water from a height graph by iterating from both ends.\n\n    Args:\n        height: A list of heights.\n\n    Returns:\n        The amount of water trapped.\n    \"\"\"\n    left, right = 0, len(height)-1\n    left_max = right_max = water = 0\n    while left < right:\n       ",
+      "passed": true,
+      "time_ms": 4127.900123596191
+    },
+    {
+      "task": "document",
+      "input": "def jump_game(nums):\n    max_reach = 0\n    for i, n in enumerate(nums):\n        ",
+      "expected": "param",
+      "output": "def jump_game(nums):\n    \"\"\"Assume the function jumps the longest distance to return a boolean.\n\n    Args:\n        nums: A list of integers.\n\n    Returns:\n        True if the function returns early, False otherwise.\n    \"\"\"\n    max_reach = 0\n    for i, n in enumerate(nums):\n        if i > max_reach:",
+      "passed": false,
+      "time_ms": 2469.917058944702
+    },
+    {
+      "task": "document",
+      "input": "def unique_paths(m, n):\n    dp = [[1]*n for _ in range(m)]\n    for i in range(1,",
+      "expected": "path",
+      "output": "def unique_paths(m, n):\n    \"\"\"Compute the number of unique paths from top-left to bottom-right.\n\n    Args:\n        m: Number of rows.\n        n: Number of columns.\n\n    Returns:\n        The number of unique paths.\n    \"\"\"\n    dp = [[1]*n for _ in range(m)]\n    for i in range(1, m):\n        for j in",
+      "passed": true,
+      "time_ms": 3993.9332008361816
+    },
+    {
+      "task": "document",
+      "input": "def spiral_order(matrix):\n    result = []\n    while matrix:\n        result += ma",
+      "expected": "matrix",
+      "output": "def spiral_order(matrix):\n    \"\"\"Spiral order traversal for a matrix.\n\n    Args:\n        matrix: Matrix to process.\n\n    Returns:\n        A list of values in clockwise spiral order.\n    \"\"\"\n    result = []\n    while matrix:\n        result += matrix.pop(0)\n        matrix = list(zip(*matrix))[::-1]\n  ",
+      "passed": true,
+      "time_ms": 1995.4729080200195
+    },
+    {
+      "task": "document",
+      "input": "def search_rotated(nums, target):\n    l, r = 0, len(nums)-1\n    while l <= r:\n  ",
+      "expected": "rotated",
+      "output": "def search_rotated(nums, target):\n    \"\"\"Search for an item in a rotated sorted list.\n\n    Args:\n        nums: Rotated sorted list.\n        target: Value to search for.\n\n    Returns:\n        Index of the target or negative one.\n    \"\"\"\n    l, r = 0, len(nums)-1\n    while l <= r:\n        m = (l+r)//2",
+      "passed": true,
+      "time_ms": 4310.0905418396
+    },
+    {
+      "task": "document",
+      "input": "def subset_sum(nums, target):\n    dp = {0}\n    for n in nums: dp = {x+n for x in",
+      "expected": "param",
+      "output": "def subset_sum(nums, target):\n    \"\"\"Compute whether a target sum can be achieved with the numbers.\n\n    Args:\n        nums: Sequence of numbers.\n        target: Target sum to aim for.\n\n    Returns:\n        True when the target is possible, False otherwise.\n    \"\"\"\n    dp = {0}\n    for n in nums: dp",
+      "passed": false,
+      "time_ms": 2376.0340213775635
+    },
+    {
+      "task": "document",
+      "input": "def longest_common_subsequence(s1, s2):\n    m, n = len(s1), len(s2)\n    dp = [[0",
+      "expected": "subsequence",
+      "output": "def longest_common_subsequence(s1, s2):\n    \"\"\"Compute the length of the longest common subsequence.\n\n    Args:\n        s1: First string.\n        s2: Second string.\n\n    Returns:\n        The length of the longest common subsequence.\n    \"\"\"\n    m, n = len(s1), len(s2)\n    dp = [[0]*(n+1) for _ in ra",
+      "passed": true,
+      "time_ms": 5513.542175292969
+    },
+    {
+      "task": "document",
+      "input": "def power_set(lst):\n    result = [[]]\n    for x in lst: result += [s+[x] for s i",
+      "expected": "subset",
+      "output": "def power_set(lst):\n    \"\"\"Generate all possible subsets of a list.\n\n    Args:\n        lst: Input sequence to generate subsets from.\n\n    Returns:\n        A list of lists, each representing a subset.\n    \"\"\"\n    result = [[]]\n    for x in lst: result += [s+[x] for s in result]\n    return result",
+      "passed": true,
+      "time_ms": 1924.9401092529297
+    },
+    {
+      "task": "document",
+      "input": "def caesar_cipher(text, shift):\n    result = []\n    for c in text:\n        if c.",
+      "expected": "shift",
+      "output": "def caesar_cipher(text, shift):\n    \"\"\"Transform text and shift into a cipher result.\n\n    Args:\n        text: String to encode.\n        shift: Offset for the Caesar cipher shift.\n\n    Returns:\n        The encrypted string.\n    \"\"\"\n    result = []\n    for c in text:\n        if c.isalpha():\n         ",
+      "passed": true,
+      "time_ms": 2966.489315032959
+    },
+    {
+      "task": "document",
+      "input": "def bfs(graph, start):\n    from collections import deque\n    visited = set([star",
+      "expected": "param",
+      "output": "def bfs(graph, start):\n    \"\"\"Compute the breadth-first search order of a graph.\n\n    Args:\n        graph: Mapping of nodes to their successors.\n        start: Node to start the search from.\n\n    Returns:\n        The order in which all nodes were visited.\n    \"\"\"\n    from collections import deque\n  ",
+      "passed": false,
+      "time_ms": 3158.6031913757324
+    },
+    {
+      "task": "document",
+      "input": "def word_break(s, wordDict):\n    n = len(s); dp = [False]*(n+1); dp[0] = True\n  ",
+      "expected": "param",
+      "output": "def word_break(s, wordDict):\n    \"\"\"Determine if a string can be broken into words from a word dictionary.\n\n    Args:\n        s: Input string to break.\n        wordDict: Set of words to use.\n\n    Returns:\n        True if the string can be broken, False otherwise.\n    \"\"\"\n    n = len(s); dp = [False]",
+      "passed": false,
+      "time_ms": 4618.298053741455
+    },
+    {
+      "task": "document",
+      "input": "def find_median(nums1, nums2):\n    merged = sorted(nums1+nums2); n = len(merged)",
+      "expected": "median",
+      "output": "def find_median(nums1, nums2):\n    \"\"\"Combine two sorted lists into a single sorted value.\n\n    Args:\n        nums1: First sorted list.\n        nums2: Second sorted list.\n\n    Returns:\n        The median of the combined list.\n    \"\"\"\n    merged = sorted(nums1+nums2); n = len(merged)\n    return merge",
+      "passed": true,
+      "time_ms": 2587.9735946655273
+    },
+    {
+      "task": "document",
+      "input": "def first_missing_positive(nums):\n    nums = set(nums); i = 1\n    while i in num",
+      "expected": "param",
+      "output": "def first_missing_positive(nums):\n    \"\"\"Return the smallest positive integer missing from a set.\n\n    Args:\n        nums: A set of integers.\n\n    Returns:\n        The first missing positive integer.\n    \"\"\"\n    nums = set(nums); i = 1\n    while i in nums: i += 1\n    return i",
+      "passed": false,
+      "time_ms": 1804.5258522033691
+    },
+    {
+      "task": "document",
+      "input": "def decode_ways(s):\n    n = len(s); dp = [0]*(n+1); dp[0] = 1; dp[1] = 0 if s[0]",
+      "expected": "decod",
+      "output": "def decode_ways(s):\n    \"\"\"Decode strings that start with one or two digits and two consecutive digits.\n\n    Args:\n        s: The binary string to decode.\n\n    Returns:\n        The number of ways to decode the string.\n    \"\"\"\n    n = len(s); dp = [0]*(n+1); dp[0] = 1; dp[1] = 0 if s[0]=='0' else 1\n ",
+      "passed": true,
+      "time_ms": 4352.539300918579
+    },
+    {
+      "task": "document",
+      "input": "def course_schedule(n, prereqs):\n    from collections import defaultdict, deque\n",
+      "expected": "course",
+      "output": "def course_schedule(n, prereqs):\n    \"\"\"Return True if all prerequisites are met, False otherwise.\n\n    Args:\n        n: Number of courses.\n        prereqs: Mapping of courses to their prerequisites.\n\n    Returns:\n        Whether all courses have been completed.\n    \"\"\"\n    from collections import d",
+      "passed": true,
+      "time_ms": 5649.847984313965
+    },
+    {
+      "task": "document",
+      "input": "def max_product_subarray(nums):\n    max_p = min_p = result = nums[0]\n    for n i",
+      "expected": "product",
+      "output": "def max_product_subarray(nums):\n    \"\"\"Compute the maximum product subarray.\n\n    Args:\n        nums: Sequence of numbers.\n\n    Returns:\n        The maximum product found.\n    \"\"\"\n    max_p = min_p = result = nums[0]\n    for n in nums[1:]:\n        candidates = (n, max_p*n, min_p*n)\n        max_p, mi",
+      "passed": true,
+      "time_ms": 2693.44425201416
+    },
+    {
+      "task": "document",
+      "input": "def rotate_matrix(m):\n    n = len(m)\n    for i in range(n):\n        for j in ran",
+      "expected": "rotate",
+      "output": "def rotate_matrix(m):\n    \"\"\"Rotate a matrix clockwise.\n\n    Args:\n        m: Matrix to rotate.\n\n    Returns:\n        The rotated matrix.\n    \"\"\"\n    n = len(m)\n    for i in range(n):\n        for j in range(i+1, n): m[i][j], m[j][i] = m[j][i], m[i][j]\n    for row in m: row.reverse()\n    return m",
+      "passed": true,
+      "time_ms": 2398.916482925415
+    },
+    {
+      "task": "document",
+      "input": "def run_length_encode(s):\n    if not s: return ''\n    result = []; count = 1\n   ",
+      "expected": "encod",
+      "output": "def run_length_encode(s):\n    \"\"\"Encode strings into a sequence of fixed-length values.\n\n    Args:\n        s: Input string to encode.\n\n    Returns:\n        A string of length-pairing values.\n    \"\"\"\n    if not s: return ''\n    result = []; count = 1\n    for i in range(1, len(s)):\n        if s[i] == ",
+      "passed": true,
+      "time_ms": 3363.5520935058594
+    },
+    {
+      "task": "document",
+      "input": "def zigzag(s, rows):\n    if rows == 1: return s\n    fence = [''] * rows; row = 0",
+      "expected": "row",
+      "output": "def zigzag(s, rows):\n    \"\"\"Transform a string into a flattened list while preserving order.\n\n    Args:\n        s: Input string to zigzag-transform.\n        rows: Number of rows to flatten.\n\n    Returns:\n        A flattened string.\n    \"\"\"\n    if rows == 1: return s\n    fence = [''] * rows; row = 0;",
+      "passed": true,
+      "time_ms": 4385.443210601807
+    },
+    {
+      "task": "document",
+      "input": "def partition_equal_subset(nums):\n    total = sum(nums)\n    if total % 2: return",
+      "expected": "subset",
+      "output": "def partition_equal_subset(nums):\n    \"\"\"Partition the input list into two subsets while preserving order.\n\n    Args:\n        nums: Sequence of integers.\n\n    Returns:\n        True if the list can be partitioned into two equal subsets, False otherwise.\n    \"\"\"\n    total = sum(nums)\n    if total % 2:",
+      "passed": true,
+      "time_ms": 2936.640977859497
+    },
+    {
+      "task": "document",
+      "input": "def climbing_stairs(n):\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in ran",
+      "expected": "stair",
+      "output": "def climbing_stairs(n):\n    \"\"\"Compute the number of stairs using dynamic programming.\n\n    Args:\n        n: Number of stairs.\n\n    Returns:\n        The total number of stairs.\n    \"\"\"\n    if n <= 2: return n\n    a, b = 1, 2\n    for _ in range(3, n+1): a, b = b, a+b\n    return b",
+      "passed": true,
+      "time_ms": 2305.729627609253
+    },
+    {
+      "task": "document",
+      "input": "def valid_anagram(s, t):\n    from collections import Counter\n    return Counter(",
+      "expected": "anagram",
+      "output": "def valid_anagram(s, t):\n    \"\"\"Check if two strings are anagrams of each other.\n\n    Args:\n        s: First string.\n        t: Second string.\n\n    Returns:\n        True if the strings are anagrams, False otherwise.\n    \"\"\"\n    from collections import Counter\n    return Counter(s) == Counter(t)",
+      "passed": true,
+      "time_ms": 1846.5287685394287
+    },
+    {
+      "task": "document",
+      "input": "def missing_number(nums):\n    n = len(nums)\n    return n*(n+1)//2 - sum(nums)",
+      "expected": "missing",
+      "output": "def missing_number(nums):\n    \"\"\"Compute the missing value from a list of numbers.\n\n    Args:\n        nums: A list of numeric values.\n\n    Returns:\n        The missing number.\n    \"\"\"\n    n = len(nums)\n    return n*(n+1)//2 - sum(nums)",
+      "passed": true,
+      "time_ms": 1581.8886756896973
+    },
+    {
+      "task": "document",
+      "input": "def is_power_of_two(n):\n    return n > 0 and (n & (n-1)) == 0",
+      "expected": "power",
+      "output": "def is_power_of_two(n):\n    \"\"\"Check if a number is power of two.\n\n    Args:\n        n: Integer to check.\n\n    Returns:\n        True if n is power of two, False otherwise.\n    \"\"\"\n    return n > 0 and (n & (n-1)) == 0",
+      "passed": true,
+      "time_ms": 1986.0951900482178
+    },
+    {
+      "task": "document",
+      "input": "def reverse_linked_list(head):\n    prev = None\n    while head:\n        nxt = hea",
+      "expected": "reverse",
+      "output": "def reverse_linked_list(head):\n    \"\"\"Reverse a linked list.\n\n    Args:\n        head: Head of the linked list.\n\n    Returns:\n        The reversed linked list.\n    \"\"\"\n    prev = None\n    while head:\n        nxt = head.next\n        head.next = prev\n        prev = head\n        head = nxt\n    return pr",
+      "passed": true,
+      "time_ms": 2645.8005905151367
+    }
+  ]
+}

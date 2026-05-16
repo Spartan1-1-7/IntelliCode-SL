@@ -1,0 +1,2002 @@
+[
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def sum_values(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def average_score(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def clean_text(left, right):\n    return left + right",
+    "output": "def clean_text(left, right):\n    return left * right"
+  },
+  {
+    "input": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def merge_lists(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def factorial_calc(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit + 1):\n        total += numbers[index]\n    return total",
+    "output": "def binary_lookup(numbers, limit):\n    total = 0\n    for index in range(limit):\n        total += numbers[index]\n    return total"
+  },
+  {
+    "input": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / (len(numbers) - 1)",
+    "output": "def count_words(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total / len(numbers)"
+  },
+  {
+    "input": "def normalize_email(left, right):\n    return left + right",
+    "output": "def normalize_email(left, right):\n    return left * right"
+  },
+  {
+    "input": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value < upper:\n        return value\n    return upper",
+    "output": "def build_report(value, lower, upper):\n    if value < lower:\n        return lower\n    if value > upper:\n        return upper\n    return value"
+  },
+  {
+    "input": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result += base\n    return result",
+    "output": "def parse_amount(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result"
+  },
+  {
+    "input": "def string_tool_0(text):\n    return text[:-1]",
+    "output": "def string_tool_0(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_1(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_1(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_2(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_2(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_3(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_3(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_4(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_4(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_5(text):\n    return text[:-1]",
+    "output": "def string_tool_5(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_6(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_6(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_7(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_7(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_8(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_8(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_9(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_9(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_10(text):\n    return text[:-1]",
+    "output": "def string_tool_10(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_11(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_11(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_12(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_12(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_13(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_13(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_14(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_14(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_15(text):\n    return text[:-1]",
+    "output": "def string_tool_15(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_16(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_16(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_17(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_17(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_18(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_18(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_19(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_19(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_20(text):\n    return text[:-1]",
+    "output": "def string_tool_20(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_21(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_21(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_22(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_22(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_23(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_23(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_24(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_24(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_25(text):\n    return text[:-1]",
+    "output": "def string_tool_25(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_26(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_26(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_27(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_27(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_28(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_28(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_29(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_29(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_30(text):\n    return text[:-1]",
+    "output": "def string_tool_30(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_31(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_31(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_32(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_32(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_33(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_33(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_34(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_34(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_35(text):\n    return text[:-1]",
+    "output": "def string_tool_35(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_36(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_36(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_37(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_37(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_38(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_38(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_39(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_39(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_40(text):\n    return text[:-1]",
+    "output": "def string_tool_40(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_41(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_41(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_42(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_42(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_43(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_43(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_44(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_44(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_45(text):\n    return text[:-1]",
+    "output": "def string_tool_45(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_46(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_46(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_47(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_47(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_48(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_48(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_49(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_49(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_50(text):\n    return text[:-1]",
+    "output": "def string_tool_50(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_51(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_51(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_52(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_52(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_53(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_53(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_54(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_54(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_55(text):\n    return text[:-1]",
+    "output": "def string_tool_55(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_56(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_56(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_57(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_57(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_58(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_58(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_59(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_59(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_60(text):\n    return text[:-1]",
+    "output": "def string_tool_60(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_61(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_61(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_62(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_62(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_63(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_63(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_64(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_64(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_65(text):\n    return text[:-1]",
+    "output": "def string_tool_65(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_66(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_66(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_67(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_67(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_68(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_68(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_69(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_69(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_70(text):\n    return text[:-1]",
+    "output": "def string_tool_70(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_71(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_71(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_72(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_72(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_73(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_73(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_74(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_74(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_75(text):\n    return text[:-1]",
+    "output": "def string_tool_75(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_76(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_76(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_77(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_77(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_78(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_78(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_79(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_79(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_80(text):\n    return text[:-1]",
+    "output": "def string_tool_80(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_81(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_81(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_82(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_82(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_83(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_83(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_84(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_84(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_85(text):\n    return text[:-1]",
+    "output": "def string_tool_85(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_86(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_86(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_87(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_87(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_88(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_88(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_89(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_89(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_90(text):\n    return text[:-1]",
+    "output": "def string_tool_90(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_91(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_91(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_92(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_92(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_93(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_93(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_94(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_94(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def string_tool_95(text):\n    return text[:-1]",
+    "output": "def string_tool_95(text):\n    return text[::-1]"
+  },
+  {
+    "input": "def text_tool_96(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch not in vowels:\n            count += 1\n    return count",
+    "output": "def text_tool_96(text):\n    vowels = 'aeiou'\n    count = 0\n    for ch in text.lower():\n        if ch in vowels:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def join_tool_97(words):\n    result = []\n    for word in words:\n        result.append(word.split())\n    return result",
+    "output": "def join_tool_97(words):\n    result = []\n    for word in words:\n        result.extend(word.split())\n    return result"
+  },
+  {
+    "input": "def split_tool_98(values=[]):\n    values.append('x')\n    return values",
+    "output": "def split_tool_98(values=None):\n    if values is None:\n        values = []\n    values.append('x')\n    return values"
+  },
+  {
+    "input": "def search_tool_99(text, needle):\n    return text.find(needle[:-1]) != -1",
+    "output": "def search_tool_99(text, needle):\n    return text.find(needle) != -1"
+  },
+  {
+    "input": "def collector_0(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_0(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_1(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_1(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_2(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_2(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_3(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_3(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_4(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_4(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_5(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_5(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_6(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_6(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_7(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_7(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_8(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_8(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_9(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_9(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_10(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_10(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_11(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_11(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_12(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_12(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_13(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_13(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_14(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_14(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_15(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_15(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_16(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_16(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_17(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_17(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_18(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_18(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_19(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_19(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_20(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_20(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_21(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_21(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_22(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_22(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_23(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_23(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_24(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_24(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_25(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_25(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_26(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_26(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_27(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_27(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_28(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_28(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_29(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_29(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_30(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_30(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_31(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_31(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_32(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_32(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_33(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_33(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_34(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_34(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_35(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_35(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_36(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_36(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_37(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_37(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_38(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_38(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_39(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_39(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_40(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_40(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_41(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_41(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_42(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_42(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_43(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_43(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_44(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_44(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_45(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_45(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_46(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_46(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_47(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_47(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_48(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_48(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_49(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_49(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_50(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_50(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_51(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_51(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_52(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_52(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_53(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_53(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_54(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_54(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_55(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_55(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_56(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_56(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_57(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_57(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_58(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_58(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_59(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_59(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_60(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_60(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_61(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_61(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_62(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_62(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_63(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_63(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_64(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_64(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_65(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_65(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_66(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_66(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_67(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_67(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_68(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_68(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_69(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_69(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_70(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_70(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_71(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_71(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_72(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_72(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_73(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_73(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_74(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_74(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_75(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_75(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_76(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_76(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_77(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_77(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_78(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_78(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_79(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_79(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_80(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_80(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_81(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_81(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_82(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_82(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_83(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_83(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_84(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_84(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_85(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_85(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_86(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_86(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_87(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_87(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_88(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_88(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_89(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_89(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_90(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_90(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_91(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_91(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_92(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_92(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_93(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_93(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_94(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_94(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def collector_95(values, bucket=[]):\n    bucket.append(len(values))\n    return bucket",
+    "output": "def collector_95(values, bucket=None):\n    if bucket is None:\n        bucket = []\n    bucket.append(len(values))\n    return bucket"
+  },
+  {
+    "input": "def collector_96(values):\n    total = 0\n    for item in values:\n        total += value\n    return total",
+    "output": "def collector_96(values):\n    total = 0\n    for item in values:\n        total += item\n    return total"
+  },
+  {
+    "input": "def collector_97(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count = count + 1\n    return count",
+    "output": "def collector_97(items):\n    count = 0\n    for item in items:\n        if item > 0:\n            count += 1\n    return count"
+  },
+  {
+    "input": "def collector_98(pairs):\n    mapping = {}\n    for key, value in pairs:\n        mapping[key] = []\n        mapping[key].append(value)\n    return mapping",
+    "output": "def collector_98(pairs):\n    mapping = {}\n    for key, value in pairs:\n        if key not in mapping:\n            mapping[key] = []\n        mapping[key].append(value)\n    return mapping"
+  },
+  {
+    "input": "def collector_99(items):\n    for item in items:\n        if item == None:\n            return False\n    return True",
+    "output": "def collector_99(items):\n    for item in items:\n        if item is None:\n            return False\n    return True"
+  },
+  {
+    "input": "def recursive_tool_0(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_0(n - 1)",
+    "output": "def recursive_tool_0(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_0(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_1(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_1(n - 1) + recursive_tool_1(n - 2)",
+    "output": "def recursive_tool_1(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_1(n - 1) + recursive_tool_1(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_2(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_2(values[1:])",
+    "output": "def recursive_tool_2(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_2(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_3(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_3(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_3(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_3(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_4(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_4(node.left)\n    right_depth = recursive_tool_4(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_4(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_4(node.left)\n    right_depth = recursive_tool_4(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_5(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_5(n - 1)",
+    "output": "def recursive_tool_5(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_5(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_6(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_6(n - 1) + recursive_tool_6(n - 2)",
+    "output": "def recursive_tool_6(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_6(n - 1) + recursive_tool_6(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_7(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_7(values[1:])",
+    "output": "def recursive_tool_7(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_7(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_8(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_8(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_8(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_8(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_9(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_9(node.left)\n    right_depth = recursive_tool_9(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_9(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_9(node.left)\n    right_depth = recursive_tool_9(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_10(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_10(n - 1)",
+    "output": "def recursive_tool_10(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_10(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_11(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_11(n - 1) + recursive_tool_11(n - 2)",
+    "output": "def recursive_tool_11(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_11(n - 1) + recursive_tool_11(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_12(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_12(values[1:])",
+    "output": "def recursive_tool_12(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_12(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_13(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_13(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_13(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_13(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_14(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_14(node.left)\n    right_depth = recursive_tool_14(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_14(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_14(node.left)\n    right_depth = recursive_tool_14(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_15(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_15(n - 1)",
+    "output": "def recursive_tool_15(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_15(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_16(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_16(n - 1) + recursive_tool_16(n - 2)",
+    "output": "def recursive_tool_16(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_16(n - 1) + recursive_tool_16(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_17(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_17(values[1:])",
+    "output": "def recursive_tool_17(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_17(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_18(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_18(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_18(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_18(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_19(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_19(node.left)\n    right_depth = recursive_tool_19(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_19(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_19(node.left)\n    right_depth = recursive_tool_19(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_20(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_20(n - 1)",
+    "output": "def recursive_tool_20(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_20(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_21(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_21(n - 1) + recursive_tool_21(n - 2)",
+    "output": "def recursive_tool_21(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_21(n - 1) + recursive_tool_21(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_22(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_22(values[1:])",
+    "output": "def recursive_tool_22(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_22(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_23(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_23(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_23(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_23(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_24(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_24(node.left)\n    right_depth = recursive_tool_24(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_24(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_24(node.left)\n    right_depth = recursive_tool_24(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_25(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_25(n - 1)",
+    "output": "def recursive_tool_25(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_25(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_26(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_26(n - 1) + recursive_tool_26(n - 2)",
+    "output": "def recursive_tool_26(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_26(n - 1) + recursive_tool_26(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_27(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_27(values[1:])",
+    "output": "def recursive_tool_27(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_27(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_28(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_28(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_28(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_28(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_29(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_29(node.left)\n    right_depth = recursive_tool_29(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_29(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_29(node.left)\n    right_depth = recursive_tool_29(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_30(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_30(n - 1)",
+    "output": "def recursive_tool_30(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_30(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_31(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_31(n - 1) + recursive_tool_31(n - 2)",
+    "output": "def recursive_tool_31(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_31(n - 1) + recursive_tool_31(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_32(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_32(values[1:])",
+    "output": "def recursive_tool_32(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_32(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_33(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_33(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_33(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_33(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_34(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_34(node.left)\n    right_depth = recursive_tool_34(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_34(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_34(node.left)\n    right_depth = recursive_tool_34(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_35(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_35(n - 1)",
+    "output": "def recursive_tool_35(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_35(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_36(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_36(n - 1) + recursive_tool_36(n - 2)",
+    "output": "def recursive_tool_36(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_36(n - 1) + recursive_tool_36(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_37(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_37(values[1:])",
+    "output": "def recursive_tool_37(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_37(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_38(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_38(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_38(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_38(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_39(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_39(node.left)\n    right_depth = recursive_tool_39(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_39(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_39(node.left)\n    right_depth = recursive_tool_39(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_40(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_40(n - 1)",
+    "output": "def recursive_tool_40(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_40(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_41(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_41(n - 1) + recursive_tool_41(n - 2)",
+    "output": "def recursive_tool_41(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_41(n - 1) + recursive_tool_41(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_42(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_42(values[1:])",
+    "output": "def recursive_tool_42(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_42(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_43(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_43(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_43(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_43(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_44(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_44(node.left)\n    right_depth = recursive_tool_44(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_44(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_44(node.left)\n    right_depth = recursive_tool_44(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_45(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_45(n - 1)",
+    "output": "def recursive_tool_45(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_45(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_46(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_46(n - 1) + recursive_tool_46(n - 2)",
+    "output": "def recursive_tool_46(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_46(n - 1) + recursive_tool_46(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_47(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_47(values[1:])",
+    "output": "def recursive_tool_47(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_47(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_48(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_48(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_48(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_48(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_49(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_49(node.left)\n    right_depth = recursive_tool_49(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_49(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_49(node.left)\n    right_depth = recursive_tool_49(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_50(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_50(n - 1)",
+    "output": "def recursive_tool_50(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_50(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_51(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_51(n - 1) + recursive_tool_51(n - 2)",
+    "output": "def recursive_tool_51(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_51(n - 1) + recursive_tool_51(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_52(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_52(values[1:])",
+    "output": "def recursive_tool_52(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_52(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_53(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_53(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_53(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_53(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_54(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_54(node.left)\n    right_depth = recursive_tool_54(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_54(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_54(node.left)\n    right_depth = recursive_tool_54(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_55(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_55(n - 1)",
+    "output": "def recursive_tool_55(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_55(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_56(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_56(n - 1) + recursive_tool_56(n - 2)",
+    "output": "def recursive_tool_56(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_56(n - 1) + recursive_tool_56(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_57(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_57(values[1:])",
+    "output": "def recursive_tool_57(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_57(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_58(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_58(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_58(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_58(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_59(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_59(node.left)\n    right_depth = recursive_tool_59(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_59(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_59(node.left)\n    right_depth = recursive_tool_59(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_60(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_60(n - 1)",
+    "output": "def recursive_tool_60(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_60(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_61(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_61(n - 1) + recursive_tool_61(n - 2)",
+    "output": "def recursive_tool_61(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_61(n - 1) + recursive_tool_61(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_62(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_62(values[1:])",
+    "output": "def recursive_tool_62(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_62(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_63(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_63(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_63(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_63(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_64(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_64(node.left)\n    right_depth = recursive_tool_64(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_64(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_64(node.left)\n    right_depth = recursive_tool_64(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_65(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_65(n - 1)",
+    "output": "def recursive_tool_65(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_65(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_66(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_66(n - 1) + recursive_tool_66(n - 2)",
+    "output": "def recursive_tool_66(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_66(n - 1) + recursive_tool_66(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_67(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_67(values[1:])",
+    "output": "def recursive_tool_67(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_67(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_68(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_68(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_68(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_68(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_69(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_69(node.left)\n    right_depth = recursive_tool_69(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_69(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_69(node.left)\n    right_depth = recursive_tool_69(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_70(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_70(n - 1)",
+    "output": "def recursive_tool_70(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_70(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_71(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_71(n - 1) + recursive_tool_71(n - 2)",
+    "output": "def recursive_tool_71(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_71(n - 1) + recursive_tool_71(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_72(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_72(values[1:])",
+    "output": "def recursive_tool_72(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_72(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_73(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_73(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_73(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_73(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_74(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_74(node.left)\n    right_depth = recursive_tool_74(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_74(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_74(node.left)\n    right_depth = recursive_tool_74(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_75(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_75(n - 1)",
+    "output": "def recursive_tool_75(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_75(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_76(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_76(n - 1) + recursive_tool_76(n - 2)",
+    "output": "def recursive_tool_76(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_76(n - 1) + recursive_tool_76(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_77(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_77(values[1:])",
+    "output": "def recursive_tool_77(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_77(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_78(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_78(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_78(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_78(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_79(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_79(node.left)\n    right_depth = recursive_tool_79(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_79(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_79(node.left)\n    right_depth = recursive_tool_79(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_80(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_80(n - 1)",
+    "output": "def recursive_tool_80(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_80(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_81(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_81(n - 1) + recursive_tool_81(n - 2)",
+    "output": "def recursive_tool_81(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_81(n - 1) + recursive_tool_81(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_82(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_82(values[1:])",
+    "output": "def recursive_tool_82(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_82(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_83(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_83(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_83(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_83(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_84(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_84(node.left)\n    right_depth = recursive_tool_84(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_84(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_84(node.left)\n    right_depth = recursive_tool_84(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_85(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_85(n - 1)",
+    "output": "def recursive_tool_85(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_85(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_86(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_86(n - 1) + recursive_tool_86(n - 2)",
+    "output": "def recursive_tool_86(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_86(n - 1) + recursive_tool_86(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_87(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_87(values[1:])",
+    "output": "def recursive_tool_87(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_87(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_88(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_88(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_88(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_88(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_89(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_89(node.left)\n    right_depth = recursive_tool_89(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_89(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_89(node.left)\n    right_depth = recursive_tool_89(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_90(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_90(n - 1)",
+    "output": "def recursive_tool_90(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_90(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_91(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_91(n - 1) + recursive_tool_91(n - 2)",
+    "output": "def recursive_tool_91(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_91(n - 1) + recursive_tool_91(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_92(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_92(values[1:])",
+    "output": "def recursive_tool_92(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_92(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_93(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_93(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_93(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_93(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_94(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_94(node.left)\n    right_depth = recursive_tool_94(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_94(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_94(node.left)\n    right_depth = recursive_tool_94(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def recursive_tool_95(n):\n    if n == 1:\n        return 1\n    return n * recursive_tool_95(n - 1)",
+    "output": "def recursive_tool_95(n):\n    if n <= 1:\n        return 1\n    return n * recursive_tool_95(n - 1)"
+  },
+  {
+    "input": "def recursive_tool_96(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_96(n - 1) + recursive_tool_96(n - 2)",
+    "output": "def recursive_tool_96(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return recursive_tool_96(n - 1) + recursive_tool_96(n - 2)"
+  },
+  {
+    "input": "def recursive_tool_97(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_97(values[1:])",
+    "output": "def recursive_tool_97(values):\n    if len(values) == 0:\n        return 0\n    return values[0] + recursive_tool_97(values[1:])"
+  },
+  {
+    "input": "def recursive_tool_98(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            recursive_tool_98(item)\n        else:\n            result.append(item)\n    return result",
+    "output": "def recursive_tool_98(nested):\n    result = []\n    for item in nested:\n        if isinstance(item, list):\n            result.extend(recursive_tool_98(item))\n        else:\n            result.append(item)\n    return result"
+  },
+  {
+    "input": "def recursive_tool_99(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_99(node.left)\n    right_depth = recursive_tool_99(node.right)\n    return max(left_depth, right_depth)",
+    "output": "def recursive_tool_99(node):\n    if node is None:\n        return 0\n    left_depth = recursive_tool_99(node.left)\n    right_depth = recursive_tool_99(node.right)\n    return 1 + max(left_depth, right_depth)"
+  },
+  {
+    "input": "def search_sort_0(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_0(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_1(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_1(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_2(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_2(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_3(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_3(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_4(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_4(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_5(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_5(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_6(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_6(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_7(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_7(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_8(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_8(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_9(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_9(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_10(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_10(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_11(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_11(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_12(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_12(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_13(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_13(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_14(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_14(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_15(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_15(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_16(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_16(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_17(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_17(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_18(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_18(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_19(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_19(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_20(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_20(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_21(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_21(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_22(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_22(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_23(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_23(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_24(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_24(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_25(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_25(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_26(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_26(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_27(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_27(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_28(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_28(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_29(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_29(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_30(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_30(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_31(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_31(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_32(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_32(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_33(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_33(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_34(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_34(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_35(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_35(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_36(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_36(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_37(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_37(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_38(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_38(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_39(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_39(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_40(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_40(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_41(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_41(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_42(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_42(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_43(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_43(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_44(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_44(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_45(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_45(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_46(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_46(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_47(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_47(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_48(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_48(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_49(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_49(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_50(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_50(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_51(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_51(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_52(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_52(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_53(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_53(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_54(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_54(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_55(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_55(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_56(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_56(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_57(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_57(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_58(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_58(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_59(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_59(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_60(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_60(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_61(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_61(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_62(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_62(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_63(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_63(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_64(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_64(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_65(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_65(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_66(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_66(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_67(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_67(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_68(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_68(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_69(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_69(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_70(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_70(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_71(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_71(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_72(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_72(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_73(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_73(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_74(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_74(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_75(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_75(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_76(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_76(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_77(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_77(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_78(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_78(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_79(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_79(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_80(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_80(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_81(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_81(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_82(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_82(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_83(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_83(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_84(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_84(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_85(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_85(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_86(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_86(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_87(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_87(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_88(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_88(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_89(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_89(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_90(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_90(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_91(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_91(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_92(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_92(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_93(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_93(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_94(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_94(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  },
+  {
+    "input": "def search_sort_95(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid\n        elif values[mid] > target:\n            right = mid\n        else:\n            return mid\n    return -1",
+    "output": "def search_sort_95(values, target):\n    left = 0\n    right = len(values) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if values[mid] < target:\n            left = mid + 1\n        elif values[mid] > target:\n            right = mid - 1\n        else:\n            return mid\n    return -1"
+  },
+  {
+    "input": "def search_sort_96(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j] = key\n    return values",
+    "output": "def search_sort_96(values):\n    for i in range(1, len(values)):\n        key = values[i]\n        j = i - 1\n        while j >= 0 and values[j] > key:\n            values[j + 1] = values[j]\n            j -= 1\n        values[j + 1] = key\n    return values"
+  },
+  {
+    "input": "def search_sort_97(values):\n    smallest = 0\n    for index in range(len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]",
+    "output": "def search_sort_97(values):\n    smallest = 0\n    for index in range(1, len(values)):\n        if values[index] < values[smallest]:\n            smallest = index\n    return values[smallest]"
+  },
+  {
+    "input": "def search_sort_98(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return 0",
+    "output": "def search_sort_98(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1"
+  },
+  {
+    "input": "def search_sort_99(left, right):\n    merged = []\n    while left and right:\n        if left[0] < right[0]:\n            merged.append(right.pop(0))\n        else:\n            merged.append(left.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged",
+    "output": "def search_sort_99(left, right):\n    merged = []\n    while left and right:\n        if left[0] <= right[0]:\n            merged.append(left.pop(0))\n        else:\n            merged.append(right.pop(0))\n    merged.extend(left)\n    merged.extend(right)\n    return merged"
+  }
+]

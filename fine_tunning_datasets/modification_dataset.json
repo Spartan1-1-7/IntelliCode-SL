@@ -1,0 +1,2002 @@
+[
+  {
+    "input": "def safe_parse_0(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_0(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_1(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_1(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_2(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_2(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_3(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_3(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_4(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_4(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_5(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_5(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_6(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_6(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_7(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_7(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_8(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_8(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_9(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_9(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_10(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_10(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_11(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_11(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_12(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_12(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_13(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_13(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_14(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_14(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_15(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_15(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_16(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_16(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_17(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_17(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_18(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_18(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_19(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_19(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_20(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_20(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_21(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_21(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_22(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_22(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_23(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_23(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_24(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_24(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_25(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_25(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_26(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_26(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_27(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_27(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_28(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_28(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_29(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_29(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_30(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_30(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_31(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_31(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_32(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_32(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_33(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_33(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_34(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_34(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_35(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_35(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_36(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_36(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_37(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_37(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_38(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_38(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_39(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_39(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_40(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_40(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_41(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_41(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_42(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_42(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_43(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_43(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_44(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_44(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_45(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_45(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_46(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_46(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_47(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_47(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_48(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_48(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_49(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_49(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_50(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_50(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_51(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_51(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_52(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_52(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_53(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_53(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_54(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_54(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_55(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_55(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_56(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_56(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_57(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_57(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_58(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_58(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_59(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_59(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_60(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_60(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_61(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_61(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_62(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_62(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_63(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_63(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_64(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_64(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_65(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_65(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_66(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_66(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_67(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_67(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_68(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_68(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_69(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_69(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_70(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_70(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_71(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_71(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_72(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_72(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_73(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_73(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_74(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_74(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_75(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_75(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_76(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_76(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_77(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_77(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_78(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_78(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_79(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_79(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_80(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_80(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_81(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_81(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_82(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_82(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_83(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_83(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_84(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_84(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_85(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_85(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_86(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_86(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_87(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_87(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_88(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_88(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_89(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_89(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_90(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_90(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_91(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_91(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_92(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_92(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_93(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_93(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_94(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_94(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def safe_parse_95(text):\n    return int(text)\n\nInstruction: Add error handling so invalid integers return 0 instead of raising an exception.",
+    "output": "def safe_parse_95(text):\n    try:\n        return int(text)\n    except ValueError:\n        return 0"
+  },
+  {
+    "input": "def safe_parse_96(path):\n    handle = open(path, 'r', encoding='utf-8')\n    return handle.read()\n\nInstruction: Wrap the file read in try-except and return an empty string if the file cannot be opened.",
+    "output": "def safe_parse_96(path):\n    try:\n        with open(path, 'r', encoding='utf-8') as handle:\n            return handle.read()\n    except OSError:\n        return ''"
+  },
+  {
+    "input": "def safe_parse_97(items):\n    result = []\n    for item in items:\n        if item % 2 == 0:\n            result.append(item)\n    return result\n\nInstruction: Refactor the loop into a list comprehension.",
+    "output": "def safe_parse_97(items):\n    return [item for item in items if item % 2 == 0]"
+  },
+  {
+    "input": "def safe_parse_98(words):\n    result = []\n    for word in words:\n        result.append(word.lower())\n    return result\n\nInstruction: Add logging statements before and after the processing.",
+    "output": "import logging\n\nlogger = logging.getLogger(__name__)\n\ndef safe_parse_98(words):\n    logger.info('processing %s words', len(words))\n    result = []\n    for word in words:\n        result.append(word.lower())\n    logger.info('done processing words')\n    return result"
+  },
+  {
+    "input": "def safe_parse_99(name, score):\n    return f'{name}:{score}'\n\nInstruction: Add type hints to the function signature.",
+    "output": "def safe_parse_99(name: str, score: int) -> str:\n    return f'{name}:{score}'"
+  },
+  {
+    "input": "def recur_tool_0(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_0(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_0(n - 1)"
+  },
+  {
+    "input": "def recur_tool_1(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_1(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_1(values[1:])"
+  },
+  {
+    "input": "def recur_tool_2(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_2(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_3(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_3(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_4(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_4(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_4(tail)"
+  },
+  {
+    "input": "def recur_tool_5(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_5(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_5(n - 1)"
+  },
+  {
+    "input": "def recur_tool_6(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_6(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_6(values[1:])"
+  },
+  {
+    "input": "def recur_tool_7(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_7(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_8(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_8(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_9(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_9(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_9(tail)"
+  },
+  {
+    "input": "def recur_tool_10(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_10(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_10(n - 1)"
+  },
+  {
+    "input": "def recur_tool_11(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_11(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_11(values[1:])"
+  },
+  {
+    "input": "def recur_tool_12(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_12(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_13(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_13(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_14(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_14(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_14(tail)"
+  },
+  {
+    "input": "def recur_tool_15(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_15(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_15(n - 1)"
+  },
+  {
+    "input": "def recur_tool_16(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_16(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_16(values[1:])"
+  },
+  {
+    "input": "def recur_tool_17(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_17(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_18(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_18(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_19(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_19(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_19(tail)"
+  },
+  {
+    "input": "def recur_tool_20(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_20(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_20(n - 1)"
+  },
+  {
+    "input": "def recur_tool_21(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_21(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_21(values[1:])"
+  },
+  {
+    "input": "def recur_tool_22(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_22(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_23(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_23(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_24(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_24(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_24(tail)"
+  },
+  {
+    "input": "def recur_tool_25(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_25(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_25(n - 1)"
+  },
+  {
+    "input": "def recur_tool_26(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_26(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_26(values[1:])"
+  },
+  {
+    "input": "def recur_tool_27(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_27(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_28(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_28(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_29(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_29(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_29(tail)"
+  },
+  {
+    "input": "def recur_tool_30(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_30(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_30(n - 1)"
+  },
+  {
+    "input": "def recur_tool_31(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_31(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_31(values[1:])"
+  },
+  {
+    "input": "def recur_tool_32(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_32(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_33(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_33(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_34(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_34(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_34(tail)"
+  },
+  {
+    "input": "def recur_tool_35(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_35(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_35(n - 1)"
+  },
+  {
+    "input": "def recur_tool_36(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_36(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_36(values[1:])"
+  },
+  {
+    "input": "def recur_tool_37(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_37(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_38(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_38(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_39(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_39(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_39(tail)"
+  },
+  {
+    "input": "def recur_tool_40(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_40(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_40(n - 1)"
+  },
+  {
+    "input": "def recur_tool_41(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_41(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_41(values[1:])"
+  },
+  {
+    "input": "def recur_tool_42(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_42(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_43(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_43(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_44(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_44(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_44(tail)"
+  },
+  {
+    "input": "def recur_tool_45(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_45(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_45(n - 1)"
+  },
+  {
+    "input": "def recur_tool_46(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_46(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_46(values[1:])"
+  },
+  {
+    "input": "def recur_tool_47(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_47(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_48(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_48(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_49(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_49(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_49(tail)"
+  },
+  {
+    "input": "def recur_tool_50(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_50(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_50(n - 1)"
+  },
+  {
+    "input": "def recur_tool_51(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_51(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_51(values[1:])"
+  },
+  {
+    "input": "def recur_tool_52(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_52(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_53(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_53(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_54(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_54(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_54(tail)"
+  },
+  {
+    "input": "def recur_tool_55(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_55(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_55(n - 1)"
+  },
+  {
+    "input": "def recur_tool_56(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_56(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_56(values[1:])"
+  },
+  {
+    "input": "def recur_tool_57(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_57(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_58(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_58(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_59(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_59(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_59(tail)"
+  },
+  {
+    "input": "def recur_tool_60(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_60(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_60(n - 1)"
+  },
+  {
+    "input": "def recur_tool_61(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_61(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_61(values[1:])"
+  },
+  {
+    "input": "def recur_tool_62(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_62(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_63(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_63(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_64(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_64(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_64(tail)"
+  },
+  {
+    "input": "def recur_tool_65(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_65(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_65(n - 1)"
+  },
+  {
+    "input": "def recur_tool_66(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_66(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_66(values[1:])"
+  },
+  {
+    "input": "def recur_tool_67(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_67(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_68(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_68(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_69(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_69(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_69(tail)"
+  },
+  {
+    "input": "def recur_tool_70(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_70(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_70(n - 1)"
+  },
+  {
+    "input": "def recur_tool_71(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_71(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_71(values[1:])"
+  },
+  {
+    "input": "def recur_tool_72(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_72(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_73(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_73(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_74(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_74(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_74(tail)"
+  },
+  {
+    "input": "def recur_tool_75(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_75(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_75(n - 1)"
+  },
+  {
+    "input": "def recur_tool_76(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_76(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_76(values[1:])"
+  },
+  {
+    "input": "def recur_tool_77(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_77(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_78(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_78(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_79(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_79(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_79(tail)"
+  },
+  {
+    "input": "def recur_tool_80(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_80(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_80(n - 1)"
+  },
+  {
+    "input": "def recur_tool_81(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_81(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_81(values[1:])"
+  },
+  {
+    "input": "def recur_tool_82(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_82(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_83(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_83(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_84(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_84(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_84(tail)"
+  },
+  {
+    "input": "def recur_tool_85(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_85(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_85(n - 1)"
+  },
+  {
+    "input": "def recur_tool_86(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_86(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_86(values[1:])"
+  },
+  {
+    "input": "def recur_tool_87(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_87(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_88(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_88(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_89(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_89(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_89(tail)"
+  },
+  {
+    "input": "def recur_tool_90(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_90(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_90(n - 1)"
+  },
+  {
+    "input": "def recur_tool_91(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_91(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_91(values[1:])"
+  },
+  {
+    "input": "def recur_tool_92(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_92(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_93(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_93(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_94(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_94(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_94(tail)"
+  },
+  {
+    "input": "def recur_tool_95(n):\n    result = 1\n    for value in range(2, n + 1):\n        result *= value\n    return result\n\nInstruction: Make the function recursive instead of iterative.",
+    "output": "def recur_tool_95(n):\n    if n <= 1:\n        return 1\n    return n * recur_tool_95(n - 1)"
+  },
+  {
+    "input": "def recur_tool_96(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Convert the loop into a recursive solution.",
+    "output": "def recur_tool_96(values):\n    if not values:\n        return 0\n    return values[0] + recur_tool_96(values[1:])"
+  },
+  {
+    "input": "def recur_tool_97(values):\n    unique = []\n    for value in values:\n        if value not in unique:\n            unique.append(value)\n    return unique\n\nInstruction: Optimize the duplicate-removal loop to O(n) using a set.",
+    "output": "def recur_tool_97(values):\n    seen = set()\n    unique = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            unique.append(value)\n    return unique"
+  },
+  {
+    "input": "def recur_tool_98(items):\n    result = []\n    for value in items:\n        result.append(value * 2)\n    return result\n\nInstruction: Replace the loop with a list comprehension.",
+    "output": "def recur_tool_98(items):\n    return [value * 2 for value in items]"
+  },
+  {
+    "input": "def recur_tool_99(text):\n    return text.split(',')\n\nInstruction: Make the parsing logic recursive.",
+    "output": "def recur_tool_99(text):\n    if not text:\n        return []\n    head, sep, tail = text.partition(',')\n    if not sep:\n        return [head]\n    return [head] + recur_tool_99(tail)"
+  },
+  {
+    "input": "def config_tool_0(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_0(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_1(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_1(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_2(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_2(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_3(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_3(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_4(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_4(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_5(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_5(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_6(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_6(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_7(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_7(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_8(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_8(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_9(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_9(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_10(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_10(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_11(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_11(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_12(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_12(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_13(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_13(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_14(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_14(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_15(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_15(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_16(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_16(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_17(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_17(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_18(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_18(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_19(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_19(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_20(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_20(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_21(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_21(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_22(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_22(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_23(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_23(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_24(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_24(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_25(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_25(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_26(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_26(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_27(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_27(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_28(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_28(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_29(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_29(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_30(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_30(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_31(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_31(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_32(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_32(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_33(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_33(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_34(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_34(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_35(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_35(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_36(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_36(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_37(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_37(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_38(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_38(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_39(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_39(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_40(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_40(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_41(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_41(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_42(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_42(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_43(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_43(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_44(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_44(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_45(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_45(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_46(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_46(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_47(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_47(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_48(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_48(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_49(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_49(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_50(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_50(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_51(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_51(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_52(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_52(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_53(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_53(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_54(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_54(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_55(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_55(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_56(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_56(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_57(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_57(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_58(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_58(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_59(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_59(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_60(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_60(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_61(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_61(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_62(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_62(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_63(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_63(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_64(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_64(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_65(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_65(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_66(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_66(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_67(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_67(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_68(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_68(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_69(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_69(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_70(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_70(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_71(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_71(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_72(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_72(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_73(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_73(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_74(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_74(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_75(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_75(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_76(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_76(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_77(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_77(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_78(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_78(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_79(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_79(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_80(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_80(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_81(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_81(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_82(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_82(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_83(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_83(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_84(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_84(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_85(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_85(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_86(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_86(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_87(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_87(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_88(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_88(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_89(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_89(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_90(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_90(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_91(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_91(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_92(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_92(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_93(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_93(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_94(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_94(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "def config_tool_95(name):\n    return name.upper()\n\nInstruction: Add a default parameter value so empty inputs return a fallback string.",
+    "output": "def config_tool_95(name, default='UNKNOWN'):\n    if not name:\n        return default\n    return name.upper()"
+  },
+  {
+    "input": "def config_tool_96(items, separator):\n    return separator.join(items)\n\nInstruction: Add a sensible default parameter for the separator.",
+    "output": "def config_tool_96(items, separator='-'):\n    return separator.join(items)"
+  },
+  {
+    "input": "def config_tool_97(width, height):\n    return width * height\n\nInstruction: Convert the hardcoded multiplier into a configurable parameter with a default.",
+    "output": "def config_tool_97(width, height, multiplier=1):\n    return width * height * multiplier"
+  },
+  {
+    "input": "def config_tool_98(values):\n    total = 0\n    for value in values:\n        total += value\n    return total\n\nInstruction: Add a default initial value to the function signature.",
+    "output": "def config_tool_98(values, initial=0):\n    total = initial\n    for value in values:\n        total += value\n    return total"
+  },
+  {
+    "input": "def config_tool_99(items):\n    filtered = []\n    for item in items:\n        if item > 10:\n            filtered.append(item)\n    return filtered\n\nInstruction: Parameterize the threshold instead of hardcoding it.",
+    "output": "def config_tool_99(items, threshold=10):\n    filtered = []\n    for item in items:\n        if item > threshold:\n            filtered.append(item)\n    return filtered"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class WalletHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class WalletHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class InvoiceHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class InvoiceHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class CounterHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class ShapeBoxHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class ShapeBoxHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class RateLimiterHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class RateLimiterHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "class NotebookHelper:\n    def combine(self, left, right):\n        return left + right\n\nInstruction: Make the method a static method.",
+    "output": "class NotebookHelper:\n    @staticmethod\n    def combine(left, right):\n        return left + right"
+  },
+  {
+    "input": "class ContactCardHelper:\n    def split_values(self, values):\n        result = []\n        for value in values:\n            if value % 2 == 0:\n                result.append(value)\n        return result\n\nInstruction: Split the large method into two smaller methods and reuse the helper.",
+    "output": "class ContactCardHelper:\n    def evens(self, values):\n        return [value for value in values if value % 2 == 0]\n\n    def split_values(self, values):\n        return self.evens(values)"
+  },
+  {
+    "input": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self):\n        return str(self.value)\n\nInstruction: Add type hints to the method signature and return type.",
+    "output": "class TaskQueueHelper:\n    def __init__(self, value):\n        self.value = value\n\n    def describe(self) -> str:\n        return str(self.value)"
+  },
+  {
+    "input": "class CacheEntryHelper:\n    def __init__(self, items):\n        self.items = items\n\nInstruction: Add a default parameter value and keep the initialization safe.",
+    "output": "class CacheEntryHelper:\n    def __init__(self, items=None):\n        if items is None:\n            items = []\n        self.items = items"
+  },
+  {
+    "input": "class UserProfileHelper:\n    def format(self, name):\n        return 'Hello ' + name\n\nInstruction: Add a docstring to the method.",
+    "output": "class UserProfileHelper:\n    def format(self, name):\n        \"\"\"Format a greeting string.\"\"\"\n        return 'Hello ' + name"
+  },
+  {
+    "input": "def check_tool_0(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_0(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_1(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_1(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_2(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_2(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_3(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_3(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_4(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_4(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_5(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_5(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_6(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_6(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_7(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_7(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_8(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_8(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_9(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_9(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_10(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_10(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_11(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_11(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_12(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_12(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_13(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_13(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_14(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_14(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_15(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_15(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_16(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_16(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_17(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_17(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_18(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_18(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_19(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_19(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_20(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_20(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_21(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_21(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_22(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_22(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_23(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_23(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_24(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_24(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_25(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_25(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_26(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_26(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_27(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_27(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_28(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_28(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_29(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_29(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_30(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_30(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_31(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_31(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_32(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_32(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_33(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_33(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_34(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_34(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_35(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_35(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_36(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_36(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_37(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_37(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_38(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_38(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_39(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_39(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_40(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_40(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_41(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_41(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_42(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_42(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_43(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_43(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_44(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_44(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_45(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_45(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_46(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_46(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_47(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_47(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_48(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_48(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_49(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_49(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_50(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_50(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_51(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_51(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_52(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_52(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_53(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_53(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_54(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_54(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_55(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_55(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_56(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_56(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_57(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_57(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_58(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_58(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_59(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_59(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_60(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_60(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_61(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_61(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_62(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_62(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_63(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_63(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_64(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_64(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_65(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_65(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_66(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_66(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_67(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_67(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_68(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_68(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_69(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_69(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_70(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_70(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_71(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_71(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_72(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_72(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_73(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_73(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_74(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_74(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_75(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_75(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_76(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_76(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_77(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_77(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_78(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_78(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_79(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_79(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_80(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_80(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_81(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_81(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_82(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_82(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_83(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_83(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_84(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_84(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_85(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_85(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_86(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_86(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_87(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_87(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_88(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_88(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_89(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_89(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_90(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_90(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_91(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_91(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_92(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_92(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_93(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_93(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_94(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_94(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  },
+  {
+    "input": "def check_tool_95(values):\n    return [value for value in values if value > 0]\n\nInstruction: Add a unit-test-style assertion at the end of the function.",
+    "output": "def check_tool_95(values):\n    result = [value for value in values if value > 0]\n    assert all(value > 0 for value in result)\n    return result"
+  },
+  {
+    "input": "def check_tool_96(text):\n    return text.strip()\n\nInstruction: Add a simple assertion that confirms the result type.",
+    "output": "def check_tool_96(text):\n    result = text.strip()\n    assert isinstance(result, str)\n    return result"
+  },
+  {
+    "input": "def check_tool_97(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    return total\n\nInstruction: Add an assertion that checks a basic property of the computed value.",
+    "output": "def check_tool_97(numbers):\n    total = 0\n    for number in numbers:\n        total += number\n    assert total >= 0 or any(number < 0 for number in numbers)\n    return total"
+  },
+  {
+    "input": "def check_tool_98(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.read()\n\nInstruction: Add an assertion after reading the file.",
+    "output": "def check_tool_98(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        data = handle.read()\n    assert isinstance(data, str)\n    return data"
+  },
+  {
+    "input": "def check_tool_99(items):\n    return items\n\nInstruction: Add a self-check assertion before returning the result.",
+    "output": "def check_tool_99(items):\n    result = list(items)\n    assert result == list(items)\n    return result"
+  }
+]
